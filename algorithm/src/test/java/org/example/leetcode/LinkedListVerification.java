@@ -1,0 +1,25 @@
+package org.example.leetcode;
+
+import org.example.model.linkedlist.ListNode;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+public class LinkedListVerification {
+
+    public static void verify(int[] expectedValues, ListNode head) {
+        for (int expectedValue : expectedValues) {
+            assertEquals(expectedValue, head.val);
+            head = head.next;
+        }
+        assertNull(head);
+    }
+
+    public static void verifyCycle(int[] expectedValues, ListNode head) {
+        for (int expectedValue : expectedValues) {
+            assertEquals(expectedValue, head.val);
+            head = head.next;
+        }
+    }
+
+}
