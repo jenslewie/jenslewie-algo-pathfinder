@@ -1,6 +1,5 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -13,7 +12,6 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
-@DisplayName("LeetCode 80: Remove Duplicates from Sorted Array II")
 public class LeetCode0080Test {
 
     private static final LeetCode0080 SOLUTION = new LeetCode0080();
@@ -25,8 +23,7 @@ public class LeetCode0080Test {
 
     @ParameterizedTest(name = "[{index}] {0} | Input: {1}")
     @MethodSource("testCases")
-    @DisplayName("All variants handle edge cases correctly")
-    void verifyAllVariants(String caseName, int[] input, int expectedLength, int[] expectedPrefix) {
+    void test(String caseName, int[] input, int expectedLength, int[] expectedPrefix) {
         ALGO_VARIANTS.forEach((algoName, algo) -> {
             int[] nums = input.clone();
             int actualLength = algo.apply(nums);
