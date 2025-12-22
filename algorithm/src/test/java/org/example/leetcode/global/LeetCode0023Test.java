@@ -27,7 +27,7 @@ public class LeetCode0023Test {
 
         ListNode result = leetcode.mergeKLists(list);
 
-        int[] expectedValues = new int[] {1, 1, 2, 3, 4, 4, 5, 6};
+        int[] expectedValues = new int[]{1, 1, 2, 3, 4, 4, 5, 6};
         LinkedListVerification.verify(expectedValues, result);
     }
 
@@ -63,5 +63,7 @@ public class LeetCode0023Test {
                 LinkedListBuilder.build(new Integer[]{10, 11, 15})
         };
         ListNode result = leetcode.mergeKLists2(list);
+        int[] expectedValues = new int[]{1, 2, 3, 3, 4, 4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 8, 9, 9, 9, 9, 10, 10, 10, 11, 11, 15, 16, 17, 18};
+        LinkedListVerification.verify(expectedValues, result);
     }
 }
