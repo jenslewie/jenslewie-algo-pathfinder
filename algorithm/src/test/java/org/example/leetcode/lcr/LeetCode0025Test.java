@@ -1,7 +1,7 @@
 package org.example.leetcode.lcr;
 
 import org.example.builder.LinkedListBuilder;
-import org.example.leetcode.LinkedListVerification;
+import org.example.leetcode.utility.LinkedListUtility;
 import org.example.model.linkedlist.ListNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ public class LeetCode0025Test {
 
         ListNode result = leetCode.addTwoNumbers(l1, l2);
 
-        LinkedListVerification.verify(new int[]{8, 0, 7}, result);
+        LinkedListUtility.verify(new int[]{8, 0, 7}, result);
     }
 
     @Test
@@ -32,7 +32,7 @@ public class LeetCode0025Test {
 
         ListNode result = leetCode.addTwoNumbers(l1, l2);
 
-        LinkedListVerification.verify(new int[]{0}, result);
+        LinkedListUtility.verify(new int[]{0}, result);
     }
 
     @Test
@@ -42,6 +42,6 @@ public class LeetCode0025Test {
 
         ListNode result = leetCode.addTwoNumbers(l1, l2);
 
-        LinkedListVerification.verify(new int[]{7, 8, 0, 7}, result);
+        LinkedListUtility.verify(new int[]{7, 8, 0, 7}, result);
     }
 }

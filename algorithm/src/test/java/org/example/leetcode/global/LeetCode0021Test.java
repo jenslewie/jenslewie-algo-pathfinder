@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 import org.example.builder.LinkedListBuilder;
-import org.example.leetcode.LinkedListVerification;
+import org.example.leetcode.utility.LinkedListUtility;
 import org.example.model.linkedlist.ListNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,7 +25,7 @@ public class LeetCode0021Test {
         ListNode result = leetCode.mergeTwoLists(list1, list2);
 
         int[] expectedValues = new int[] {1, 2, 3, 4, 5, 5, 6};
-        LinkedListVerification.verify(expectedValues, result);
+        LinkedListUtility.verify(expectedValues, result);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class LeetCode0021Test {
         ListNode result = leetCode.mergeTwoLists(list1, list2);
 
         int[] expectedValues = new int[] {2, 5, 6};
-        LinkedListVerification.verify(expectedValues, result);
+        LinkedListUtility.verify(expectedValues, result);
     }
 
     @Test

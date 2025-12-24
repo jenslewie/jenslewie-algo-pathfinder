@@ -1,11 +1,11 @@
 package org.example.leetcode.global;
 
+import org.example.leetcode.utility.ArrayUtility;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -26,19 +26,18 @@ class LeetCode1329Test {
             "diagonalSort2", LEET_CODE::diagonalSort2
     );
 
-    @ParameterizedTest(name = "[{index}] case={0}, algo={1}")
+    @ParameterizedTest(name = "[{index}] case={0}, algo={1}, mat={2}")
     @MethodSource("allCombinations")
     void testDiagonalSort(String caseName, String algoName, int[][] input, int[][] expected) {
-        int[][] actual = ALGO_VARIANTS.get(algoName).apply(deepClone(input));
+        int[][] actual = ALGO_VARIANTS.get(algoName).apply(ArrayUtility.deepClone(input));
 
         assertArrayEquals(expected, actual, () -> "Case '%s' with algo '%s' failed. Input matrix: %s"
-                .formatted(caseName, algoName, matrixToString(input)));
+                .formatted(caseName, algoName, ArrayUtility.matrixToString(input)));
     }
 
     private static Stream<Arguments> allCombinations() {
-        return testCases().flatMap(tc ->
-                ALGO_VARIANTS.keySet().stream()
-                        .map(algo -> Arguments.of(tc.name, algo, tc.input, tc.expected))
+        return testCases().flatMap(tc -> ALGO_VARIANTS.keySet().stream()
+                .map(algo -> Arguments.of(tc.name, algo, tc.input, tc.expected))
         );
     }
 
@@ -106,26 +105,7 @@ class LeetCode1329Test {
         );
     }
 
-    private static int[][] deepClone(int[][] original) {
-        return Arrays.stream(original)
-                .map(int[]::clone)
-                .toArray(int[][]::new);
-    }
-
-    private static String matrixToString(int[][] mat) {
-        if (mat == null) return "null";
-        return Arrays.stream(mat)
-                .map(Arrays::toString)
-                .reduce((a, b) -> a + ", " + b)
-                .map(s -> "[" + s + "]")
-                .orElse("[]");
-    }
-
     private record TestCase(String name, int[][] input, int[][] expected) {
-        private TestCase(String name, int[][] input, int[][] expected) {
-            this.name = name;
-            this.input = deepClone(input);
-            this.expected = deepClone(expected);
-        }
     }
+
 }

@@ -1,11 +1,11 @@
 package org.example.leetcode.global;
 
+import org.example.leetcode.utility.ArrayUtility;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -33,11 +33,11 @@ class LeetCode1260Test {
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, grid={2}, k={3}")
     @MethodSource("allCombinations")
     void testShiftGrid(String caseName, String algoName, int[][] input, int k, List<List<Integer>> expected) {
-        int[][] inputClone = deepClone(input);
+        int[][] inputClone = ArrayUtility.deepClone(input);
         List<List<Integer>> actual = ALGO_VARIANTS.get(algoName).apply(inputClone, k);
 
         assertEquals(expected, actual, () -> "Case '%s' with algo '%s' failed for k=%d. Input grid: %s"
-                .formatted(caseName, algoName, k, matrixToString(input)));
+                .formatted(caseName, algoName, k, ArrayUtility.matrixToString(input)));
     }
 
     private static Stream<Arguments> allCombinations() {
@@ -114,40 +114,7 @@ class LeetCode1260Test {
         );
     }
 
-    private static int[][] deepClone(int[][] original) {
-        if (original == null) return null;
-        return Arrays.stream(original)
-                .map(int[]::clone)
-                .toArray(int[][]::new);
-    }
-
-    private static String matrixToString(int[][] mat) {
-        if (mat == null) return "null";
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
-        for (int i = 0; i < mat.length; i++) {
-            if (i > 0) sb.append(", ");
-            sb.append(Arrays.toString(mat[i]));
-        }
-        sb.append("]");
-        return sb.toString();
-    }
-
     private record TestCase(String name, int[][] input, int k, List<List<Integer>> expected) {
-        private TestCase(String name, int[][] input, int k, List<List<Integer>> expected) {
-            this.name = name;
-            this.input = deepClone(input);
-            this.k = k;
-            this.expected = deepCopyList(expected);
-        }
-
-        private static List<List<Integer>> deepCopyList(List<List<Integer>> original) {
-            List<List<Integer>> copy = new ArrayList<>();
-            for (List<Integer> row : original) {
-                copy.add(new ArrayList<>(row));
-            }
-            return copy;
-        }
     }
 
 }

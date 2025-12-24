@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 import org.example.builder.LinkedListBuilder;
-import org.example.leetcode.LinkedListVerification;
+import org.example.leetcode.utility.LinkedListUtility;
 import org.example.model.linkedlist.ListNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,7 +24,7 @@ public class LeetCode0142Test {
         ListNode result = leetCode.detectCycle(head);
 
         int[] expectedValues = new int[] {2, 0, -4, 2};
-        LinkedListVerification.verifyCycle(expectedValues, result);
+        LinkedListUtility.verifyCycle(expectedValues, result);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class LeetCode0142Test {
         ListNode result = leetCode.detectCycle(head);
 
         int[] expectedValues = new int[] {1, 2, 1};
-        LinkedListVerification.verifyCycle(expectedValues, result);
+        LinkedListUtility.verifyCycle(expectedValues, result);
     }
 
     @Test

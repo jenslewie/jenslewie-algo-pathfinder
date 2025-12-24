@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 import org.example.builder.LinkedListBuilder;
-import org.example.leetcode.LinkedListVerification;
+import org.example.leetcode.utility.LinkedListUtility;
 import org.example.model.Pair;
 import org.example.model.linkedlist.ListNode;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,10 +24,10 @@ public class LeetCode0160Test {
         int[] expectedValues = new int[]{1, 8, 4, 5};
 
         ListNode result = leetCode.getIntersectionNode(pair.first(), pair.second());
-        LinkedListVerification.verify(expectedValues, result);
+        LinkedListUtility.verify(expectedValues, result);
 
         result = leetCode.getIntersectionNode2(pair.first(), pair.second());
-        LinkedListVerification.verify(expectedValues, result);
+        LinkedListUtility.verify(expectedValues, result);
     }
 
     @Test
@@ -36,10 +36,10 @@ public class LeetCode0160Test {
         int[] expectedValues = new int[]{2, 4};
 
         ListNode result = leetCode.getIntersectionNode(pair.first(), pair.second());
-        LinkedListVerification.verify(expectedValues, result);
+        LinkedListUtility.verify(expectedValues, result);
 
         result = leetCode.getIntersectionNode2(pair.first(), pair.second());
-        LinkedListVerification.verify(expectedValues, result);
+        LinkedListUtility.verify(expectedValues, result);
     }
 
     @Test

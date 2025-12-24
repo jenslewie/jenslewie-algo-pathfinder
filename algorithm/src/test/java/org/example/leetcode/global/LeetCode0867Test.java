@@ -1,11 +1,11 @@
 package org.example.leetcode.global;
 
+import org.example.leetcode.utility.ArrayUtility;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 867: Transpose Matrix - Algorithm Variants")
 class LeetCode0867Test {
 
-    private static final LeetCode0867 INSTANCE = new LeetCode0867();
+    private static final LeetCode0867 LEET_CODE = new LeetCode0867();
 
     @FunctionalInterface
     interface TransposeFunction {
@@ -22,7 +22,7 @@ class LeetCode0867Test {
     }
 
     private static final Map<String, TransposeFunction> ALGO_VARIANTS = Map.of(
-            "transpose", INSTANCE::transpose
+            "transpose", LEET_CODE::transpose
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, matrix={2}")
@@ -31,7 +31,7 @@ class LeetCode0867Test {
         int[][] actual = ALGO_VARIANTS.get(algoName).apply(input);
 
         assertArrayEquals(expected, actual, () -> "Case '%s' with algo '%s' failed. Input matrix: %s"
-                .formatted(caseName, algoName, matrixToString(input)));
+                .formatted(caseName, algoName, ArrayUtility.matrixToString(input)));
     }
 
     private static Stream<Arguments> allCombinations() {
@@ -116,29 +116,7 @@ class LeetCode0867Test {
         );
     }
 
-    private static int[][] deepClone(int[][] original) {
-        return Arrays.stream(original)
-                .map(int[]::clone)
-                .toArray(int[][]::new);
-    }
-
-    private static String matrixToString(int[][] mat) {
-        if (mat == null) return "null";
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
-        for (int i = 0; i < mat.length; i++) {
-            if (i > 0) sb.append(", ");
-            sb.append(Arrays.toString(mat[i]));
-        }
-        sb.append("]");
-        return sb.toString();
-    }
-
     private record TestCase(String name, int[][] input, int[][] expected) {
-            private TestCase(String name, int[][] input, int[][] expected) {
-                this.name = name;
-                this.input = deepClone(input);
-                this.expected = deepClone(expected);
-            }
-        }
+    }
+
 }

@@ -27,7 +27,7 @@ class LeetCode0088Test {
             "merge3", LEET_CODE::merge3
     );
 
-    @ParameterizedTest(name = "[{index}] case={0}, algo={1}")
+    @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums1={2}, m={3}, nums2={4}, n={5}")
     @MethodSource("allCombinations")
     void test(String caseName, String algoName, int[] nums1, int m, int[] nums2, int n, int[] expected) {
         int[] nums1Copy = Arrays.copyOf(nums1, nums1.length);
@@ -90,13 +90,6 @@ class LeetCode0088Test {
     }
 
     private record TestCase(String name, int[] nums1, int m, int[] nums2, int n, int[] expected) {
-        private TestCase(String name, int[] nums1, int m, int[] nums2, int n, int[] expected) {
-            this.name = name;
-            this.nums1 = nums1.clone();
-            this.m = m;
-            this.nums2 = nums2.clone();
-            this.n = n;
-            this.expected = expected.clone();
-        }
     }
+
 }
