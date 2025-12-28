@@ -1,5 +1,8 @@
 package org.example.leetcode.global;
 
+/**
+ * <a href="https://leetcode.cn/problems/range-sum-query-2d-immutable">...</a>
+ */
 public class LeetCode0304 {
 
     private final int[][] preSum;
