@@ -1,12 +1,20 @@
 package org.example.builder;
 
-import org.example.model.linkedlist.ListNode;
 import org.example.model.Pair;
+import org.example.model.linkedlist.ListNode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class LinkedListBuilder {
 
     public static ListNode build(Integer[] arr) {
         return buildPair(arr).first();
+    }
+
+    public static ListNode fromArray(int[] arr) {
+        return buildPair(Arrays.stream(arr).boxed().toArray(Integer[]::new)).first();
     }
 
     public static Pair<ListNode, ListNode> buildPair(Integer[] arr) {
@@ -23,12 +31,10 @@ public class LinkedListBuilder {
         }
 
         return new Pair<>(head, cur);
-
     }
 
-
     public static ListNode buildCycle(Integer[] arr, int pos) {
-        ListNode head  = build(arr);
+        ListNode head = build(arr);
 
         ListNode cur = head, tail = head;
         int i = 0;
@@ -51,5 +57,14 @@ public class LinkedListBuilder {
         pair1.second().next = head3;
         pair2.second().next = head3;
         return new Pair<>(pair1.first(), pair2.first());
+    }
+
+    public static int[] toArray(ListNode head) {
+        List<Integer> list = new ArrayList<>();
+        while (head != null) {
+            list.add(head.val);
+            head = head.next;
+        }
+        return list.stream().mapToInt(i -> i).toArray();
     }
 }
