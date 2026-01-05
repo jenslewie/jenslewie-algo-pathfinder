@@ -22,14 +22,6 @@ public class LeetCode0155 {
         map = new HashMap<>();
     }
 
-    public static void main(String[] args) {
-        LeetCode0155 leetCode = new LeetCode0155();
-        leetCode.push(-2);
-        leetCode.push(0);
-        leetCode.push(-3);
-        leetCode.getMin();
-    }
-
     public void push(int val) {
         stack2.push(new int[]{val, Math.min(stack2.peek()[1], val)});
     }
