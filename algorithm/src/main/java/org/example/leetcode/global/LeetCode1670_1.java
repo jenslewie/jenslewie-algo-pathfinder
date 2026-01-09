@@ -113,6 +113,8 @@ public class LeetCode1670_1 {
     private int remove(ListNode node) {
         node.prev.next = node.next;
         node.next.prev = node.prev;
+        node.prev = null;
+        node.next = null;
         return node.val;
     }
 
