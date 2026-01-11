@@ -1,8 +1,6 @@
 package org.example.learning.stack;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Stack;
 
 public class MonotonicStack {
@@ -28,16 +26,13 @@ public class MonotonicStack {
 
     public static int[] calculateGreaterElementsFromLeft(int[] nums) {
         Stack<Integer> stack = new Stack<>();
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int num : nums) {
-            while (!stack.isEmpty() && stack.peek() < num) {
-                map.put(stack.pop(), num);
-            }
-            stack.push(num);
-        }
         int[] ans = new int[nums.length];
+        Arrays.fill(ans, -1);
         for (int i = 0; i < nums.length; i++) {
-            ans[i] = map.getOrDefault(nums[i], -1);
+            while (!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
+                ans[stack.pop()] = nums[i];
+            }
+            stack.push(i);
         }
         return ans;
     }
