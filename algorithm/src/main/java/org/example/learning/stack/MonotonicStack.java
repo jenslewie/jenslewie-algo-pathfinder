@@ -20,7 +20,8 @@ public class MonotonicStack {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{2, 1, 2, 4, 3, 3};
+        int[] nums;
+        nums = new int[]{2, 1, 2, 4, 3, 3};
         System.out.println(Arrays.toString(nums));
         System.out.println(Arrays.toString(MonotonicStack.nextGreaterElementsFromRight(nums)));
         System.out.println(Arrays.toString(MonotonicStack.nextGreaterElementsFromLeft(nums)));
@@ -65,25 +66,27 @@ public class MonotonicStack {
     public static int[] getElementsFromRight(int[] nums, Direction direction, Mode mode) {
         int n = nums.length;
         int[] ans = new int[n];
-        Deque<Integer> st = new ArrayDeque<>(); // stack of values
+        Deque<Integer> stack = new ArrayDeque<>(); // stack of values
 
         if (direction == Direction.NEXT) {
             for (int i = n - 1; i >= 0; i--) {
-                while (!st.isEmpty() && shouldPop(st.peek(), nums[i], mode)) {
-                    st.pop();
+                while (!stack.isEmpty() && shouldPop(stack.peek(), nums[i], mode)) {
+                    stack.pop();
                 }
-                ans[i] = st.isEmpty() ? -1 : st.peek();
-                st.push(nums[i]);
+                ans[i] = stack.isEmpty() ? -1 : stack.peek();
+                stack.push(nums[i]);
             }
         } else {
             for (int i = 0; i < n; i++) {
-                while (!st.isEmpty() && shouldPop(st.peek(), nums[i], mode)) {
-                    st.pop();
+                while (!stack.isEmpty() && shouldPop(stack.peek(), nums[i], mode)) {
+                    stack.pop();
                 }
-                ans[i] = st.isEmpty() ? -1 : st.peek();
-                st.push(nums[i]);
+                ans[i] = stack.isEmpty() ? -1 : stack.peek();
+                stack.push(nums[i]);
             }
         }
+        System.out.println();
+        System.out.println(Arrays.toString(stack.toArray()));
         return ans;
     }
 
