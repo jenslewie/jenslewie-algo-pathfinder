@@ -5,7 +5,7 @@ import org.example.model.tree.TreeNode;
 /**
  * <a href="https://leetcode.cn/problems/maximum-depth-of-binary-tree">...</a>
  */
-public class LeetCode0104 {
+public class LeetCode0104_1 {
 
     public int maxDepth(TreeNode root) {
         if (root == null) {

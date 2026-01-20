@@ -1,54 +1,72 @@
 package org.example.leetcode.global;
 
-import org.example.builder.BinaryTreeBuilder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Map;
 import java.util.stream.Stream;
 
+import static org.example.builder.BinaryTreeBuilder.build;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("LeetCode 104: Maximum Depth of Binary Tree")
 class LeetCode0104Test {
 
-    private final LeetCode0104 solution = new LeetCode0104();
-
-    @ParameterizedTest(name = "[{index}] case={0}")
-    @MethodSource("testCases")
-    void testMaxDepth(String caseName, Integer[] treeArray, int expected) {
-        var root = BinaryTreeBuilder.build(treeArray);
-        int actual = solution.maxDepth(root);
-        assertEquals(expected, actual, () -> "Case '" + caseName + "' failed.");
+    @FunctionalInterface
+    interface MaxDepthFunction {
+        int apply(org.example.model.tree.TreeNode root);
     }
 
-    private static Stream<Arguments> testCases() {
-        return Stream.of(
-                // Example 1: [3,9,20,null,null,15,7]
-                Arguments.of("example_1", new Integer[]{3, 9, 20, null, null, 15, 7}, 3),
+    private static final Map<String, MaxDepthFunction> ALGO_VARIANTS = Map.of(
+            "recursive_post_order", root -> new LeetCode0104_1().maxDepth(root),
+            "dfs_with_global_state", root -> new LeetCode0104_2().maxDepth(root)
+    );
 
-                // Example 2: [1,null,2]
-                Arguments.of("example_2", new Integer[]{1, null, 2}, 2),
+    @ParameterizedTest(name = "[{index}] case={0}, algo={1}, tree={2}")
+    @MethodSource("allCombinations")
+    void testMaxDepth(String caseName, String algoName, Integer[] treeArray, int expected) {
+        var root = build(treeArray);
+        int actual = ALGO_VARIANTS.get(algoName).apply(root);
+        assertEquals(expected, actual, () -> String.format(
+                "Case '%s' with algo='%s' failed.", caseName, algoName));
+    }
 
-                // Single node
-                Arguments.of("single_node", new Integer[]{1}, 1),
-
-                // Empty tree
-                Arguments.of("empty_tree", new Integer[]{}, 0),
-
-                // All null (treated as empty)
-                Arguments.of("all_null", new Integer[]{null}, 0),
-
-                // Left-skewed tree: [1,2,null,3,null,null,null,4]
-                Arguments.of("left_skewed", new Integer[]{1, 2, null, 3, null, null, null, 4}, 4),
-
-                // Right-skewed tree: [1,null,2,null,null,null,3]
-                Arguments.of("right_skewed", new Integer[]{1, null, 2, null, null, null, 3}, 3),
-
-                // Full binary tree of depth 3: [1,2,3,4,5,6,7]
-                Arguments.of("full_tree_depth_3", new Integer[]{1, 2, 3, 4, 5, 6, 7}, 3)
+    private static Stream<Arguments> allCombinations() {
+        return testCases().flatMap(tc -> ALGO_VARIANTS.keySet().stream()
+                .map(algo -> Arguments.of(tc.name, algo, tc.treeArray, tc.expected))
         );
     }
 
+    private static Stream<TestCase> testCases() {
+        return Stream.of(
+                // Example 1 from LeetCode: [3,9,20,null,null,15,7] -> 3
+                new TestCase("example_1", new Integer[]{3, 9, 20, null, null, 15, 7}, 3),
+
+                // Example 2 from LeetCode: [1,null,2] -> 2
+                new TestCase("example_2", new Integer[]{1, null, 2}, 2),
+
+                // Empty tree
+                new TestCase("empty_tree", new Integer[]{}, 0),
+
+                // Single node
+                new TestCase("single_node", new Integer[]{1}, 1),
+
+                // Root with two null children
+                new TestCase("root_with_null_children", new Integer[]{1, null, null}, 1),
+
+                // Left-skewed tree
+                new TestCase("left_skewed", new Integer[]{1, 2, null, 3, null, null, null, 4}, 4),
+
+                // Right-skewed tree
+                new TestCase("right_skewed", new Integer[]{1, null, 2, null, null, null, 3}, 3),
+
+                // Full binary tree of depth 3
+                new TestCase("full_tree_depth_3", new Integer[]{1, 2, 3, 4, 5, 6, 7}, 3)
+        );
+    }
+
+    private record TestCase(String name, Integer[] treeArray, int expected) {
+    }
 }
