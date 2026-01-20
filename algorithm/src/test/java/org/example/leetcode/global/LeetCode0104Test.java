@@ -69,4 +69,5 @@ class LeetCode0104Test {
 
     private record TestCase(String name, Integer[] treeArray, int expected) {
     }
+
 }
