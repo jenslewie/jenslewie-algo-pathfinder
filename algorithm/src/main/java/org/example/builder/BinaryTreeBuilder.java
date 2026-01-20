@@ -4,12 +4,15 @@ import org.example.model.tree.TreeNode;
 
 public class BinaryTreeBuilder {
 
-    public static TreeNode buildTree(Integer[] arr, int index) {
-        if (index >= arr.length) {
+    public static TreeNode build(Integer[] arr) {
+        if (arr == null || arr.length == 0 || arr[0] == null) {
             return null;
         }
+        return buildTree(arr, 0);
+    }
 
-        if (arr[index] == null) {
+    public static TreeNode buildTree(Integer[] arr, int index) {
+        if (index >= arr.length || arr[index] == null) {
             return null;
         }
 
