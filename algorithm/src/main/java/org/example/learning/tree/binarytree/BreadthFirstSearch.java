@@ -1,8 +1,8 @@
 package org.example.learning.tree.binarytree;
 
 import org.example.builder.BinaryTreeBuilder;
-import org.example.model.tree.TreeNodeState;
 import org.example.model.tree.TreeNode;
+import org.example.model.tree.TreeNodeState;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -34,7 +34,7 @@ public class BreadthFirstSearch {
 
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            System.out.print(node.value + " ");
+            System.out.print(node.val + " ");
 
             if (node.left != null) {
                 queue.offer(node.left);
@@ -59,7 +59,7 @@ public class BreadthFirstSearch {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                System.out.println("Depth: " + depth + " value: " + node.value);
+                System.out.println("Depth: " + depth + " value: " + node.val);
                 if (node.left != null) {
                     queue.offer(node.left);
                 }
@@ -82,7 +82,7 @@ public class BreadthFirstSearch {
 
         while (!queue.isEmpty()) {
             TreeNodeState treeNodeState = queue.poll();
-            System.out.println("Weight: " + treeNodeState.depth + " value: " + treeNodeState.node.value);
+            System.out.println("Weight: " + treeNodeState.depth + " value: " + treeNodeState.node.val);
 
             if (treeNodeState.node.left != null) {
                 queue.offer(new TreeNodeState(treeNodeState.node.left, treeNodeState.depth + 1));

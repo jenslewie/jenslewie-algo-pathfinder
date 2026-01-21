@@ -27,7 +27,7 @@ public class DepthFirstSearch {
             return;
         }
 
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
         PreOrderTraversal(root.left);
         PreOrderTraversal(root.right);
     }
@@ -38,7 +38,7 @@ public class DepthFirstSearch {
         }
 
         InOrderTraversal(root.left);
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
         InOrderTraversal(root.right);
     }
 
@@ -49,6 +49,6 @@ public class DepthFirstSearch {
 
         PostOrderTraversal(root.left);
         PostOrderTraversal(root.right);
-        System.out.print(root.value + " ");
+        System.out.print(root.val + " ");
     }
 }

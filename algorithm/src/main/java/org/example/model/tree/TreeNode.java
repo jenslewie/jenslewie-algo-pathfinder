@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TreeNode {
-    public int value;
+    public int val;
     public TreeNode left, right;
 
-    public TreeNode(int value) {
-        this.value = value;
+    public TreeNode(int val) {
+        this.val = val;
         this.left = null;
         this.right = null;
     }
