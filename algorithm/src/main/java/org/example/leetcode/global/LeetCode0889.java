@@ -26,9 +26,12 @@ public class LeetCode0889 {
         if (preLeft == preRight) {
             return null;
         }
+        if (preLeft + 1 == preRight) {
+            return new TreeNode(preorder[preLeft]);
+        }
 
         int leftRootIndex = preLeft + 1;
-        int leftSize = leftRootIndex == preRight ? 0 : map.get(preorder[leftRootIndex]) + 1 - postLeft;
+        int leftSize = map.get(preorder[leftRootIndex]) + 1 - postLeft;
         TreeNode left = dfs(preorder, leftRootIndex, leftRootIndex + leftSize, postLeft, postLeft + leftSize);
         TreeNode right = dfs(preorder, leftRootIndex + leftSize, preRight, postLeft + leftSize, postRight - 1);
         return new TreeNode(preorder[preLeft], left, right);
