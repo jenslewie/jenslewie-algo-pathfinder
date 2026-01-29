@@ -7,8 +7,8 @@ import java.util.LinkedList;
 
 /**
  * <a href="https://leetcode.cn/problems/serialize-and-deserialize-binary-tree">...</a>
- * Time Complexity:
- * Space Complexity:
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
  */
 public class LeetCode0297_1 {
     private final static String SEPARATOR = ",";
