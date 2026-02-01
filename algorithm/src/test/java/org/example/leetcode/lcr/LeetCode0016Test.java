@@ -1,51 +1,54 @@
 package org.example.leetcode.lcr;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.Map;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LeetCode0016Test {
+@DisplayName("LCR 016: Longest Substring Without Repeating Characters - Algorithm Variants")
+class LeetCode0016Test {
 
-    private LeetCode0016 leetCode;
+    private static final LeetCode0016 LEET_CODE = new LeetCode0016();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0016();
+    @FunctionalInterface
+    interface LengthOfLongestSubstringFunction {
+        int apply(String s);
     }
 
-    @Test
-    void test1() {
-        String s = "abcabcbb";
-        assertEquals(3, leetCode.lengthOfLongestSubstring(s));
-        assertEquals(3, leetCode.lengthOfLongestSubstring2(s));
+    private static final Map<String, LengthOfLongestSubstringFunction> ALGO_VARIANTS = Map.of(
+            "sliding_window_set", LEET_CODE::lengthOfLongestSubstring,
+            "sliding_window_map", LEET_CODE::lengthOfLongestSubstring2
+    );
+
+    @ParameterizedTest(name = "[{index}] case={0}, algo={1}, s=\"{2}\"")
+    @MethodSource("allCombinations")
+    void testLengthOfLongestSubstring(String caseName, String algoName, String s, int expected) {
+        int actual = ALGO_VARIANTS.get(algoName).apply(s);
+        assertEquals(expected, actual, () -> "Case '%s' with algo='%s' failed. s=\"%s\""
+                .formatted(caseName, algoName, s));
     }
 
-    @Test
-    void test2() {
-        String s = "bbbbb";
-        assertEquals(1, leetCode.lengthOfLongestSubstring(s));
-        assertEquals(1, leetCode.lengthOfLongestSubstring2(s));
+    private static Stream<Arguments> allCombinations() {
+        return testCases().flatMap(tc -> ALGO_VARIANTS.keySet().stream()
+                .map(algo -> Arguments.of(tc.name, algo, tc.s, tc.expected))
+        );
     }
 
-    @Test
-    void test3() {
-        String s = "pwwkew";
-        assertEquals(3, leetCode.lengthOfLongestSubstring(s));
-        assertEquals(3, leetCode.lengthOfLongestSubstring2(s));
+    private static Stream<TestCase> testCases() {
+        return Stream.of(
+                new TestCase("example_1", "abcabcbb", 3),
+                new TestCase("example_2", "bbbbb", 1),
+                new TestCase("example_3", "pwwkew", 3),
+                new TestCase("empty_string", "", 0),
+                new TestCase("abba_pattern", "abba", 2)
+        );
     }
 
-    @Test
-    void test4() {
-        String s = "";
-        assertEquals(0, leetCode.lengthOfLongestSubstring(s));
-        assertEquals(0, leetCode.lengthOfLongestSubstring2(s));
-    }
-
-    @Test
-    void test5() {
-        String s = "abba";
-        assertEquals(2, leetCode.lengthOfLongestSubstring(s));
-        assertEquals(2, leetCode.lengthOfLongestSubstring2(s));
+    private record TestCase(String name, String s, int expected) {
     }
 }

@@ -1,5 +1,6 @@
 package org.example.leetcode.global;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -12,6 +13,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+@DisplayName("LeetCode 80: Remove Duplicates from Sorted Array II - Algorithm Variants")
 public class LeetCode0080Test {
 
     private static final LeetCode0080 LEET_CODE = new LeetCode0080();

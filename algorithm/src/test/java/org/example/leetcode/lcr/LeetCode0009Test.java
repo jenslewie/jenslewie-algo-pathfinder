@@ -1,26 +1,32 @@
 package org.example.leetcode.lcr;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LeetCode0009Test {
+@DisplayName("LCR 009: Subarray Product Less Than K")
+class LeetCode0009Test {
 
-    private LeetCode0009 leetCode;
+    private static final LeetCode0009 LEET_CODE = new LeetCode0009();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0009();
+    @ParameterizedTest(name = "[{index}] case={0}, nums={1}, k={2}")
+    @MethodSource("testCases")
+    void testNumSubarrayProductLessThanK(String caseName, int[] nums, int k, int expected) {
+        int actual = LEET_CODE.numSubarrayProductLessThanK(nums, k);
+        assertEquals(expected, actual, () -> "Case '%s' failed. nums=%s, k=%d"
+                .formatted(caseName, Arrays.toString(nums), k));
     }
 
-    @Test
-    void test1() {
-        assertEquals(8, leetCode.numSubarrayProductLessThanK(new int[]{10, 5, 2, 6}, 100));
-    }
-
-    @Test
-    void test2() {
-        assertEquals(0, leetCode.numSubarrayProductLessThanK(new int[]{1, 2, 3}, 0));
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                Arguments.of("example_1", new int[]{10, 5, 2, 6}, 100, 8),
+                Arguments.of("k_zero", new int[]{1, 2, 3}, 0, 0)
+        );
     }
 }

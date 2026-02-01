@@ -1,5 +1,6 @@
 package org.example.leetcode.global;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -11,6 +12,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@DisplayName("LeetCode 125: Valid Palindrome - Algorithm Variants")
 public class LeetCode0125Test {
 
     private static final LeetCode0125 SOLUTION = new LeetCode0125();

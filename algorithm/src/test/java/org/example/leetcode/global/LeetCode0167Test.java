@@ -1,31 +1,33 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class LeetCode0167Test {
+@DisplayName("LeetCode 167: Two Sum II - Input Array Is Sorted")
+class LeetCode0167Test {
 
-    private LeetCode0167 leetCode;
+    private static final LeetCode0167 LEET_CODE = new LeetCode0167();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0167();
+    @ParameterizedTest(name = "[{index}] case={0}, numbers={1}, target={2}")
+    @MethodSource("testCases")
+    void testTwoSum(String caseName, int[] numbers, int target, int[] expected) {
+        int[] actual = LEET_CODE.twoSum(numbers, target);
+        assertArrayEquals(expected, actual, () -> "Case '%s' failed. numbers=%s, target=%d"
+                .formatted(caseName, Arrays.toString(numbers), target));
     }
 
-    @Test
-    void test1() {
-        assertArrayEquals(new int[]{1, 2}, leetCode.twoSum(new int[]{2, 7, 11, 15}, 9));
-    }
-
-    @Test
-    void test2() {
-        assertArrayEquals(new int[]{1, 3}, leetCode.twoSum(new int[]{2, 3, 4}, 6));
-    }
-
-    @Test
-    void test3() {
-        assertArrayEquals(new int[]{1, 2}, leetCode.twoSum(new int[]{-1, 0}, -1));
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                Arguments.of("example_1", new int[]{2, 7, 11, 15}, 9, new int[]{1, 2}),
+                Arguments.of("example_2", new int[]{2, 3, 4}, 6, new int[]{1, 3}),
+                Arguments.of("example_3", new int[]{-1, 0}, -1, new int[]{1, 2})
+        );
     }
 }

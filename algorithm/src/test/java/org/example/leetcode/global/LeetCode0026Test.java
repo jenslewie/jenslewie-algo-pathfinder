@@ -1,26 +1,32 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LeetCode0026Test {
+@DisplayName("LeetCode 26: Remove Duplicates from Sorted Array")
+class LeetCode0026Test {
 
-    private LeetCode0026 leetCode;
+    private static final LeetCode0026 LEET_CODE = new LeetCode0026();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0026();
+    @ParameterizedTest(name = "[{index}] case={0}, nums={1}")
+    @MethodSource("testCases")
+    void testRemoveDuplicates(String caseName, int[] nums, int expected) {
+        int actual = LEET_CODE.removeDuplicates(nums);
+        assertEquals(expected, actual, () -> "Case '%s' failed. nums=%s"
+                .formatted(caseName, Arrays.toString(nums)));
     }
 
-    @Test
-    void test1() {
-        assertEquals(2, leetCode.removeDuplicates(new int[]{1, 1, 2}));
-    }
-
-    @Test
-    void test2() {
-        assertEquals(5, leetCode.removeDuplicates(new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}));
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                Arguments.of("example_1", new int[]{1, 1, 2}, 2),
+                Arguments.of("example_2", new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}, 5)
+        );
     }
 }

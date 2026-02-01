@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("Valid Palindrome - LCR 018")
+@DisplayName("LCR 018: Valid Palindrome")
 public class LeetCode0018Test {
 
     private final LeetCode0018 leetCode = new LeetCode0018();

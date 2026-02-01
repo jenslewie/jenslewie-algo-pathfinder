@@ -1,26 +1,31 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LeetCode0067Test {
+@DisplayName("LeetCode 67: Add Binary")
+class LeetCode0067Test {
 
-    private LeetCode0067 leetCode;
+    private static final LeetCode0067 LEET_CODE = new LeetCode0067();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0067();
+    @ParameterizedTest(name = "[{index}] case={0}, a=\"{1}\", b=\"{2}\"")
+    @MethodSource("testCases")
+    void testAddBinary(String caseName, String a, String b, String expected) {
+        String actual = LEET_CODE.addBinary(a, b);
+        assertEquals(expected, actual, () -> "Case '%s' failed. a=\"%s\", b=\"%s\""
+                .formatted(caseName, a, b));
     }
 
-    @Test
-    void test1() {
-        assertEquals("100", leetCode.addBinary("11", "1"));
-    }
-
-    @Test
-    void test2() {
-        assertEquals("10101", leetCode.addBinary("1010", "1011"));
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                Arguments.of("example_1", "11", "1", "100"),
+                Arguments.of("example_2", "1010", "1011", "10101")
+        );
     }
 }

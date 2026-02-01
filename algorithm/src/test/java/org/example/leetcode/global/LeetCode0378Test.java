@@ -1,28 +1,32 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.example.leetcode.utility.ArrayUtility;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LeetCode0378Test {
+@DisplayName("LeetCode 378: Kth Smallest Element in a Sorted Matrix")
+class LeetCode0378Test {
 
-    private LeetCode0378 leetCode;
+    private static final LeetCode0378 LEET_CODE = new LeetCode0378();
 
-    @BeforeEach
-    public void init(){
-        leetCode = new LeetCode0378();
+    @ParameterizedTest(name = "[{index}] case={0}, matrix={1}, k={2}")
+    @MethodSource("testCases")
+    void testKthSmallest(String caseName, int[][] matrix, int k, int expected) {
+        int actual = LEET_CODE.kthSmallest(matrix, k);
+        assertEquals(expected, actual, () -> "Case '%s' failed. matrix=%s, k=%d"
+                .formatted(caseName, ArrayUtility.matrixToString(matrix), k));
     }
 
-    @Test
-    void test1() {
-        int[][] data = new int[][]{{1, 5, 9},{10, 11, 13},{10 , 12, 15}};
-        assertEquals(13, leetCode.kthSmallest(data, 8));
-    }
-
-    @Test
-    void test2() {
-        int[][] data = new int[][]{{-5}};
-        assertEquals(-5, leetCode.kthSmallest(data, 1));
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                Arguments.of("3x3_matrix", new int[][]{{1, 5, 9}, {10, 11, 13}, {10, 12, 15}}, 8, 13),
+                Arguments.of("single_element", new int[][]{{-5}}, 1, -5)
+        );
     }
 }

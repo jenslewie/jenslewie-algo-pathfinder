@@ -1,31 +1,32 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LeetCode0076Test {
+@DisplayName("LeetCode 76: Minimum Window Substring")
+class LeetCode0076Test {
 
-    private LeetCode0076 leetCode;
+    private static final LeetCode0076 LEET_CODE = new LeetCode0076();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0076();
+    @ParameterizedTest(name = "[{index}] case={0}, s=\"{1}\", t=\"{2}\"")
+    @MethodSource("testCases")
+    void testMinWindow(String caseName, String s, String t, String expected) {
+        String actual = LEET_CODE.minWindow(s, t);
+        assertEquals(expected, actual, () -> "Case '%s' failed. s=\"%s\", t=\"%s\""
+                .formatted(caseName, s, t));
     }
 
-    @Test
-    void test1() {
-        assertEquals("BANC", leetCode.minWindow("ADOBECODEBANC", "ABC"));
-    }
-
-    @Test
-    void test2() {
-        assertEquals("a", leetCode.minWindow("a", "a"));
-    }
-
-    @Test
-    void test3() {
-        assertEquals("", leetCode.minWindow("a", "aa"));
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                Arguments.of("example_1", "ADOBECODEBANC", "ABC", "BANC"),
+                Arguments.of("example_2", "a", "a", "a"),
+                Arguments.of("not_found", "a", "aa", "")
+        );
     }
 }

@@ -1,31 +1,32 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LeetCode0005Test {
+@DisplayName("LeetCode 5: Longest Palindromic Substring")
+class LeetCode0005Test {
 
-    private LeetCode0005 leetCode;
+    private static final LeetCode0005 LEET_CODE = new LeetCode0005();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0005();
+    @ParameterizedTest(name = "[{index}] case={0}, s=\"{1}\"")
+    @MethodSource("testCases")
+    void testLongestPalindrome(String caseName, String s, String expected) {
+        String actual = LEET_CODE.longestPalindrome(s);
+        assertEquals(expected, actual, () -> "Case '%s' failed. s=\"%s\""
+                .formatted(caseName, s));
     }
 
-    @Test
-    void test1() {
-        assertEquals("aba", leetCode.longestPalindrome("babad"));
-    }
-
-    @Test
-    void test2() {
-        assertEquals("bb", leetCode.longestPalindrome("cbbd"));
-    }
-
-    @Test
-    void test3() {
-        assertEquals("a", leetCode.longestPalindrome("a"));
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                Arguments.of("example_1", "babad", "aba"),
+                Arguments.of("example_2", "cbbd", "bb"),
+                Arguments.of("single_char", "a", "a")
+        );
     }
 }

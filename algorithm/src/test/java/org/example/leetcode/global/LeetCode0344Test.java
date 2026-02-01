@@ -1,30 +1,33 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class LeetCode0344Test {
+@DisplayName("LeetCode 344: Reverse String")
+class LeetCode0344Test {
 
-    private LeetCode0344 leetCode;
+    private static final LeetCode0344 LEET_CODE = new LeetCode0344();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0344();
+    @ParameterizedTest(name = "[{index}] case={0}, s={1}")
+    @MethodSource("testCases")
+    void testReverseString(String caseName, char[] s, char[] expected) {
+        char[] input = Arrays.copyOf(s, s.length);
+        LEET_CODE.reverseString(s);
+        assertArrayEquals(expected, s, () -> "Case '%s' failed. Input s: %s"
+                .formatted(caseName, Arrays.toString(input)));
     }
 
-    @Test
-    void test1() {
-        char[] s = new char[]{'h', 'e', 'l', 'l', 'o'};
-        leetCode.reverseString(s);
-        assertArrayEquals(new char[]{'o', 'l', 'l', 'e', 'h'}, s);
-    }
-
-    @Test
-    void test2() {
-        char[] s = new char[]{'H', 'a', 'n', 'n', 'a', 'h'};
-        leetCode.reverseString(s);
-        assertArrayEquals(new char[]{'h', 'a', 'n', 'n', 'a', 'H'}, s);
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                Arguments.of("example_1", new char[]{'h', 'e', 'l', 'l', 'o'}, new char[]{'o', 'l', 'l', 'e', 'h'}),
+                Arguments.of("example_2", new char[]{'H', 'a', 'n', 'n', 'a', 'h'}, new char[]{'h', 'a', 'n', 'n', 'a', 'H'})
+        );
     }
 }
