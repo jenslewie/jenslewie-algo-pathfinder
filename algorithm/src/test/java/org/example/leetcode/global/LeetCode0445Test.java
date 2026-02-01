@@ -3,45 +3,50 @@ package org.example.leetcode.global;
 import org.example.builder.LinkedListBuilder;
 import org.example.leetcode.utility.LinkedListUtility;
 import org.example.model.linkedlist.ListNode;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-public class LeetCode0445Test {
+import java.util.Arrays;
+import java.util.stream.Stream;
 
-    private LeetCode0445 leetCode;
+@DisplayName("LeetCode 445: Add Two Numbers II")
+class LeetCode0445Test {
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0445();
+    private static final LeetCode0445 LEET_CODE = new LeetCode0445();
+
+    @ParameterizedTest(name = "[{index}] case={0}, l1={1}, l2={2}")
+    @MethodSource("testCases")
+    void testAddTwoNumbers(String caseName, Integer[] l1Array, Integer[] l2Array, int[] expected) {
+        ListNode l1 = LinkedListBuilder.build(l1Array);
+        ListNode l2 = LinkedListBuilder.build(l2Array);
+
+        ListNode result = LEET_CODE.addTwoNumbers(l1, l2);
+
+        LinkedListUtility.verify(expected, result, () -> "Case '%s' failed. l1=%s, l2=%s"
+                .formatted(caseName, Arrays.toString(l1Array), Arrays.toString(l2Array)));
     }
 
-    @Test
-    void test1() {
-        ListNode l1 = LinkedListBuilder.build(new Integer[] {2, 4, 3});
-        ListNode l2 = LinkedListBuilder.build(new Integer[] {5, 6, 4});
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                // Example 1 from LeetCode
+                Arguments.of("example_1",
+                        new Integer[]{2, 4, 3},
+                        new Integer[]{5, 6, 4},
+                        new int[]{8, 0, 7}),
 
-        ListNode result = leetCode.addTwoNumbers(l1, l2);
+                // Example 2 from LeetCode
+                Arguments.of("example_2",
+                        new Integer[]{0},
+                        new Integer[]{0},
+                        new int[]{0}),
 
-        LinkedListUtility.verify(new int[]{8, 0, 7}, result);
-    }
-
-    @Test
-    void test2() {
-        ListNode l1 = LinkedListBuilder.build(new Integer[] {0});
-        ListNode l2 = LinkedListBuilder.build(new Integer[] {0});
-
-        ListNode result = leetCode.addTwoNumbers(l1, l2);
-
-        LinkedListUtility.verify(new int[]{0}, result);
-    }
-
-    @Test
-    void test3() {
-        ListNode l1 = LinkedListBuilder.build(new Integer[] {7, 2, 4, 3});
-        ListNode l2 = LinkedListBuilder.build(new Integer[] {5, 6, 4});
-
-        ListNode result = leetCode.addTwoNumbers(l1, l2);
-
-        LinkedListUtility.verify(new int[]{7, 8, 0, 7}, result);
+                // Example 3: different lengths
+                Arguments.of("example_3",
+                        new Integer[]{7, 2, 4, 3},
+                        new Integer[]{5, 6, 4},
+                        new int[]{7, 8, 0, 7})
+        );
     }
 }

@@ -1,30 +1,40 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.Arrays;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class LeetCode0283Test {
+@DisplayName("LeetCode 283: Move Zeroes")
+class LeetCode0283Test {
 
-    private LeetCode0283 leetCode;
+    private static final LeetCode0283 LEET_CODE = new LeetCode0283();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0283();
+    @ParameterizedTest(name = "[{index}] case={0}, nums={1}")
+    @MethodSource("testCases")
+    void testMoveZeroes(String caseName, int[] nums, int[] expected) {
+        int[] input = Arrays.copyOf(nums, nums.length);
+        LEET_CODE.moveZeroes(nums);
+        assertArrayEquals(expected, nums, () -> "Case '%s' failed. Input nums: %s"
+                .formatted(caseName, Arrays.toString(input)));
     }
 
-    @Test
-    void test1() {
-        int[] nums = new int[]{0, 1, 0, 3, 12};
-        leetCode.moveZeroes(nums);
-        assertArrayEquals(new int[]{1, 3, 12, 0, 0}, nums);
-    }
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                // Example 1 from LeetCode
+                Arguments.of("example_1",
+                        new int[]{0, 1, 0, 3, 12},
+                        new int[]{1, 3, 12, 0, 0}),
 
-    @Test
-    void test2() {
-        int[] nums = new int[]{0};
-        leetCode.moveZeroes(nums);
-        assertArrayEquals(new int[]{0}, nums);
+                // Example 2 from LeetCode
+                Arguments.of("example_2",
+                        new int[]{0},
+                        new int[]{0})
+        );
     }
 }

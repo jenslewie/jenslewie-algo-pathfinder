@@ -4,51 +4,80 @@ import org.example.builder.LinkedListBuilder;
 import org.example.leetcode.utility.LinkedListUtility;
 import org.example.model.Pair;
 import org.example.model.linkedlist.ListNode;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.Arrays;
+import java.util.Map;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class LeetCode0160Test {
+@DisplayName("LeetCode 160: Intersection of Two Linked Lists - Algorithm Variants")
+class LeetCode0160Test {
 
-    private LeetCode0160 leetCode;
+    private static final LeetCode0160 LEET_CODE = new LeetCode0160();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0160();
+    @FunctionalInterface
+    interface GetIntersectionFunction {
+        ListNode apply(ListNode headA, ListNode headB);
     }
 
-    @Test
-    void test1() {
-        Pair<ListNode, ListNode> pair = LinkedListBuilder.buildIntersectionNode(new Integer[]{4}, new Integer[]{5, 6}, new Integer[]{1, 8, 4, 5});
-        int[] expectedValues = new int[]{1, 8, 4, 5};
+    private static final Map<String, GetIntersectionFunction> ALGO_VARIANTS = Map.of(
+            "two_pointers", LEET_CODE::getIntersectionNode,
+            "length_difference", LEET_CODE::getIntersectionNode2
+    );
 
-        ListNode result = leetCode.getIntersectionNode(pair.first(), pair.second());
-        LinkedListUtility.verify(expectedValues, result);
+    @ParameterizedTest(name = "[{index}] case={0}, algo={1}")
+    @MethodSource("allCombinations")
+    void testGetIntersectionNode(String caseName, String algoName, Integer[] listA, Integer[] listB, Integer[] intersection, int[] expected) {
+        Pair<ListNode, ListNode> pair = LinkedListBuilder.buildIntersectionNode(listA, listB, intersection);
+        ListNode result = ALGO_VARIANTS.get(algoName).apply(pair.first(), pair.second());
 
-        result = leetCode.getIntersectionNode2(pair.first(), pair.second());
-        LinkedListUtility.verify(expectedValues, result);
+        if (expected == null) {
+            assertNull(result, () -> "Case '%s' with algo='%s' failed. listA=%s, listB=%s, intersection=%s"
+                    .formatted(caseName, algoName, Arrays.toString(listA), Arrays.toString(listB),
+                            intersection == null ? "null" : Arrays.toString(intersection)));
+        } else {
+            LinkedListUtility.verify(expected, result, () -> "Case '%s' with algo='%s' failed. listA=%s, listB=%s, intersection=%s"
+                    .formatted(caseName, algoName, Arrays.toString(listA), Arrays.toString(listB),
+                            intersection == null ? "null" : Arrays.toString(intersection)));
+        }
     }
 
-    @Test
-    void test2() {
-        Pair<ListNode, ListNode> pair = LinkedListBuilder.buildIntersectionNode(new Integer[]{1, 9, 1}, new Integer[]{3}, new Integer[]{2, 4});
-        int[] expectedValues = new int[]{2, 4};
-
-        ListNode result = leetCode.getIntersectionNode(pair.first(), pair.second());
-        LinkedListUtility.verify(expectedValues, result);
-
-        result = leetCode.getIntersectionNode2(pair.first(), pair.second());
-        LinkedListUtility.verify(expectedValues, result);
+    private static Stream<Arguments> allCombinations() {
+        return testCases().flatMap(tc -> ALGO_VARIANTS.keySet().stream()
+                .map(algo -> Arguments.of(tc.name, algo, tc.listA, tc.listB, tc.intersection, tc.expected))
+        );
     }
 
-    @Test
-    void test3() {
-        ListNode head1 = LinkedListBuilder.build(new Integer[] {2, 6, 4});
-        ListNode head2 = LinkedListBuilder.build(new Integer[] {1, 5});
+    private static Stream<TestCase> testCases() {
+        return Stream.of(
+                // Example 1 from LeetCode
+                new TestCase("example_1",
+                        new Integer[]{4},
+                        new Integer[]{5, 6},
+                        new Integer[]{1, 8, 4, 5},
+                        new int[]{1, 8, 4, 5}),
 
-        assertNull(leetCode.getIntersectionNode(head1, head2));
-        assertNull(leetCode.getIntersectionNode2(head1, head2));
+                // Example 2 from LeetCode
+                new TestCase("example_2",
+                        new Integer[]{1, 9, 1},
+                        new Integer[]{3},
+                        new Integer[]{2, 4},
+                        new int[]{2, 4}),
+
+                // Example 3 from LeetCode: no intersection
+                new TestCase("example_3",
+                        new Integer[]{2, 6, 4},
+                        new Integer[]{1, 5},
+                        null,
+                        null)
+        );
     }
 
+    private record TestCase(String name, Integer[] listA, Integer[] listB, Integer[] intersection, int[] expected) {
+    }
 }

@@ -1,34 +1,63 @@
 package org.example.leetcode.global;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.Map;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LeetCode0151Test {
+@DisplayName("LeetCode 151: Reverse Words in a String - Algorithm Variants")
+class LeetCode0151Test {
 
-    private LeetCode0151 leetCode;
+    private static final LeetCode0151 LEET_CODE = new LeetCode0151();
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0151();
+    @FunctionalInterface
+    interface ReverseWordsFunction {
+        String apply(String s);
     }
 
-    @Test
-    void test1() {
-        assertEquals("blue is sky the", leetCode.reverseWords("the sky is blue"));
-        assertEquals("blue is sky the", leetCode.reverseWords2("the sky is blue"));
+    private static final Map<String, ReverseWordsFunction> ALGO_VARIANTS = Map.of(
+            "split_reverse", LEET_CODE::reverseWords,
+            "two_pointers", LEET_CODE::reverseWords2
+    );
+
+    @ParameterizedTest(name = "[{index}] case={0}, algo={1}, s=\"{2}\"")
+    @MethodSource("allCombinations")
+    void testReverseWords(String caseName, String algoName, String s, String expected) {
+        String actual = ALGO_VARIANTS.get(algoName).apply(s);
+        assertEquals(expected, actual, () -> "Case '%s' with algo='%s' failed. s=\"%s\""
+                .formatted(caseName, algoName, s));
     }
 
-    @Test
-    void test2() {
-        assertEquals("world hello", leetCode.reverseWords("  hello world  "));
-        assertEquals("world hello", leetCode.reverseWords2("  hello world  "));
+    private static Stream<Arguments> allCombinations() {
+        return testCases().flatMap(tc -> ALGO_VARIANTS.keySet().stream()
+                .map(algo -> Arguments.of(tc.name, algo, tc.s, tc.expected))
+        );
     }
 
-    @Test
-    void test3() {
-        assertEquals("example good a", leetCode.reverseWords("a good   example"));
-        assertEquals("example good a", leetCode.reverseWords2("a good   example"));
+    private static Stream<TestCase> testCases() {
+        return Stream.of(
+                // Example 1 from LeetCode
+                new TestCase("example_1",
+                        "the sky is blue",
+                        "blue is sky the"),
+
+                // Example 2 from LeetCode
+                new TestCase("example_2",
+                        "  hello world  ",
+                        "world hello"),
+
+                // Example 3 from LeetCode
+                new TestCase("example_3",
+                        "a good   example",
+                        "example good a")
+        );
+    }
+
+    private record TestCase(String name, String s, String expected) {
     }
 }

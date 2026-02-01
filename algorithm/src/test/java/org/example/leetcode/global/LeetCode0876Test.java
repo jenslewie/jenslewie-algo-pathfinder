@@ -3,35 +3,39 @@ package org.example.leetcode.global;
 import org.example.builder.LinkedListBuilder;
 import org.example.leetcode.utility.LinkedListUtility;
 import org.example.model.linkedlist.ListNode;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-public class LeetCode0876Test {
+import java.util.Arrays;
+import java.util.stream.Stream;
 
-    private LeetCode0876 leetCode;
+@DisplayName("LeetCode 876: Middle of the Linked List")
+class LeetCode0876Test {
 
-    @BeforeEach
-    public void init() {
-        leetCode = new LeetCode0876();
+    private static final LeetCode0876 LEET_CODE = new LeetCode0876();
+
+    @ParameterizedTest(name = "[{index}] case={0}, list={1}")
+    @MethodSource("testCases")
+    void testMiddleNode(String caseName, Integer[] listArray, int[] expected) {
+        ListNode listNode = LinkedListBuilder.build(listArray);
+        ListNode result = LEET_CODE.middleNode(listNode);
+        LinkedListUtility.verify(expected, result, () -> "Case '%s' failed. list=%s"
+                .formatted(caseName, Arrays.toString(listArray)));
     }
 
-    @Test
-    void test1() {
-        ListNode listNode = LinkedListBuilder.build(new Integer[]{1, 2, 3, 4, 5});
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                // Example 1 from LeetCode
+                Arguments.of("example_1",
+                        new Integer[]{1, 2, 3, 4, 5},
+                        new int[]{3, 4, 5}),
 
-        ListNode result = leetCode.middleNode(listNode);
-
-        int[] expectedValues = new int[] {3, 4, 5};
-        LinkedListUtility.verify(expectedValues, result);
-    }
-
-    @Test
-    void test2() {
-        ListNode listNode = LinkedListBuilder.build(new Integer[]{1, 2, 3, 4, 5, 6});
-
-        ListNode result = leetCode.middleNode(listNode);
-
-        int[] expectedValues = new int[] {4, 5, 6};
-        LinkedListUtility.verify(expectedValues, result);
+                // Example 2 from LeetCode
+                Arguments.of("example_2",
+                        new Integer[]{1, 2, 3, 4, 5, 6},
+                        new int[]{4, 5, 6})
+        );
     }
 }

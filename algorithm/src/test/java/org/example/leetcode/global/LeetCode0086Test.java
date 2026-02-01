@@ -3,33 +3,41 @@ package org.example.leetcode.global;
 import org.example.builder.LinkedListBuilder;
 import org.example.leetcode.utility.LinkedListUtility;
 import org.example.model.linkedlist.ListNode;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-public class LeetCode0086Test {
+import java.util.Arrays;
+import java.util.stream.Stream;
 
-    private LeetCode0086 leetcode;
+@DisplayName("LeetCode 86: Partition List")
+class LeetCode0086Test {
 
-    @BeforeEach
-    public void init() {
-        leetcode = new LeetCode0086();
+    private static final LeetCode0086 LEET_CODE = new LeetCode0086();
+
+    @ParameterizedTest(name = "[{index}] case={0}, list={1}, x={2}")
+    @MethodSource("testCases")
+    void testPartition(String caseName, Integer[] listArray, int x, int[] expected) {
+        ListNode list = LinkedListBuilder.build(listArray);
+        ListNode result = LEET_CODE.partition(list, x);
+        LinkedListUtility.verify(expected, result, () -> "Case '%s' failed. list=%s, x=%d"
+                .formatted(caseName, Arrays.toString(listArray), x));
     }
 
-    @Test
-    void test1() {
-        ListNode list = LinkedListBuilder.build(new Integer[]{1, 4, 3, 2, 5, 2});
-        ListNode result = leetcode.partition(list, 3);
+    private static Stream<Arguments> testCases() {
+        return Stream.of(
+                // Example 1 from LeetCode
+                Arguments.of("example_1",
+                        new Integer[]{1, 4, 3, 2, 5, 2},
+                        3,
+                        new int[]{1, 2, 2, 4, 3, 5}),
 
-        int[] expectedValues = new int[] {1, 2, 2, 4, 3, 5};
-        LinkedListUtility.verify(expectedValues, result);
-    }
-
-    @Test
-    void test2() {
-        ListNode list = LinkedListBuilder.build(new Integer[]{2, 1});
-        ListNode result = leetcode.partition(list, 2);
-
-        int[] expectedValues = new int[] {1, 2};
-        LinkedListUtility.verify(expectedValues, result);
+                // Example 2 from LeetCode
+                Arguments.of("example_2",
+                        new Integer[]{2, 1},
+                        2,
+                        new int[]{1, 2})
+        );
     }
 }
