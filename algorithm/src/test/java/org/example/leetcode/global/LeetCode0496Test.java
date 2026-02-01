@@ -13,7 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 496: Next Greater Element I - Algorithm Variants")
 class LeetCode0496Test {
 
-    private static final LeetCode0496 LEET_CODE = new LeetCode0496();
+    private static final LeetCode0496_1 SOLUTION_1 = new LeetCode0496_1();
+    private static final LeetCode0496_2 SOLUTION_2 = new LeetCode0496_2();
 
     @FunctionalInterface
     interface NextGreaterElementFunction {
@@ -21,8 +22,8 @@ class LeetCode0496Test {
     }
 
     private static final Map<String, NextGreaterElementFunction> ALGO_VARIANTS = Map.of(
-            "reverse_traversal", LEET_CODE::nextGreaterElement,
-            "forward_traversal", LEET_CODE::nextGreaterElement2
+            "monotonic_stack_right_to_left", SOLUTION_1::nextGreaterElement,
+            "monotonic_stack_left_to_right", SOLUTION_2::nextGreaterElement
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums1={2}, nums2={3}")

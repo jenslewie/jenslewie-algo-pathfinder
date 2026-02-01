@@ -13,7 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 71: Simplify Path - Algorithm Variants")
 class LeetCode0071Test {
 
-    private static final LeetCode0071 LEET_CODE = new LeetCode0071();
+    private static final LeetCode0071_1 LEET_CODE_1 = new LeetCode0071_1();
+    private static final LeetCode0071_2 LEET_CODE_2 = new LeetCode0071_2();
 
     @FunctionalInterface
     interface SimplifyPathFunction {
@@ -21,8 +22,8 @@ class LeetCode0071Test {
     }
 
     private static final Map<String, SimplifyPathFunction> ALGO_VARIANTS = Map.of(
-            "deque_based", LEET_CODE::simplifyPath,
-            "stack_based", LEET_CODE::simplifyPath2
+            "deque_based", LEET_CODE_1::simplifyPath,
+            "stack_based", LEET_CODE_2::simplifyPath
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, path={2}")

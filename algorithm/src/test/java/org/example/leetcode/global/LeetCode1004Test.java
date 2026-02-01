@@ -14,7 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 1004: Max Consecutive Ones III - Algorithm Variants")
 class LeetCode1004Test {
 
-    private static final LeetCode1004 LEET_CODE = new LeetCode1004();
+    private static final LeetCode1004_1 SOLUTION_1 = new LeetCode1004_1();
+    private static final LeetCode1004_2 SOLUTION_2 = new LeetCode1004_2();
 
     @FunctionalInterface
     interface LongestOnesFunction {
@@ -22,8 +23,8 @@ class LeetCode1004Test {
     }
 
     private static final Map<String, LongestOnesFunction> ALGO_VARIANTS = Map.of(
-            "sliding_window", LEET_CODE::longestOnes,
-            "sliding_window_optimized", LEET_CODE::longestOnes2
+            "deque_approach", SOLUTION_1::longestOnes,
+            "sliding_window_approach", SOLUTION_2::longestOnes
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums={2}, k={3}")

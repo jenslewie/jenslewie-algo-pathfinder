@@ -13,7 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 3: Longest Substring Without Repeating Characters - Algorithm Variants")
 class LeetCode0003Test {
 
-    private static final LeetCode0003 LEET_CODE = new LeetCode0003();
+    private static final LeetCode0003_1 LEET_CODE_1 = new LeetCode0003_1();
+    private static final LeetCode0003_2 LEET_CODE_2 = new LeetCode0003_2();
+    private static final LeetCode0003_3 LEET_CODE_3 = new LeetCode0003_3();
 
     @FunctionalInterface
     interface LengthOfLongestSubstringFunction {
@@ -21,9 +23,9 @@ class LeetCode0003Test {
     }
 
     private static final Map<String, LengthOfLongestSubstringFunction> ALGO_VARIANTS = Map.of(
-            "sliding_window_set", LEET_CODE::lengthOfLongestSubstring,
-            "sliding_window_map", LEET_CODE::lengthOfLongestSubstring2,
-            "optimized_map", LEET_CODE::lengthOfLongestSubstring3
+            "sliding_window_set", LEET_CODE_1::lengthOfLongestSubstring,
+            "sliding_window_map", LEET_CODE_2::lengthOfLongestSubstring,
+            "optimized_map", LEET_CODE_3::lengthOfLongestSubstring
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, s=\"{2}\"")

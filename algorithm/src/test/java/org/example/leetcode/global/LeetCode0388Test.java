@@ -13,7 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 388: Longest Absolute File Path - Algorithm Variants")
 class LeetCode0388Test {
 
-    private static final LeetCode0388 LEET_CODE = new LeetCode0388();
+    private static final LeetCode0388_1 SOLUTION_1 = new LeetCode0388_1();
+    private static final LeetCode0388_2 SOLUTION_2 = new LeetCode0388_2();
+    private static final LeetCode0388_3 SOLUTION_3 = new LeetCode0388_3();
 
     @FunctionalInterface
     interface LongestPathFunction {
@@ -21,9 +23,9 @@ class LeetCode0388Test {
     }
 
     private static final Map<String, LongestPathFunction> ALGO_VARIANTS = Map.of(
-            "array_level_tracking", LEET_CODE::lengthLongestPath,
-            "stack_integer", LEET_CODE::lengthLongestPath2,
-            "stack_string", LEET_CODE::lengthLongestPath3
+            "array_level_tracking", SOLUTION_1::lengthLongestPath,
+            "stack_integer", SOLUTION_2::lengthLongestPath,
+            "stack_string", SOLUTION_3::lengthLongestPath
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, input={2}")

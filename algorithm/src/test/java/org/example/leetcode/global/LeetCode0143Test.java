@@ -15,7 +15,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 143: Reorder List - Algorithm Variants")
 class LeetCode0143Test {
 
-    private static final LeetCode0143 LEET_CODE = new LeetCode0143();
+    private static final LeetCode0143_1 SOLUTION_1 = new LeetCode0143_1();
+    private static final LeetCode0143_2 SOLUTION_2 = new LeetCode0143_2();
 
     @FunctionalInterface
     interface ReorderListFunction {
@@ -23,8 +24,8 @@ class LeetCode0143Test {
     }
 
     private static final Map<String, ReorderListFunction> ALGO_VARIANTS = Map.of(
-            "reverse_and_merge_list", LEET_CODE::reorderList,
-            "stack_based", LEET_CODE::reorderList2
+            "reverse_and_merge_list", SOLUTION_1::reorderList,
+            "stack_based", SOLUTION_2::reorderList
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, input={2}")

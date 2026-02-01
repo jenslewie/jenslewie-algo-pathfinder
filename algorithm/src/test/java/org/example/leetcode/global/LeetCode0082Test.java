@@ -17,7 +17,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 @DisplayName("LeetCode 82: Remove Duplicates from Sorted List II - Algorithm Variants")
 class LeetCode0082Test {
 
-    private static final LeetCode0082 LEET_CODE = new LeetCode0082();
+    private static final LeetCode0082_1 LEET_CODE_1 = new LeetCode0082_1();
+    private static final LeetCode0082_2 LEET_CODE_2 = new LeetCode0082_2();
 
     @FunctionalInterface
     interface DeleteDuplicatesFunction {
@@ -25,8 +26,8 @@ class LeetCode0082Test {
     }
 
     private static final Map<String, DeleteDuplicatesFunction> ALGO_VARIANTS = Map.of(
-            "two_pointers_dual_list", LEET_CODE::deleteDuplicates,
-            "single_pass_sentinel", LEET_CODE::deleteDuplicates2
+            "two_pointers_dual_list", LEET_CODE_1::deleteDuplicates,
+            "single_pass_sentinel", LEET_CODE_2::deleteDuplicates
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, head={2}")

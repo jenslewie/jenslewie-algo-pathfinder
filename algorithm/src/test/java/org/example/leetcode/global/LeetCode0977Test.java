@@ -14,7 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 977: Squares of a Sorted Array - Algorithm Variants")
 class LeetCode0977Test {
 
-    private static final LeetCode0977 INSTANCE = new LeetCode0977();
+    private static final LeetCode0977_1 SOLUTION_1 = new LeetCode0977_1();
+    private static final LeetCode0977_2 SOLUTION_2 = new LeetCode0977_2();
 
     @FunctionalInterface
     interface SquareSquaresFunction {
@@ -22,8 +23,8 @@ class LeetCode0977Test {
     }
 
     private static final Map<String, SquareSquaresFunction> ALGO_VARIANTS = Map.of(
-            "sortedSquares", INSTANCE::sortedSquares,
-            "sortedSquares2", INSTANCE::sortedSquares2
+            "two_pointers_from_ends", SOLUTION_1::sortedSquares,
+            "partition_and_merge", SOLUTION_2::sortedSquares
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}")

@@ -13,7 +13,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LCR 014: String Permutation - Algorithm Variants")
 class LeetCode0014Test {
 
-    private static final LeetCode0014 LEET_CODE = new LeetCode0014();
+    private static final LeetCode0014_1 SOLUTION_1 = new LeetCode0014_1();
+    private static final LeetCode0014_2 SOLUTION_2 = new LeetCode0014_2();
+    private static final LeetCode0014_3 SOLUTION_3 = new LeetCode0014_3();
+    private static final LeetCode0014_4 SOLUTION_4 = new LeetCode0014_4();
 
     @FunctionalInterface
     interface CheckInclusionFunction {
@@ -21,10 +24,10 @@ class LeetCode0014Test {
     }
 
     private static final Map<String, CheckInclusionFunction> ALGO_VARIANTS = Map.of(
-            "sliding_window_array", LEET_CODE::checkInclusion1,
-            "sliding_window_map", LEET_CODE::checkInclusion2,
-            "optimized_array", LEET_CODE::checkInclusion3,
-            "two_pointers", LEET_CODE::checkInclusion4
+            "count_array_approach", SOLUTION_1::checkInclusion,
+            "fixed_arrays_comparison", SOLUTION_2::checkInclusion,
+            "explicit_size_check", SOLUTION_3::checkInclusion,
+            "hashmap_mapping", SOLUTION_4::checkInclusion
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, s1=\"{2}\", s2=\"{3}\"")

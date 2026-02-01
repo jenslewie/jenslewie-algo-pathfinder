@@ -5,27 +5,44 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Map;
+import java.util.function.BiFunction;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 67: Add Binary")
+@DisplayName("LeetCode 67: Add Binary - Algorithm Variants")
 class LeetCode0067Test {
 
-    private static final LeetCode0067 LEET_CODE = new LeetCode0067();
+    private static final LeetCode0067_1 LEET_CODE_1 = new LeetCode0067_1();
+    private static final LeetCode0067_2 LEET_CODE_2 = new LeetCode0067_2();
 
-    @ParameterizedTest(name = "[{index}] case={0}, a=\"{1}\", b=\"{2}\"")
-    @MethodSource("testCases")
-    void testAddBinary(String caseName, String a, String b, String expected) {
-        String actual = LEET_CODE.addBinary(a, b);
-        assertEquals(expected, actual, () -> "Case '%s' failed. a=\"%s\", b=\"%s\""
-                .formatted(caseName, a, b));
+    private static final Map<String, BiFunction<String, String, String>> ALGO_VARIANTS = Map.of(
+            "direct_iteration", LEET_CODE_1::addBinary,
+            "stack_based", LEET_CODE_2::addBinary
+    );
+
+    @ParameterizedTest(name = "[{index}] case={0}, algo={1}, a={2}, b={3}")
+    @MethodSource("allCombinations")
+    void testAddBinary(String caseName, String algoName, String a, String b, String expected) {
+        String actual = ALGO_VARIANTS.get(algoName).apply(a, b);
+        assertEquals(expected, actual, () -> "Case '%s' with algo '%s' failed. a='%s', b='%s'"
+                .formatted(caseName, algoName, a, b));
     }
 
-    private static Stream<Arguments> testCases() {
-        return Stream.of(
-                Arguments.of("example_1", "11", "1", "100"),
-                Arguments.of("example_2", "1010", "1011", "10101")
+    private static Stream<Arguments> allCombinations() {
+        return testCases().flatMap(tc -> ALGO_VARIANTS.keySet().stream()
+                .map(algo -> Arguments.of(tc.name, algo, tc.a, tc.b, tc.expected))
         );
+    }
+
+    private static Stream<TestCase> testCases() {
+        return Stream.of(
+                new TestCase("example_1", "11", "1", "100"),
+                new TestCase("example_2", "1010", "1011", "10101")
+        );
+    }
+
+    private record TestCase(String name, String a, String b, String expected) {
     }
 }

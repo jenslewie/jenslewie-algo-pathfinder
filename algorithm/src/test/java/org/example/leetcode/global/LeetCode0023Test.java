@@ -16,7 +16,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 @DisplayName("LeetCode 23: Merge k Sorted Lists - Algorithm Variants")
 class LeetCode0023Test {
 
-    private static final LeetCode0023 LEET_CODE = new LeetCode0023();
+    private static final LeetCode0023_1 LEET_CODE_1 = new LeetCode0023_1();
+    private static final LeetCode0023_2 LEET_CODE_2 = new LeetCode0023_2();
 
     @FunctionalInterface
     interface MergeKListsFunction {
@@ -24,8 +25,8 @@ class LeetCode0023Test {
     }
 
     private static final Map<String, MergeKListsFunction> ALGO_VARIANTS = Map.of(
-            "priority_queue", LEET_CODE::mergeKLists,
-            "divide_and_conquer", LEET_CODE::mergeKLists2
+            "priority_queue", LEET_CODE_1::mergeKLists,
+            "divide_and_conquer", LEET_CODE_2::mergeKLists
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}")

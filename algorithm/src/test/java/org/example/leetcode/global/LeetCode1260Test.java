@@ -16,7 +16,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 1260: Shift 2D Grid - Algorithm Variants")
 class LeetCode1260Test {
 
-    private static final LeetCode1260 LEET_CODE = new LeetCode1260();
+    private static final LeetCode1260_1 SOLUTION_1 = new LeetCode1260_1();
+    private static final LeetCode1260_2 SOLUTION_2 = new LeetCode1260_2();
+    private static final LeetCode1260_3 SOLUTION_3 = new LeetCode1260_3();
+    private static final LeetCode1260_4 SOLUTION_4 = new LeetCode1260_4();
 
     @FunctionalInterface
     interface ShiftGridFunction {
@@ -24,10 +27,10 @@ class LeetCode1260Test {
     }
 
     private static final Map<String, ShiftGridFunction> ALGO_VARIANTS = Map.of(
-            "shiftGrid", LEET_CODE::shiftGrid,
-            "shiftGrid2", LEET_CODE::shiftGrid2,
-            "shiftGrid3", LEET_CODE::shiftGrid3,
-            "shiftGrid4", LEET_CODE::shiftGrid4
+            "direct_index_mapping", SOLUTION_1::shiftGrid,
+            "reverse_array_approach", SOLUTION_2::shiftGrid,
+            "array_flattening_approach", SOLUTION_3::shiftGrid,
+            "direct_assignment_approach", SOLUTION_4::shiftGrid
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, grid={2}, k={3}")

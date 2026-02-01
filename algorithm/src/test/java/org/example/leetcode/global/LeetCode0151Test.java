@@ -13,7 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 151: Reverse Words in a String - Algorithm Variants")
 class LeetCode0151Test {
 
-    private static final LeetCode0151 LEET_CODE = new LeetCode0151();
+    private static final LeetCode0151_1 LEET_CODE_1 = new LeetCode0151_1();
+    private static final LeetCode0151_2 LEET_CODE_2 = new LeetCode0151_2();
 
     @FunctionalInterface
     interface ReverseWordsFunction {
@@ -21,8 +22,8 @@ class LeetCode0151Test {
     }
 
     private static final Map<String, ReverseWordsFunction> ALGO_VARIANTS = Map.of(
-            "split_reverse", LEET_CODE::reverseWords,
-            "two_pointers", LEET_CODE::reverseWords2
+            "split_reverse", LEET_CODE_1::reverseWords,
+            "two_pointers", LEET_CODE_2::reverseWords
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, s=\"{2}\"")

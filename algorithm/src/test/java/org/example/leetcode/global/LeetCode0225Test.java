@@ -29,7 +29,7 @@ class LeetCode0225Test {
     private static final Map<String, Supplier<StackOperations>> ALGO_VARIANTS = Map.of(
             "single_queue",
             () -> {
-                LeetCode0225 stack = new LeetCode0225();
+                LeetCode0225_1 stack = new LeetCode0225_1();
                 return new StackOperations() {
                     @Override
                     public void push(int x) {
@@ -54,26 +54,26 @@ class LeetCode0225Test {
             },
             "dual_queue",
             () -> {
-                LeetCode0225 stack = new LeetCode0225();
+                LeetCode0225_2 stack = new LeetCode0225_2();
                 return new StackOperations() {
                     @Override
                     public void push(int x) {
-                        stack.push2(x);
+                        stack.push(x);
                     }
 
                     @Override
                     public int pop() {
-                        return stack.pop2();
+                        return stack.pop();
                     }
 
                     @Override
                     public int top() {
-                        return stack.top2();
+                        return stack.top();
                     }
 
                     @Override
                     public boolean empty() {
-                        return stack.empty2();
+                        return stack.empty();
                     }
                 };
             }

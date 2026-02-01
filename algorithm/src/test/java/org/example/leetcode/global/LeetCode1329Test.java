@@ -14,7 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 1329: Sort the Matrix Diagonally - Algorithm Variants")
 class LeetCode1329Test {
 
-    private static final LeetCode1329 LEET_CODE = new LeetCode1329();
+    private static final LeetCode1329_1 SOLUTION_1 = new LeetCode1329_1();
+    private static final LeetCode1329_2 SOLUTION_2 = new LeetCode1329_2();
 
     @FunctionalInterface
     interface DiagonalSortFunction {
@@ -22,8 +23,8 @@ class LeetCode1329Test {
     }
 
     private static final Map<String, DiagonalSortFunction> ALGO_VARIANTS = Map.of(
-            "diagonalSort", LEET_CODE::diagonalSort,
-            "diagonalSort2", LEET_CODE::diagonalSort2
+            "array_based_approach", SOLUTION_1::diagonalSort,
+            "hashmap_based_approach", SOLUTION_2::diagonalSort
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, mat={2}")

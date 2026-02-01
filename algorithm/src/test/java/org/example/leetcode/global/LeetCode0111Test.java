@@ -8,29 +8,46 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.Arrays;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 111: Minimum Depth of Binary Tree")
+@DisplayName("LeetCode 111: Minimum Depth of Binary Tree - Algorithm Variants")
 class LeetCode0111Test {
 
-    private static final LeetCode0111 LEET_CODE = new LeetCode0111();
+    private static final LeetCode0111_1 LEET_CODE_1 = new LeetCode0111_1();
+    private static final LeetCode0111_2 LEET_CODE_2 = new LeetCode0111_2();
 
-    @ParameterizedTest(name = "[{index}] case={0}, tree={1}")
-    @MethodSource("testCases")
-    void testMinDepth(String caseName, Integer[] treeArray, int expected) {
+    private static final Map<String, Function<TreeNode, Integer>> ALGO_VARIANTS = Map.of(
+            "bfs_approach", LEET_CODE_1::minDepth,
+            "dfs_traversal_approach", LEET_CODE_2::minDepth
+    );
+
+    @ParameterizedTest(name = "[{index}] case={0}, algo={1}, tree={2}")
+    @MethodSource("allCombinations")
+    void testMinDepth(String caseName, String algoName, Integer[] treeArray, int expected) {
         TreeNode root = BinaryTreeBuilder.buildTree(treeArray, 0);
-        int actual = LEET_CODE.minDepth(root);
-        assertEquals(expected, actual, () -> "Case '%s' failed. tree=%s"
-                .formatted(caseName, Arrays.toString(treeArray)));
+        int actual = ALGO_VARIANTS.get(algoName).apply(root);
+        assertEquals(expected, actual, () -> "Case '%s' with algo='%s' failed. tree=%s"
+                .formatted(caseName, algoName, Arrays.toString(treeArray)));
     }
 
-    private static Stream<Arguments> testCases() {
-        return Stream.of(
-                Arguments.of("empty_tree", new Integer[]{}, 0),
-                Arguments.of("single_node", new Integer[]{1}, 1),
-                Arguments.of("right_skewed", new Integer[]{1, null, 3, null, null, null, 7}, 3)
+    private static Stream<Arguments> allCombinations() {
+        return testCases().flatMap(tc -> ALGO_VARIANTS.keySet().stream()
+                .map(algo -> Arguments.of(tc.name, algo, tc.treeArray, tc.expected))
         );
+    }
+
+    private static Stream<TestCase> testCases() {
+        return Stream.of(
+                new TestCase("empty_tree", new Integer[]{}, 0),
+                new TestCase("single_node", new Integer[]{1}, 1),
+                new TestCase("right_skewed", new Integer[]{1, null, 3, null, null, null, 7}, 3)
+        );
+    }
+
+    private record TestCase(String name, Integer[] treeArray, int expected) {
     }
 }

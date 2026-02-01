@@ -13,7 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 14: Longest Common Prefix - Algorithm Variants")
 class LeetCode0014Test {
 
-    private static final LeetCode0014 LEET_CODE = new LeetCode0014();
+    private static final LeetCode0014_1 LEET_CODE_1 = new LeetCode0014_1();
+    private static final LeetCode0014_2 LEET_CODE_2 = new LeetCode0014_2();
+    private static final LeetCode0014_3 LEET_CODE_3 = new LeetCode0014_3();
 
     @FunctionalInterface
     interface LCPFunction {
@@ -21,9 +23,9 @@ class LeetCode0014Test {
     }
 
     private static final Map<String, LCPFunction> ALGO_VARIANTS = Map.of(
-            "vertical_scanning", LEET_CODE::longestCommonPrefix,
-            "horizontal_scanning", LEET_CODE::longestCommonPrefix2,
-            "character_map_scanning", LEET_CODE::longestCommonPrefix3
+            "vertical_scanning", LEET_CODE_1::longestCommonPrefix,
+            "horizontal_scanning", LEET_CODE_2::longestCommonPrefix,
+            "character_map_scanning", LEET_CODE_3::longestCommonPrefix
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, strs={2}")

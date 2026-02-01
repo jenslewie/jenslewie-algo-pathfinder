@@ -16,11 +16,13 @@ import static org.junit.jupiter.api.Assertions.fail;
 @DisplayName("LeetCode 80: Remove Duplicates from Sorted Array II - Algorithm Variants")
 public class LeetCode0080Test {
 
-    private static final LeetCode0080 LEET_CODE = new LeetCode0080();
+    private static final LeetCode0080_1 LEET_CODE_1 = new LeetCode0080_1();
+    private static final LeetCode0080_2 LEET_CODE_2 = new LeetCode0080_2();
+    private static final LeetCode0080_3 LEET_CODE_3 = new LeetCode0080_3();
     private static final Map<String, Function<int[], Integer>> ALGO_VARIANTS = Map.of(
-            "removeDuplicates1", LEET_CODE::removeDuplicates1,
-            "removeDuplicates2", LEET_CODE::removeDuplicates2,
-            "removeDuplicates3", LEET_CODE::removeDuplicates3
+            "removeDuplicates1", LEET_CODE_1::removeDuplicates,
+            "removeDuplicates2", LEET_CODE_2::removeDuplicates,
+            "removeDuplicates3", LEET_CODE_3::removeDuplicates
     );
 
     @ParameterizedTest(name = "[{index}] {0} | Input: {1}")

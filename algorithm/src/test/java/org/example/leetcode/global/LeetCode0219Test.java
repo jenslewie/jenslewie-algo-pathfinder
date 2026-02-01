@@ -14,7 +14,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 219: Contains Duplicate II - Algorithm Variants")
 class LeetCode0219Test {
 
-    private static final LeetCode0219 LEET_CODE = new LeetCode0219();
+    private static final LeetCode0219_1 SOLUTION_1 = new LeetCode0219_1();
+    private static final LeetCode0219_2 SOLUTION_2 = new LeetCode0219_2();
+    private static final LeetCode0219_3 SOLUTION_3 = new LeetCode0219_3();
 
     @FunctionalInterface
     interface ContainsDuplicateFunction {
@@ -22,9 +24,9 @@ class LeetCode0219Test {
     }
 
     private static final Map<String, ContainsDuplicateFunction> ALGO_VARIANTS = Map.of(
-            "hash_map", LEET_CODE::containsNearbyDuplicate,
-            "sliding_window_set", LEET_CODE::containsNearbyDuplicate2,
-            "brute_force", LEET_CODE::containsNearbyDuplicate3
+            "hash_map", SOLUTION_1::containsNearbyDuplicate,
+            "sliding_window_set", SOLUTION_2::containsNearbyDuplicate,
+            "brute_force", SOLUTION_3::containsNearbyDuplicate
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums={2}, k={3}")

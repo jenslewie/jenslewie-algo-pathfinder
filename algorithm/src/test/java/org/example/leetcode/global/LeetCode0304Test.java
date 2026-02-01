@@ -22,20 +22,14 @@ class LeetCode0304Test {
     private static final Map<String, QueryAlgorithm> ALGO_VARIANTS = Map.of(
             "2d_prefix_sum",
             (matrix, r1, c1, r2, c2) -> {
-                LeetCode0304 leetCode = new LeetCode0304(matrix, "1");
+                LeetCode0304_1 leetCode = new LeetCode0304_1(matrix);
                 return leetCode.sumRegion(r1, c1, r2, c2);
             },
 
             "row_prefix_sum",
             (matrix, r1, c1, r2, c2) -> {
-                LeetCode0304 leetCode = new LeetCode0304(matrix, "2");
-                return leetCode.sumRegion2(r1, c1, r2, c2);
-            },
-
-            "others",
-            (matrix, r1, c1, r2, c2) -> {
-                LeetCode0304 leetCode = new LeetCode0304(matrix, "3");
-                return leetCode.sumRegion2(r1, c1, r2, c2);
+                LeetCode0304_2 leetCode = new LeetCode0304_2(matrix);
+                return leetCode.sumRegion(r1, c1, r2, c2);
             }
     );
 

@@ -18,7 +18,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 @DisplayName("LeetCode 160: Intersection of Two Linked Lists - Algorithm Variants")
 class LeetCode0160Test {
 
-    private static final LeetCode0160 LEET_CODE = new LeetCode0160();
+    private static final LeetCode0160_1 LEET_CODE_1 = new LeetCode0160_1();
+    private static final LeetCode0160_2 LEET_CODE_2 = new LeetCode0160_2();
 
     @FunctionalInterface
     interface GetIntersectionFunction {
@@ -26,8 +27,8 @@ class LeetCode0160Test {
     }
 
     private static final Map<String, GetIntersectionFunction> ALGO_VARIANTS = Map.of(
-            "two_pointers", LEET_CODE::getIntersectionNode,
-            "length_difference", LEET_CODE::getIntersectionNode2
+            "length_difference", LEET_CODE_1::getIntersectionNode,
+            "two_pointers", LEET_CODE_2::getIntersectionNode
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}")

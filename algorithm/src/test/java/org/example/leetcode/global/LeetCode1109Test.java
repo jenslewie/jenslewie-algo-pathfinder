@@ -14,7 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 1109: Corporate Flight Bookings - Algorithm Variants")
 class LeetCode1109Test {
 
-    private static final LeetCode1109 LEET_CODE = new LeetCode1109();
+    private static final LeetCode1109_1 SOLUTION_1 = new LeetCode1109_1();
+    private static final LeetCode1109_2 SOLUTION_2 = new LeetCode1109_2();
 
     @FunctionalInterface
     interface FlightBookingsFunction {
@@ -22,8 +23,8 @@ class LeetCode1109Test {
     }
 
     private static final Map<String, FlightBookingsFunction> ALGO_VARIANTS = Map.of(
-            "diff_inplace", LEET_CODE::corpFlightBookings,
-            "diff_separate", LEET_CODE::corpFlightBookings2
+            "difference_array_inplace", SOLUTION_1::corpFlightBookings,
+            "difference_array_separate", SOLUTION_2::corpFlightBookings
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, books={2}, n={3}")

@@ -35,7 +35,7 @@ class LeetCode0895Test {
     }
 
     private static List<Integer> executeArrayVersion(List<String> ops, List<Integer> vals) {
-        LeetCode0895 stack = new LeetCode0895();
+        LeetCode0895_1 stack = new LeetCode0895_1();
         List<Integer> result = new ArrayList<>();
         int valIndex = 0;
 
@@ -55,7 +55,7 @@ class LeetCode0895Test {
     }
 
     private static List<Integer> executeMapVersion(List<String> ops, List<Integer> vals) {
-        LeetCode0895 stack = new LeetCode0895();
+        LeetCode0895_2 stack = new LeetCode0895_2();
         List<Integer> result = new ArrayList<>();
         int valIndex = 0;
 
@@ -64,10 +64,10 @@ class LeetCode0895Test {
                 case "FreqStack":
                     break;
                 case "push":
-                    stack.push2(vals.get(valIndex++));
+                    stack.push(vals.get(valIndex++));
                     break;
                 case "pop":
-                    result.add(stack.pop2());
+                    result.add(stack.pop());
                     break;
             }
         }

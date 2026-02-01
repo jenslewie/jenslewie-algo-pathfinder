@@ -5,7 +5,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,7 +30,14 @@ class LeetCode0155Test {
     }
 
     private static List<Integer> simulate(String algo, List<String> ops, List<Integer> vals) {
-        LeetCode0155 stack = new LeetCode0155();
+        MinStack stack;
+        switch (algo) {
+            case "int_array_stack" -> stack = new LeetCode0155_1();
+            case "dual_integer_stack" -> stack = new LeetCode0155_2();
+            case "stack_with_map" -> stack = new LeetCode0155_3();
+            default -> throw new IllegalArgumentException("Unknown algorithm: " + algo);
+        }
+        
         List<Integer> result = new ArrayList<>();
         int valIndex = 0;
 
@@ -38,36 +47,16 @@ class LeetCode0155Test {
                     break;
                 case "push":
                     int val = vals.get(valIndex++);
-                    switch (algo) {
-                        case "int_array_stack" -> stack.push(val);
-                        case "dual_integer_stack" -> stack.push2(val);
-                        case "stack_with_map" -> stack.push3(val);
-                    }
+                    stack.push(val);
                     break;
                 case "pop":
-                    switch (algo) {
-                        case "int_array_stack" -> stack.pop();
-                        case "dual_integer_stack" -> stack.pop2();
-                        case "stack_with_map" -> stack.pop3();
-                    }
+                    stack.pop();
                     break;
                 case "top":
-                    int top = switch (algo) {
-                        case "int_array_stack" -> stack.top();
-                        case "dual_integer_stack" -> stack.top2();
-                        case "stack_with_map" -> stack.top3();
-                        default -> throw new IllegalStateException("Unexpected value: " + algo);
-                    };
-                    result.add(top);
+                    result.add(stack.top());
                     break;
                 case "getMin":
-                    int min = switch (algo) {
-                        case "int_array_stack" -> stack.getMin();
-                        case "dual_integer_stack" -> stack.getMin2();
-                        case "stack_with_map" -> stack.getMin3();
-                        default -> throw new IllegalStateException("Unexpected value: " + algo);
-                    };
-                    result.add(min);
+                    result.add(stack.getMin());
                     break;
             }
         }

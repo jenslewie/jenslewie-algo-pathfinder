@@ -14,7 +14,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 1094: Car Pooling - Algorithm Variants")
 class LeetCode1094Test {
 
-    private static final LeetCode1094 LEET_CODE = new LeetCode1094();
+    private static final LeetCode1094_1 SOLUTION_1 = new LeetCode1094_1();
+    private static final LeetCode1094_2 SOLUTION_2 = new LeetCode1094_2();
+    private static final LeetCode1094_3 SOLUTION_3 = new LeetCode1094_3();
 
     @FunctionalInterface
     interface CarPoolingFunction {
@@ -22,9 +24,9 @@ class LeetCode1094Test {
     }
 
     private static final Map<String, CarPoolingFunction> ALGO_VARIANTS = Map.of(
-            "diff_array", LEET_CODE::carPooling,
-            "diff_array_with_util", LEET_CODE::carPooling2,
-            "brute_force_map", LEET_CODE::carPooling3
+            "diff_array", SOLUTION_1::carPooling,
+            "diff_array_with_util", SOLUTION_2::carPooling,
+            "brute_force_map", SOLUTION_3::carPooling
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, trips={2}, capacity={3}")

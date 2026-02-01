@@ -13,7 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 410: Split Array Largest Sum - Algorithm Variants")
 class LeetCode0410Test {
 
-    private static final LeetCode0410 LEET_CODE = new LeetCode0410();
+    private static final LeetCode0410_1 SOLUTION_1 = new LeetCode0410_1();
+    private static final LeetCode0410_2 SOLUTION_2 = new LeetCode0410_2();
 
     @FunctionalInterface
     interface SplitArrayFunction {
@@ -21,8 +22,8 @@ class LeetCode0410Test {
     }
 
     private static final Map<String, SplitArrayFunction> ALGO_VARIANTS = Map.of(
-            "binary_search_v1", LEET_CODE::splitArray,
-            "binary_search_v2", LEET_CODE::splitArray2
+            "binary_search_v1", SOLUTION_1::splitArray,
+            "binary_search_v2", SOLUTION_2::splitArray
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums={2}, k={3}")

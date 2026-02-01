@@ -13,7 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 239: Sliding Window Maximum - Algorithm Variants")
 class LeetCode0239Test {
 
-    private static final LeetCode0239 LEET_CODE = new LeetCode0239();
+    private static final LeetCode0239_1 SOLUTION_1 = new LeetCode0239_1();
+    private static final LeetCode0239_2 SOLUTION_2 = new LeetCode0239_2();
 
     @FunctionalInterface
     interface MaxSlidingWindowFunction {
@@ -21,8 +22,8 @@ class LeetCode0239Test {
     }
 
     private static final Map<String, MaxSlidingWindowFunction> ALGO_VARIANTS = Map.of(
-            "monotonic_deque", LEET_CODE::maxSlidingWindow,
-            "priority_queue", LEET_CODE::maxSlidingWindow2
+            "monotonic_deque", SOLUTION_1::maxSlidingWindow,
+            "priority_queue", SOLUTION_2::maxSlidingWindow
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums={2}, k={3}")

@@ -17,7 +17,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 @DisplayName("LeetCode 206: Reverse Linked List - Algorithm Variants")
 class LeetCode0206Test {
 
-    private static final LeetCode0206 LEET_CODE = new LeetCode0206();
+    private static final LeetCode0206_1 SOLUTION_1 = new LeetCode0206_1();
+    private static final LeetCode0206_2 SOLUTION_2 = new LeetCode0206_2();
 
     @FunctionalInterface
     interface ReverseListFunction {
@@ -25,8 +26,8 @@ class LeetCode0206Test {
     }
 
     private static final Map<String, ReverseListFunction> ALGO_VARIANTS = Map.of(
-            "iterative", LEET_CODE::reverseList,
-            "sentinel_node", LEET_CODE::reverseList2
+            "iterative", SOLUTION_1::reverseList,
+            "sentinel_node", SOLUTION_2::reverseList
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, head={2}")

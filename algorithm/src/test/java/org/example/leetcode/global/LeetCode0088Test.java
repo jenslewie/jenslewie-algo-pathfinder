@@ -14,7 +14,9 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 88: Merge Sorted Array - Algorithm Variants")
 class LeetCode0088Test {
 
-    private static final LeetCode0088 LEET_CODE = new LeetCode0088();
+    private static final LeetCode0088_1 LEET_CODE_1 = new LeetCode0088_1();
+    private static final LeetCode0088_2 LEET_CODE_2 = new LeetCode0088_2();
+    private static final LeetCode0088_3 LEET_CODE_3 = new LeetCode0088_3();
 
     @FunctionalInterface
     interface MergeFunction {
@@ -22,9 +24,9 @@ class LeetCode0088Test {
     }
 
     private static final Map<String, MergeFunction> ALGO_VARIANTS = Map.of(
-            "merge", LEET_CODE::merge,
-            "merge2", LEET_CODE::merge2,
-            "merge3", LEET_CODE::merge3
+            "merge", LEET_CODE_1::merge,
+            "merge2", LEET_CODE_2::merge,
+            "merge3", LEET_CODE_3::merge
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums1={2}, m={3}, nums2={4}, n={5}")

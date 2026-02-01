@@ -13,7 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 2073: Time Needed to Buy Tickets - Algorithm Variants")
 class LeetCode2073Test {
 
-    private static final LeetCode2073 LEET_CODE = new LeetCode2073();
+    private static final LeetCode2073_1 SOLUTION_1 = new LeetCode2073_1();
+    private static final LeetCode2073_2 SOLUTION_2 = new LeetCode2073_2();
 
     @FunctionalInterface
     interface TimeRequiredFunction {
@@ -21,8 +22,8 @@ class LeetCode2073Test {
     }
 
     private static final Map<String, TimeRequiredFunction> ALGO_VARIANTS = Map.of(
-            "optimized_min", LEET_CODE::timeRequiredToBuy,
-            "conditional_logic", LEET_CODE::timeRequiredToBuy2
+            "mathematical_calculation", SOLUTION_1::timeRequiredToBuy,
+            "conditional_checks", SOLUTION_2::timeRequiredToBuy
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, tickets={2}, k={3}")

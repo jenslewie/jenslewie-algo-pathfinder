@@ -9,35 +9,58 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.Arrays;
+import java.util.Map;
 import java.util.stream.Stream;
 
-@DisplayName("LeetCode 61: Rotate List")
+@DisplayName("LeetCode 61: Rotate List - Algorithm Variants")
 class LeetCode0061Test {
 
-    private static final LeetCode0061 LEET_CODE = new LeetCode0061();
+    private static final LeetCode0061_1 LEET_CODE_1 = new LeetCode0061_1();
+    private static final LeetCode0061_2 LEET_CODE_2 = new LeetCode0061_2();
+    private static final LeetCode0061_3 LEET_CODE_3 = new LeetCode0061_3();
 
-    @ParameterizedTest(name = "[{index}] case={0}, head={1}, k={2}")
-    @MethodSource("testCases")
-    void testRotateRight(String caseName, Integer[] headArray, int k, int[] expected) {
-        ListNode head = LinkedListBuilder.build(headArray);
-        ListNode result = LEET_CODE.rotateRight(head, k);
-        LinkedListUtility.verify(expected, result, () -> "Case '%s' failed. head=%s, k=%d"
-                .formatted(caseName, Arrays.toString(headArray), k));
+    @FunctionalInterface
+    interface RotateRightFunction {
+        ListNode apply(ListNode head, int k);
     }
 
-    private static Stream<Arguments> testCases() {
+    private static final Map<String, RotateRightFunction> ALGO_VARIANTS = Map.of(
+            "calculate_position", LEET_CODE_1::rotateRight,
+            "move_nodes_to_front", LEET_CODE_2::rotateRight,
+            "reverse_parts", LEET_CODE_3::rotateRight
+    );
+
+    @ParameterizedTest(name = "[{index}] case={0}, algo={1}, head={2}, k={3}")
+    @MethodSource("allCombinations")
+    void testRotateRight(String caseName, String algoName, Integer[] headArray, int k, int[] expected) {
+        ListNode head = LinkedListBuilder.build(headArray);
+        ListNode result = ALGO_VARIANTS.get(algoName).apply(head, k);
+        LinkedListUtility.verify(expected, result, () -> "Case '%s' with algo='%s' failed. head=%s, k=%d"
+                .formatted(caseName, algoName, Arrays.toString(headArray), k));
+    }
+
+    private static Stream<Arguments> allCombinations() {
+        return testCases().flatMap(tc -> ALGO_VARIANTS.keySet().stream()
+                .map(algo -> Arguments.of(tc.name, algo, tc.headArray, tc.k, tc.expected))
+        );
+    }
+
+    private static Stream<TestCase> testCases() {
         return Stream.of(
                 // Example 1 from LeetCode
-                Arguments.of("example_1",
+                new TestCase("example_1",
                         new Integer[]{1, 2, 3, 4, 5},
                         2,
                         new int[]{4, 5, 1, 2, 3}),
 
                 // Example 2 from LeetCode
-                Arguments.of("example_2",
+                new TestCase("example_2",
                         new Integer[]{1, 2},
                         0,
                         new int[]{1, 2})
         );
+    }
+
+    private record TestCase(String name, Integer[] headArray, int k, int[] expected) {
     }
 }

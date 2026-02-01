@@ -13,7 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 34: Find First and Last Position - Algorithm Variants")
 class LeetCode0034Test {
 
-    private static final LeetCode0034 LEET_CODE = new LeetCode0034();
+    private static final LeetCode0034_1 LEET_CODE_1 = new LeetCode0034_1();
+    private static final LeetCode0034_2 LEET_CODE_2 = new LeetCode0034_2();
 
     @FunctionalInterface
     interface SearchRangeFunction {
@@ -21,8 +22,8 @@ class LeetCode0034Test {
     }
 
     private static final Map<String, SearchRangeFunction> ALGO_VARIANTS = Map.of(
-            "left_bound_twice", LEET_CODE::searchRange,
-            "left_and_right_bound", LEET_CODE::searchRange2
+            "left_bound_twice", LEET_CODE_1::searchRange,
+            "left_and_right_bound", LEET_CODE_2::searchRange
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums={2}, target={3}")
