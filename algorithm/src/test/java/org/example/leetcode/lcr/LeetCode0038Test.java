@@ -5,6 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -29,8 +30,9 @@ class LeetCode0038Test {
     void testDailyTemperatures(String caseName, String algoName, int[] temperatures, int[] expected) {
         int[] actual = ALGO_VARIANTS.get(algoName).apply(temperatures);
 
-        assertArrayEquals(expected, actual, () -> String.format("Case '%s' with algo='%s' failed. temperatures=%s",
-                caseName, algoName, java.util.Arrays.toString(temperatures)));
+        assertArrayEquals(expected, actual,
+                String.format("Case '%s' with algo='%s' failed. temperatures=%s",
+                        caseName, algoName, Arrays.toString(temperatures)));
     }
 
     private static Stream<Arguments> allCombinations() {

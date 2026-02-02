@@ -5,6 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -31,8 +32,9 @@ class LeetCode2073Test {
     void testTimeRequiredToBuy(String caseName, String algoName, int[] tickets, int k, int expected) {
         int actual = ALGO_VARIANTS.get(algoName).apply(tickets, k);
 
-        assertEquals(expected, actual, () -> "Case '%s' with algo='%s' failed. tickets=%s, k=%d"
-                .formatted(caseName, algoName, java.util.Arrays.toString(tickets), k));
+        assertEquals(expected, actual,
+                String.format("Case '%s' with algo='%s' failed. tickets=%s, k=%d",
+                        caseName, algoName, Arrays.toString(tickets), k));
     }
 
     private static Stream<Arguments> allCombinations() {

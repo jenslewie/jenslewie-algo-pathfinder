@@ -5,6 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -32,7 +33,7 @@ class LeetCode0496Test {
         int[] actual = ALGO_VARIANTS.get(algoName).apply(nums1, nums2);
 
         assertArrayEquals(expected, actual, () -> "Case '%s' with algo='%s' failed. nums1=%s, nums2=%s"
-                .formatted(caseName, algoName, java.util.Arrays.toString(nums1), java.util.Arrays.toString(nums2)));
+                .formatted(caseName, algoName, Arrays.toString(nums1), Arrays.toString(nums2)));
     }
 
     private static Stream<Arguments> allCombinations() {
