@@ -12,12 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LCR 167: Dismantling Action (Longest Substring)")
 class LeetCode0167Test {
 
-    private static final LeetCode0167 LEET_CODE = new LeetCode0167();
+    private static final LeetCode0167 SOLUTION = new LeetCode0167();
 
     @ParameterizedTest(name = "[{index}] case={0}, s=\"{1}\"")
     @MethodSource("testCases")
     void testDismantlingAction(String caseName, String s, int expected) {
-        int actual = LEET_CODE.dismantlingAction(s);
+        int actual = SOLUTION.dismantlingAction(s);
         assertEquals(expected, actual, () -> "Case '%s' failed. s=\"%s\""
                 .formatted(caseName, s));
     }

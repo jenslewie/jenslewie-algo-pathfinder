@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 @DisplayName("LCR 025: Add Two Numbers II")
 class LeetCode0025Test {
 
-    private static final LeetCode0025 LEET_CODE = new LeetCode0025();
+    private static final LeetCode0025 SOLUTION = new LeetCode0025();
 
     @ParameterizedTest(name = "[{index}] case={0}, l1={1}, l2={2}")
     @MethodSource("testCases")
@@ -22,7 +22,7 @@ class LeetCode0025Test {
         ListNode l1 = LinkedListBuilder.build(l1Array);
         ListNode l2 = LinkedListBuilder.build(l2Array);
 
-        ListNode result = LEET_CODE.addTwoNumbers(l1, l2);
+        ListNode result = SOLUTION.addTwoNumbers(l1, l2);
 
         LinkedListUtility.verify(expected, result, () -> "Case '%s' failed. l1=%s, l2=%s"
                 .formatted(caseName, Arrays.toString(l1Array), Arrays.toString(l2Array)));

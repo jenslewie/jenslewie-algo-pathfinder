@@ -12,12 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 76: Minimum Window Substring")
 class LeetCode0076Test {
 
-    private static final LeetCode0076 LEET_CODE = new LeetCode0076();
+    private static final LeetCode0076 SOLUTION = new LeetCode0076();
 
     @ParameterizedTest(name = "[{index}] case={0}, s=\"{1}\", t=\"{2}\"")
     @MethodSource("testCases")
     void testMinWindow(String caseName, String s, String t, String expected) {
-        String actual = LEET_CODE.minWindow(s, t);
+        String actual = SOLUTION.minWindow(s, t);
         assertEquals(expected, actual, () -> "Case '%s' failed. s=\"%s\", t=\"%s\""
                 .formatted(caseName, s, t));
     }

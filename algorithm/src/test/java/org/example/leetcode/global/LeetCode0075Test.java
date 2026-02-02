@@ -15,16 +15,16 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 75: Sort Colors - Algorithm Variants Test")
 public class LeetCode0075Test {
 
-    private static final LeetCode0075_1 LEET_CODE_1 = new LeetCode0075_1();
-    private static final LeetCode0075_2 LEET_CODE_2 = new LeetCode0075_2();
-    private static final LeetCode0075_3 LEET_CODE_3 = new LeetCode0075_3();
-    private static final LeetCode0075_4 LEET_CODE_4 = new LeetCode0075_4();
+    private static final LeetCode0075_1 SOLUTION_1 = new LeetCode0075_1();
+    private static final LeetCode0075_2 SOLUTION_2 = new LeetCode0075_2();
+    private static final LeetCode0075_3 SOLUTION_3 = new LeetCode0075_3();
+    private static final LeetCode0075_4 SOLUTION_4 = new LeetCode0075_4();
 
     private static final Map<String, Consumer<int[]>> ALGO_VARIANTS = Map.of(
-            "sortColors", LEET_CODE_1::sortColors,
-            "sortColors2", LEET_CODE_2::sortColors,
-            "sortColors3", LEET_CODE_3::sortColors,
-            "sortColors4", LEET_CODE_4::sortColors
+            "sortColors", SOLUTION_1::sortColors,
+            "sortColors2", SOLUTION_2::sortColors,
+            "sortColors3", SOLUTION_3::sortColors,
+            "sortColors4", SOLUTION_4::sortColors
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums={2}")

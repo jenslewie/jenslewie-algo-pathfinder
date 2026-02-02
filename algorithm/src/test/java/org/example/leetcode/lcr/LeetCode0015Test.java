@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LCR 015: Find All Anagrams in a String")
 class LeetCode0015Test {
 
-    private static final LeetCode0015 LEET_CODE = new LeetCode0015();
+    private static final LeetCode0015 SOLUTION = new LeetCode0015();
 
     @ParameterizedTest(name = "[{index}] case={0}, s=\"{1}\", p=\"{2}\"")
     @MethodSource("testCases")
     void testFindAnagrams(String caseName, String s, String p, List<Integer> expected) {
-        List<Integer> actual = LEET_CODE.findAnagrams(s, p);
+        List<Integer> actual = SOLUTION.findAnagrams(s, p);
         assertEquals(expected, actual, () -> "Case '%s' failed. s=\"%s\", p=\"%s\""
                 .formatted(caseName, s, p));
     }

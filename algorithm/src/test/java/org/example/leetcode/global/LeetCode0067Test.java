@@ -14,12 +14,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 67: Add Binary - Algorithm Variants")
 class LeetCode0067Test {
 
-    private static final LeetCode0067_1 LEET_CODE_1 = new LeetCode0067_1();
-    private static final LeetCode0067_2 LEET_CODE_2 = new LeetCode0067_2();
+    private static final LeetCode0067_1 SOLUTION_1 = new LeetCode0067_1();
+    private static final LeetCode0067_2 SOLUTION_2 = new LeetCode0067_2();
 
     private static final Map<String, BiFunction<String, String, String>> ALGO_VARIANTS = Map.of(
-            "direct_iteration", LEET_CODE_1::addBinary,
-            "stack_based", LEET_CODE_2::addBinary
+            "direct_iteration", SOLUTION_1::addBinary,
+            "stack_based", SOLUTION_2::addBinary
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, a={2}, b={3}")

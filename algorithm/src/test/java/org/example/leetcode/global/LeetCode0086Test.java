@@ -14,13 +14,13 @@ import java.util.stream.Stream;
 @DisplayName("LeetCode 86: Partition List")
 class LeetCode0086Test {
 
-    private static final LeetCode0086 LEET_CODE = new LeetCode0086();
+    private static final LeetCode0086 SOLUTION = new LeetCode0086();
 
     @ParameterizedTest(name = "[{index}] case={0}, list={1}, x={2}")
     @MethodSource("testCases")
     void testPartition(String caseName, Integer[] listArray, int x, int[] expected) {
         ListNode list = LinkedListBuilder.build(listArray);
-        ListNode result = LEET_CODE.partition(list, x);
+        ListNode result = SOLUTION.partition(list, x);
         LinkedListUtility.verify(expected, result, () -> "Case '%s' failed. list=%s, x=%d"
                 .formatted(caseName, Arrays.toString(listArray), x));
     }

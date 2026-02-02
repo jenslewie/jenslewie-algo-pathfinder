@@ -13,13 +13,13 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 283: Move Zeroes")
 class LeetCode0283Test {
 
-    private static final LeetCode0283 LEET_CODE = new LeetCode0283();
+    private static final LeetCode0283 SOLUTION = new LeetCode0283();
 
     @ParameterizedTest(name = "[{index}] case={0}, nums={1}")
     @MethodSource("testCases")
     void testMoveZeroes(String caseName, int[] nums, int[] expected) {
         int[] input = Arrays.copyOf(nums, nums.length);
-        LEET_CODE.moveZeroes(nums);
+        SOLUTION.moveZeroes(nums);
         assertArrayEquals(expected, nums, () -> "Case '%s' failed. Input nums: %s"
                 .formatted(caseName, Arrays.toString(input)));
     }

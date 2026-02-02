@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 @DisplayName("LeetCode 21: Merge Two Sorted Lists")
 class LeetCode0021Test {
 
-    private static final LeetCode0021 LEET_CODE = new LeetCode0021();
+    private static final LeetCode0021 SOLUTION = new LeetCode0021();
 
     @ParameterizedTest(name = "[{index}] case={0}, list1={1}, list2={2}")
     @MethodSource("testCases")
@@ -24,7 +24,7 @@ class LeetCode0021Test {
         ListNode list1 = LinkedListBuilder.build(list1Array);
         ListNode list2 = LinkedListBuilder.build(list2Array);
 
-        ListNode result = LEET_CODE.mergeTwoLists(list1, list2);
+        ListNode result = SOLUTION.mergeTwoLists(list1, list2);
 
         if (expected == null) {
             assertNull(result, () -> "Case '%s' failed. list1=%s, list2=%s"

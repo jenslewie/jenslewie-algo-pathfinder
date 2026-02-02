@@ -17,12 +17,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 111: Minimum Depth of Binary Tree - Algorithm Variants")
 class LeetCode0111Test {
 
-    private static final LeetCode0111_1 LEET_CODE_1 = new LeetCode0111_1();
-    private static final LeetCode0111_2 LEET_CODE_2 = new LeetCode0111_2();
+    private static final LeetCode0111_1 SOLUTION_1 = new LeetCode0111_1();
+    private static final LeetCode0111_2 SOLUTION_2 = new LeetCode0111_2();
 
     private static final Map<String, Function<TreeNode, Integer>> ALGO_VARIANTS = Map.of(
-            "bfs_approach", LEET_CODE_1::minDepth,
-            "dfs_traversal_approach", LEET_CODE_2::minDepth
+            "bfs_approach", SOLUTION_1::minDepth,
+            "dfs_traversal_approach", SOLUTION_2::minDepth
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, tree={2}")

@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LCR 036: Evaluate RPN - Algorithm Variants")
 class LeetCode0036Test {
 
-    private static final LeetCode0036 LEET_CODE = new LeetCode0036();
+    private static final LeetCode0036 SOLUTION = new LeetCode0036();
 
     @FunctionalInterface
     interface EvalRPNFunction {
@@ -21,7 +21,7 @@ class LeetCode0036Test {
     }
 
     private static final Map<String, EvalRPNFunction> ALGO_VARIANTS = Map.of(
-            "array_stack", LEET_CODE::evalRPN
+            "array_stack", SOLUTION::evalRPN
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, tokens={2}")

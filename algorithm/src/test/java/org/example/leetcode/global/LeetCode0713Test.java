@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 713: Subarray Product Less Than K")
 class LeetCode0713Test {
 
-    private static final LeetCode0713 LEET_CODE = new LeetCode0713();
+    private static final LeetCode0713 SOLUTION = new LeetCode0713();
 
     @ParameterizedTest(name = "[{index}] case={0}, nums={1}, k={2}")
     @MethodSource("testCases")
     void testNumSubarrayProductLessThanK(String caseName, int[] nums, int k, int expected) {
-        int actual = LEET_CODE.numSubarrayProductLessThanK(nums, k);
+        int actual = SOLUTION.numSubarrayProductLessThanK(nums, k);
         assertEquals(expected, actual, () -> "Case '%s' failed. nums=%s, k=%d"
                 .formatted(caseName, Arrays.toString(nums), k));
     }

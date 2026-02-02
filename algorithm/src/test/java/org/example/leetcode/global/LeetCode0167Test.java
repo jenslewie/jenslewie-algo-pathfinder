@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 167: Two Sum II - Input Array Is Sorted")
 class LeetCode0167Test {
 
-    private static final LeetCode0167 LEET_CODE = new LeetCode0167();
+    private static final LeetCode0167 SOLUTION = new LeetCode0167();
 
     @ParameterizedTest(name = "[{index}] case={0}, numbers={1}, target={2}")
     @MethodSource("testCases")
     void testTwoSum(String caseName, int[] numbers, int target, int[] expected) {
-        int[] actual = LEET_CODE.twoSum(numbers, target);
+        int[] actual = SOLUTION.twoSum(numbers, target);
         assertArrayEquals(expected, actual, () -> "Case '%s' failed. numbers=%s, target=%d"
                 .formatted(caseName, Arrays.toString(numbers), target));
     }

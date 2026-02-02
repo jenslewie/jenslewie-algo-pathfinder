@@ -18,10 +18,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @DisplayName("LeetCode 49: Group Anagrams - Algorithm Variants")
 class LeetCode0049Test {
 
-    private static final LeetCode0049_1 LEET_CODE_1 = new LeetCode0049_1();
-    private static final LeetCode0049_2 LEET_CODE_2 = new LeetCode0049_2();
-    private static final LeetCode0049_3 LEET_CODE_3 = new LeetCode0049_3();
-    private static final LeetCode0049_4 LEET_CODE_4 = new LeetCode0049_4();
+    private static final LeetCode0049_1 SOLUTION_1 = new LeetCode0049_1();
+    private static final LeetCode0049_2 SOLUTION_2 = new LeetCode0049_2();
+    private static final LeetCode0049_3 SOLUTION_3 = new LeetCode0049_3();
+    private static final LeetCode0049_4 SOLUTION_4 = new LeetCode0049_4();
 
     @FunctionalInterface
     interface GroupAnagramsFunction {
@@ -29,10 +29,10 @@ class LeetCode0049Test {
     }
 
     private static final Map<String, GroupAnagramsFunction> ALGO_VARIANTS = Map.of(
-            "hash_map_frequency", LEET_CODE_1::groupAnagrams,
-            "sorted_string_key", LEET_CODE_2::groupAnagrams,
-            "character_count_encoding", LEET_CODE_3::groupAnagrams,
-            "stream_api", LEET_CODE_4::groupAnagrams
+            "hash_map_frequency", SOLUTION_1::groupAnagrams,
+            "sorted_string_key", SOLUTION_2::groupAnagrams,
+            "character_count_encoding", SOLUTION_3::groupAnagrams,
+            "stream_api", SOLUTION_4::groupAnagrams
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, strs={2}")

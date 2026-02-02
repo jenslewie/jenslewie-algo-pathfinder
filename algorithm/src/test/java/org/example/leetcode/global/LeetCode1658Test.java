@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 1658: Minimum Operations to Reduce X to Zero")
 class LeetCode1658Test {
 
-    private static final LeetCode1658 LEET_CODE = new LeetCode1658();
+    private static final LeetCode1658 SOLUTION = new LeetCode1658();
 
     @ParameterizedTest(name = "[{index}] case={0}, nums={1}, x={2}")
     @MethodSource("testCases")
     void testMinOperations(String caseName, int[] nums, int x, int expected) {
-        int actual = LEET_CODE.minOperations(nums, x);
+        int actual = SOLUTION.minOperations(nums, x);
         assertEquals(expected, actual, () -> "Case '%s' failed. nums=%s, x=%d"
                 .formatted(caseName, Arrays.toString(nums), x));
     }

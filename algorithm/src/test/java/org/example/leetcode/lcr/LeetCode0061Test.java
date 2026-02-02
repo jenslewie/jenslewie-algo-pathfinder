@@ -14,12 +14,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LCR 061: Find K Pairs with Smallest Sums")
 class LeetCode0061Test {
 
-    private static final LeetCode0061 LEET_CODE = new LeetCode0061();
+    private static final LeetCode0061 SOLUTION = new LeetCode0061();
 
     @ParameterizedTest(name = "[{index}] case={0}, nums1={1}, nums2={2}, k={3}")
     @MethodSource("testCases")
     void testKSmallestPairs(String caseName, int[] nums1, int[] nums2, int k, List<List<Integer>> expected) {
-        List<List<Integer>> actual = LEET_CODE.kSmallestPairs(nums1, nums2, k);
+        List<List<Integer>> actual = SOLUTION.kSmallestPairs(nums1, nums2, k);
         assertEquals(expected, actual,
                 String.format("Case '%s' failed. nums1=%s, nums2=%s, k=%d",
                         caseName, Arrays.toString(nums1), Arrays.toString(nums2), k));

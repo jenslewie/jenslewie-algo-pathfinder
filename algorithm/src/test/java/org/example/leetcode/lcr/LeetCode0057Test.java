@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LCR 057: Contains Duplicate III")
 class LeetCode0057Test {
 
-    private static final LeetCode0057 LEET_CODE = new LeetCode0057();
+    private static final LeetCode0057 SOLUTION = new LeetCode0057();
 
     @ParameterizedTest(name = "[{index}] case={0}, nums={1}, k={2}, t={3}")
     @MethodSource("testCases")
     void testContainsNearbyAlmostDuplicate(String caseName, int[] nums, int k, int t, boolean expected) {
-        boolean actual = LEET_CODE.containsNearbyAlmostDuplicate(nums, k, t);
+        boolean actual = SOLUTION.containsNearbyAlmostDuplicate(nums, k, t);
         assertEquals(expected, actual, () -> "Case '%s' failed. nums=%s, k=%d, t=%d"
                 .formatted(caseName, Arrays.toString(nums), k, t));
     }

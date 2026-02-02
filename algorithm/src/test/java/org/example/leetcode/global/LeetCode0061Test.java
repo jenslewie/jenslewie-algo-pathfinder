@@ -15,9 +15,9 @@ import java.util.stream.Stream;
 @DisplayName("LeetCode 61: Rotate List - Algorithm Variants")
 class LeetCode0061Test {
 
-    private static final LeetCode0061_1 LEET_CODE_1 = new LeetCode0061_1();
-    private static final LeetCode0061_2 LEET_CODE_2 = new LeetCode0061_2();
-    private static final LeetCode0061_3 LEET_CODE_3 = new LeetCode0061_3();
+    private static final LeetCode0061_1 SOLUTION_1 = new LeetCode0061_1();
+    private static final LeetCode0061_2 SOLUTION_2 = new LeetCode0061_2();
+    private static final LeetCode0061_3 SOLUTION_3 = new LeetCode0061_3();
 
     @FunctionalInterface
     interface RotateRightFunction {
@@ -25,9 +25,9 @@ class LeetCode0061Test {
     }
 
     private static final Map<String, RotateRightFunction> ALGO_VARIANTS = Map.of(
-            "calculate_position", LEET_CODE_1::rotateRight,
-            "move_nodes_to_front", LEET_CODE_2::rotateRight,
-            "reverse_parts", LEET_CODE_3::rotateRight
+            "calculate_position", SOLUTION_1::rotateRight,
+            "move_nodes_to_front", SOLUTION_2::rotateRight,
+            "reverse_parts", SOLUTION_3::rotateRight
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, head={2}, k={3}")

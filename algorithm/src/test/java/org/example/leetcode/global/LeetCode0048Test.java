@@ -13,13 +13,13 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 48: Rotate Image")
 class LeetCode0048Test {
 
-    private static final LeetCode0048 LEET_CODE = new LeetCode0048();
+    private static final LeetCode0048 SOLUTION = new LeetCode0048();
 
     @ParameterizedTest(name = "[{index}] case={0}, matrix={1}")
     @MethodSource("testCases")
     void testRotate(String caseName, int[][] matrix, int[][] expected) {
         int[][] input = ArrayUtility.deepClone(matrix);
-        LEET_CODE.rotate(matrix);
+        SOLUTION.rotate(matrix);
         assertArrayEquals(expected, matrix, () -> "Case '%s' failed. Input matrix: %s"
                 .formatted(caseName, ArrayUtility.matrixToString(input)));
     }

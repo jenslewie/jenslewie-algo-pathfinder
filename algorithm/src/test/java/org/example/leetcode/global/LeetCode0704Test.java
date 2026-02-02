@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 704: Binary Search - Algorithm Variants")
 class LeetCode0704Test {
 
-    private static final LeetCode0704 LEET_CODE = new LeetCode0704();
+    private static final LeetCode0704 SOLUTION = new LeetCode0704();
 
     @FunctionalInterface
     interface SearchFunction {
@@ -21,7 +21,7 @@ class LeetCode0704Test {
     }
 
     private static final Map<String, SearchFunction> ALGO_VARIANTS = Map.of(
-            "binary_search", LEET_CODE::search
+            "binary_search", SOLUTION::search
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums={2}, target={3}")

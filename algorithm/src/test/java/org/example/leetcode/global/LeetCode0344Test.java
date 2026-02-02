@@ -13,13 +13,13 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 344: Reverse String")
 class LeetCode0344Test {
 
-    private static final LeetCode0344 LEET_CODE = new LeetCode0344();
+    private static final LeetCode0344 SOLUTION = new LeetCode0344();
 
     @ParameterizedTest(name = "[{index}] case={0}, s={1}")
     @MethodSource("testCases")
     void testReverseString(String caseName, char[] s, char[] expected) {
         char[] input = Arrays.copyOf(s, s.length);
-        LEET_CODE.reverseString(s);
+        SOLUTION.reverseString(s);
         assertArrayEquals(expected, s, () -> "Case '%s' failed. Input s: %s"
                 .formatted(caseName, Arrays.toString(input)));
     }

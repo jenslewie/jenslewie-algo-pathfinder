@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LCR 038: Daily Temperatures - Algorithm Variants")
 class LeetCode0038Test {
 
-    private static final LeetCode0038 LEET_CODE = new LeetCode0038();
+    private static final LeetCode0038 SOLUTION = new LeetCode0038();
 
     @FunctionalInterface
     interface DailyTemperaturesFunction {
@@ -21,7 +21,7 @@ class LeetCode0038Test {
     }
 
     private static final Map<String, DailyTemperaturesFunction> ALGO_VARIANTS = Map.of(
-            "monotonic_stack", LEET_CODE::dailyTemperatures
+            "monotonic_stack", SOLUTION::dailyTemperatures
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, temperatures={2}")

@@ -16,13 +16,13 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 @DisplayName("LeetCode 19: Remove Nth Node From End of List")
 class LeetCode0019Test {
 
-    private static final LeetCode0019 LEET_CODE = new LeetCode0019();
+    private static final LeetCode0019 SOLUTION = new LeetCode0019();
 
     @ParameterizedTest(name = "[{index}] case={0}, list={1}, n={2}")
     @MethodSource("testCases")
     void testRemoveNthFromEnd(String caseName, Integer[] listArray, int n, int[] expected) {
         ListNode listNode = LinkedListBuilder.build(listArray);
-        ListNode result = LEET_CODE.removeNthFromEnd(listNode, n);
+        ListNode result = SOLUTION.removeNthFromEnd(listNode, n);
 
         if (expected == null) {
             assertNull(result, () -> "Case '%s' failed. list=%s, n=%d"

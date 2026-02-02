@@ -15,13 +15,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 234: Palindrome Linked List")
 class LeetCode0234Test {
 
-    private static final LeetCode0234 LEET_CODE = new LeetCode0234();
+    private static final LeetCode0234 SOLUTION = new LeetCode0234();
 
     @ParameterizedTest(name = "[{index}] case={0}, head={1}")
     @MethodSource("testCases")
     void testIsPalindrome(String caseName, Integer[] headArray, boolean expected) {
         ListNode head = LinkedListBuilder.build(headArray);
-        boolean actual = LEET_CODE.isPalindrome(head);
+        boolean actual = SOLUTION.isPalindrome(head);
         assertEquals(expected, actual, () -> "Case '%s' failed. head=%s"
                 .formatted(caseName, Arrays.toString(headArray)));
     }

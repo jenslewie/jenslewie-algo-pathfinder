@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 141: Linked List Cycle")
 class LeetCode0141Test {
 
-    private static final LeetCode0141 LEET_CODE = new LeetCode0141();
+    private static final LeetCode0141 SOLUTION = new LeetCode0141();
 
     @ParameterizedTest(name = "[{index}] case={0}, values={1}, pos={2}")
     @MethodSource("testCases")
@@ -26,7 +26,7 @@ class LeetCode0141Test {
         } else {
             head = LinkedListBuilder.buildCycle(values, pos);
         }
-        boolean actual = LEET_CODE.hasCycle(head);
+        boolean actual = SOLUTION.hasCycle(head);
         assertEquals(expected, actual, () -> "Case '%s' failed. values=%s, pos=%d"
                 .formatted(caseName, Arrays.toString(values), pos));
     }

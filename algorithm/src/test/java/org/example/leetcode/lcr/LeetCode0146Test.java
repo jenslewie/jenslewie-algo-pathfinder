@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LCR 146: Spiral Array")
 class LeetCode0146Test {
 
-    private static final LeetCode0146 LEET_CODE = new LeetCode0146();
+    private static final LeetCode0146 SOLUTION = new LeetCode0146();
 
     @ParameterizedTest(name = "[{index}] case={0}")
     @MethodSource("testCases")
     void testSpiralArray(String caseName, int[][] matrix, int[] expected) {
-        int[] actual = LEET_CODE.spiralArray(matrix);
+        int[] actual = SOLUTION.spiralArray(matrix);
         assertArrayEquals(expected, actual, () -> "Case '%s' failed. Input matrix: %s"
                 .formatted(caseName, ArrayUtility.matrixToString(matrix)));
     }

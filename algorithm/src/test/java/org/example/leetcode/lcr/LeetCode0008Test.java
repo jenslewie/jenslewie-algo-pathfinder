@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LCR 008: Minimum Size Subarray Sum")
 class LeetCode0008Test {
 
-    private static final LeetCode0008 LEET_CODE = new LeetCode0008();
+    private static final LeetCode0008 SOLUTION = new LeetCode0008();
 
     @ParameterizedTest(name = "[{index}] case={0}, target={1}, nums={2}")
     @MethodSource("testCases")
     void testMinSubArrayLen(String caseName, int target, int[] nums, int expected) {
-        int actual = LEET_CODE.minSubArrayLen(target, nums);
+        int actual = SOLUTION.minSubArrayLen(target, nums);
         assertEquals(expected, actual, () -> "Case '%s' failed. target=%d, nums=%s"
                 .formatted(caseName, target, Arrays.toString(nums)));
     }

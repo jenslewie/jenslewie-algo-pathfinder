@@ -13,9 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 150: Evaluate Reverse Polish Notation - Algorithm Variants")
 class LeetCode0150Test {
 
-    private static final LeetCode0150_1 LEET_CODE_1 = new LeetCode0150_1();
-    private static final LeetCode0150_2 LEET_CODE_2 = new LeetCode0150_2();
-    private static final LeetCode0150_3 LEET_CODE_3 = new LeetCode0150_3();
+    private static final LeetCode0150_1 SOLUTION_1 = new LeetCode0150_1();
+    private static final LeetCode0150_2 SOLUTION_2 = new LeetCode0150_2();
+    private static final LeetCode0150_3 SOLUTION_3 = new LeetCode0150_3();
 
     @FunctionalInterface
     interface EvalRPNFunction {
@@ -23,9 +23,9 @@ class LeetCode0150Test {
     }
 
     private static final Map<String, EvalRPNFunction> ALGO_VARIANTS = Map.of(
-            "array_mock_stack", LEET_CODE_1::evalRPN,
-            "integer_stack", LEET_CODE_2::evalRPN,
-            "string_stack", LEET_CODE_3::evalRPN
+            "array_mock_stack", SOLUTION_1::evalRPN,
+            "integer_stack", SOLUTION_2::evalRPN,
+            "string_stack", SOLUTION_3::evalRPN
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, tokens={2}")

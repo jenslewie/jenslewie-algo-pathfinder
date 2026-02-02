@@ -14,13 +14,13 @@ import java.util.stream.Stream;
 @DisplayName("LeetCode 876: Middle of the Linked List")
 class LeetCode0876Test {
 
-    private static final LeetCode0876 LEET_CODE = new LeetCode0876();
+    private static final LeetCode0876 SOLUTION = new LeetCode0876();
 
     @ParameterizedTest(name = "[{index}] case={0}, list={1}")
     @MethodSource("testCases")
     void testMiddleNode(String caseName, Integer[] listArray, int[] expected) {
         ListNode listNode = LinkedListBuilder.build(listArray);
-        ListNode result = LEET_CODE.middleNode(listNode);
+        ListNode result = SOLUTION.middleNode(listNode);
         LinkedListUtility.verify(expected, result, () -> "Case '%s' failed. list=%s"
                 .formatted(caseName, Arrays.toString(listArray)));
     }

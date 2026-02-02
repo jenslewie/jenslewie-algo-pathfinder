@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LCR 172: Count Target in Sorted Array - Algorithm Variants")
 class LeetCode0172Test {
 
-    private static final LeetCode0172 LEET_CODE = new LeetCode0172();
+    private static final LeetCode0172 SOLUTION = new LeetCode0172();
 
     @FunctionalInterface
     interface CountTargetFunction {
@@ -21,7 +21,7 @@ class LeetCode0172Test {
     }
 
     private static final Map<String, CountTargetFunction> ALGO_VARIANTS = Map.of(
-            "left_bound_twice", LEET_CODE::countTarget
+            "left_bound_twice", SOLUTION::countTarget
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, scores={2}, target={3}")

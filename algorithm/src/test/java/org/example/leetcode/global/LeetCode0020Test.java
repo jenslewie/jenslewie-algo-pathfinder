@@ -13,9 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 20: Valid Parentheses - Algorithm Variants")
 class LeetCode0020Test {
 
-    private static final LeetCode0020_1 LEET_CODE_1 = new LeetCode0020_1();
-    private static final LeetCode0020_2 LEET_CODE_2 = new LeetCode0020_2();
-    private static final LeetCode0020_3 LEET_CODE_3 = new LeetCode0020_3();
+    private static final LeetCode0020_1 SOLUTION_1 = new LeetCode0020_1();
+    private static final LeetCode0020_2 SOLUTION_2 = new LeetCode0020_2();
+    private static final LeetCode0020_3 SOLUTION_3 = new LeetCode0020_3();
 
     @FunctionalInterface
     interface ValidParenthesesFunction {
@@ -23,9 +23,9 @@ class LeetCode0020Test {
     }
 
     private static final Map<String, ValidParenthesesFunction> ALGO_VARIANTS = Map.of(
-            "push_expected_closing", LEET_CODE_1::isValid,
-            "push_opening_match_left", LEET_CODE_2::isValid,
-            "string_substring_based", LEET_CODE_3::isValid
+            "push_expected_closing", SOLUTION_1::isValid,
+            "push_opening_match_left", SOLUTION_2::isValid,
+            "string_substring_based", SOLUTION_3::isValid
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, s={2}")

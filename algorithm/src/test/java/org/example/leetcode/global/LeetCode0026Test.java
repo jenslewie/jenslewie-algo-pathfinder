@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 26: Remove Duplicates from Sorted Array")
 class LeetCode0026Test {
 
-    private static final LeetCode0026 LEET_CODE = new LeetCode0026();
+    private static final LeetCode0026 SOLUTION = new LeetCode0026();
 
     @ParameterizedTest(name = "[{index}] case={0}, nums={1}")
     @MethodSource("testCases")
     void testRemoveDuplicates(String caseName, int[] nums, int expected) {
-        int actual = LEET_CODE.removeDuplicates(nums);
+        int actual = SOLUTION.removeDuplicates(nums);
         assertEquals(expected, actual, () -> "Case '%s' failed. nums=%s"
                 .formatted(caseName, Arrays.toString(nums)));
     }

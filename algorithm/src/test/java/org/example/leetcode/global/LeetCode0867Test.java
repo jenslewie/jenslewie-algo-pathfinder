@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 867: Transpose Matrix - Algorithm Variants")
 class LeetCode0867Test {
 
-    private static final LeetCode0867 LEET_CODE = new LeetCode0867();
+    private static final LeetCode0867 SOLUTION = new LeetCode0867();
 
     @FunctionalInterface
     interface TransposeFunction {
@@ -22,7 +22,7 @@ class LeetCode0867Test {
     }
 
     private static final Map<String, TransposeFunction> ALGO_VARIANTS = Map.of(
-            "transpose", LEET_CODE::transpose
+            "transpose", SOLUTION::transpose
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, matrix={2}")

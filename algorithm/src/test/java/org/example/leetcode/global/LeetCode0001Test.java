@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 @DisplayName("LeetCode 1: Two Sum - Algorithm Variants")
 class LeetCode0001Test {
 
-    private static final LeetCode0001 LEET_CODE = new LeetCode0001();
+    private static final LeetCode0001 SOLUTION = new LeetCode0001();
 
     @FunctionalInterface
     interface TwoSumFunction {
@@ -21,7 +21,7 @@ class LeetCode0001Test {
     }
 
     private static final Map<String, TwoSumFunction> ALGO_VARIANTS = Map.of(
-            "hash_map", LEET_CODE::twoSum
+            "hash_map", SOLUTION::twoSum
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums={2}, target={3}")

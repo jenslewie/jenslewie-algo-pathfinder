@@ -16,12 +16,12 @@ import java.util.stream.Stream;
 @DisplayName("LeetCode 83: Remove Duplicates from Sorted List - Algorithm Variants")
 class LeetCode0083Test {
 
-    private static final LeetCode0083_1 LEET_CODE_1 = new LeetCode0083_1();
-    private static final LeetCode0083_2 LEET_CODE_2 = new LeetCode0083_2();
+    private static final LeetCode0083_1 SOLUTION_1 = new LeetCode0083_1();
+    private static final LeetCode0083_2 SOLUTION_2 = new LeetCode0083_2();
 
     private static final Map<String, Function<ListNode, ListNode>> ALGO_VARIANTS = Map.of(
-            "single_pass_sentinel", LEET_CODE_1::deleteDuplicates,
-            "two_pointer_sentinel", LEET_CODE_2::deleteDuplicates
+            "single_pass_sentinel", SOLUTION_1::deleteDuplicates,
+            "two_pointer_sentinel", SOLUTION_2::deleteDuplicates
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, head={2}")

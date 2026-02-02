@@ -12,12 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 5: Longest Palindromic Substring")
 class LeetCode0005Test {
 
-    private static final LeetCode0005 LEET_CODE = new LeetCode0005();
+    private static final LeetCode0005 SOLUTION = new LeetCode0005();
 
     @ParameterizedTest(name = "[{index}] case={0}, s=\"{1}\"")
     @MethodSource("testCases")
     void testLongestPalindrome(String caseName, String s, String expected) {
-        String actual = LEET_CODE.longestPalindrome(s);
+        String actual = SOLUTION.longestPalindrome(s);
         assertEquals(expected, actual, () -> "Case '%s' failed. s=\"%s\""
                 .formatted(caseName, s));
     }

@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 27: Remove Element")
 class LeetCode0027Test {
 
-    private static final LeetCode0027 LEET_CODE = new LeetCode0027();
+    private static final LeetCode0027 SOLUTION = new LeetCode0027();
 
     @ParameterizedTest(name = "[{index}] case={0}, nums={1}, val={2}")
     @MethodSource("testCases")
     void testRemoveElement(String caseName, int[] nums, int val, int expected) {
-        int actual = LEET_CODE.removeElement(nums, val);
+        int actual = SOLUTION.removeElement(nums, val);
         assertEquals(expected, actual, () -> "Case '%s' failed. nums=%s, val=%d"
                 .formatted(caseName, Arrays.toString(nums), val));
     }

@@ -14,13 +14,13 @@ import java.util.stream.Stream;
 @DisplayName("LCR 140: Training Plan (Kth from End)")
 class LeetCode0140Test {
 
-    private static final LeetCode0140 LEET_CODE = new LeetCode0140();
+    private static final LeetCode0140 SOLUTION = new LeetCode0140();
 
     @ParameterizedTest(name = "[{index}] case={0}, head={1}, cnt={2}")
     @MethodSource("testCases")
     void testTrainingPlan(String caseName, Integer[] headArray, int cnt, int[] expected) {
         ListNode head = LinkedListBuilder.build(headArray);
-        ListNode result = LEET_CODE.trainingPlan(head, cnt);
+        ListNode result = SOLUTION.trainingPlan(head, cnt);
         LinkedListUtility.verify(expected, result, () -> "Case '%s' failed. head=%s, cnt=%d"
                 .formatted(caseName, Arrays.toString(headArray), cnt));
     }

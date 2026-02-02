@@ -12,12 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 424: Longest Repeating Character Replacement")
 class LeetCode0424Test {
 
-    private static final LeetCode0424 LEET_CODE = new LeetCode0424();
+    private static final LeetCode0424 SOLUTION = new LeetCode0424();
 
     @ParameterizedTest(name = "[{index}] case={0}, s=\"{1}\", k={2}")
     @MethodSource("testCases")
     void testCharacterReplacement(String caseName, String s, int k, int expected) {
-        int actual = LEET_CODE.characterReplacement(s, k);
+        int actual = SOLUTION.characterReplacement(s, k);
         assertEquals(expected, actual, () -> "Case '%s' failed. s=\"%s\", k=%d"
                 .formatted(caseName, s, k));
     }

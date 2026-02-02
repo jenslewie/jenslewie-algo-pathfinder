@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 1011: Capacity To Ship Packages - Algorithm Variants")
 class LeetCode1011Test {
 
-    private static final LeetCode1011 LEET_CODE = new LeetCode1011();
+    private static final LeetCode1011 SOLUTION = new LeetCode1011();
 
     @FunctionalInterface
     interface ShipCapacityFunction {
@@ -21,7 +21,7 @@ class LeetCode1011Test {
     }
 
     private static final Map<String, ShipCapacityFunction> ALGO_VARIANTS = Map.of(
-            "binary_search_on_capacity", LEET_CODE::shipWithinDays
+            "binary_search_on_capacity", SOLUTION::shipWithinDays
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, weights={2}, days={3}")

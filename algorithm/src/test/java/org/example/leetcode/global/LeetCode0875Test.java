@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 875: Koko Eating Bananas - Algorithm Variants")
 class LeetCode0875Test {
 
-    private static final LeetCode0875 LEET_CODE = new LeetCode0875();
+    private static final LeetCode0875 SOLUTION = new LeetCode0875();
 
     @FunctionalInterface
     interface MinEatingSpeedFunction {
@@ -22,7 +22,7 @@ class LeetCode0875Test {
     }
 
     private static final Map<String, MinEatingSpeedFunction> ALGO_VARIANTS = Map.of(
-            "binary_search_on_speed", LEET_CODE::minEatingSpeed
+            "binary_search_on_speed", SOLUTION::minEatingSpeed
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, piles={2}, h={3}")
