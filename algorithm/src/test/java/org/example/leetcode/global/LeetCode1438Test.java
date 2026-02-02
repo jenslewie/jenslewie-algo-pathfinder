@@ -13,15 +13,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 1438: Longest Continuous Subarray With Absolute Diff <= Limit")
 class LeetCode1438Test {
 
+    private static final LeetCode1438_1 SOLUTION_1 = new LeetCode1438_1();
+    private static final LeetCode1438_2 SOLUTION_2 = new LeetCode1438_2();
+    private static final LeetCode1438_3 SOLUTION_3 = new LeetCode1438_3();
+
     @FunctionalInterface
     interface LongestSubarrayFunction {
         int apply(int[] nums, int limit);
     }
 
     private static final Map<String, LongestSubarrayFunction> ALGO_VARIANTS = Map.of(
-            "monotonic_queue_wrapper", (nums, limit) -> new LeetCode1438_1().longestSubarray(nums, limit),
-            "dual_monotonic_queues", (nums, limit) -> new LeetCode1438_2().longestSubarray(nums, limit),
-            "array", (nums, limit) -> new LeetCode1438_3().longestSubarray(nums, limit)
+            "monotonic_queue_wrapper", SOLUTION_1::longestSubarray,
+            "dual_monotonic_queues", SOLUTION_2::longestSubarray,
+            "array", SOLUTION_3::longestSubarray
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, nums={2}, limit={3}")
