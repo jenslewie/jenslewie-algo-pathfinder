@@ -24,4 +24,16 @@ public class BinaryTreeUtility {
                 isSameNextStructure(a.left, b.left) &&
                 isSameNextStructure(a.right, b.right);
     }
+
+    public static TreeNode findNodeByValue(TreeNode root, int val) {
+        if (root == null) {
+            return null;
+        }
+        if (root.val == val) {
+            return root;
+        }
+        TreeNode left = findNodeByValue(root.left, val);
+        return left != null ? left : findNodeByValue(root.right, val);
+    }
+
 }

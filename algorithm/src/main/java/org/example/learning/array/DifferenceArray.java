@@ -25,7 +25,7 @@ public class DifferenceArray {
         if (to + 1 < diff.length) {
             diff[to + 1] -= value;
         }
-        System.out.println("[" + from + "," + to + "] value increases: " + value);
+//        System.out.println("[" + from + "," + to + "] value increases: " + value);
     }
 
     public int[] result() {
