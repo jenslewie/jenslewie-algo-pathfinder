@@ -5,7 +5,17 @@ import org.example.model.tree.TreeNode;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/invert-binary-tree">...</a>
+ * <a href="https://leetcode.cn/problems/invert-binary-tree">LeetCode 226: Invert Binary Tree</a>
+ * <p>
+ * Approach: Iterative stack traversal. <br>
+ * - Use a stack to visit nodes. <br>
+ * - Swap children for each popped node.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is processed once.
+ * <p>
+ * Space Complexity: O(h) <br>
+ * - h: height of the tree; stack holds a path of nodes.
  */
 public class LeetCode0226_3 {
 

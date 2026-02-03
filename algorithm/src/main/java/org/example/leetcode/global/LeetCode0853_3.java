@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/car-fleet">...</a>
+ * <a href="https://leetcode.cn/problems/car-fleet">LeetCode 853: Car Fleet</a>
+ * <p>
+ * Approach: Sort by position and count fleets with max time. <br>
+ - Traverse from closest to target. <br>
+ - Increment fleet count when time increases.
+ * <p>
+ * Time Complexity: O(n * log(n)) <br>
+ * - Sorting dominates. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Store pairs or times. <br>
  */
 public class LeetCode0853_3 {
 

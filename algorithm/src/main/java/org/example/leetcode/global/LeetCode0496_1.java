@@ -5,22 +5,20 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/next-greater-element-i">...</a>
- * Approach 1: Monotonic stack from right to left
+ * <a href="https://leetcode.cn/problems/next-greater-element-i">LeetCode 496: Next Greater Element I</a>
+ * <p>
+ * Approach: Monotonic stack from right to left. <br>
+ * - Build a map of each value's next greater element in nums2. <br>
+ * - Answer queries for nums1 using the map.
+ * <p>
+ * Time Complexity: O(m + n) <br>
+ * - m: length of nums1; n: length of nums2.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Map and stack store elements from nums2.
  */
 public class LeetCode0496_1 {
 
-    /**
-     * Find next greater element using monotonic stack from right to left
-     * Time Complexity: O(m + n)
-     * - m: length of nums1
-     * - n: length of nums2
-     * - Single pass through nums2 to build map + single pass through nums1 to get results
-     * <p>
-     * Space Complexity: O(n)
-     * - Hash map to store next greater elements for each number in nums2
-     * - Stack for monotonic processing
-     */
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Map<Integer, Integer> map = new HashMap<>();
         Stack<Integer> stack = new Stack<>();

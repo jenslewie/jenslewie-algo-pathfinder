@@ -4,18 +4,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/number-of-visible-people-in-a-queue">...</a>
- * input:   10, 6, 8, 5, 11, 9
- * expect:  3, 1, 2, 1, 1, 0
- * i    h[i]  stack1.    stack2     ans
- * 0    10    []         [0]
- * 1    6     [0]        [0, 1]     ans[0] = 1
- * 2    8     [0, 1].    [0, 2]     ans[1] = 1, ans[0] = 2
- * 3    5     [0, 2].    [0, 2, 3]  ans[2] = 1
- * 4    11    [0, 2, 3]  [4]        ans[3] = 1, ans[2] = 2, ans[0] = 3
- * 5    9     [4].       [4, 5]     ans[4] = 1
- * stack1 means before pushing the value to the stack
- * stack2 means after pushing the value to the stack
+ * <a href="https://leetcode.cn/problems/number-of-visible-people-in-a-queue">LeetCode 1944: Number of Visible People in a Queue</a>
+ * <p>
+ * Approach: Monotonic stack from left to right. <br>
+ * - Pop shorter people and increment their visibility count. <br>
+ * - The current top (if any) also sees this person.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of people; each index is pushed/popped once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack stores indices.
  */
 public class LeetCode1944_2 {
 

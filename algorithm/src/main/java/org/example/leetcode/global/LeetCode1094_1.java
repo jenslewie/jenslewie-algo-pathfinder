@@ -1,21 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/car-pooling/">...</a>
- * Difference array approach
+ * <a href="https://leetcode.cn/problems/car-pooling">LeetCode 1094: Car Pooling</a>
+ * <p>
+ * Approach: Difference array with prefix sum. <br>
+ - Mark passenger changes at start/end points. <br>
+ - Accumulate to check capacity along the route.
+ * <p>
+ * Time Complexity: O(n + R) <br>
+ * - n: trips; R: route range scanned. <br>
+ * <p>
+ * Space Complexity: O(R) <br>
+ * - Difference array for the route. <br>
  */
 public class LeetCode1094_1 {
 
-    /**
-     * Difference array approach to solve car pooling problem
-     * Time Complexity: O(n + m)
-     * - n: number of trips
-     * - m: max position value
-     * - We iterate through trips once to build difference array, then once through positions
-     * <p>
-     * Space Complexity: O(m)
-     * - Where m is the max position value for the difference array
-     */
     public boolean carPooling(int[][] trips, int capacity) {
         int toMax = 0;
         for (int[] trip : trips) {

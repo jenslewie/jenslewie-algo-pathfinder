@@ -4,20 +4,20 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/sliding-window-maximum">...</a>
- * Monotonic deque approach
+ * <a href="https://leetcode.cn/problems/sliding-window-maximum">LeetCode 239: Sliding Window Maximum</a>
+ * <p>
+ * Approach: Monotonic deque. <br>
+ * - Maintain a decreasing deque of candidates. <br>
+ * - The front holds the current window maximum.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each element is added/removed at most once.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - k: window size for deque storage.
  */
 public class LeetCode0239_1 {
 
-    /**
-     * Monotonic deque approach to solve sliding window maximum problem
-     * Time Complexity: O(n)
-     * - n: length of the input array
-     * - Each element is added and removed from the deque at most once
-     * <p>
-     * Space Complexity: O(k)
-     * - Where k is the window size, for the deque storage
-     */
     public int[] maxSlidingWindow(int[] nums, int k) {
         Deque<Integer> queue = new ArrayDeque<>();
         int[] res = new int[nums.length - k + 1];

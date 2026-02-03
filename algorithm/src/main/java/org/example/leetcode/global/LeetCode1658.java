@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/max-consecutive-ones-iii/description/
+ * <a href="https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero">LeetCode 1658: Minimum Operations to Reduce X to Zero</a>
+ * <p>
+ * Approach: Sliding window for longest subarray with sum = total - x. <br>
+ * - Convert to finding the longest subarray to keep. <br>
+ * - Use a window to match target sum.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each pointer moves at most n steps.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space.
  */
 public class LeetCode1658 {
 

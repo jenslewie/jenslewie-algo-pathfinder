@@ -6,9 +6,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal">...</a>
- * Time Complexity: O(n)
- * Space Complexity: O(n)
+ * <a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal">LeetCode 105: Construct Binary Tree from Preorder and Inorder Traversal</a>
+ * <p>
+ * Approach: Recursion with inorder index map. <br>
+ * - Map each inorder value to its index for O(1) splits. <br>
+ * - Recurse using index ranges without copying arrays.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - Each node is processed once with O(1) index lookup.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Map storage plus recursion stack.
  */
 public class LeetCode0105_2 {
 

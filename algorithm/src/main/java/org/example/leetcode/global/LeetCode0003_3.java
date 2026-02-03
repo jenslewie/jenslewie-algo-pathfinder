@@ -4,20 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+ * <a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters">LeetCode 3: Longest Substring Without Repeating Characters</a>
+ * <p>
+ * Approach: Sliding window with frequency map. <br>
+ * - Expand right pointer and increment counts. <br>
+ * - While a character count exceeds 1, move left pointer and decrement counts.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each character is processed at most twice.
+ * <p>
+ * Space Complexity: O(min(m, n)) <br>
+ * - m: size of the character set; map stores at most min(m, n) entries.
  */
 public class LeetCode0003_3 {
 
-    /**
-     * Use map to record each character occurrence times
-     * Time Complexity: O(n)
-     * - n: length of the string
-     * - Each character is visited at most twice (once by right pointer, once by left pointer)
-     * <p>
-     * Space Complexity: O(min(m,n))
-     * - m: size of the charset (number of distinct characters in the string)
-     * - Map stores at most min(m,n) characters
-     */
     public int lengthOfLongestSubstring(String s) {
         int left = 0, right = 0, max = 0;
         Map<Character, Integer> map = new HashMap<>();

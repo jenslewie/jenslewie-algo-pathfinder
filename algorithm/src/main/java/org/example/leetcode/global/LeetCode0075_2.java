@@ -1,19 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/sort-colors/">...</a>
+ * <a href="https://leetcode.cn/problems/sort-colors">LeetCode 75: Sort Colors</a>
+ * <p>
+ * Approach: Three-pointer Dutch National Flag. <br>
+ * - Keep low for 0s, high for 2s, and scan with i. <br>
+ * - Swap elements into the correct region.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each element is processed once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - In-place swaps only.
  */
 public class LeetCode0075_2 {
 
-    /**
-     * Dutch National Flag algorithm - Three Pointers approach
-     * Time Complexity: O(n)
-     * - n: length of the array
-     * - We iterate through the array once
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public void sortColors(int[] nums) {
         int n = nums.length;
         int p0 = 0, p2 = n - 1, i = 0;

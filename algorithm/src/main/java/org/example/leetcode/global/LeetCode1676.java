@@ -5,17 +5,17 @@ import org.example.model.tree.TreeNode;
 import java.util.HashSet;
 
 /**
- * <a href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-iv">LeetCode 1676: LCA of Binary Tree IV</a>
+ * <a href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-iv">LeetCode 1676: Lowest Common Ancestor of a Binary Tree IV</a>
  * <p>
- * Given a binary tree and an array of target nodes, find their lowest common ancestor (LCA).<br>
- * Assumption: All node values in the tree are unique (as per LeetCode 1676 constraint).
+ * Approach: Postorder DFS with target set. <br>
+ * - Return current node if it is a target or both children report a target. <br>
+ * - Otherwise propagate the non-null child result upward.
  * <p>
- * Time Complexity: O(n)<br>
- * - Each node is visited at most once during the post-order traversal.
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
  * <p>
- * Space Complexity: O(m + h)<br>
- * - m: number of target nodes (for the HashSet)<br>
- * - h: height of the tree (for recursion stack; worst case O(n), best case O(log n))
+ * Space Complexity: O(m + h) <br>
+ * - m: number of target nodes; h: height of the tree.
  */
 public class LeetCode1676 {
 

@@ -3,20 +3,20 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/intersection-of-two-linked-lists/description/
+ * <a href="https://leetcode.cn/problems/intersection-of-two-linked-lists">LeetCode 160: Intersection of Two Linked Lists</a>
+ * <p>
+ * Approach: Length difference alignment. <br>
+ * - Compute lengths of both lists and advance the longer one. <br>
+ * - Move both pointers together until they meet.
+ * <p>
+ * Time Complexity: O(m + n) <br>
+ * - m, n: lengths of the two lists; each node is visited at most twice.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0160_1 {
 
-    /**
-     * Length difference approach
-     * Time Complexity: O(m + n)
-     * - m: length of list A
-     * - n: length of list B
-     * - We iterate through both lists twice (once to measure lengths, once to find intersection)
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         int lenA = 0;
         int lenB = 0;

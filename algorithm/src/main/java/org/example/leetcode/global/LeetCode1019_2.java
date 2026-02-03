@@ -6,7 +6,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/next-greater-node-in-linked-list">...</a>
+ * <a href="https://leetcode.cn/problems/next-greater-node-in-linked-list">LeetCode 1019: Next Greater Node In Linked List</a>
+ * <p>
+ * Approach: Reverse list + monotonic stack. <br>
+ - Reverse the list, then compute next greater using a stack. <br>
+ - Fill results from the end.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; linear passes. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack and result array. <br>
  */
 public class LeetCode1019_2 {
 

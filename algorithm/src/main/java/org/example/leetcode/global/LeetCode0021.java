@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/merge-two-sorted-lists/description/
+ * <a href="https://leetcode.cn/problems/merge-two-sorted-lists">LeetCode 21: Merge Two Sorted Lists</a>
+ * <p>
+ * Approach: Iterative merge with a dummy head. <br>
+ * - Compare list heads and append the smaller node. <br>
+ * - Attach the remaining list when one is exhausted.
+ * <p>
+ * Time Complexity: O(n + m) <br>
+ * - n, m: lengths of the two lists; each node is visited once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Uses constant extra space (reuses existing nodes).
  */
 public class LeetCode0021 {
 

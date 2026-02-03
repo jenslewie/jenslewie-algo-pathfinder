@@ -3,20 +3,20 @@ package org.example.leetcode.global;
 import java.util.TreeSet;
 
 /**
- * https://leetcode.cn/problems/contains-duplicate-iii/description/
- * TreeSet sliding window approach
+ * <a href="https://leetcode.cn/problems/contains-duplicate-iii">LeetCode 220: Contains Duplicate III</a>
+ * <p>
+ * Approach: TreeSet sliding window with floor/ceiling. <br>
+ * - Keep a TreeSet of at most indexDiff recent values. <br>
+ * - Check nearest neighbors within valueDiff.
+ * <p>
+ * Time Complexity: O(n * log(min(n, indexDiff))) <br>
+ * - n: length of the array; each TreeSet operation is logarithmic.
+ * <p>
+ * Space Complexity: O(min(n, indexDiff)) <br>
+ * - TreeSet stores up to indexDiff elements.
  */
 public class LeetCode0220_2 {
 
-    /**
-     * TreeSet sliding window approach to find nearby almost duplicates
-     * Time Complexity: O(n * log(min(n, indexDiff)))
-     * - n: length of the input array
-     * - For each element, we perform TreeSet operations that take O(log(size))
-     * <p>
-     * Space Complexity: O(min(n, indexDiff))
-     * - TreeSet stores at most indexDiff elements
-     */
     public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {
         TreeSet<Integer> set = new TreeSet<>();
         int left = 0, right = 0;

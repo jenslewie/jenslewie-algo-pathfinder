@@ -3,19 +3,20 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/reverse-linked-list">...</a>
+ * <a href="https://leetcode.cn/problems/reverse-linked-list">LeetCode 206: Reverse Linked List</a>
+ * <p>
+ * Approach: Head-insertion with sentinel. <br>
+ * - Repeatedly move the next node to the front of the list. <br>
+ * - Uses a dummy node to simplify insertions.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is repositioned once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0206_2 {
 
-    /**
-     * Sentinel node approach to reverse a linked list
-     * Time Complexity: O(n)
-     * - n: number of nodes in the linked list
-     * - We visit each node exactly once
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers and dummy node
-     */
     public ListNode reverseList(ListNode head) {
         if (head == null) {
             return null;

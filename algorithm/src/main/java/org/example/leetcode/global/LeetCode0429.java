@@ -8,7 +8,17 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * https://leetcode.cn/problems/n-ary-tree-level-order-traversal/
+ * <a href="https://leetcode.cn/problems/n-ary-tree-level-order-traversal">LeetCode 429: N-ary Tree Level Order Traversal</a>
+ * <p>
+ * Approach: BFS level-order traversal. <br>
+ * - Use a queue to process nodes level by level. <br>
+ * - Collect values for each level.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(w) <br>
+ * - w: maximum width of the tree in the queue.
  */
 public class LeetCode0429 {
 

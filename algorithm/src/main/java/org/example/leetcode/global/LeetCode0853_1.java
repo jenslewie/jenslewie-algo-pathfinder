@@ -5,7 +5,17 @@ import java.util.Arrays;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/car-fleet">...</a>
+ * <a href="https://leetcode.cn/problems/car-fleet">LeetCode 853: Car Fleet</a>
+ * <p>
+ * Approach: Sort by position descending and track max arrival time. <br>
+ - Compute time to target for each car. <br>
+ - Count a new fleet when time exceeds current max.
+ * <p>
+ * Time Complexity: O(n * log(n)) <br>
+ * - n: number of cars; sorting dominates. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Store pairs of position/time. <br>
  */
 public class LeetCode0853_1 {
 

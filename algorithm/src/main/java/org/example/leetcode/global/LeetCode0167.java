@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/description/
+ * <a href="https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted">LeetCode 167: Two Sum II - Input Array Is Sorted</a>
+ * <p>
+ * Approach: Two pointers. <br>
+ * - Use left and right pointers on the sorted array. <br>
+ * - Move pointers based on sum comparison with target.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each pointer moves at most n steps.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0167 {
 

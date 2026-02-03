@@ -3,18 +3,20 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/rotate-list/
+ * <a href="https://leetcode.cn/problems/rotate-list">LeetCode 61: Rotate List</a>
+ * <p>
+ * Approach: Reverse-then-merge. <br>
+ * - Reverse the whole list and split at k. <br>
+ * - Reverse both parts and stitch together.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited a constant number of times.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0061_3 {
 
-    /**
-     * Time Complexity: O(n^2)
-     * - n: number of nodes in the linked list
-     * - We reverse parts of the list multiple times
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public ListNode rotateRight(ListNode head, int k) {
         if (head == null || head.next == null || k == 0) {
             return head;

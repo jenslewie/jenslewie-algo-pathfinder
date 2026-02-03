@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/design-circular-deque">...</a>
+ * <a href="https://leetcode.cn/problems/design-circular-deque">LeetCode 641: Design Circular Deque</a>
+ * <p>
+ * Approach: Array with shift on insertFront. <br>
+ * - Shift elements to make space at the front. <br>
+ * - Use head/tail indices and size for state.
+ * <p>
+ * Time Complexity: O(n) for insertFront, O(1) for others <br>
+ * - Shifting elements costs linear time.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - Array of capacity k.
  */
 public class LeetCode0641_1 {
 

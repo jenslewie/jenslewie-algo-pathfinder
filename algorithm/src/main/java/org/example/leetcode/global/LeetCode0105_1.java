@@ -5,9 +5,17 @@ import org.example.model.tree.TreeNode;
 import java.util.Arrays;
 
 /**
- * <a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal">...</a>
- * Time Complexity: O(n^2)
- * Space Complexity: O(n^2)
+ * <a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal">LeetCode 105: Construct Binary Tree from Preorder and Inorder Traversal</a>
+ * <p>
+ * Approach: Recursive split with array copies. <br>
+ * - Use the preorder root to split the inorder array. <br>
+ * - Recurse on left and right subarrays created by copying ranges.
+ * <p>
+ * Time Complexity: O(n^2) <br>
+ * - Each recursion searches the root in inorder and copies subarrays.
+ * <p>
+ * Space Complexity: O(n^2) <br>
+ * - Subarray copies across recursion levels dominate space.
  */
 public class LeetCode0105_1 {
 

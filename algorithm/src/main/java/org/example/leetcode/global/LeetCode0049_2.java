@@ -6,22 +6,20 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/group-anagrams">...</a>
+ * <a href="https://leetcode.cn/problems/group-anagrams">LeetCode 49: Group Anagrams</a>
+ * <p>
+ * Approach: Sorted-string key. <br>
+ * - Sort characters of each string. <br>
+ * - Use the sorted string as the grouping key.
+ * <p>
+ * Time Complexity: O(n * k * log(k)) <br>
+ * - n: number of strings; k: max string length.
+ * <p>
+ * Space Complexity: O(n * k) <br>
+ * - Store grouped strings and sorted keys.
  */
 public class LeetCode0049_2 {
 
-    /**
-     * Time Complexity: O(n * k * log(k))
-     * - n: number of strings in the input array
-     * - k: maximum length of a string
-     * - Sorting each string takes O(k * log(k))
-     * - Total: O(n * k * log(k))
-     * <p>
-     * Space Complexity: O(n * k)
-     * - HashMap to store groups: O(n * k) for storing all strings
-     * - Temporary char array for sorting: O(k)
-     * - Overall: O(n * k)
-     */
     public List<List<String>> groupAnagrams(String[] strs) {
         var ans = new HashMap<String, List<String>>();
         for (String str : strs) {

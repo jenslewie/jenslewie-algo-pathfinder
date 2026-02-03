@@ -4,7 +4,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/shortest-unsorted-continuous-subarray">...</a>
+ * <a href="https://leetcode.cn/problems/shortest-unsorted-continuous-subarray">LeetCode 581: Shortest Unsorted Continuous Subarray</a>
+ * <p>
+ * Approach: Monotonic stacks for bounds. <br>
+ * - Find right bound where order breaks using a decreasing stack. <br>
+ * - Find left bound using an increasing stack.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each index is pushed/popped at most once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stacks store indices.
  */
 public class LeetCode0581 {
 

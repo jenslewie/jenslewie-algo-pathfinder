@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/invert-binary-tree">...</a>
+ * <a href="https://leetcode.cn/problems/invert-binary-tree">LeetCode 226: Invert Binary Tree</a>
+ * <p>
+ * Approach: Recursive swap. <br>
+ * - Recursively invert left and right subtrees. <br>
+ * - Swap the children.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(h) <br>
+ * - h: height of the tree due to recursion stack.
  */
 public class LeetCode0226_1 {
 

@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import java.util.ArrayDeque;
 
 /**
- * <a href="https://leetcode.cn/problems/maximum-sum-circular-subarray">...</a>
+ * <a href="https://leetcode.cn/problems/maximum-sum-circular-subarray">LeetCode 918: Maximum Sum Circular Subarray</a>
+ * <p>
+ * Approach: Prefix sums with monotonic deque. <br>
+ - Compute prefix sums over 2n and keep a deque of minima. <br>
+ - Maintain a window size at most n.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - Each index is pushed/popped at most once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Prefix sums and deque. <br>
  */
 public class LeetCode0918_1 {
 

@@ -4,7 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * https://leetcode.cn/problems/minimum-window-substring/description/
+ * <a href="https://leetcode.cn/problems/minimum-window-substring">LeetCode 76: Minimum Window Substring</a>
+ * <p>
+ * Approach: Sliding window with frequency maps. <br>
+ * - Expand right to satisfy all needed characters. <br>
+ * - Shrink left to minimize the window while maintaining validity.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each pointer moves at most n steps.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - k: number of distinct characters tracked in the maps.
  */
 public class LeetCode0076 {
 

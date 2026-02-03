@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/remove-k-digits">...</a>
+ * <a href="https://leetcode.cn/problems/remove-k-digits">LeetCode 402: Remove K Digits</a>
+ * <p>
+ * Approach: Array-based stack of indices. <br>
+ * - Maintain increasing digits with index stack. <br>
+ * - Trim remaining digits if k remains.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of digits; each index is pushed/popped at most once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack array stores indices.
  */
 public class LeetCode0402_3 {
 

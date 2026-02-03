@@ -1,19 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="http://leetcode.cn/problems/valid-palindrome/">...</a>
+ * <a href="https://leetcode.cn/problems/valid-palindrome">LeetCode 125: Valid Palindrome</a>
+ * <p>
+ * Approach: Build cleaned string then compare to reverse. <br>
+ * - Filter alphanumeric characters into a lowercase buffer. <br>
+ * - Compare with its reversed copy.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; filtering and reversing are linear.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Buffer for the cleaned string and its reverse.
  */
 public class LeetCode0125_3 {
 
-    /**
-     * Time Complexity: O(n)
-     * - n: length of the string
-     * - We iterate through each character once to build the cleaned string
-     * - And once to compare with reversed string
-     * <p>
-     * Space Complexity: O(n)
-     * - Creating a new string buffer to store the cleaned string
-     */
     public boolean isPalindrome(String s) {
         StringBuilder sgood = new StringBuilder();
         int length = s.length();

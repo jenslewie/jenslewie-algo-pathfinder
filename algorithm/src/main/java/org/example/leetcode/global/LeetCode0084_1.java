@@ -4,7 +4,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/largest-rectangle-in-histogram">...</a>
+ * <a href="https://leetcode.cn/problems/largest-rectangle-in-histogram">LeetCode 84: Largest Rectangle in Histogram</a>
+ * <p>
+ * Approach: Monotonic stack with left/right bounds. <br>
+ * - For each bar, compute nearest smaller to left and right. <br>
+ * - Max area is height * (right - left - 1).
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of bars; each index is pushed/popped once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack and boundary arrays.
  */
 public class LeetCode0084_1 {
 

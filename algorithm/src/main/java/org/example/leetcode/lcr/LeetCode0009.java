@@ -1,7 +1,17 @@
 package org.example.leetcode.lcr;
 
 /**
- * https://leetcode.cn/problems/ZVAVXX/
+ * <a href="https://leetcode.cn/problems/ZVAVXX/">LeetCode LCR 009: Subarray Product Less Than K</a>
+ * <p>
+ * Approach: Sliding window with product. <br>
+ - Expand right and multiply. <br>
+ - Shrink left while product >= k.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each pointer moves at most n steps. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
  */
 public class LeetCode0009 {
 

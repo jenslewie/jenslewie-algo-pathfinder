@@ -6,7 +6,17 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * https://leetcode.cn/problems/find-all-anagrams-in-a-string/description/
+ * <a href="https://leetcode.cn/problems/find-all-anagrams-in-a-string">LeetCode 438: Find All Anagrams in a String</a>
+ * <p>
+ * Approach: Sliding window with frequency maps. <br>
+ * - Track counts for the current window and the target. <br>
+ * - Record indices where counts match.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each pointer moves at most n steps.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - k: number of distinct characters in the pattern.
  */
 public class LeetCode0438 {
 

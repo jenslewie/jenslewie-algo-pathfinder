@@ -4,21 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/shift-2d-grid">...</a>
- * Approach 4: Direct assignment approach
+ * <a href="https://leetcode.cn/problems/shift-2d-grid">LeetCode 1260: Shift 2D Grid</a>
+ * <p>
+ * Approach: Modular index shift. <br>
+ - Treat grid as circular 1D and compute shifted index. <br>
+ - Map back to 2D coordinates.
+ * <p>
+ * Time Complexity: O(m * n) <br>
+ * - m, n: grid dimensions. <br>
+ * <p>
+ * Space Complexity: O(m * n) <br>
+ * - Output grid. <br>
  */
 public class LeetCode1260_4 {
 
-    /**
-     * Shift 2D grid using direct assignment approach
-     * Time Complexity: O(m * n)
-     * - m: number of rows
-     * - n: number of columns
-     * - Single pass through all elements
-     * <p>
-     * Space Complexity: O(m * n)
-     * - Result list to store the final answer
-     */
     public List<List<Integer>> shiftGrid(int[][] grid, int k) {
         int m = grid.length, n = grid[0].length;
         List<List<Integer>> results = new ArrayList<>();

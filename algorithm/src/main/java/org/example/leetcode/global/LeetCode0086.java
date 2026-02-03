@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/partition-list/description/
+ * <a href="https://leetcode.cn/problems/partition-list">LeetCode 86: Partition List</a>
+ * <p>
+ * Approach: Two lists for < x and >= x, then concatenate. <br>
+ * - Walk the list and append nodes to the appropriate list. <br>
+ * - Connect the two lists at the end.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space for pointers.
  */
 public class LeetCode0086 {
 

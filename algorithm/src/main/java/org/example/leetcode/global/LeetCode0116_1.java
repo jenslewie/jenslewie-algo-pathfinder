@@ -5,7 +5,17 @@ import org.example.model.tree.TreeNode;
 import java.util.LinkedList;
 
 /**
- * <a href="https://leetcode.cn/problems/populating-next-right-pointers-in-each-node">...</a>
+ * <a href="https://leetcode.cn/problems/populating-next-right-pointers-in-each-node">LeetCode 116: Populating Next Right Pointers in Each Node</a>
+ * <p>
+ * Approach: BFS level-order traversal. <br>
+ * - Traverse each level and connect nodes using the queue order. <br>
+ * - The next pointer points to the next node in the same level.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Queue holds up to a full level of nodes.
  */
 public class LeetCode0116_1 {
 

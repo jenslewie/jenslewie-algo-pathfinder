@@ -6,7 +6,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * https://leetcode.cn/problems/palindrome-linked-list/description/
+ * <a href="https://leetcode.cn/problems/palindrome-linked-list">LeetCode 234: Palindrome Linked List</a>
+ * <p>
+ * Approach: Half traversal with deque. <br>
+ * - Use fast/slow pointers to reach the middle. <br>
+ * - Compare second half with values stored from the first half.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Deque stores the first half values.
  */
 public class LeetCode0234 {
 

@@ -3,20 +3,20 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/reorder-list">...</a>
- * Reverse and merge approach
+ * <a href="https://leetcode.cn/problems/reorder-list">LeetCode 143: Reorder List</a>
+ * <p>
+ * Approach: Reverse second half and merge. <br>
+ * - Find the middle, reverse the second half. <br>
+ * - Interleave nodes from the first and second halves.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited a constant number of times.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - In-place reordering.
  */
 public class LeetCode0143_1 {
 
-    /**
-     * Reverse and merge approach to reorder a linked list
-     * Time Complexity: O(n)
-     * - n: number of nodes in the linked list
-     * - Find middle: O(n), reverse second half: O(n/2), merge: O(n/2)
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public void reorderList(ListNode head) {
         if (head == null) {
             return;

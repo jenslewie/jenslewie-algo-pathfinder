@@ -4,8 +4,17 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
- * <a href="https://leetcode.cn/problems/implement-stack-using-queues">...</a>
- * Single queue approach to implement stack
+ * <a href="https://leetcode.cn/problems/implement-stack-using-queues">LeetCode 225: Implement Stack using Queues</a>
+ * <p>
+ * Approach: Single queue rotation. <br>
+ * - Push by rotating the queue to place the new element at the front. <br>
+ * - Pop/top read directly from the front.
+ * <p>
+ * Time Complexity: O(n) for push, O(1) for pop/top/empty <br>
+ * - n: current stack size; rotation costs linear time on push.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Queue stores all elements.
  */
 public class LeetCode0225_1 {
 
@@ -17,15 +26,6 @@ public class LeetCode0225_1 {
         size = 0;
     }
 
-    /**
-     * Push operation using single queue approach
-     * Time Complexity: O(n)
-     * - n: current size of the stack
-     * - We rotate all existing elements to place the new element at front
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for rotation
-     */
     public void push(int x) {
         mainQueue.offer(x);
         for (int i = 0; i < size; i++) {
@@ -34,14 +34,6 @@ public class LeetCode0225_1 {
         size++;
     }
 
-    /**
-     * Pop operation using single queue approach
-     * Time Complexity: O(1)
-     * - Direct removal from front of queue
-     * <p>
-     * Space Complexity: O(1)
-     * - No additional space needed
-     */
     public int pop() {
         if (!mainQueue.isEmpty()) {
             size--;
@@ -50,14 +42,6 @@ public class LeetCode0225_1 {
         return -1;
     }
 
-    /**
-     * Top operation using single queue approach
-     * Time Complexity: O(1)
-     * - Direct access to front of queue
-     * <p>
-     * Space Complexity: O(1)
-     * - No additional space needed
-     */
     public int top() {
         if (!mainQueue.isEmpty()) {
             return mainQueue.peek();
@@ -65,14 +49,6 @@ public class LeetCode0225_1 {
         return -1;
     }
 
-    /**
-     * Empty check using single queue approach
-     * Time Complexity: O(1)
-     * - Direct check of queue emptiness
-     * <p>
-     * Space Complexity: O(1)
-     * - No additional space needed
-     */
     public boolean empty() {
         return mainQueue.isEmpty();
     }

@@ -5,9 +5,17 @@ import org.example.model.tree.TreeNode;
 import java.util.LinkedList;
 
 /**
- * <a href="https://leetcode.cn/problems/serialize-and-deserialize-binary-tree">...</a>
- * Time Complexity: O(n)
- * Space Complexity: O(n)
+ * <a href="https://leetcode.cn/problems/serialize-and-deserialize-binary-tree">LeetCode 297: Serialize and Deserialize Binary Tree</a>
+ * <p>
+ * Approach: Level-order BFS serialization. <br>
+ * - Serialize by visiting nodes level by level with null markers. <br>
+ * - Deserialize using a queue to rebuild children in order.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is processed once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Queue and serialized representation store all nodes.
  */
 public class LeetCode0297_3 {
 

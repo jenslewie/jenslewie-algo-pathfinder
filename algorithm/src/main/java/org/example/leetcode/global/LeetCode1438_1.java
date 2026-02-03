@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.learning.queue.MonotonicQueue;
 
 /**
- * <a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">...</a>
+ * <a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">LeetCode 1438: Longest Continuous Subarray With Absolute Diff <= Limit</a>
+ * <p>
+ * Approach: Sliding window with two deques. <br>
+ - Maintain max deque and min deque. <br>
+ - Shrink window when max - min exceeds limit.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each index is pushed/popped once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Deques store indices. <br>
  */
 public class LeetCode1438_1 {
 

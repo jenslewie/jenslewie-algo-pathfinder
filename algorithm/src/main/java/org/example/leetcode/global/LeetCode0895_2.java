@@ -5,7 +5,17 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * Frequency stack implementation using maps for frequency tracking
+ * <a href="https://leetcode.cn/problems/maximum-frequency-stack">LeetCode 895: Maximum Frequency Stack</a>
+ * <p>
+ * Approach: Map of frequency to stacks. <br>
+ - Track value frequencies and per-frequency stacks. <br>
+ - Pop from the stack at max frequency.
+ * <p>
+ * Time Complexity: O(1) <br>
+ * - Push and pop are constant time. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Store all pushed values. <br>
  */
 public class LeetCode0895_2 {
 
@@ -19,14 +29,6 @@ public class LeetCode0895_2 {
         freqToValsMap = new HashMap<>();
     }
 
-    /**
-     * Push element to the frequency stack using map-based approach
-     * Time Complexity: O(1)
-     * - Adding to the stack takes constant time
-     * <p>
-     * Space Complexity: O(N)
-     * - Where N is the total number of pushes
-     */
     public void push(int val) {
         int freq = valToFreq.getOrDefault(val, 0) + 1;
         maxFreq = Math.max(maxFreq, freq);
@@ -34,14 +36,6 @@ public class LeetCode0895_2 {
         freqToValsMap.computeIfAbsent(freq, k -> new Stack<>()).add(val);
     }
 
-    /**
-     * Pop element from the frequency stack using map-based approach
-     * Time Complexity: O(1)
-     * - Removing from the stack takes constant time
-     * <p>
-     * Space Complexity: O(1)
-     * - No additional space needed
-     */
     public int pop() {
         int value = freqToValsMap.get(maxFreq).pop();
         if (freqToValsMap.get(maxFreq).isEmpty()) {

@@ -1,7 +1,17 @@
 package org.example.leetcode.lcr;
 
 /**
- * https://leetcode.cn/problems/2VG8Kg/
+ * <a href="https://leetcode.cn/problems/2VG8Kg/">LeetCode LCR 008: Minimum Size Subarray Sum</a>
+ * <p>
+ * Approach: Sliding window. <br>
+ - Expand right to reach or exceed target sum. <br>
+ - Shrink left to minimize window length.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each pointer moves at most n steps. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
  */
 public class LeetCode0008 {
 

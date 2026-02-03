@@ -3,7 +3,17 @@ package org.example.leetcode.lcr;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/description/
+ * <a href="https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/description/">LeetCode LCR 140: Kth Node From End of List</a>
+ * <p>
+ * Approach: Two pointers with a gap. <br>
+ - Advance first pointer cnt steps. <br>
+ - Move both until first reaches end.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; single pass. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
  */
 public class LeetCode0140 {
 

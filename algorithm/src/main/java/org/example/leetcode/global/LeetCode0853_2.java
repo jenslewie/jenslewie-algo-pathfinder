@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import java.util.Arrays;
 
 /**
- * <a href="https://leetcode.cn/problems/car-fleet">...</a>
+ * <a href="https://leetcode.cn/problems/car-fleet">LeetCode 853: Car Fleet</a>
+ * <p>
+ * Approach: Monotonic stack of times after sorting by position. <br>
+ - Push times in descending position order. <br>
+ - Pop when a car catches up to form a fleet.
+ * <p>
+ * Time Complexity: O(n * log(n)) <br>
+ * - Sorting dominates. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack of times. <br>
  */
 public class LeetCode0853_2 {
 

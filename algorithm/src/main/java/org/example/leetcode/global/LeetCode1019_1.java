@@ -6,7 +6,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/next-greater-node-in-linked-list">...</a>
+ * <a href="https://leetcode.cn/problems/next-greater-node-in-linked-list">LeetCode 1019: Next Greater Node In Linked List</a>
+ * <p>
+ * Approach: Recursion with monotonic stack. <br>
+ - Recurse to the end to know size. <br>
+ - Use a decreasing stack to fill results on the way back.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node processed once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Recursion stack and monotonic stack. <br>
  */
 public class LeetCode1019_1 {
 

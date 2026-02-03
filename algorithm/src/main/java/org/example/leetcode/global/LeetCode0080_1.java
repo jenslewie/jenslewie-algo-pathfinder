@@ -1,19 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/description/">...</a>
+ * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii">LeetCode 80: Remove Duplicates from Sorted Array II</a>
+ * <p>
+ * Approach: Allow at most two duplicates. <br>
+ * - Keep a slow pointer for the write position. <br>
+ * - Accept a number if it is greater than nums[slow - 2].
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each element is processed once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - In-place update with constant extra space.
  */
 public class LeetCode0080_1 {
 
-    /**
-     * Allow up to 2 duplicates approach
-     * Time Complexity: O(n)
-     * - n: length of the array
-     * - We iterate through the array once
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public int removeDuplicates(int[] nums) {
         int slow = 0;
         for (int num : nums) {

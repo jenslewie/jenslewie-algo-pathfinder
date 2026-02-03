@@ -4,20 +4,20 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * https://leetcode.cn/problems/max-consecutive-ones-iii/description/
- * Deque approach
+ * <a href="https://leetcode.cn/problems/max-consecutive-ones-iii">LeetCode 1004: Max Consecutive Ones III</a>
+ * <p>
+ * Approach: Sliding window with zero count. <br>
+ - Expand right; shrink left when zeros exceed k. <br>
+ - Track maximum window length.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each pointer moves at most n steps. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
  */
 public class LeetCode1004_1 {
 
-    /**
-     * Deque approach to find maximum consecutive ones with at most k flips
-     * Time Complexity: O(n)
-     * - n: length of the input array
-     * - Single pass through the array
-     * <p>
-     * Space Complexity: O(k)
-     * - Deque stores at most k indices
-     */
     public int longestOnes(int[] nums, int k) {
         Deque<Integer> queue = new ArrayDeque<>();
         int maxLen = Integer.MIN_VALUE;

@@ -1,5 +1,18 @@
 package org.example.leetcode.global;
 
+/**
+ * <a href="https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days">LeetCode 1011: Capacity To Ship Packages Within D Days</a>
+ * <p>
+ * Approach: Binary search on capacity. <br>
+ * - Check how many days needed for a candidate capacity. <br>
+ * - Shrink the search range.
+ * <p>
+ * Time Complexity: O(n * log(W)) <br>
+ * - n: number of packages; W: sum of weights. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
+ */
 public class LeetCode1011 {
 
     public int shipWithinDays(int[] weights, int days) {

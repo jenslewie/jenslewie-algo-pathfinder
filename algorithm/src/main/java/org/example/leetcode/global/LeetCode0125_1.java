@@ -1,18 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="http://leetcode.cn/problems/valid-palindrome/">...</a>
+ * <a href="https://leetcode.cn/problems/valid-palindrome">LeetCode 125: Valid Palindrome</a>
+ * <p>
+ * Approach: Two pointers with manual validation. <br>
+ * - Move pointers inward, skipping non-alphanumeric characters. <br>
+ * - Compare lowercase characters for equality.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each character is visited at most once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0125_1 {
 
-    /**
-     * Time Complexity: O(n)
-     * - n: length of the string
-     * - We iterate through each character once at most
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public boolean isPalindrome(String s) {
         s = s.toLowerCase();
         int left = 0, right = s.length() - 1;

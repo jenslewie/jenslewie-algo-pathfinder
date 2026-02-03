@@ -3,20 +3,20 @@ package org.example.leetcode.lcr;
 import java.util.Arrays;
 
 /**
- * https://leetcode.cn/problems/MPnaiL/description/
- * Approach 3: Using sliding window with explicit size check
+ * <a href="https://leetcode.cn/problems/MPnaiL/description/">LeetCode LCR 014: Permutation in String</a>
+ * <p>
+ * Approach: Sliding window with size check. <br>
+ - Track counts for needed characters only. <br>
+ - Compare arrays when window size matches.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of s2; linear scan. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Fixed-size arrays of 26 counts. <br>
  */
 public class LeetCode0014_3 {
 
-    /**
-     * Check if s2 contains a permutation of s1 using sliding window with explicit size check
-     * Time Complexity: O(n)
-     * - n: length of s2
-     * - Single pass through s2 with two pointers
-     * <p>
-     * Space Complexity: O(1)
-     * - Fixed size arrays of 26 elements for character counting
-     */
     public boolean checkInclusion(String s1, String s2) {
         int[] window = new int[26];
         int[] need = new int[26];

@@ -3,6 +3,19 @@ package org.example.leetcode.global;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * <a href="https://leetcode.cn/problems/online-stock-span">LeetCode 901: Online Stock Span</a>
+ * <p>
+ * Approach: Monotonic stack with sentinel. <br>
+ * - Maintain decreasing prices with their indices. <br>
+ * - Span is the difference to the last greater price.
+ * <p>
+ * Time Complexity: O(1) amortized <br>
+ * - Each price is pushed and popped once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack stores past prices. <br>
+ */
 public class LeetCode0901_2 {
 
     private final Deque<int[]> stack;

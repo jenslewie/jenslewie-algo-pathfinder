@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/minimum-size-subarray-sum/description/
+ * <a href="https://leetcode.cn/problems/minimum-size-subarray-sum">LeetCode 209: Minimum Size Subarray Sum</a>
+ * <p>
+ * Approach: Sliding window. <br>
+ * - Expand right to reach or exceed target sum. <br>
+ * - Shrink left to minimize window length.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each pointer moves at most n steps.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0209 {
 

@@ -4,7 +4,17 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * <a href="https://leetcode.cn/problems/iIQa4I">...</a>
+ * <a href="https://leetcode.cn/problems/iIQa4I">LeetCode LCR 038: Daily Temperatures</a>
+ * <p>
+ * Approach: Monotonic stack of indices. <br>
+ - Maintain decreasing temperatures. <br>
+ - Resolve waits when a warmer day appears.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of days; each index pushed/popped once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack and result array. <br>
  */
 public class LeetCode0038 {
 

@@ -4,7 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * https://leetcode.cn/problems/spiral-matrix/description/
+ * <a href="https://leetcode.cn/problems/spiral-matrix">LeetCode 54: Spiral Matrix</a>
+ * <p>
+ * Approach: Boundary simulation. <br>
+ * - Maintain top, bottom, left, and right bounds. <br>
+ * - Traverse the edges in order while shrinking the bounds.
+ * <p>
+ * Time Complexity: O(m * n) <br>
+ * - m, n: matrix dimensions; each element is visited once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Output list excluded; constant extra space.
  */
 public class LeetCode0054 {
 

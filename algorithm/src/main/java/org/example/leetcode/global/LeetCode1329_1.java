@@ -3,8 +3,16 @@ package org.example.leetcode.global;
 import java.util.Arrays;
 
 /**
- * <a href="https://leetcode.cn/problems/sort-the-matrix-diagonally">...</a>
- * Approach 1: Diagonal sorting with array
+ * <a href="https://leetcode.cn/problems/sort-the-matrix-diagonally">LeetCode 1329: Sort the Matrix Diagonally</a>
+ * <p>
+ * Approach: Sort each diagonal with a list. <br>
+ - Collect elements of each diagonal, sort, and write back.
+ * <p>
+ * Time Complexity: O(m * n log(min(m, n))) <br>
+ * - Sorting each diagonal dominates. <br>
+ * <p>
+ * Space Complexity: O(min(m, n)) <br>
+ * - Temporary list for a diagonal. <br>
  */
 public class LeetCode1329_1 {
 

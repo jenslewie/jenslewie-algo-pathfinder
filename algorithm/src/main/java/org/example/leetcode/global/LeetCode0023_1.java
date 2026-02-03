@@ -7,19 +7,20 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * https://leetcode.cn/problems/merge-k-sorted-lists/description/
+ * <a href="https://leetcode.cn/problems/merge-k-sorted-lists">LeetCode 23: Merge k Sorted Lists</a>
+ * <p>
+ * Approach: Min-heap (priority queue). <br>
+ * - Push the head of each list into the heap. <br>
+ * - Repeatedly extract the smallest node and push its next node.
+ * <p>
+ * Time Complexity: O(N * * log(k)) <br>
+ * - N: total number of nodes; k: number of lists.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - Heap holds at most k nodes.
  */
 public class LeetCode0023_1 {
 
-    /**
-     * Time Complexity: O(N * log(k))
-     * - N: total number of nodes across all lists
-     * - k: number of linked lists
-     * - Each node is added and removed from the priority queue once, which takes O(log(k)) time
-     * <p>
-     * Space Complexity: O(k)
-     * - Priority queue stores at most k nodes (one from each list)
-     */
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode dummy = new ListNode(-1);
         ListNode p = dummy;

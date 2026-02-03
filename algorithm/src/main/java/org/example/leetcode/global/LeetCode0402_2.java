@@ -4,7 +4,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/remove-k-digits">...</a>
+ * <a href="https://leetcode.cn/problems/remove-k-digits">LeetCode 402: Remove K Digits</a>
+ * <p>
+ * Approach: Deque as monotonic stack. <br>
+ * - Maintain increasing digits; pop when a smaller digit appears. <br>
+ * - Remove extra digits from the end if k remains.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of digits; each digit is added/removed at most once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Deque stores digits.
  */
 public class LeetCode0402_2 {
 

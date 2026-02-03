@@ -1,20 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/add-binary/
+ * <a href="https://leetcode.cn/problems/add-binary">LeetCode 67: Add Binary</a>
+ * <p>
+ * Approach: Two-pointer addition with carry. <br>
+ * - Traverse both strings from right to left. <br>
+ * - Sum bits with carry and build the result in reverse.
+ * <p>
+ * Time Complexity: O(max(m, n)) <br>
+ * - m, n: lengths of the input strings.
+ * <p>
+ * Space Complexity: O(max(m, n)) <br>
+ * - StringBuilder holds the result.
  */
 public class LeetCode0067_1 {
 
-    /**
-     * Direct iteration approach
-     * Time Complexity: O(max(m, n))
-     * - m: length of string a
-     * - n: length of string b
-     * - We iterate through both strings once
-     * <p>
-     * Space Complexity: O(max(m, n))
-     * - StringBuilder to store the result
-     */
     public String addBinary(String a, String b) {
         StringBuilder sb = new StringBuilder();
         int carry = 0;

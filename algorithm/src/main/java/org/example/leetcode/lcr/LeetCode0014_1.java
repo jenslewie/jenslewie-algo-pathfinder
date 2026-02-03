@@ -1,20 +1,20 @@
 package org.example.leetcode.lcr;
 
 /**
- * https://leetcode.cn/problems/MPnaiL/description/
- * Approach 1: Using sliding window with count array
+ * <a href="https://leetcode.cn/problems/MPnaiL/description/">LeetCode LCR 014: Permutation in String</a>
+ * <p>
+ * Approach: Sliding window with count array. <br>
+ - Track frequency deltas for s1 and window in s2. <br>
+ - Adjust left when a count exceeds target.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of s2; single pass with two pointers. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Fixed-size array of 26 counts. <br>
  */
 public class LeetCode0014_1 {
 
-    /**
-     * Check if s2 contains a permutation of s1 using sliding window technique
-     * Time Complexity: O(n)
-     * - n: length of s2
-     * - Single pass through s2 with two pointers
-     * <p>
-     * Space Complexity: O(1)
-     * - Fixed size array of 26 elements for character counting
-     */
     public boolean checkInclusion(String s1, String s2) {
         int m = s1.length(), n = s2.length();
         if (m > n) {

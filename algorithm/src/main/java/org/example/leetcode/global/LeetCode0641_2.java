@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/design-circular-deque">...</a>
+ * <a href="https://leetcode.cn/problems/design-circular-deque">LeetCode 641: Design Circular Deque</a>
+ * <p>
+ * Approach: Circular array with modular indices. <br>
+ * - Insert/delete by moving head/tail indices. <br>
+ * - Track size to detect full/empty.
+ * <p>
+ * Time Complexity: O(1) per operation <br>
+ * - All operations are constant time.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - Array of capacity k.
  */
 public class LeetCode0641_2 {
 

@@ -3,20 +3,20 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/merge-k-sorted-lists/description/
+ * <a href="https://leetcode.cn/problems/merge-k-sorted-lists">LeetCode 23: Merge k Sorted Lists</a>
+ * <p>
+ * Approach: Divide and conquer merge. <br>
+ * - Recursively split the list array in half. <br>
+ * - Merge pairs of lists until one remains.
+ * <p>
+ * Time Complexity: O(N * * log(k)) <br>
+ * - N: total number of nodes; k: number of lists.
+ * <p>
+ * Space Complexity: O(log(k)) <br>
+ * - Recursion depth from splitting the lists.
  */
 public class LeetCode0023_2 {
 
-    /**
-     * Time Complexity: O(N * log(k))
-     * - N: total number of nodes across all lists
-     * - k: number of linked lists
-     * - We divide the lists into halves log(k) times, and each level processes all N nodes
-     * <p>
-     * Space Complexity: O(log(k))
-     * - Recursion depth is O(log(k))
-     * - Each recursion level uses constant extra space
-     */
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0) {
             return null;

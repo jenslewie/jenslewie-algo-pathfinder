@@ -1,20 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/squares-of-a-sorted-array">...</a>
- * Approach 2: Find partition point and merge
+ * <a href="https://leetcode.cn/problems/squares-of-a-sorted-array">LeetCode 977: Squares of a Sorted Array</a>
+ * <p>
+ * Approach: Partition then merge. <br>
+ - Find the first non-negative index. <br>
+ - Merge squares from negative and non-negative sides.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; linear merge. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Output array. <br>
  */
 public class LeetCode0977_2 {
 
-    /**
-     * Sort squares of a sorted array by finding partition point and merging
-     * Time Complexity: O(n)
-     * - n: length of nums
-     * - Single pass through the array to find partition and merge
-     * <p>
-     * Space Complexity: O(n)
-     * - Result array of size n
-     */
     public int[] sortedSquares(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];

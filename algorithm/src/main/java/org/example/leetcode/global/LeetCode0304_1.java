@@ -1,8 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/range-sum-query-2d-immutable">...</a>
- * Prefix sum approach
+ * <a href="https://leetcode.cn/problems/range-sum-query-2d-immutable">LeetCode 304: Range Sum Query 2D - Immutable</a>
+ * <p>
+ * Approach: 2D prefix sums. <br>
+ * - Precompute cumulative sums for each rectangle from (0,0). <br>
+ * - Answer queries in O(1) using inclusion-exclusion.
+ * <p>
+ * Time Complexity: O(m * n) build, O(1) per query <br>
+ * - m, n: matrix dimensions.
+ * <p>
+ * Space Complexity: O(m * n) <br>
+ * - Prefix sum matrix stores (m+1) * (n+1) values.
  */
 public class LeetCode0304_1 {
 
@@ -30,14 +39,6 @@ public class LeetCode0304_1 {
         }
     }
 
-    /**
-     * Range sum query using 2D prefix sum
-     * Time Complexity: O(1)
-     * - Each query takes constant time
-     * <p>
-     * Space Complexity: O(m*n)
-     * - Where m and n are dimensions of the matrix
-     */
     public int sumRegion(int row1, int col1, int row2, int col2) {
         return preSum[row2 + 1][col2 + 1] - preSum[row1][col2 + 1] - preSum[row2 + 1][col1] + preSum[row1][col1];
     }

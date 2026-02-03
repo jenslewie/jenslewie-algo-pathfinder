@@ -3,18 +3,20 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/rotate-list/
+ * <a href="https://leetcode.cn/problems/rotate-list">LeetCode 61: Rotate List</a>
+ * <p>
+ * Approach: Repeatedly move tail to head. <br>
+ * - Rotate by moving the last node to the front k times. <br>
+ * - Uses list traversal per rotation.
+ * <p>
+ * Time Complexity: O(n^2) <br>
+ * - n: number of nodes; repeated rotations each cost O(n).
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0061_2 {
 
-    /**
-     * Time Complexity: O(n^2)
-     * - n: number of nodes in the linked list
-     * - We repeatedly move nodes from the end to the front k times
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public ListNode rotateRight(ListNode head, int k) {
         if (head == null || head.next == null || k == 0) {
             return head;

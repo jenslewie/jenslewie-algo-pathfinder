@@ -1,15 +1,20 @@
 package org.example.leetcode.global;
 
+/**
+ * <a href="https://leetcode.cn/problems/longest-common-prefix">LeetCode 14: Longest Common Prefix</a>
+ * <p>
+ * Approach: Vertical scanning. <br>
+ * - Compare characters column by column across all strings. <br>
+ * - Stop at the first mismatch or when a string ends. <br>
+ * <p>
+ * Time Complexity: O(S) <br>
+ * - S: total number of characters across all strings. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used. <br>
+ */
 public class LeetCode0014_2 {
 
-    /**
-     * Time Complexity: O(S)
-     * - S: sum of all characters in all strings
-     * - In the worst case, we iterate through all characters of all strings
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space (excluding the output string)
-     */
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) {
             return "";

@@ -3,19 +3,20 @@ package org.example.leetcode.global;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/valid-parentheses">...</a>
+ * <a href="https://leetcode.cn/problems/valid-parentheses">LeetCode 20: Valid Parentheses</a>
+ * <p>
+ * Approach: Stack of opening brackets. <br>
+ * - Push openings, and on a closing bracket check it matches the stack top. <br>
+ * - Use a helper to map closing brackets to their openings.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each character is processed once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack stores up to n characters in the worst case.
  */
 public class LeetCode0020_2 {
 
-    /**
-     * Time Complexity: O(n)
-     * - n: length of the string
-     * - We iterate through each character once
-     * <p>
-     * Space Complexity: O(n)
-     * - Stack can hold up to n/2 characters in worst case (all opening brackets)
-     * - Overall: O(n)
-     */
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         for (char c : s.toCharArray()) {

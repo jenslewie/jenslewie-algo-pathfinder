@@ -4,7 +4,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">...</a>
+ * <a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">LeetCode 1438: Longest Continuous Subarray With Absolute Diff <= Limit</a>
+ * <p>
+ * Approach: Sliding window with TreeMap. <br>
+ - Track counts in a TreeMap to get min/max. <br>
+ - Shrink when max - min exceeds limit.
+ * <p>
+ * Time Complexity: O(n * log(n)) <br>
+ * - TreeMap operations are logarithmic. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - TreeMap stores window values. <br>
  */
 public class LeetCode1438_2 {
 

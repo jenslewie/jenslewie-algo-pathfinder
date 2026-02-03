@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/binary-search">...</a>
+ * <a href="https://leetcode.cn/problems/binary-search">LeetCode 704: Binary Search</a>
+ * <p>
+ * Approach: Iterative binary search. <br>
+ * - Maintain left/right bounds and shrink based on comparisons. <br>
+ * - Return index when target is found.
+ * <p>
+ * Time Complexity: O(log(n)) <br>
+ * - n: length of the array; halves search space each step.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0704 {
 

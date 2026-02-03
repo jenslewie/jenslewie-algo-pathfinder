@@ -3,17 +3,21 @@ package org.example.leetcode.global;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <a href="https://leetcode.cn/problems/longest-common-prefix">LeetCode 14: Longest Common Prefix</a>
+ * <p>
+ * Approach: Character counting per position. <br>
+ * - For each index, count occurrences of that character across all strings. <br>
+ * - Stop once any string ends or the counts diverge. <br>
+ * <p>
+ * Time Complexity: O(S) <br>
+ * - S: total number of characters across all strings. <br>
+ * <p>
+ * Space Complexity: O(m) <br>
+ * - m: number of strings (used for counting per position). <br>
+ */
 public class LeetCode0014_3 {
 
-    /**
-     * Time Complexity: O(S)
-     * - S: sum of all characters in all strings
-     * - In the worst case, we iterate through all characters of all strings
-     * <p>
-     * Space Complexity: O(m)
-     * - m: number of strings in the array
-     * - Using a map to store character counts at each position
-     */
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) {
             return "";

@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/rotate-image/description/
+ * <a href="https://leetcode.cn/problems/rotate-image">LeetCode 48: Rotate Image</a>
+ * <p>
+ * Approach: Transpose then reverse each row. <br>
+ * - Transpose the matrix across its main diagonal. <br>
+ * - Reverse each row to achieve a 90-degree clockwise rotation.
+ * <p>
+ * Time Complexity: O(n^2) <br>
+ * - n: dimension of the n x n matrix; each element is visited once in each step.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Rotation is done in-place.
  */
 public class LeetCode0048 {
 

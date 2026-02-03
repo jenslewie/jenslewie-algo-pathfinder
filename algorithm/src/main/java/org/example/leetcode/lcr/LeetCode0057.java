@@ -3,7 +3,17 @@ package org.example.leetcode.lcr;
 import java.util.TreeSet;
 
 /**
- * https://leetcode.cn/problems/7WqeDu/description/
+ * <a href="https://leetcode.cn/problems/7WqeDu/description/">LeetCode LCR 057: Contains Duplicate III</a>
+ * <p>
+ * Approach: TreeSet sliding window. <br>
+ - Maintain last k elements in a TreeSet. <br>
+ - Use ceiling to check valueDiff range.
+ * <p>
+ * Time Complexity: O(n * log(k)) <br>
+ * - n: array length; each TreeSet op is log(k). <br>
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - TreeSet stores up to k elements. <br>
  */
 public class LeetCode0057 {
 

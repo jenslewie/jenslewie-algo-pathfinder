@@ -4,20 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <a href="http://leetcode.cn/problems/split-array-largest-sum">...</a>
- * Alternative binary search approach
+ * <a href="https://leetcode.cn/problems/split-array-largest-sum">LeetCode 410: Split Array Largest Sum</a>
+ * <p>
+ * Approach: Binary search with feasibility check. <br>
+ * - Search the minimal maximum subarray sum. <br>
+ * - Check if the array can be split into k parts within the limit.
+ * <p>
+ * Time Complexity: O(n * log(sum - max)) <br>
+ * - n: length of the array; each check is linear.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0410_2 {
 
-    /**
-     * Alternative binary search approach to split array into k subarrays with minimized largest sum
-     * Time Complexity: O(n * log(sum - max))
-     * - n: length of the array
-     * - Binary search on the answer range
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space
-     */
     public int splitArray(int[] nums, int k) {
         int mx = 0;
         int sum = 0;

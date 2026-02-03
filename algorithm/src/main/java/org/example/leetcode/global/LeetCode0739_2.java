@@ -4,21 +4,20 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * <a href="https://leetcode.cn/problems/daily-temperatures">...</a>
- * Approach 2: Monotonic stack from right to left
+ * <a href="https://leetcode.cn/problems/daily-temperatures">LeetCode 739: Daily Temperatures</a>
+ * <p>
+ * Approach: Monotonic stack from right to left. <br>
+ * - Pop non-warmer days to find the next warmer day index. <br>
+ * - Compute distance to the next warmer day.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of days; each index is pushed/popped at most once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack and result array.
  */
 public class LeetCode0739_2 {
 
-    /**
-     * Find daily temperatures using monotonic stack from right to left
-     * Time Complexity: O(n)
-     * - n: length of temperatures
-     * - Each element is processed once
-     * <p>
-     * Space Complexity: O(n)
-     * - Stack to store indices
-     * - Result array of size n
-     */
     public int[] dailyTemperatures(int[] temperatures) {
         int[] ans = new int[temperatures.length];
         Deque<Integer> stack = new LinkedList<>();

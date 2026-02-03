@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/design-front-middle-back-queue">...</a>
+ * <a href="https://leetcode.cn/problems/design-front-middle-back-queue">LeetCode 1670: Design Front Middle Back Queue</a>
+ * <p>
+ * Approach: Doubly linked list with middle pointer. <br>
+ * - Maintain head/tail sentinels and a middle pointer. <br>
+ * - Update middle as size changes.
+ * <p>
+ * Time Complexity: O(1) per operation <br>
+ * - All operations are constant time.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Store all elements in the list.
  */
 public class LeetCode1670_1 {
 

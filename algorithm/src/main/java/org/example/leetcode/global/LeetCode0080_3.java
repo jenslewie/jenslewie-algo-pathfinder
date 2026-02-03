@@ -1,19 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/description/">...</a>
+ * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii">LeetCode 80: Remove Duplicates from Sorted Array II</a>
+ * <p>
+ * Approach: Count occurrences while scanning. <br>
+ * - Track count of the current value and write up to two copies. <br>
+ * - Reset count when the value changes.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each element is processed once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - In-place update with constant extra space.
  */
 public class LeetCode0080_3 {
 
-    /**
-     * Counter-based approach with explicit tracking
-     * Time Complexity: O(n)
-     * - n: length of the array
-     * - We iterate through the array once
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers and counter
-     */
     public int removeDuplicates(int[] nums) {
         int slow = 0, fast = 0, count = 0;
         while (fast < nums.length) {

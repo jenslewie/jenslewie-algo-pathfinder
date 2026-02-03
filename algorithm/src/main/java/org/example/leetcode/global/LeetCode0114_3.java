@@ -3,9 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list">...</a>
- * Time Complexity: O(n)
- * Space Complexity: O(h), where h is the height of the tree (O(n) in worst case)
+ * <a href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list">LeetCode 114: Flatten Binary Tree to Linked List</a>
+ * <p>
+ * Approach: Reverse preorder (right-left-root). <br>
+ * - Traverse in reverse preorder while linking nodes to a head pointer. <br>
+ * - Reuse the right pointer to build the list.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(h) <br>
+ * - h: height of the tree due to recursion stack.
  */
 public class LeetCode0114_3 {
 

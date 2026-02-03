@@ -1,20 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/max-consecutive-ones-iii/description/
- * Sliding window approach
+ * <a href="https://leetcode.cn/problems/max-consecutive-ones-iii">LeetCode 1004: Max Consecutive Ones III</a>
+ * <p>
+ * Approach: Sliding window with remaining flips. <br>
+ - Decrease k when encountering 0, increase when moving left. <br>
+ - Maintain the longest valid window.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; linear scan. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
  */
 public class LeetCode1004_2 {
 
-    /**
-     * Sliding window approach to find maximum consecutive ones with at most k flips
-     * Time Complexity: O(n)
-     * - n: length of the input array
-     * - Single pass through the array with two pointers
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers and counters
-     */
     public int longestOnes(int[] nums, int k) {
         int left = 0, right = 0;
         int windowOneCount = 0;

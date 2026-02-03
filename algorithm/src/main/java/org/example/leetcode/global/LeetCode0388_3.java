@@ -3,20 +3,20 @@ package org.example.leetcode.global;
 import java.util.Stack;
 
 /**
- * String split approach for finding longest path in file system
+ * <a href="https://leetcode.cn/problems/longest-absolute-file-path">LeetCode 388: Longest Absolute File Path</a>
+ * <p>
+ * Approach: Split and stack of directory names. <br>
+ * - Split input by newlines and track depth by tabs. <br>
+ * - Compute path length when a file is seen.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the input string; splitting and scanning are linear.
+ * <p>
+ * Space Complexity: O(d) <br>
+ * - d: maximum directory depth stored in the stack.
  */
 public class LeetCode0388_3 {
 
-    /**
-     * String split approach to find the longest absolute path to a file
-     * Time Complexity: O(n)
-     * - n: length of the input string
-     * - Split the string and process each component
-     * <p>
-     * Space Complexity: O(d)
-     * - d: maximum depth of the directory structure
-     * - Stack to store directory names
-     */
     public int lengthLongestPath(String input) {
         int maxLen = 0;
         Stack<String> stack = new Stack<>();

@@ -4,19 +4,20 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/valid-parentheses">...</a>
+ * <a href="https://leetcode.cn/problems/valid-parentheses">LeetCode 20: Valid Parentheses</a>
+ * <p>
+ * Approach: Stack of expected closing brackets. <br>
+ * - Push the matching closing bracket when an opening bracket is seen. <br>
+ * - On a closing bracket, verify it matches the stack top.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each character is processed once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack stores up to n characters in the worst case.
  */
 public class LeetCode0020_1 {
 
-    /**
-     * Time Complexity: O(n)
-     * - n: length of the string
-     * - We iterate through each character once
-     * <p>
-     * Space Complexity: O(n)
-     * - Stack can hold up to n/2 characters in worst case (all opening brackets)
-     * - Overall: O(n)
-     */
     public boolean isValid(String s) {
         if (s.length() % 2 != 0) {
             return false;

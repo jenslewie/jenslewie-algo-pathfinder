@@ -1,14 +1,25 @@
 package org.example.leetcode.global;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/description/
+ * <a href="https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix">LeetCode 378: Kth Smallest Element in a Sorted Matrix</a>
+ * <p>
+ * Approach: Min-heap merging rows. <br>
+ * - Push the first element of each row with its coordinates. <br>
+ * - Pop k times, pushing the next element in the same row.
+ * <p>
+ * Time Complexity: O(k * log(n)) <br>
+ * - n: number of rows; heap size at most n.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Heap stores one element per row.
  */
 public class LeetCode0378 {
 
     public int kthSmallest(int[][] matrix, int k) {
-        PriorityQueue<int[]> queue = new PriorityQueue<>((a, b) -> {return a[0] - b[0];});
+        PriorityQueue<int[]> queue = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
 
         for (int i = 0; i < matrix.length; i++) {
             queue.offer(new int[]{matrix[i][0], i, 0});

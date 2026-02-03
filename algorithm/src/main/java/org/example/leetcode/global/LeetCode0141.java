@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/linked-list-cycle/description/
+ * <a href="https://leetcode.cn/problems/linked-list-cycle">LeetCode 141: Linked List Cycle</a>
+ * <p>
+ * Approach: Floyd's cycle detection. <br>
+ * - Use slow and fast pointers moving at different speeds. <br>
+ * - If they meet, a cycle exists.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each pointer advances linearly.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0141 {
 

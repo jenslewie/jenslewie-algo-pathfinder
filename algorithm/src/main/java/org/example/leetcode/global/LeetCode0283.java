@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/move-zeroes/description/
+ * <a href="https://leetcode.cn/problems/move-zeroes">LeetCode 283: Move Zeroes</a>
+ * <p>
+ * Approach: Two pointers with overwrite. <br>
+ * - Move non-zero elements forward with a slow pointer. <br>
+ * - Fill the remaining positions with zeros.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each element is visited once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - In-place update with constant extra space.
  */
 public class LeetCode0283 {
 

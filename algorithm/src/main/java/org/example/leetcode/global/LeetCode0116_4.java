@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/populating-next-right-pointers-in-each-node">...</a>
+ * <a href="https://leetcode.cn/problems/populating-next-right-pointers-in-each-node">LeetCode 116: Populating Next Right Pointers in Each Node</a>
+ * <p>
+ * Approach: Iterative level traversal using next pointers. <br>
+ * - Build the next level using a dummy head. <br>
+ * - Move across the current level via next pointers.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space for the dummy and pointers.
  */
 public class LeetCode0116_4 {
 

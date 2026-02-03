@@ -7,22 +7,20 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/sort-the-matrix-diagonally">...</a>
- * Approach 2: HashMap-based approach
+ * <a href="https://leetcode.cn/problems/sort-the-matrix-diagonally">LeetCode 1329: Sort the Matrix Diagonally</a>
+ * <p>
+ * Approach: Use priority queues per diagonal. <br>
+ - Push diagonal elements into a min-heap. <br>
+ - Pop to fill in sorted order.
+ * <p>
+ * Time Complexity: O(m * n * log(min(m, n))) <br>
+ * - Heap operations for each diagonal. <br>
+ * <p>
+ * Space Complexity: O(m * n) <br>
+ * - Heaps across diagonals. <br>
  */
 public class LeetCode1329_2 {
 
-    /**
-     * Sort matrix diagonally using HashMap approach
-     * Time Complexity: O(m * n * log(min(m,n)))
-     * - m: number of rows
-     * - n: number of columns
-     * - For each diagonal, we sort its elements
-     * <p>
-     * Space Complexity: O(m * n)
-     * - HashMap to store diagonal elements
-     * - Each diagonal list stores its elements
-     */
     public int[][] diagonalSort(int[][] mat) {
         int m = mat.length, n = mat[0].length;
         Map<Integer, List<Integer>> map = new HashMap<>();

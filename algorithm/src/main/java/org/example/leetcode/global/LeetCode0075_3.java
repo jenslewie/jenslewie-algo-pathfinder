@@ -1,19 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/sort-colors/">...</a>
+ * <a href="https://leetcode.cn/problems/sort-colors">LeetCode 75: Sort Colors</a>
+ * <p>
+ * Approach: Two-pass counting by value. <br>
+ * - First pass places all 0s, then all 1s. <br>
+ * - Remaining elements are 2s.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each element is visited at most twice.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - In-place swaps only.
  */
 public class LeetCode0075_3 {
 
-    /**
-     * Two-pass counting approach
-     * Time Complexity: O(n)
-     * - n: length of the array
-     * - We iterate through the array twice
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for counters
-     */
     public void sortColors(int[] nums) {
         int n = nums.length;
         int p = 0;

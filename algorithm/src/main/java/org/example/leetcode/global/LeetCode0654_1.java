@@ -3,14 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/maximum-binary-tree">...</a>
- * Time Complexity: O(n^2)
- * - In the worst case (monotonically increasing or decreasing array),
- * each recursive call scans the entire subarray to find the maximum,
- * leading to n + (n-1) + ... + 1 operations.
- * Space Complexity: O(n)
- * - Due to recursion stack in the worst case when the tree is skewed.
- * - (Best case would be O(log n) if the tree is balanced.)
+ * <a href="https://leetcode.cn/problems/maximum-binary-tree">LeetCode 654: Maximum Binary Tree</a>
+ * <p>
+ * Approach: Recursive scan for maximum. <br>
+ * - Find the maximum element as root. <br>
+ * - Recurse on left and right subarrays.
+ * <p>
+ * Time Complexity: O(n^2) <br>
+ * - Worst case when the array is monotonic and each scan is linear.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Recursion depth in the worst case (skewed tree).
  */
 public class LeetCode0654_1 {
 

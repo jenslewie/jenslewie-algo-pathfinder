@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/spiral-matrix-ii/description/
+ * <a href="https://leetcode.cn/problems/spiral-matrix-ii">LeetCode 59: Spiral Matrix II</a>
+ * <p>
+ * Approach: Boundary simulation with incremental fill. <br>
+ * - Maintain top, bottom, left, and right bounds. <br>
+ * - Fill numbers along the edges while shrinking bounds.
+ * <p>
+ * Time Complexity: O(n^2) <br>
+ * - n: matrix dimension; each cell is filled once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Output matrix excluded; constant extra space.
  */
 public class LeetCode0059 {
 

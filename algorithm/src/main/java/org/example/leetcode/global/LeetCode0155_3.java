@@ -5,8 +5,17 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/min-stack">...</a>
- * Approach 3: Stack with map for counting occurrences
+ * <a href="https://leetcode.cn/problems/min-stack">LeetCode 155: Min Stack</a>
+ * <p>
+ * Approach: Stack plus frequency map. <br>
+ * - Stack stores values; map tracks counts for each value. <br>
+ * - getMin scans map keys to find the minimum.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - getMin scans distinct values; push/pop are O(1).
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack and map store up to n elements.
  */
 public class LeetCode0155_3 implements MinStack {
 

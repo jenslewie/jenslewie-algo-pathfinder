@@ -1,8 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/range-sum-query-2d-immutable">...</a>
- * Row-wise prefix sum approach
+ * <a href="https://leetcode.cn/problems/range-sum-query-2d-immutable">LeetCode 304: Range Sum Query 2D - Immutable</a>
+ * <p>
+ * Approach: Row-wise prefix sums. <br>
+ * - Precompute prefix sums for each row. <br>
+ * - Sum over rows within [row1, row2] for each query.
+ * <p>
+ * Time Complexity: O(m * n) build, O(row2 - row1 + 1) per query <br>
+ * - m, n: matrix dimensions.
+ * <p>
+ * Space Complexity: O(m * n) <br>
+ * - Row-wise prefix sum matrix.
  */
 public class LeetCode0304_2 {
 
@@ -29,14 +38,6 @@ public class LeetCode0304_2 {
         }
     }
 
-    /**
-     * Range sum query using row-wise prefix sum
-     * Time Complexity: O(row2 - row1 + 1)
-     * - Need to iterate through rows to calculate sum
-     * <p>
-     * Space Complexity: O(m*n)
-     * - Where m and n are dimensions of the matrix
-     */
     public int sumRegion(int row1, int col1, int row2, int col2) {
         int result = 0;
         for (int i = row1; i <= row2; i++) {

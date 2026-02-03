@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/design-circular-queue">...</a>
+ * <a href="https://leetcode.cn/problems/design-circular-queue">LeetCode 622: Design Circular Queue</a>
+ * <p>
+ * Approach: Fixed-size array with head/tail and size. <br>
+ * - Use modulo indexing for circular behavior. <br>
+ * - Track size to distinguish empty/full.
+ * <p>
+ * Time Complexity: O(1) per operation <br>
+ * - All operations are constant time.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - Array of capacity k.
  */
 public class LeetCode0622_1 {
 

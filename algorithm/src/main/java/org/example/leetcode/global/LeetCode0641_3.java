@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/design-circular-deque">...</a>
+ * <a href="https://leetcode.cn/problems/design-circular-deque">LeetCode 641: Design Circular Deque</a>
+ * <p>
+ * Approach: Doubly linked list. <br>
+ * - Insert/delete at both ends in O(1). <br>
+ * - Track size to enforce capacity.
+ * <p>
+ * Time Complexity: O(1) per operation <br>
+ * - All operations are constant time.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - Nodes stored up to capacity.
  */
 public class LeetCode0641_3 {
 

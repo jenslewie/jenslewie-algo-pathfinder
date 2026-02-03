@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/
+ * <a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list">LeetCode 19: Remove Nth Node From End of List</a>
+ * <p>
+ * Approach: Two pointers with a dummy node. <br>
+ * - Advance the first pointer n+1 steps ahead. <br>
+ * - Move both pointers until the first reaches the end, then remove the target node.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the list; each node is visited once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0019 {
 

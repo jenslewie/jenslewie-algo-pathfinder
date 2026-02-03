@@ -1,11 +1,22 @@
 package org.example.leetcode.global;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
 /**
- * https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/description/
+ * <a href="https://leetcode.cn/problems/find-k-pairs-with-smallest-sums">LeetCode 373: Find K Pairs with Smallest Sums</a>
+ * <p>
+ * Approach: Min-heap over pair sums. <br>
+ * - Initialize heap with pairs (i, 0) for nums1 and nums2[0]. <br>
+ * - Pop smallest and push next pair in the same row.
+ * <p>
+ * Time Complexity: O(k * log(min(n, k)) <br>
+ * - n: length of nums1; heap size is bounded by min(n, k).
+ * <p>
+ * Space Complexity: O(min(n, k)) <br>
+ * - Heap stores at most one pair per nums1 index.
  */
 public class LeetCode0373 {
 
@@ -14,7 +25,7 @@ public class LeetCode0373 {
         if (nums1.length == 0 || nums2.length == 0) {
             return res;
         }
-        PriorityQueue<int[]> queue = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+        PriorityQueue<int[]> queue = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
 
         for (int i = 0; i < Math.min(nums1.length, k); i++) {
             queue.offer(new int[]{nums1[i] + nums2[0], i, 0});

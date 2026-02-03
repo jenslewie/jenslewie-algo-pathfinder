@@ -4,7 +4,16 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/final-prices-with-a-special-discount-in-a-shop">...</a>
+ * <a href="https://leetcode.cn/problems/final-prices-with-a-special-discount-in-a-shop">LeetCode 1475: Final Prices With a Special Discount in a Shop</a>
+ * <p>
+ * Approach: Brute force scan for next discount. <br>
+ - For each price, scan right until a smaller/equal price is found.
+ * <p>
+ * Time Complexity: O(n^2) <br>
+ * - Nested scan over prices. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
  */
 public class LeetCode1475_2 {
 

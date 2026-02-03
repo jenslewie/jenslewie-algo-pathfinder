@@ -5,23 +5,20 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/group-anagrams">...</a>
+ * <a href="https://leetcode.cn/problems/group-anagrams">LeetCode 49: Group Anagrams</a>
+ * <p>
+ * Approach: Fixed-length count signature. <br>
+ * - Build a compact key from 26 lowercase character counts. <br>
+ * - Group strings by that signature.
+ * <p>
+ * Time Complexity: O(n * k) <br>
+ * - n: number of strings; k: max string length.
+ * <p>
+ * Space Complexity: O(n * k) <br>
+ * - Store grouped strings and generated keys.
  */
 public class LeetCode0049_3 {
 
-    /**
-     * Time Complexity: O(n * k)
-     * - n: number of strings in the input array
-     * - k: maximum length of a string
-     * - For each string: O(k) to count characters + O(26) to build key = O(k)
-     * - Total: O(n * k)
-     * <p>
-     * Space Complexity: O(n * k)
-     * - HashMap to store groups: O(n * k) for storing all strings
-     * - Count array: O(26) = O(1)
-     * - StringBuilder for key: O(26) = O(1) in worst case
-     * - Overall: O(n * k)
-     */
     public List<List<String>> groupAnagrams(String[] strs) {
         var ans = new HashMap<String, List<String>>();
         for (String str : strs) {

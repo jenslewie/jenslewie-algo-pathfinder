@@ -3,8 +3,17 @@ package org.example.leetcode.global;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/min-stack">...</a>
- * Approach 2: Dual integer stacks (main stack + min stack)
+ * <a href="https://leetcode.cn/problems/min-stack">LeetCode 155: Min Stack</a>
+ * <p>
+ * Approach: Two stacks (main + min). <br>
+ * - Main stack stores values; min stack stores current minima. <br>
+ * - Push to min stack when a new minimum appears.
+ * <p>
+ * Time Complexity: O(1) <br>
+ * - All operations are constant time.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Two stacks store up to n elements.
  */
 public class LeetCode0155_2 implements MinStack {
 

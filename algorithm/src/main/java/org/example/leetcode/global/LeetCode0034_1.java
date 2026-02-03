@@ -1,18 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array">...</a>
+ * <a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array">LeetCode 34: Find First and Last Position of Element in Sorted Array</a>
+ * <p>
+ * Approach: Two binary searches with left bound. <br>
+ * - Find the leftmost index of target. <br>
+ * - Find the leftmost index of target + 1, then subtract one.
+ * <p>
+ * Time Complexity: O(log(n)) <br>
+ * - n: length of the array; two binary searches.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space for pointers.
  */
 public class LeetCode0034_1 {
 
-    /**
-     * Time Complexity: O(log n)
-     * - n: length of the array
-     * - We perform two binary searches, each taking O(log n)
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public int[] searchRange(int[] nums, int target) {
         int left = leftBound(nums, target);
         if (left >= nums.length || nums[left] != target) {

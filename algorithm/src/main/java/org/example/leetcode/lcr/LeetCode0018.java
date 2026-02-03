@@ -1,7 +1,17 @@
 package org.example.leetcode.lcr;
 
 /**
- * <a href="https://leetcode.cn/problems/XltzEq">...</a>
+ * <a href="https://leetcode.cn/problems/XltzEq">LeetCode LCR 018: Valid Palindrome</a>
+ * <p>
+ * Approach: Two pointers with skipping. <br>
+ - Skip non-alphanumeric characters. <br>
+ - Compare lowercase characters from both ends.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each character visited once. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
  */
 public class LeetCode0018 {
 

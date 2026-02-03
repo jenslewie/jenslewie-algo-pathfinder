@@ -3,9 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list">...</a>
- * Time Complexity: O(n²) in the worst case (e.g., left-skewed tree)
- * Space Complexity: O(h), where h is the height of the tree (O(n) in worst case)
+ * <a href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list">LeetCode 114: Flatten Binary Tree to Linked List</a>
+ * <p>
+ * Approach: Postorder flatten with tail scan. <br>
+ * - Flatten left and right subtrees. <br>
+ * - Move the left subtree to the right and append the original right subtree.
+ * <p>
+ * Time Complexity: O(n^2) <br>
+ * - In the worst case, each node scans to the rightmost tail.
+ * <p>
+ * Space Complexity: O(h) <br>
+ * - h: height of the tree due to recursion stack.
  */
 public class LeetCode0114_2 {
 

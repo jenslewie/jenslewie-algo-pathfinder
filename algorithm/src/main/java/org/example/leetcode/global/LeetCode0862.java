@@ -4,7 +4,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k">...</a>
+ * <a href="https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k">LeetCode 862: Shortest Subarray with Sum at Least K</a>
+ * <p>
+ * Approach: Prefix sums + monotonic deque. <br>
+ - Maintain increasing prefix sums indices. <br>
+ - Update answer when current sum minus front >= k.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - Each index is pushed/popped at most once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Prefix sums and deque. <br>
  */
 public class LeetCode0862 {
 

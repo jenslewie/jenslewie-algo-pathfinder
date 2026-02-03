@@ -3,19 +3,20 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/reverse-linked-list">...</a>
+ * <a href="https://leetcode.cn/problems/reverse-linked-list">LeetCode 206: Reverse Linked List</a>
+ * <p>
+ * Approach: Iterative pointer reversal. <br>
+ * - Walk the list and reverse links one by one. <br>
+ * - Track previous and current nodes.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0206_1 {
 
-    /**
-     * Iterative approach to reverse a linked list
-     * Time Complexity: O(n)
-     * - n: number of nodes in the linked list
-     * - We visit each node exactly once
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;

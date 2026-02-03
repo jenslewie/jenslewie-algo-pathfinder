@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/longest-repeating-character-replacement/description/
+ * <a href="https://leetcode.cn/problems/longest-repeating-character-replacement">LeetCode 424: Longest Repeating Character Replacement</a>
+ * <p>
+ * Approach: Sliding window with max frequency. <br>
+ * - Track the most frequent character in the window. <br>
+ * - Shrink when window size - maxFreq exceeds k.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each pointer moves at most n steps.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Fixed-size frequency array of 26 letters.
  */
 public class LeetCode0424 {
 

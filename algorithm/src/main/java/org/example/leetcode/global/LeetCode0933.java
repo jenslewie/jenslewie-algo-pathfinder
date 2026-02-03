@@ -4,7 +4,17 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
- * <a href="https://leetcode.cn/problems/number-of-recent-calls">...</a>
+ * <a href="https://leetcode.cn/problems/number-of-recent-calls">LeetCode 933: Number of Recent Calls</a>
+ * <p>
+ * Approach: Queue of timestamps. <br>
+ - Push current time; pop times older than t-3000. <br>
+ - Queue size is the answer.
+ * <p>
+ * Time Complexity: O(1) amortized <br>
+ * - Each time is enqueued and dequeued once. <br>
+ * <p>
+ * Space Complexity: O(w) <br>
+ * - w: number of calls within the last 3000 ms. <br>
  */
 public class LeetCode0933 {
 

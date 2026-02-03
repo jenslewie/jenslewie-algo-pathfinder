@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/koko-eating-bananas">...</a>
+ * <a href="https://leetcode.cn/problems/koko-eating-bananas">LeetCode 875: Koko Eating Bananas</a>
+ * <p>
+ * Approach: Binary search on eating speed. <br>
+ - Check if a speed finishes within h hours. <br>
+ - Shrink the search range accordingly.
+ * <p>
+ * Time Complexity: O(n * log(M)) <br>
+ * - n: piles count; M: max pile size. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
  */
 public class LeetCode0875 {
 

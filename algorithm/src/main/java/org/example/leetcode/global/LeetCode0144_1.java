@@ -6,7 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/binary-tree-preorder-traversal">...</a>
+ * <a href="https://leetcode.cn/problems/binary-tree-preorder-traversal">LeetCode 144: Binary Tree Preorder Traversal</a>
+ * <p>
+ * Approach: Recursive traversal with shared list. <br>
+ * - Visit root, then left subtree, then right subtree. <br>
+ * - Accumulate results in a list field.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(h) <br>
+ * - h: height of the tree due to recursion stack.
  */
 public class LeetCode0144_1 {
 

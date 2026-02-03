@@ -6,9 +6,17 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 /**
- * <a href="https://leetcode.cn/problems/serialize-and-deserialize-binary-tree">...</a>
- * Time Complexity: O(n)
- * Space Complexity: O(n)
+ * <a href="https://leetcode.cn/problems/serialize-and-deserialize-binary-tree">LeetCode 297: Serialize and Deserialize Binary Tree</a>
+ * <p>
+ * Approach: Preorder DFS with null markers. <br>
+ * - Serialize with root-left-right and use "#" for nulls. <br>
+ * - Deserialize by consuming tokens in preorder.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is processed once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Serialized string plus recursion stack.
  */
 public class LeetCode0297_1 {
     private final static String SEPARATOR = ",";

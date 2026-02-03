@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/populating-next-right-pointers-in-each-node">...</a>
+ * <a href="https://leetcode.cn/problems/populating-next-right-pointers-in-each-node">LeetCode 116: Populating Next Right Pointers in Each Node</a>
+ * <p>
+ * Approach: DFS connecting adjacent pairs. <br>
+ * - Connect left->right within the same parent. <br>
+ * - Connect across parents by linking right child to next left child.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(h) <br>
+ * - h: height of the tree due to recursion stack.
  */
 public class LeetCode0116_2 {
 

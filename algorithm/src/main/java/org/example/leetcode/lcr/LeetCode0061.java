@@ -1,17 +1,28 @@
 package org.example.leetcode.lcr;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
 /**
- * https://leetcode.cn/problems/qn8gGX/description/
+ * <a href="https://leetcode.cn/problems/qn8gGX/description/">LeetCode LCR 061: Find K Pairs with Smallest Sums</a>
+ * <p>
+ * Approach: Min-heap over pair sums. <br>
+ - Initialize with pairs (i, 0). <br>
+ - Pop smallest and push next pair in the row.
+ * <p>
+ * Time Complexity: O(k * log(min(n, k))) <br>
+ * - n: length of nums1; heap size bounded by min(n, k). <br>
+ * <p>
+ * Space Complexity: O(min(n, k)) <br>
+ * - Heap stores one pair per nums1 index. <br>
  */
 public class LeetCode0061 {
 
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         List<List<Integer>> result = new ArrayList<>();
-        PriorityQueue<int[]> queue = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+        PriorityQueue<int[]> queue = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
         for (int i = 0; i < Math.min(nums1.length, k); i++) {
             queue.offer(new int[]{nums1[i] + nums2[0], i, 0});
         }

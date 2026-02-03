@@ -3,8 +3,17 @@ package org.example.leetcode.global;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/min-stack">...</a>
- * Approach 1: Stack with int array to store value and min
+ * <a href="https://leetcode.cn/problems/min-stack">LeetCode 155: Min Stack</a>
+ * <p>
+ * Approach: Stack of [value, min] pairs. <br>
+ * - Each element stores its value and the minimum so far. <br>
+ * - getMin is O(1) by peeking the top pair.
+ * <p>
+ * Time Complexity: O(1) <br>
+ * - All operations are constant time.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack stores one pair per element.
  */
 public class LeetCode0155_1 implements MinStack {
 

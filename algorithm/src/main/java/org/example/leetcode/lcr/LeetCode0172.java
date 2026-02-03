@@ -1,7 +1,17 @@
 package org.example.leetcode.lcr;
 
 /**
- * <a href="https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof">...</a>
+ * <a href="https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof">LeetCode LCR 172: Count Target in Sorted Array</a>
+ * <p>
+ * Approach: Binary search for bounds. <br>
+ - Find left bound of target. <br>
+ - Find left bound of target + 1 to get right bound.
+ * <p>
+ * Time Complexity: O(log(n)) <br>
+ * - n: length of the array; two binary searches. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Constant extra space. <br>
  */
 public class LeetCode0172 {
 

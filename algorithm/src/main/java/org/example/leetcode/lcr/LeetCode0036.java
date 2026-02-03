@@ -1,7 +1,17 @@
 package org.example.leetcode.lcr;
 
 /**
- * <a href="https://leetcode.cn/problems/8Zf90G/">...</a>
+ * <a href="https://leetcode.cn/problems/8Zf90G/">LeetCode LCR 036: Evaluate Reverse Polish Notation</a>
+ * <p>
+ * Approach: Array-based stack. <br>
+ - Push operands and apply operators to top two values. <br>
+ - Store results back on the stack.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of tokens; each token processed once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack holds operands. <br>
  */
 public class LeetCode0036 {
 

@@ -5,7 +5,17 @@ import org.example.model.linkedlist.ListNode;
 import java.util.Stack;
 
 /**
- * https://leetcode.cn/problems/lMSNwu/
+ * <a href="https://leetcode.cn/problems/lMSNwu/">LeetCode LCR 025: Add Two Numbers II</a>
+ * <p>
+ * Approach: Two stacks for digits. <br>
+ - Push digits of both lists onto stacks. <br>
+ - Pop and add with carry to build the result.
+ * <p>
+ * Time Complexity: O(m + n) <br>
+ * - m, n: lengths of the lists; each node processed once. <br>
+ * <p>
+ * Space Complexity: O(m + n) <br>
+ * - Stacks store all digits. <br>
  */
 public class LeetCode0025 {
 

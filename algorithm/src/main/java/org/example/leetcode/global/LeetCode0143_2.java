@@ -5,20 +5,20 @@ import org.example.model.linkedlist.ListNode;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/reorder-list">...</a>
- * Stack-based approach
+ * <a href="https://leetcode.cn/problems/reorder-list">LeetCode 143: Reorder List</a>
+ * <p>
+ * Approach: Stack-based interleaving. <br>
+ * - Push the second half into a stack. <br>
+ * - Pop and interleave nodes into the first half.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited a constant number of times.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack stores about half the nodes.
  */
 public class LeetCode0143_2 {
 
-    /**
-     * Stack-based approach to reorder a linked list
-     * Time Complexity: O(n)
-     * - n: number of nodes in the linked list
-     * - Find middle: O(n/2), push second half to stack: O(n/2), interleave: O(n/2)
-     * <p>
-     * Space Complexity: O(n/2)
-     * - Stack stores approximately half of the nodes
-     */
     public void reorderList(ListNode head) {
         if (head == null) {
             return;

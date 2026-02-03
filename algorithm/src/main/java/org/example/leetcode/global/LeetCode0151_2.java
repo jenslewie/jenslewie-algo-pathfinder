@@ -1,19 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/reverse-words-in-a-string/
+ * <a href="https://leetcode.cn/problems/reverse-words-in-a-string">LeetCode 151: Reverse Words in a String</a>
+ * <p>
+ * Approach: Split and rebuild. <br>
+ * - Split by spaces and skip empty tokens. <br>
+ * - Append words in reverse order.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; split and rebuild are linear.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Array of words plus StringBuilder.
  */
 public class LeetCode0151_2 {
 
-    /**
-     * Split and reverse approach
-     * Time Complexity: O(n)
-     * - n: length of the string
-     * - Splitting and joining operations take linear time
-     * <p>
-     * Space Complexity: O(n)
-     * - Array to store the split words and StringBuilder for result
-     */
     public String reverseWords(String s) {
         s = s.trim();
         if (s.isEmpty()) {

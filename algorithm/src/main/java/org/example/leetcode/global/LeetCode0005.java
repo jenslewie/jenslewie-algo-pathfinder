@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/longest-palindromic-substring/
+ * <a href="https://leetcode.cn/problems/longest-palindromic-substring">LeetCode 5: Longest Palindromic Substring</a>
+ * <p>
+ * Approach: Expand around center. <br>
+ * - For each index, expand for odd and even centers. <br>
+ * - Track the longest palindrome found.
+ * <p>
+ * Time Complexity: O(n^2) <br>
+ * - n: length of the string; each center expansion can scan the string.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0005 {
 

@@ -6,20 +6,20 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * https://leetcode.cn/problems/minimum-depth-of-binary-tree/
+ * <a href="https://leetcode.cn/problems/minimum-depth-of-binary-tree">LeetCode 111: Minimum Depth of Binary Tree</a>
+ * <p>
+ * Approach: BFS level-order traversal. <br>
+ * - Visit nodes level by level. <br>
+ * - The first leaf encountered defines the minimum depth.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(w) <br>
+ * - w: maximum width of the tree held in the queue.
  */
 public class LeetCode0111_1 {
 
-    /**
-     * BFS (Breadth-First Search) approach
-     * Time Complexity: O(n)
-     * - n: number of nodes in the tree
-     * - We visit each node at most once
-     * <p>
-     * Space Complexity: O(w)
-     * - w: maximum width of the tree (at any level)
-     * - Queue can hold up to w nodes in the worst case
-     */
     public int minDepth(TreeNode root) {
         if (root == null) {
             return 0;

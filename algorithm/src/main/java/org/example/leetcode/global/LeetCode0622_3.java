@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/design-circular-queue">...</a>
+ * <a href="https://leetcode.cn/problems/design-circular-queue">LeetCode 622: Design Circular Queue</a>
+ * <p>
+ * Approach: Singly linked list with head/tail. <br>
+ * - Enqueue at tail and dequeue at head. <br>
+ * - Track size to enforce capacity.
+ * <p>
+ * Time Complexity: O(1) per operation <br>
+ * - All operations are constant time.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - Nodes stored up to capacity.
  */
 public class LeetCode0622_3 {
 

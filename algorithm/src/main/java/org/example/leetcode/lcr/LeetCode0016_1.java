@@ -4,20 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/wtcaE1/">...</a>
- * Sliding window with set approach
+ * <a href="https://leetcode.cn/problems/wtcaE1/">LeetCode LCR 016: Longest Substring Without Repeating Characters</a>
+ * <p>
+ * Approach: Sliding window with last-seen map. <br>
+ - Move left pointer past the last occurrence of a duplicate. <br>
+ - Track maximum window length.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each character processed once. <br>
+ * <p>
+ * Space Complexity: O(min(m, n)) <br>
+ * - m: character set size. <br>
  */
 public class LeetCode0016_1 {
 
-    /**
-     * Sliding window with set approach to find the length of the longest substring without repeating characters
-     * Time Complexity: O(n)
-     * - n: length of the input string
-     * - Each character is visited at most twice (once by right pointer, once by left pointer)
-     * <p>
-     * Space Complexity: O(min(m,n))
-     * - Where m is the size of the character set and n is the length of the string
-     */
     public int lengthOfLongestSubstring(String s) {
         int left = 0, right = 0, maxLen = 0;
         Map<Character, Integer> map = new HashMap<>();

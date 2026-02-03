@@ -3,19 +3,20 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
+ * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list">LeetCode 83: Remove Duplicates from Sorted List</a>
+ * <p>
+ * Approach: Single pass with a sentinel. <br>
+ * - Compare current node with the next and skip duplicates. <br>
+ * - Keep a moving pointer to rebuild the list in place.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space for pointers.
  */
 public class LeetCode0083_1 {
 
-    /**
-     * Single pass approach with sentinel node
-     * Time Complexity: O(n)
-     * - n: number of nodes in the linked list
-     * - We iterate through the list once
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode(-101, head);
         ListNode p = dummy;

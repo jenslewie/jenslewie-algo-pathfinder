@@ -5,7 +5,17 @@ import org.example.model.linkedlist.ListNode;
 import java.util.Stack;
 
 /**
- * https://leetcode.cn/problems/add-two-numbers-ii/
+ * <a href="https://leetcode.cn/problems/add-two-numbers-ii">LeetCode 445: Add Two Numbers II</a>
+ * <p>
+ * Approach: Two stacks for digit reversal. <br>
+ * - Push digits of each list to stacks. <br>
+ * - Pop and add with carry, building the result from front.
+ * <p>
+ * Time Complexity: O(m + n) <br>
+ * - m, n: lengths of the lists; each node is processed once.
+ * <p>
+ * Space Complexity: O(m + n) <br>
+ * - Stacks store all digits.
  */
 public class LeetCode0445 {
 

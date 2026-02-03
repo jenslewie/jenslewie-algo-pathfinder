@@ -1,7 +1,17 @@
 package org.example.leetcode.lcr;
 
 /**
- * https://leetcode.cn/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/description/
+ * <a href="https://leetcode.cn/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/description/">LeetCode LCR 146: Spiral Order of Matrix</a>
+ * <p>
+ * Approach: Boundary simulation. <br>
+ - Maintain top/bottom/left/right bounds. <br>
+ - Traverse edges while shrinking bounds.
+ * <p>
+ * Time Complexity: O(m * n) <br>
+ * - m, n: matrix dimensions; each element visited once. <br>
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Output array excluded. <br>
  */
 public class LeetCode0146 {
 

@@ -3,19 +3,20 @@ package org.example.leetcode.global;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/evaluate-reverse-polish-notation">...</a>
+ * <a href="https://leetcode.cn/problems/evaluate-reverse-polish-notation">LeetCode 150: Evaluate Reverse Polish Notation</a>
+ * <p>
+ * Approach: String stack with parsing on each operation. <br>
+ * - Push operands as strings; on operators, pop and compute. <br>
+ * - Push results back as strings.
+ * <p>
+ * Time Complexity: O(n^2) <br>
+ * - n: number of tokens; repeated parsing adds overhead.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack holds operands.
  */
 public class LeetCode0150_3 {
 
-    /**
-     * String Stack approach
-     * Time Complexity: O(n^2)
-     * - n: number of tokens
-     * - Converting between integers and strings adds overhead
-     * <p>
-     * Space Complexity: O(n)
-     * - Stack can store up to n/2 operands in the worst case
-     */
     public int evalRPN(String[] tokens) {
         String lastToken = tokens[tokens.length - 1];
         if (!"+".equals(lastToken) && !"-".equals(lastToken) && !"*".equals(lastToken) && !"/".equals(lastToken)) {

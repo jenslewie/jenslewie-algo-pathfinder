@@ -4,7 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * https://leetcode.cn/problems/permutation-in-string/
+ * <a href="https://leetcode.cn/problems/permutation-in-string">LeetCode 567: Permutation in String</a>
+ * <p>
+ * Approach: Sliding window with frequency maps. <br>
+ * - Track counts for the current window and target string. <br>
+ * - Check for full match when the window size equals s1 length.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of s2; each pointer moves at most n steps.
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - k: number of distinct characters in s1.
  */
 public class LeetCode0567 {
 

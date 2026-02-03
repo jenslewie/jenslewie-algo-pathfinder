@@ -7,7 +7,17 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/binary-tree-preorder-traversal">...</a>
+ * <a href="https://leetcode.cn/problems/binary-tree-preorder-traversal">LeetCode 144: Binary Tree Preorder Traversal</a>
+ * <p>
+ * Approach: Iterative stack. <br>
+ * - Push root, then pop to visit and push right then left. <br>
+ * - Ensures preorder order without recursion.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is processed once.
+ * <p>
+ * Space Complexity: O(h) <br>
+ * - h: height of the tree; stack stores at most one path.
  */
 public class LeetCode0144_3 {
 

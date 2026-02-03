@@ -4,18 +4,20 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/simplify-path">...</a>
+ * <a href="https://leetcode.cn/problems/simplify-path">LeetCode 71: Simplify Path</a>
+ * <p>
+ * Approach: Stack of path components. <br>
+ * - Split by '/' and process components. <br>
+ * - Use stack to handle ".." and ignore "." or empty segments.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the path string.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack stores path components.
  */
 public class LeetCode0071_1 {
 
-    /**
-     * Time Complexity: O(n)
-     * - n: length of the path string
-     * - We process each component once
-     * <p>
-     * Space Complexity: O(n)
-     * - Deque can store up to n components in the worst case
-     */
     public String simplifyPath(String path) {
         Deque<String> stack = new ArrayDeque<>();
         for (String str : path.split("/")) {

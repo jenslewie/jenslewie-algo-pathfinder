@@ -4,7 +4,17 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/design-front-middle-back-queue">...</a>
+ * <a href="https://leetcode.cn/problems/design-front-middle-back-queue">LeetCode 1670: Design Front Middle Back Queue</a>
+ * <p>
+ * Approach: Two deques (left/right). <br>
+ * - Keep sizes balanced so right is equal or one larger. <br>
+ * - Operations adjust and rebalance as needed.
+ * <p>
+ * Time Complexity: O(1) per operation <br>
+ * - All operations are constant time.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Store all elements across two deques.
  */
 public class LeetCode1670_2 {
 

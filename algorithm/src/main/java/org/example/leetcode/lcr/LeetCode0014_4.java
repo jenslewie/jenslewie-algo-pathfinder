@@ -4,21 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * https://leetcode.cn/problems/MPnaiL/description/
- * Approach 4: Using HashMap for flexible character mapping
+ * <a href="https://leetcode.cn/problems/MPnaiL/description/">LeetCode LCR 014: Permutation in String</a>
+ * <p>
+ * Approach: Sliding window with HashMap. <br>
+ - Track counts for target characters in maps. <br>
+ - Maintain valid count to detect matches.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of s2; linear scan. <br>
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - k: number of unique characters in s1. <br>
  */
 public class LeetCode0014_4 {
 
-    /**
-     * Check if s2 contains a permutation of s1 using HashMap for character counting
-     * Time Complexity: O(n)
-     * - n: length of s2
-     * - Single pass through s2 with two pointers
-     * <p>
-     * Space Complexity: O(k)
-     * - k: number of unique characters in s1
-     * - HashMap storage for character counts
-     */
     public boolean checkInclusion(String s1, String s2) {
         Map<Character, Integer> window = new HashMap<>();
         Map<Character, Integer> need = new HashMap<>();

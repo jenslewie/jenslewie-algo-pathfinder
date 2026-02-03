@@ -5,21 +5,20 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/group-anagrams">...</a>
+ * <a href="https://leetcode.cn/problems/group-anagrams">LeetCode 49: Group Anagrams</a>
+ * <p>
+ * Approach: Frequency-map key. <br>
+ * - Count character frequencies for each string. <br>
+ * - Use the frequency map as a grouping key.
+ * <p>
+ * Time Complexity: O(n * k) <br>
+ * - n: number of strings; k: max string length.
+ * <p>
+ * Space Complexity: O(n * k) <br>
+ * - Store grouped strings and per-string frequency maps.
  */
 public class LeetCode0049_1 {
 
-    /**
-     * Time Complexity: O(n * k)
-     * - n: number of strings in the input array
-     * - k: maximum length of a string
-     * - We iterate through each string once and count character frequencies
-     * <p>
-     * Space Complexity: O(n * k)
-     * - HashMap to store groups: O(n * k) for storing all strings
-     * - Temporary frequency map for each string: O(26) = O(1) for lowercase letters
-     * - Overall: O(n * k)
-     */
     public List<List<String>> groupAnagrams(String[] strs) {
         var ans = new HashMap<HashMap<Character, Integer>, List<String>>();
         for (String str : strs) {

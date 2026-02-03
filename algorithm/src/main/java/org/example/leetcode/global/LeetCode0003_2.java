@@ -4,20 +4,20 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+ * <a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters">LeetCode 3: Longest Substring Without Repeating Characters</a>
+ * <p>
+ * Approach: Sliding window with a HashSet. <br>
+ * - Expand right pointer and add characters to the set. <br>
+ * - When a duplicate appears, shrink from the left until it is removed.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the string; each character is added/removed at most once.
+ * <p>
+ * Space Complexity: O(min(m, n)) <br>
+ * - m: size of the character set; set stores at most min(m, n) entries.
  */
 public class LeetCode0003_2 {
 
-    /**
-     * Use set to record if character has already existed
-     * Time Complexity: O(n)
-     * - n: length of the string
-     * - Each character is visited at most twice (once by right pointer, once by left pointer)
-     * <p>
-     * Space Complexity: O(min(m,n))
-     * - m: size of the charset (number of distinct characters in the string)
-     * - Set stores at most min(m,n) characters
-     */
     public int lengthOfLongestSubstring(String s) {
         int left = 0, right = 0, max = 0;
         Set<Character> set = new HashSet<>();

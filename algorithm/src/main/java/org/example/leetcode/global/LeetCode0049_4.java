@@ -5,22 +5,20 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * <a href="https://leetcode.cn/problems/group-anagrams">...</a>
+ * <a href="https://leetcode.cn/problems/group-anagrams">LeetCode 49: Group Anagrams</a>
+ * <p>
+ * Approach: Stream grouping with sorted-string key. <br>
+ * - Sort characters of each string in a stream pipeline. <br>
+ * - Group by the sorted key.
+ * <p>
+ * Time Complexity: O(n * k * log(k)) <br>
+ * - n: number of strings; k: max string length.
+ * <p>
+ * Space Complexity: O(n * k) <br>
+ * - Store grouped strings and sorted keys.
  */
 public class LeetCode0049_4 {
 
-    /**
-     * Time Complexity: O(n * k * log(k))
-     * - n: number of strings in the input array
-     * - k: maximum length of a string
-     * - Sorting each string takes O(k * log(k))
-     * - Total: O(n * k * log(k))
-     * <p>
-     * Space Complexity: O(n * k)
-     * - Map to store groups: O(n * k) for storing all strings
-     * - Temporary char array for sorting: O(k)
-     * - Overall: O(n * k)
-     */
     public List<List<String>> groupAnagrams(String[] strs) {
         return Arrays.stream(strs)
                 .collect(Collectors.groupingBy(str -> {

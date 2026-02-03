@@ -6,9 +6,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal">...</a>
- * Time Complexity: O(n)
- * Space Complexity: O(n)
+ * <a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal">LeetCode 889: Construct Binary Tree from Preorder and Postorder Traversal</a>
+ * <p>
+ * Approach: Recursion with index map. <br>
+ - Use preorder root and postorder to split subtrees. <br>
+ - Recurse on left and right ranges.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - Each node is constructed once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Map plus recursion stack. <br>
  */
 public class LeetCode0889 {
 

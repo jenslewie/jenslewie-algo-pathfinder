@@ -1,7 +1,17 @@
 package org.example.leetcode.global;
 
 /**
- * https://leetcode.cn/problems/subarray-product-less-than-k/description/
+ * <a href="https://leetcode.cn/problems/subarray-product-less-than-k">LeetCode 713: Subarray Product Less Than K</a>
+ * <p>
+ * Approach: Sliding window with product. <br>
+ * - Expand right to multiply in new elements. <br>
+ * - Shrink left while product >= k.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each pointer moves at most n steps.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0713 {
 

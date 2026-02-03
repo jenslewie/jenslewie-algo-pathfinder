@@ -5,8 +5,17 @@ import org.example.learning.array.DifferenceArray;
 import java.util.Arrays;
 
 /**
- * <a href="https://leetcode.cn/problems/car-pooling/">...</a>
- * Difference array with utility class approach
+ * <a href="https://leetcode.cn/problems/car-pooling">LeetCode 1094: Car Pooling</a>
+ * <p>
+ * Approach: Sorting events. <br>
+ - Convert trips into pickup/drop-off events. <br>
+ - Sweep in order to track capacity.
+ * <p>
+ * Time Complexity: O(n * log(n)) <br>
+ * - n: number of trips; sorting events dominates. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Event list. <br>
  */
 public class LeetCode1094_2 {
 

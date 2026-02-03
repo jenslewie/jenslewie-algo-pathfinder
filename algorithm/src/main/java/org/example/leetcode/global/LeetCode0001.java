@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import java.util.HashMap;
 
 /**
- * <a href="https://leetcode.cn/problems/two-sum">...</a>
+ * <a href="https://leetcode.cn/problems/two-sum">LeetCode 1: Two Sum</a>
+ * <p>
+ * Approach: HashMap lookup. <br>
+ * - Traverse once, storing value -> index. <br>
+ * - For each number, check if target - num already exists.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each element is processed once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - HashMap stores up to n elements.
  */
 public class LeetCode0001 {
 

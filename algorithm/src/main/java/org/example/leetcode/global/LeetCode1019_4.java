@@ -8,7 +8,17 @@ import java.util.Deque;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/next-greater-node-in-linked-list">...</a>
+ * <a href="https://leetcode.cn/problems/next-greater-node-in-linked-list">LeetCode 1019: Next Greater Node In Linked List</a>
+ * <p>
+ * Approach: Convert to array + monotonic stack. <br>
+ - Store node values in a list. <br>
+ - Use a stack of indices to find next greater values.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each index pushed/popped once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Array of values and stack. <br>
  */
 public class LeetCode1019_4 {
 

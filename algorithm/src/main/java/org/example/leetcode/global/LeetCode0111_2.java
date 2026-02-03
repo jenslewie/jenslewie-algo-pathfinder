@@ -3,23 +3,23 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * https://leetcode.cn/problems/minimum-depth-of-binary-tree/
+ * <a href="https://leetcode.cn/problems/minimum-depth-of-binary-tree">LeetCode 111: Minimum Depth of Binary Tree</a>
+ * <p>
+ * Approach: DFS traversal with depth tracking. <br>
+ * - Traverse all root-to-leaf paths. <br>
+ * - Track the minimum depth across leaf nodes.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(h) <br>
+ * - h: height of the tree due to recursion stack.
  */
 public class LeetCode0111_2 {
 
     private int minDepth = Integer.MAX_VALUE;
     private int currentDepth = 0;
 
-    /**
-     * DFS (Depth-First Search) approach with traversal
-     * Time Complexity: O(n)
-     * - n: number of nodes in the tree
-     * - We visit each node at most once
-     * <p>
-     * Space Complexity: O(h)
-     * - h: height of the tree
-     * - Due to recursion stack in the worst case (skewed tree)
-     */
     public int minDepth(TreeNode root) {
         if (root == null) {
             return 0;

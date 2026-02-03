@@ -3,20 +3,20 @@ package org.example.leetcode.global;
 import java.util.Stack;
 
 /**
- * https://leetcode.cn/problems/add-binary/
+ * <a href="https://leetcode.cn/problems/add-binary">LeetCode 67: Add Binary</a>
+ * <p>
+ * Approach: Stack-based addition. <br>
+ * - Push digits of both strings onto stacks. <br>
+ * - Pop and sum with carry to build the result.
+ * <p>
+ * Time Complexity: O(max(m, n)) <br>
+ * - m, n: lengths of the input strings.
+ * <p>
+ * Space Complexity: O(m + n) <br>
+ * - Stacks store all digits.
  */
 public class LeetCode0067_2 {
 
-    /**
-     * Stack-based approach
-     * Time Complexity: O(max(m, n))
-     * - m: length of string a
-     * - n: length of string b
-     * - We iterate through both strings once to build stacks and then process them
-     * <p>
-     * Space Complexity: O(m + n)
-     * - Stacks to store the digits of both strings
-     */
     public String addBinary(String a, String b) {
         Stack<Integer> stackA = new Stack<>();
         for (Character c : a.toCharArray()) {

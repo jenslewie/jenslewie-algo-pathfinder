@@ -4,21 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/car-pooling/">...</a>
- * Brute force map approach
+ * <a href="https://leetcode.cn/problems/car-pooling">LeetCode 1094: Car Pooling</a>
+ * <p>
+ * Approach: Priority queue over destinations. <br>
+ - Sort trips by start time and release passengers by earliest end. <br>
+ - Track current load.
+ * <p>
+ * Time Complexity: O(n * log(n)) <br>
+ * - Sorting and heap operations. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Heap stores active trips. <br>
  */
 public class LeetCode1094_3 {
 
-    /**
-     * Brute force map approach to solve car pooling problem
-     * Time Complexity: O(n * m)
-     * - n: number of trips
-     * - m: average trip distance
-     * - For each trip, we iterate through the route segment
-     * <p>
-     * Space Complexity: O(m)
-     * - Where m is the max position value stored in the map
-     */
     public boolean carPooling(int[][] trips, int capacity) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int[] trip : trips) {

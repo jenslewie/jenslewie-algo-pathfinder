@@ -6,9 +6,17 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * <a href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list">...</a>
- * Time Complexity: O(n)
- * Space Complexity: O(n)
+ * <a href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list">LeetCode 114: Flatten Binary Tree to Linked List</a>
+ * <p>
+ * Approach: Preorder traversal with a queue. <br>
+ * - Collect nodes in preorder. <br>
+ * - Rewire pointers to form a right-skewed list.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Queue stores all nodes in preorder.
  */
 public class LeetCode0114_1 {
 

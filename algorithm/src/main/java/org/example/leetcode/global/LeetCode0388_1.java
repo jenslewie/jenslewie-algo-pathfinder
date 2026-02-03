@@ -1,20 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * Depth-based approach for finding longest path in file system
+ * <a href="https://leetcode.cn/problems/longest-absolute-file-path">LeetCode 388: Longest Absolute File Path</a>
+ * <p>
+ * Approach: Depth-based length tracking. <br>
+ * - Track the cumulative length at each depth. <br>
+ * - Update the maximum when a file is encountered.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the input string; single pass parsing.
+ * <p>
+ * Space Complexity: O(d) <br>
+ * - d: maximum directory depth.
  */
 public class LeetCode0388_1 {
 
-    /**
-     * Depth-based approach to find the longest absolute path to a file
-     * Time Complexity: O(n)
-     * - n: length of the input string
-     * - Single pass through the string
-     * <p>
-     * Space Complexity: O(d)
-     * - d: maximum depth of the directory structure
-     * - Array to store path lengths at each level
-     */
     public int lengthLongestPath(String input) {
         int n = input.length();
         int pos = 0, ans = 0;

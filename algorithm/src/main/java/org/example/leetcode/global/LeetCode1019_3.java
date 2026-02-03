@@ -8,7 +8,17 @@ import java.util.Deque;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/next-greater-node-in-linked-list">...</a>
+ * <a href="https://leetcode.cn/problems/next-greater-node-in-linked-list">LeetCode 1019: Next Greater Node In Linked List</a>
+ * <p>
+ * Approach: Single pass with index stack. <br>
+ - Maintain a stack of (value, index) with decreasing values. <br>
+ - Update results when a greater value appears.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node pushed/popped once. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack and list of results. <br>
  */
 public class LeetCode1019_3 {
 

@@ -4,21 +4,20 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * <a href="https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof">...</a>
- * Priority queue approach
+ * <a href="https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof">LeetCode LCR 183: Sliding Window Maximum</a>
+ * <p>
+ * Approach: Priority queue with lazy removal. <br>
+ - Push elements with indices. <br>
+ - Pop while index is out of window.
+ * <p>
+ * Time Complexity: O(n * log(k)) <br>
+ * - n: length of the array; heap ops are log(k). <br>
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - Heap stores up to k elements. <br>
  */
 public class LeetCode0183_2 {
 
-    /**
-     * Priority queue approach to find maximum altitude in sliding window
-     * Time Complexity: O(n*log(k))
-     * - n: length of the input array
-     * - k: window size
-     * - Each element is added and removed from the priority queue
-     * <p>
-     * Space Complexity: O(k)
-     * - Where k is the window size, for storing elements in the priority queue
-     */
     public int[] maxAltitude(int[] heights, int limit) {
         int n = heights.length;
         if (n == 0 || limit == 0) {

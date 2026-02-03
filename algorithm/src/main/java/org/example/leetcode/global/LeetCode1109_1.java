@@ -1,21 +1,20 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/corporate-flight-bookings">...</a>
- * Approach 1: Difference array with prefix sum
+ * <a href="https://leetcode.cn/problems/corporate-flight-bookings">LeetCode 1109: Corporate Flight Bookings</a>
+ * <p>
+ * Approach: Difference array with prefix sum. <br>
+ - Apply seat deltas to start/end+1 indices. <br>
+ - Prefix sum yields final bookings.
+ * <p>
+ * Time Complexity: O(n + m) <br>
+ * - n: flights; m: bookings. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Difference array. <br>
  */
 public class LeetCode1109_1 {
 
-    /**
-     * Calculate flight bookings using difference array with prefix sum
-     * Time Complexity: O(m + n)
-     * - m: length of bookings
-     * - n: number of flights
-     * - Single pass through bookings + single pass to compute prefix sums
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using the result array of size n
-     */
     public int[] corpFlightBookings(int[][] bookings, int n) {
         int[] ans = new int[n];
         for (int[] booking : bookings) {

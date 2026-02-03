@@ -3,19 +3,20 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/
+ * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii">LeetCode 82: Remove Duplicates from Sorted List II</a>
+ * <p>
+ * Approach: Two lists for unique and duplicate nodes. <br>
+ * - Track the last seen value and split nodes into unique/duplicate lists. <br>
+ * - Return the unique list.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: number of nodes; each node is visited once.
+ * <p>
+ * Space Complexity: O(1) <br>
+ * - Only constant extra space for pointers.
  */
 public class LeetCode0082_1 {
 
-    /**
-     * Two-pointers dual-list approach
-     * Time Complexity: O(n)
-     * - n: number of nodes in the linked list
-     * - We iterate through the list once
-     * <p>
-     * Space Complexity: O(1)
-     * - Only using constant extra space for pointers
-     */
     public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy1 = new ListNode(-101);
         ListNode dummy2 = new ListNode(-101);

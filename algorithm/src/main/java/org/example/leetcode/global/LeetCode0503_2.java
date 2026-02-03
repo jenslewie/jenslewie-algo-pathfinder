@@ -4,21 +4,20 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * <a href="https://leetcode.cn/problems/next-greater-element-ii">...</a>
- * Approach 2: Monotonic stack with reverse traversal
+ * <a href="https://leetcode.cn/problems/next-greater-element-ii">LeetCode 503: Next Greater Element II</a>
+ * <p>
+ * Approach: Monotonic stack with reverse traversal. <br>
+ * - Traverse from right to left twice to simulate circularity. <br>
+ * - Maintain a decreasing stack of values.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each element is pushed/popped at most once.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Stack and result array.
  */
 public class LeetCode0503_2 {
 
-    /**
-     * Find next greater elements in circular array using monotonic stack with reverse traversal
-     * Time Complexity: O(n)
-     * - n: length of nums
-     * - Single pass through 2*n elements
-     * <p>
-     * Space Complexity: O(n)
-     * - Deque to store values
-     * - Result array of size n
-     */
     public int[] nextGreaterElements(int[] nums) {
         int len = nums.length;
         Deque<Integer> stack = new LinkedList<>();

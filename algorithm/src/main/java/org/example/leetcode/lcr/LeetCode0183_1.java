@@ -4,20 +4,20 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof">...</a>
- * Monotonic deque approach
+ * <a href="https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof">LeetCode LCR 183: Sliding Window Maximum</a>
+ * <p>
+ * Approach: Monotonic deque. <br>
+ - Maintain decreasing deque of candidates. <br>
+ - The front is the current maximum.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the array; each element pushed/popped once. <br>
+ * <p>
+ * Space Complexity: O(k) <br>
+ * - k: window size. <br>
  */
 public class LeetCode0183_1 {
 
-    /**
-     * Monotonic deque approach to find maximum altitude in sliding window
-     * Time Complexity: O(n)
-     * - n: length of the input array
-     * - Each element is added and removed from the deque at most once
-     * <p>
-     * Space Complexity: O(k)
-     * - Where k is the window size, for storing elements in the deque
-     */
     public int[] maxAltitude(int[] heights, int limit) {
         int n = heights.length;
         if (n == 0 || limit == 0) {

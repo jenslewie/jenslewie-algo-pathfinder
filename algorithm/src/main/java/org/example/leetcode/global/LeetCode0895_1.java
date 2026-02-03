@@ -5,7 +5,17 @@ import java.util.LinkedList;
 import java.util.Map;
 
 /**
- * Frequency stack implementation using arrays for frequency tracking
+ * <a href="https://leetcode.cn/problems/maximum-frequency-stack">LeetCode 895: Maximum Frequency Stack</a>
+ * <p>
+ * Approach: Array of stacks by frequency. <br>
+ - Track value frequencies and group values by frequency. <br>
+ - Pop from the highest-frequency list.
+ * <p>
+ * Time Complexity: O(1) <br>
+ * - Push and pop are constant time. <br>
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Store all pushed values. <br>
  */
 public class LeetCode0895_1 {
 
@@ -19,14 +29,6 @@ public class LeetCode0895_1 {
         freqToValsArray = new LinkedList[2 * (int) 1e4];
     }
 
-    /**
-     * Push element to the frequency stack using array-based approach
-     * Time Complexity: O(1)
-     * - Adding to the stack takes constant time
-     * <p>
-     * Space Complexity: O(N)
-     * - Where N is the total number of pushes
-     */
     public void push(int val) {
         int freq = valToFreq.getOrDefault(val, 0) + 1;
         maxFreq = Math.max(maxFreq, freq);
@@ -37,14 +39,6 @@ public class LeetCode0895_1 {
         freqToValsArray[freq].add(val);
     }
 
-    /**
-     * Pop element from the frequency stack using array-based approach
-     * Time Complexity: O(1)
-     * - Removing from the stack takes constant time
-     * <p>
-     * Space Complexity: O(1)
-     * - No additional space needed
-     */
     public int pop() {
         LinkedList<Integer> list = freqToValsArray[maxFreq];
         int value = list.removeLast();

@@ -3,7 +3,17 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * https://leetcode.cn/problems/add-two-numbers/description/
+ * <a href="https://leetcode.cn/problems/add-two-numbers">LeetCode 2: Add Two Numbers</a>
+ * <p>
+ * Approach: Simulate elementary addition with carry. <br>
+ * - Walk both lists, summing digits and carry. <br>
+ * - Append the ones digit to the result, carry the tens.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: length of the longer list.
+ * <p>
+ * Space Complexity: O(n) <br>
+ * - Result list length is at most n + 1.
  */
 public class LeetCode0002 {
 
