@@ -205,6 +205,41 @@ class LeetCode1670Test {
                                 -1,
                                 null, null, null, null
                         )
+                ),
+
+                // Branch coverage: exercise size transitions and empty pops
+                new TestCase("branch_coverage",
+                        List.of("FrontMiddleBackQueue", "popFront", "pushFront", "pushBack", "pushFront",
+                                "pushMiddle", "pushMiddle", "popMiddle", "popMiddle", "popBack", "popBack", "popFront", "popBack"),
+                        List.of(
+                                List.of(),
+                                List.of(),
+                                List.of(10),
+                                List.of(20),
+                                List.of(30),
+                                List.of(40),
+                                List.of(50),
+                                List.of(),
+                                List.of(),
+                                List.of(),
+                                List.of(),
+                                List.of(),
+                                List.of()
+                        ),
+                        Arrays.asList(null, -1, null, null, null, null, null, 50, 40, 20, 10, 30, -1)
+                ),
+
+                // pushBack on even size and popFront to even size
+                new TestCase("push_back_even_pop_front_even",
+                        List.of("FrontMiddleBackQueue", "pushBack", "pushBack", "pushBack", "popFront"),
+                        List.of(
+                                List.of(),
+                                List.of(1),
+                                List.of(2),
+                                List.of(3),
+                                List.of()
+                        ),
+                        Arrays.asList(null, null, null, null, 1)
                 )
         );
     }

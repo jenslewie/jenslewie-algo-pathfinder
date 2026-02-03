@@ -57,7 +57,31 @@ class LeetCode0061Test {
                 new TestCase("example_2",
                         new Integer[]{1, 2},
                         0,
-                        new int[]{1, 2})
+                        new int[]{1, 2}),
+
+                // k multiple of length
+                new TestCase("k_multiple_of_len",
+                        new Integer[]{1, 2, 3},
+                        3,
+                        new int[]{1, 2, 3}),
+
+                // k greater than length
+                new TestCase("k_greater_than_len",
+                        new Integer[]{1, 2, 3},
+                        5,
+                        new int[]{2, 3, 1}),
+
+                // Single node
+                new TestCase("single_node",
+                        new Integer[]{1},
+                        4,
+                        new int[]{1}),
+
+                // Empty list
+                new TestCase("empty_list",
+                        new Integer[]{},
+                        2,
+                        new int[]{})
         );
     }
 

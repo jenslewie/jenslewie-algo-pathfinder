@@ -46,7 +46,19 @@ class LeetCode0002Test {
                 Arguments.of("example_3",
                         new Integer[]{9, 9, 9, 9, 9, 9, 9},
                         new Integer[]{9, 9, 9, 9},
-                        new int[]{8, 9, 9, 9, 0, 0, 0, 1})
+                        new int[]{8, 9, 9, 9, 0, 0, 0, 1}),
+
+                // First list longer, no final carry
+                Arguments.of("first_longer_no_carry",
+                        new Integer[]{1, 8},
+                        new Integer[]{0},
+                        new int[]{1, 8}),
+
+                // Second list longer, no final carry
+                Arguments.of("second_longer_no_carry",
+                        new Integer[]{5},
+                        new Integer[]{5, 9},
+                        new int[]{0, 0, 1})
         );
     }
 }

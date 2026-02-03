@@ -26,7 +26,8 @@ class LeetCode0057Test {
     private static Stream<Arguments> testCases() {
         return Stream.of(
                 Arguments.of("example_1", new int[]{1, 2, 3, 1}, 3, 0, true),
-                Arguments.of("example_2", new int[]{1, 0, 1, 1}, 1, 2, true)
+                Arguments.of("example_2", new int[]{1, 0, 1, 1}, 1, 2, true),
+                Arguments.of("not_found", new int[]{1, 5, 9, 1, 5, 9}, 2, 3, false)
         );
     }
 }

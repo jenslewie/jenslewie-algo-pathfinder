@@ -14,31 +14,30 @@ public class LeetCode0146 {
         int upper = 0, lower = m - 1, left = 0, right = n - 1;
         int num = 0;
 
-        while (num < m * n) {
-            if (upper <= lower) {
-                for (int j = left; j <= right; j++) {
-                    results[num++] = array[upper][j];
-                }
-                upper++;
+        while (upper <= lower && left <= right) {
+            for (int j = left; j <= right; j++) {
+                results[num++] = array[upper][j];
             }
-            if (left <= right) {
-                for (int i = upper; i <= lower; i++) {
-                    results[num++] = array[i][right];
-                }
-                right--;
+            upper++;
+
+            for (int i = upper; i <= lower; i++) {
+                results[num++] = array[i][right];
             }
-            if (upper <= lower) {
-                for (int j = right; j >= left; j--) {
-                    results[num++] = array[lower][j];
-                }
-                lower--;
+            right--;
+
+            if (upper > lower || left > right) {
+                break;
             }
-            if (left <= right) {
-                for (int i = lower; i >= upper; i--) {
-                    results[num++] = array[i][left];
-                }
-                left++;
+
+            for (int j = right; j >= left; j--) {
+                results[num++] = array[lower][j];
             }
+            lower--;
+
+            for (int i = lower; i >= upper; i--) {
+                results[num++] = array[i][left];
+            }
+            left++;
         }
         return results;
     }

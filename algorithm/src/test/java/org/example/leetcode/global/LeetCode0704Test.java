@@ -89,7 +89,15 @@ class LeetCode0704Test {
 
                 // Two elements: no match
                 new TestCase("two_elements_no_match",
-                        new int[]{10, 20}, 15, -1)
+                        new int[]{10, 20}, 15, -1),
+
+                // Target between elements (forces mid > target branch)
+                new TestCase("target_between",
+                        new int[]{1, 3, 5, 7, 9}, 4, -1),
+
+                // Target smaller than mid to hit nums[mid] > target branch early
+                new TestCase("target_less_than_mid",
+                        new int[]{1, 3, 5, 7, 9}, 2, -1)
         );
     }
 

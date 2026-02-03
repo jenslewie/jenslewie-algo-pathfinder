@@ -4,6 +4,7 @@ import org.example.builder.LinkedListBuilder;
 import org.example.leetcode.utility.LinkedListUtility;
 import org.example.model.linkedlist.ListNode;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -32,11 +33,6 @@ class LeetCode0023Test {
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}")
     @MethodSource("allCombinations")
     void testMergeKLists(String caseName, String algoName, Integer[][] listsArray, int[] expected) {
-        // Skip divide_and_conquer for empty or all-empty-lists cases
-        if ("divide_and_conquer".equals(algoName) && (listsArray.length == 0 || allListsEmpty(listsArray))) {
-            return; // skip this test combination
-        }
-
         ListNode[] lists = new ListNode[listsArray.length];
         for (int i = 0; i < listsArray.length; i++) {
             lists[i] = LinkedListBuilder.build(listsArray[i]);
@@ -53,13 +49,24 @@ class LeetCode0023Test {
         }
     }
 
-    private static boolean allListsEmpty(Integer[][] listsArray) {
-        for (Integer[] list : listsArray) {
-            if (list != null && list.length > 0) {
-                return false;
-            }
-        }
-        return true;
+    @Test
+    void testMergeDivideAndConquerInvalidRange() {
+        ListNode result = SOLUTION_2.merge(new ListNode[0], 1, 0);
+        assertNull(result, "Expected null when l > r");
+    }
+
+    @Test
+    void testMergeTwoListsWithNullList() {
+        ListNode list = LinkedListBuilder.build(new Integer[]{1, 2, 4});
+        ListNode result = SOLUTION_2.mergeTwoLists(null, list);
+        LinkedListUtility.verify(new int[]{1, 2, 4}, result, () -> "Expected the non-null list to be returned");
+    }
+
+    @Test
+    void testMergeTwoListsWithSecondNullList() {
+        ListNode list = LinkedListBuilder.build(new Integer[]{2, 3});
+        ListNode result = SOLUTION_2.mergeTwoLists(list, null);
+        LinkedListUtility.verify(new int[]{2, 3}, result, () -> "Expected the non-null list to be returned");
     }
 
     private static Stream<Arguments> allCombinations() {

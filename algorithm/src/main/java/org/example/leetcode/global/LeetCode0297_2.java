@@ -23,6 +23,9 @@ public class LeetCode0297_2 {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
+        if (data == null || data.isEmpty()) {
+            return null;
+        }
         var nodes = new LinkedList<>(Arrays.asList(data.split(SEPARATOR)));
         return _deserialize(nodes);
     }
@@ -39,10 +42,7 @@ public class LeetCode0297_2 {
     }
 
     private TreeNode _deserialize(LinkedList<String> nodes) {
-        if (nodes.isEmpty()) {
-            return null;
-        }
-        String value = nodes.removeLast();
+        String value = nodes.pollLast();
         if (NULL.equals(value)) {
             return null;
         }

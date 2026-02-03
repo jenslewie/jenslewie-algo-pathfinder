@@ -26,7 +26,9 @@ class LeetCode0015Test {
     private static Stream<Arguments> testCases() {
         return Stream.of(
                 Arguments.of("example_1", "cbaebabacd", "abc", List.of(0, 6)),
-                Arguments.of("example_2", "abab", "ab", List.of(0, 1, 2))
+                Arguments.of("example_2", "abab", "ab", List.of(0, 1, 2)),
+                Arguments.of("s_shorter_than_p", "ab", "abc", List.of()),
+                Arguments.of("first_window_not_match", "baa", "aa", List.of(1))
         );
     }
 }

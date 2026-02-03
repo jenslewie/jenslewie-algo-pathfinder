@@ -16,12 +16,16 @@ public class LeetCode0151_1 {
      */
     public String reverseWords(String s) {
         s = s.trim();
+        if (s.isEmpty()) {
+            return "";
+        }
         StringBuilder sb = new StringBuilder();
         int right = s.length() - 1;
         int left = right;
         while (left >= 0) {
-            while (left >= 0 && s.charAt(left) == ' ') {
+            if (s.charAt(left) == ' ') {
                 left--;
+                continue;
             }
             right = left;
             while (left >= 0 && s.charAt(left) != ' ') {

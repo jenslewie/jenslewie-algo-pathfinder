@@ -73,9 +73,7 @@ public class LeetCode0155_3 implements MinStack {
         if (!map.isEmpty()) {
             int min = Integer.MAX_VALUE;
             for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-                if (entry.getValue() > 0) {
-                    min = Math.min(min, entry.getKey());
-                }
+                min = Math.min(min, entry.getKey());
             }
             return min;
         }

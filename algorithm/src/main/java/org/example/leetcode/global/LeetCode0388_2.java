@@ -24,9 +24,11 @@ public class LeetCode0388_2 {
 
         while (pos < n) {
             int depth = 1;
-            while (pos < n && input.charAt(pos) == '\t') {
-                pos++;
-                depth++;
+            if (input.charAt(pos) == '\t') {
+                while (input.charAt(pos) == '\t') {
+                    pos++;
+                    depth++;
+                }
             }
 
             boolean isFile = false;

@@ -64,7 +64,10 @@ class LeetCode0402Test {
                 new TestCase("zeros_at_end", "100", 1, "0"),
 
                 // Large input
-                new TestCase("large_input", "33526221184202197273", 19, "0")
+                new TestCase("large_input", "33526221184202197273", 19, "0"),
+
+                // No removal
+                new TestCase("k_zero", "12345", 0, "12345")
         );
     }
 

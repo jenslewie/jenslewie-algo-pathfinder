@@ -55,7 +55,17 @@ class LeetCode0151Test {
                 // Example 3 from LeetCode
                 new TestCase("example_3",
                         "a good   example",
-                        "example good a")
+                        "example good a"),
+
+                // Single word
+                new TestCase("single_word",
+                        "hello",
+                        "hello"),
+
+                // Only spaces
+                new TestCase("only_spaces",
+                        "     ",
+                        "")
         );
     }
 

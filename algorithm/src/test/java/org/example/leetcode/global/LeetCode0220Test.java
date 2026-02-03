@@ -55,7 +55,14 @@ class LeetCode0220Test {
                         new int[]{1, 5, 9, 1, 5, 9},
                         2,
                         3,
-                        false)
+                        false),
+
+                // Floor match only
+                new TestCase("floor_match",
+                        new int[]{1, 3},
+                        1,
+                        2,
+                        true)
         );
     }
 

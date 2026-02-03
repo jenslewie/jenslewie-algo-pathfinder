@@ -24,8 +24,10 @@ class LeetCode0445Test {
 
         ListNode result = SOLUTION.addTwoNumbers(l1, l2);
 
+        String l1Str = l1Array == null ? "null" : Arrays.toString(l1Array);
+        String l2Str = l2Array == null ? "null" : Arrays.toString(l2Array);
         LinkedListUtility.verify(expected, result, () -> "Case '%s' failed. l1=%s, l2=%s"
-                .formatted(caseName, Arrays.toString(l1Array), Arrays.toString(l2Array)));
+                .formatted(caseName, l1Str, l2Str));
     }
 
     private static Stream<Arguments> testCases() {
@@ -46,7 +48,24 @@ class LeetCode0445Test {
                 Arguments.of("example_3",
                         new Integer[]{7, 2, 4, 3},
                         new Integer[]{5, 6, 4},
-                        new int[]{7, 8, 0, 7})
+                        new int[]{7, 8, 0, 7}),
+
+                // One list is null
+                Arguments.of("l1_null",
+                        null,
+                        new Integer[]{1, 2, 3},
+                        new int[]{1, 2, 3}),
+
+                Arguments.of("l2_null",
+                        new Integer[]{9, 9},
+                        null,
+                        new int[]{9, 9}),
+
+                // Carry over after both stacks empty
+                Arguments.of("carry_over",
+                        new Integer[]{9, 9},
+                        new Integer[]{1},
+                        new int[]{1, 0, 0})
         );
     }
 }

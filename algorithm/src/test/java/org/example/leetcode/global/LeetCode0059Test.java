@@ -34,6 +34,11 @@ class LeetCode0059Test {
                         1,
                         new int[][]{{1}}),
 
+                // Example 2b: n = 2
+                Arguments.of("n_2",
+                        2,
+                        new int[][]{{1, 2}, {4, 3}}),
+
                 // Example 3: n = 4
                 Arguments.of("example_3",
                         4,

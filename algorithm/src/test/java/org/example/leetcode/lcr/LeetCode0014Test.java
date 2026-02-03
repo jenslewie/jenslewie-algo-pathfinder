@@ -47,7 +47,10 @@ class LeetCode0014Test {
     private static Stream<TestCase> testCases() {
         return Stream.of(
                 new TestCase("found", "ab", "eidbaooo", true),
-                new TestCase("not_found", "ab", "eidboaoo", false)
+                new TestCase("not_found", "ab", "eidboaoo", false),
+                new TestCase("s1_longer_than_s2", "abcd", "abc", false),
+                new TestCase("equal_length_match", "ab", "ab", true),
+                new TestCase("repeated_chars", "aab", "aaab", true)
         );
     }
 

@@ -26,7 +26,10 @@ class LeetCode0567Test {
         return Stream.of(
                 Arguments.of("example_1", "ab", "eidbaooo", true),
                 Arguments.of("example_2", "ab", "eidboaoo", false),
-                Arguments.of("permutation_found", "abcdxioe", "abcdioxe", true)
+                Arguments.of("permutation_found", "abcdxioe", "abcdioxe", true),
+                Arguments.of("s2_shorter_than_s1", "abcd", "abc", false),
+                Arguments.of("exact_match", "abc", "abc", true),
+                Arguments.of("extra_repeats", "ab", "aaab", true)
         );
     }
 }

@@ -153,7 +153,12 @@ class LeetCode0225Test {
                 new TestCase("top_only",
                         new String[]{"MyStack", "push", "push", "top", "top", "pop", "top"},
                         new Object[][]{{}, {7}, {8}, {}, {}, {}, {}},
-                        new Object[]{null, null, null, 8, 8, 8, 7})
+                        new Object[]{null, null, null, 8, 8, 8, 7}),
+
+                new TestCase("empty_pop_top",
+                        new String[]{"MyStack", "pop", "top", "empty"},
+                        new Object[][]{{}, {}, {}, {}},
+                        new Object[]{null, -1, -1, true})
         );
     }
 

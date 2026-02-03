@@ -27,7 +27,10 @@ class LeetCode0167Test {
         return Stream.of(
                 Arguments.of("example_1", new int[]{2, 7, 11, 15}, 9, new int[]{1, 2}),
                 Arguments.of("example_2", new int[]{2, 3, 4}, 6, new int[]{1, 3}),
-                Arguments.of("example_3", new int[]{-1, 0}, -1, new int[]{1, 2})
+                Arguments.of("example_3", new int[]{-1, 0}, -1, new int[]{1, 2}),
+                Arguments.of("sum_less_than_target", new int[]{1, 2, 3, 4}, 7, new int[]{3, 4}),
+                Arguments.of("no_solution", new int[]{1, 2, 3, 4}, 10, new int[]{-1, -1}),
+                Arguments.of("single_element", new int[]{5}, 5, new int[]{-1, -1})
         );
     }
 }

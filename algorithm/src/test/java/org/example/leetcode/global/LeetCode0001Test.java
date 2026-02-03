@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @DisplayName("LeetCode 1: Two Sum - Algorithm Variants")
 class LeetCode0001Test {
@@ -30,8 +31,13 @@ class LeetCode0001Test {
     void testTwoSum(String caseName, String algoName, int[] nums, int target, int[] expected) {
         int[] actual = ALGO_VARIANTS.get(algoName).apply(nums, target);
 
-        assertArrayEquals(expected, actual, () -> "Case '%s' with algo='%s' failed. nums=%s, target=%d"
-                .formatted(caseName, algoName, Arrays.toString(nums), target));
+        if (expected == null) {
+            assertNull(actual, () -> "Case '%s' with algo='%s' failed. nums=%s, target=%d"
+                    .formatted(caseName, algoName, Arrays.toString(nums), target));
+        } else {
+            assertArrayEquals(expected, actual, () -> "Case '%s' with algo='%s' failed. nums=%s, target=%d"
+                    .formatted(caseName, algoName, Arrays.toString(nums), target));
+        }
     }
 
     private static Stream<Arguments> allCombinations() {
@@ -94,7 +100,13 @@ class LeetCode0001Test {
                 new TestCase("with_zero",
                         new int[]{0, 4, 3, 0},
                         0,
-                        new int[]{3, 0})
+                        new int[]{3, 0}),
+
+                // No solution exists
+                new TestCase("no_solution",
+                        new int[]{1, 2, 3},
+                        7,
+                        null)
         );
     }
 

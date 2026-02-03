@@ -17,9 +17,8 @@ public class LeetCode0402_3 {
             stack[++index] = i;
         }
 
-        while (k > 0 && index >= 0) {
-            k--;
-            index--;
+        if (k > 0) {
+            index = Math.max(0, index - k);
         }
 
         StringBuilder sb = new StringBuilder();

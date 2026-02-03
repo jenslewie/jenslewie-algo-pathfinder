@@ -97,7 +97,17 @@ class LeetCode0014Test {
                 // Mixed case (though problem assumes lowercase, but test robustness)
                 new TestCase("with_empty_string",
                         new String[]{"", "abc"},
-                        "")
+                        ""),
+
+                // First string longer than others
+                new TestCase("first_longer",
+                        new String[]{"abcd", "ab"},
+                        "ab"),
+
+                // Long strings to reach loop bound in variant 3
+                new TestCase("long_200",
+                        new String[]{"a".repeat(200), "a".repeat(200)},
+                        "a".repeat(200))
         );
     }
 

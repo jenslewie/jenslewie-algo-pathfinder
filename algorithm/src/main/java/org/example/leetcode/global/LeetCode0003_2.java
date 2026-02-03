@@ -25,7 +25,7 @@ public class LeetCode0003_2 {
             char c = s.charAt(right++);
             boolean notExists = set.add(c);
             if (!notExists) {
-                while (left < right && s.charAt(left) != c) {
+                while (s.charAt(left) != c) {
                     set.remove(s.charAt(left++));
                 }
                 left++;

@@ -48,7 +48,9 @@ class LeetCode0003Test {
                 new TestCase("example_2", "bbbbb", 1),
                 new TestCase("example_3", "pwwkew", 3),
                 new TestCase("single_space", " ", 1),
-                new TestCase("custom_case", "dfdv", 3)
+                new TestCase("custom_case", "dfdv", 3),
+                new TestCase("repeat_outside_window", "abba", 2),
+                new TestCase("repeat_inside_window", "abcb", 3)
         );
     }
 

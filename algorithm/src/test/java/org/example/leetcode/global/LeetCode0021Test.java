@@ -53,7 +53,13 @@ class LeetCode0021Test {
                 Arguments.of("example_3",
                         new Integer[]{},
                         new Integer[]{},
-                        null)
+                        null),
+
+                // Second list empty
+                Arguments.of("second_empty",
+                        new Integer[]{1, 2, 3},
+                        new Integer[]{},
+                        new int[]{1, 2, 3})
         );
     }
 }

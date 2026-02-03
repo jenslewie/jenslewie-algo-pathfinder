@@ -19,9 +19,11 @@ public class LeetCode0402_2 {
             queue.offerLast(ch);
         }
 
-        while (k > 0 && !queue.isEmpty()) {
-            queue.pollLast();
-            k--;
+        if (k > 0) {
+            int remove = Math.min(k, queue.size());
+            for (int i = 0; i < remove; i++) {
+                queue.pollLast();
+            }
         }
 
         StringBuilder sb = new StringBuilder();

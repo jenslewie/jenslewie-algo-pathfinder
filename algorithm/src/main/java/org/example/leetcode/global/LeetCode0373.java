@@ -11,6 +11,9 @@ public class LeetCode0373 {
 
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         List<List<Integer>> res = new ArrayList<>();
+        if (nums1.length == 0 || nums2.length == 0) {
+            return res;
+        }
         PriorityQueue<int[]> queue = new PriorityQueue<>((a, b) -> a[0] - b[0]);
 
         for (int i = 0; i < Math.min(nums1.length, k); i++) {

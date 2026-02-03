@@ -63,6 +63,26 @@ class LeetCode0082Test {
                         new Integer[]{1, 1, 1, 2, 3},
                         new int[]{2, 3}),
 
+                // Duplicates only at end
+                new TestCase("duplicates_end",
+                        new Integer[]{1, 2, 3, 4, 4},
+                        new int[]{1, 2, 3}),
+
+                // All duplicates
+                new TestCase("all_duplicates",
+                        new Integer[]{2, 2, 2},
+                        null),
+
+                // Single element
+                new TestCase("single_element",
+                        new Integer[]{5},
+                        new int[]{5}),
+
+                // Unique elements
+                new TestCase("all_unique",
+                        new Integer[]{1, 2, 3},
+                        new int[]{1, 2, 3}),
+
                 // Empty list
                 new TestCase("empty_list",
                         new Integer[]{},

@@ -39,7 +39,10 @@ class LeetCode0067Test {
     private static Stream<TestCase> testCases() {
         return Stream.of(
                 new TestCase("example_1", "11", "1", "100"),
-                new TestCase("example_2", "1010", "1011", "10101")
+                new TestCase("example_2", "1010", "1011", "10101"),
+                new TestCase("different_lengths", "1", "111", "1000"),
+                new TestCase("no_carry", "0", "0", "0"),
+                new TestCase("carry_chain", "1111", "1", "10000")
         );
     }
 

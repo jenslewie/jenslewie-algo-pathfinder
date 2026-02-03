@@ -88,7 +88,10 @@ class LeetCode0020Test {
                 new TestCase("complex_invalid", "([{}])]", false),
 
                 // Only opening
-                new TestCase("only_opening", "{{[", false)
+                new TestCase("only_opening", "{{[", false),
+
+                // Only closing
+                new TestCase("only_closing", "]]", false)
         );
     }
 

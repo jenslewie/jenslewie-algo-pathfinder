@@ -16,6 +16,9 @@ public class LeetCode0151_2 {
      */
     public String reverseWords(String s) {
         s = s.trim();
+        if (s.isEmpty()) {
+            return "";
+        }
         String[] words = s.split(" ");
         StringBuilder sb = new StringBuilder();
         for (int i = words.length - 1; i >= 0; i--) {

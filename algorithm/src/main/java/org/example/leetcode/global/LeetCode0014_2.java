@@ -17,10 +17,10 @@ public class LeetCode0014_2 {
         int m = strs.length;
         int n = strs[0].length();
         for (int j = 0; j < n; j++) {
-            for (int i = 0; i < m - 1; i++) {
-                String currentStr = strs[i], nextStr = strs[i + 1];
-                if (currentStr.length() <= j || nextStr.length() <= j || currentStr.charAt(j) != nextStr.charAt(j)) {
-                    return currentStr.substring(0, j);
+            char c = strs[0].charAt(j);
+            for (int i = 1; i < m; i++) {
+                if (strs[i].length() <= j || strs[i].charAt(j) != c) {
+                    return strs[0].substring(0, j);
                 }
             }
         }

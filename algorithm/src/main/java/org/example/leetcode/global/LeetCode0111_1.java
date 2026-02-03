@@ -29,7 +29,7 @@ public class LeetCode0111_1 {
         queue.offer(root);
         int depth = 1;
 
-        while (!queue.isEmpty()) {
+        while (true) {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
@@ -45,7 +45,5 @@ public class LeetCode0111_1 {
             }
             depth++;
         }
-
-        return depth;
     }
 }

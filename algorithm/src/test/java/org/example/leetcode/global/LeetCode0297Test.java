@@ -4,6 +4,7 @@ import org.example.builder.BinaryTreeBuilder;
 import org.example.leetcode.utility.BinaryTreeUtility;
 import org.example.model.tree.TreeNode;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -11,6 +12,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Map;
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("LeetCode 297: Serialize and Deserialize Binary Tree")
@@ -74,6 +76,22 @@ class LeetCode0297Test {
 
         assertTrue(BinaryTreeUtility.isSameTree(original, deserialized),
                 () -> String.format("Round-trip failed for case '%s' with algo='%s'.", caseName, algoName));
+    }
+
+    @Test
+    void testDeserializeEmptyString() {
+        for (var entry : ALGO_VARIANTS.entrySet()) {
+            TreeNode result = entry.getValue().deserialize("");
+            assertNull(result, () -> "Expected null for empty input with algo=" + entry.getKey());
+        }
+    }
+
+    @Test
+    void testDeserializeNullString() {
+        for (var entry : ALGO_VARIANTS.entrySet()) {
+            TreeNode result = entry.getValue().deserialize(null);
+            assertNull(result, () -> "Expected null for null input with algo=" + entry.getKey());
+        }
     }
 
     private static Stream<Arguments> allCombinations() {

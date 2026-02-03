@@ -69,7 +69,19 @@ class LeetCode0036Test {
                 new TestCase("multiplication", new String[]{"5", "3", "*"}, 15),
 
                 // Complex verified case
-                new TestCase("complex_case", new String[]{"4", "-2", "/", "5", "*"}, -10)
+                new TestCase("complex_case", new String[]{"4", "-2", "/", "5", "*"}, -10),
+
+                // Mixed operators (classic)
+                new TestCase("mixed_ops", new String[]{"5", "1", "2", "+", "4", "*", "+", "3", "-"}, 14),
+
+                // Simple addition
+                new TestCase("simple_add", new String[]{"1", "2", "+"}, 3),
+
+                // Simple subtraction
+                new TestCase("simple_sub", new String[]{"5", "3", "-"}, 2),
+
+                // Simple division
+                new TestCase("simple_div", new String[]{"8", "4", "/"}, 2)
         );
     }
 

@@ -11,7 +11,7 @@ public class LeetCode0209 {
 
         while (right < nums.length) {
             windowSum += nums[right++];
-            while (windowSum >= target && left < right) {
+            while (windowSum >= target) {
                 result = Math.min(result, right - left);
                 windowSum -= nums[left++];
             }

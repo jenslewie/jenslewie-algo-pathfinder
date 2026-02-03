@@ -29,7 +29,25 @@ class LeetCode1658Test {
                 Arguments.of("example_1",
                         new int[]{1, 1, 4, 2, 3},
                         5,
-                        2)
+                        2),
+
+                // sum < x
+                Arguments.of("sum_less_than_x",
+                        new int[]{1, 1, 1},
+                        5,
+                        -1),
+
+                // sum == x (remove all)
+                Arguments.of("sum_equals_x",
+                        new int[]{1, 2, 3},
+                        6,
+                        3),
+
+                // No valid subarray (maxLen stays MIN)
+                Arguments.of("no_valid_subarray",
+                        new int[]{5, 6, 7, 8, 9},
+                        4,
+                        -1)
         );
     }
 }

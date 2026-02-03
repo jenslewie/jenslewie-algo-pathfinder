@@ -10,7 +10,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @DisplayName("LeetCode 155: Min Stack - Algorithm Variants")
 class LeetCode0155Test {
@@ -63,10 +65,30 @@ class LeetCode0155Test {
         return result;
     }
 
+    @ParameterizedTest(name = "[{index}] empty_behavior algo={0}")
+    @MethodSource("emptyCases")
+    void testEmptyBehavior(String algoName) {
+        MinStack stack;
+        switch (algoName) {
+            case "int_array_stack" -> stack = new LeetCode0155_1();
+            case "dual_integer_stack" -> stack = new LeetCode0155_2();
+            case "stack_with_map" -> stack = new LeetCode0155_3();
+            default -> throw new IllegalArgumentException("Unknown algorithm: " + algoName);
+        }
+
+        assertDoesNotThrow(stack::pop, "pop on empty should be a no-op");
+        assertThrows(RuntimeException.class, stack::top, "top on empty should throw");
+        assertThrows(RuntimeException.class, stack::getMin, "getMin on empty should throw");
+    }
+
     private static Stream<Arguments> allCombinations() {
         return testCases().flatMap(tc -> ALGO_NAMES.stream()
                 .map(algo -> Arguments.of(tc.name, algo, tc.ops, tc.vals, tc.expected))
         );
+    }
+
+    private static Stream<Arguments> emptyCases() {
+        return ALGO_NAMES.stream().map(Arguments::of);
     }
 
     private static Stream<TestCase> testCases() {
@@ -110,7 +132,13 @@ class LeetCode0155Test {
                 new TestCase("empty_after_pops",
                         List.of("MinStack", "push", "pop", "push", "getMin"),
                         List.of(100, 200),
-                        List.of(200))
+                        List.of(200)),
+
+                // Pop removes a non-min value
+                new TestCase("pop_non_min",
+                        List.of("MinStack", "push", "push", "push", "pop", "getMin", "top"),
+                        List.of(5, 3, 4),
+                        List.of(3, 3))
         );
     }
 

@@ -25,7 +25,7 @@ public class LeetCode0581 {
             }
             stack.push(i);
         }
-        if (left == Integer.MAX_VALUE && right == Integer.MIN_VALUE) {
+        if (left == Integer.MAX_VALUE) {
             return 0;
         }
         return right - left + 1;

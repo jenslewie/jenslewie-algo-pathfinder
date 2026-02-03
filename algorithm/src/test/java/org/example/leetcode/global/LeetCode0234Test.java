@@ -29,7 +29,9 @@ class LeetCode0234Test {
     private static Stream<Arguments> testCases() {
         return Stream.of(
                 Arguments.of("palindrome_even", new Integer[]{1, 2, 2, 1}, true),
-                Arguments.of("not_palindrome", new Integer[]{1, 2}, false)
+                Arguments.of("not_palindrome", new Integer[]{1, 2}, false),
+                Arguments.of("palindrome_odd", new Integer[]{1, 2, 3, 2, 1}, true),
+                Arguments.of("not_palindrome_odd", new Integer[]{1, 2, 3}, false)
         );
     }
 }

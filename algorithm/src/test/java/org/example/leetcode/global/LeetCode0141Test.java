@@ -35,7 +35,8 @@ class LeetCode0141Test {
         return Stream.of(
                 Arguments.of("cycle_at_1", new Integer[]{3, 2, 0, -4}, 1, true),
                 Arguments.of("cycle_at_0", new Integer[]{1, 2}, 0, true),
-                Arguments.of("no_cycle", new Integer[]{1}, -1, false)
+                Arguments.of("no_cycle", new Integer[]{1}, -1, false),
+                Arguments.of("no_cycle_two_nodes", new Integer[]{1, 2}, -1, false)
         );
     }
 }

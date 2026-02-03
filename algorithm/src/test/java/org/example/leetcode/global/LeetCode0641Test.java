@@ -220,6 +220,35 @@ class LeetCode0641Test {
                         ),
                         Arrays.asList(null, true, true, 2, 1, true, 2, true, true)
                 )
+                ,
+                // Delete to empty
+                new TestCase("delete_to_empty",
+                        List.of("MyCircularDeque", "insertFront", "getFront", "deleteFront", "getFront", "getRear", "isEmpty"),
+                        List.of(
+                                List.of(1),
+                                List.of(9),
+                                List.of(),
+                                List.of(),
+                                List.of(),
+                                List.of(),
+                                List.of()
+                        ),
+                        Arrays.asList(null, true, 9, true, -1, -1, true)
+                ),
+
+                // Delete last to empty
+                new TestCase("delete_last_to_empty",
+                        List.of("MyCircularDeque", "insertLast", "getRear", "deleteLast", "getFront", "getRear", "isEmpty"),
+                        List.of(
+                                List.of(1),
+                                List.of(7),
+                                List.of(),
+                                List.of(),
+                                List.of(),
+                                List.of()
+                        ),
+                        Arrays.asList(null, true, 7, true, -1, -1, true)
+                )
         );
     }
 

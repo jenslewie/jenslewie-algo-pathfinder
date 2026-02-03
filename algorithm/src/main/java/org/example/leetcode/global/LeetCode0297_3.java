@@ -37,7 +37,7 @@ public class LeetCode0297_3 {
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        if (data.isEmpty()) {
+        if (data == null || data.isEmpty()) {
             return null;
         }
         var nodes = data.split(SEPARATOR);

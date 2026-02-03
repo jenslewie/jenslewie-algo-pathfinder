@@ -26,7 +26,10 @@ class LeetCode0027Test {
     private static Stream<Arguments> testCases() {
         return Stream.of(
                 Arguments.of("example_1", new int[]{3, 2, 2, 3}, 3, 2),
-                Arguments.of("example_2", new int[]{0, 1, 2, 2, 3, 0, 4, 2}, 2, 5)
+                Arguments.of("example_2", new int[]{0, 1, 2, 2, 3, 0, 4, 2}, 2, 5),
+                Arguments.of("empty_array", new int[]{}, 1, 0),
+                Arguments.of("no_removal", new int[]{1, 2, 3}, 4, 3),
+                Arguments.of("all_removed", new int[]{2, 2, 2}, 2, 0)
         );
     }
 }

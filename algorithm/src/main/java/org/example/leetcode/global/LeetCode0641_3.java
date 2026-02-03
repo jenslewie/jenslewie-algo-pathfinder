@@ -20,7 +20,7 @@ public class LeetCode0641_3 {
             return false;
         }
         ListNode node = new ListNode(value);
-        if (head == null || tail == null) {
+        if (head == null) {
             head = tail = node;
         } else {
             node.next = head;
@@ -36,7 +36,7 @@ public class LeetCode0641_3 {
             return false;
         }
         ListNode node = new ListNode(value);
-        if (head == null || tail == null) {
+        if (head == null) {
             head = tail = node;
         } else {
             tail.next = node;
@@ -55,6 +55,8 @@ public class LeetCode0641_3 {
         head = head.next;
         if (head != null) {
             head.prev = null;
+        } else {
+            tail = null;
         }
         node.next = null;
         size--;
@@ -69,6 +71,8 @@ public class LeetCode0641_3 {
         tail = tail.prev;
         if (tail != null) {
             tail.next = null;
+        } else {
+            head = null;
         }
         node.prev = null;
         size--;

@@ -32,7 +32,9 @@ class LeetCode0025Test {
         return Stream.of(
                 Arguments.of("example_1", new Integer[]{2, 4, 3}, new Integer[]{5, 6, 4}, new int[]{8, 0, 7}),
                 Arguments.of("both_zero", new Integer[]{0}, new Integer[]{0}, new int[]{0}),
-                Arguments.of("different_length", new Integer[]{7, 2, 4, 3}, new Integer[]{5, 6, 4}, new int[]{7, 8, 0, 7})
+                Arguments.of("different_length", new Integer[]{7, 2, 4, 3}, new Integer[]{5, 6, 4}, new int[]{7, 8, 0, 7}),
+                Arguments.of("final_carry", new Integer[]{9, 9}, new Integer[]{1}, new int[]{1, 0, 0}),
+                Arguments.of("first_shorter", new Integer[]{5, 6, 4}, new Integer[]{7, 2, 4, 3}, new int[]{7, 8, 0, 7})
         );
     }
 }

@@ -27,7 +27,8 @@ class LeetCode0008Test {
         return Stream.of(
                 Arguments.of("example_1", 7, new int[]{2, 3, 1, 2, 4, 3}, 2),
                 Arguments.of("example_2", 4, new int[]{1, 4, 4}, 1),
-                Arguments.of("not_found", 11, new int[]{1, 1, 1, 1, 1, 1, 1, 1}, 0)
+                Arguments.of("not_found", 11, new int[]{1, 1, 1, 1, 1, 1, 1, 1}, 0),
+                Arguments.of("zero_target", 0, new int[]{1}, 1)
         );
     }
 }

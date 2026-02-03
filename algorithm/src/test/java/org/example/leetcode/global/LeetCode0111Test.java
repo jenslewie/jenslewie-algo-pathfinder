@@ -44,7 +44,11 @@ class LeetCode0111Test {
         return Stream.of(
                 new TestCase("empty_tree", new Integer[]{}, 0),
                 new TestCase("single_node", new Integer[]{1}, 1),
-                new TestCase("right_skewed", new Integer[]{1, null, 3, null, null, null, 7}, 3)
+                new TestCase("right_skewed", new Integer[]{1, null, 3, null, null, null, 7}, 3),
+                new TestCase("left_skewed", new Integer[]{1, 2, null, 3}, 3),
+                new TestCase("full_two_levels", new Integer[]{1, 2, 3}, 2),
+                new TestCase("left_only_child", new Integer[]{1, 2}, 2),
+                new TestCase("right_only_child", new Integer[]{1, null, 2}, 2)
         );
     }
 

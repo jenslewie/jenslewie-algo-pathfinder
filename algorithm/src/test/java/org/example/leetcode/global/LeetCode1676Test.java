@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @DisplayName("LeetCode 1676: Lowest Common Ancestor of a Binary Tree IV")
 class LeetCode1676Test {
@@ -29,6 +30,12 @@ class LeetCode1676Test {
         TreeNode actual = SOLUTION.lowestCommonAncestor(root, targets);
         assertEquals(expectedLcaVal, actual.val,
                 () -> String.format("Case '%s' failed. Expected LCA value: %d", caseName, expectedLcaVal));
+    }
+
+    @org.junit.jupiter.api.Test
+    void testNullRoot() {
+        TreeNode actual = SOLUTION.lowestCommonAncestor(null, new TreeNode[0]);
+        assertNull(actual, "Expected null LCA for an empty tree");
     }
 
     private static Stream<Arguments> testCases() {
@@ -73,7 +80,19 @@ class LeetCode1676Test {
                 Arguments.of("deep_asymmetric",
                         new Integer[]{6, 2, 8, 0, 4, 7, 9, null, null, 3, 5},
                         new int[]{3, 5, 0},
-                        2)
+                        2),
+
+                // Targets only in left subtree
+                Arguments.of("left_only",
+                        new Integer[]{1, 2, 3, 4, null, null, null},
+                        new int[]{4},
+                        4),
+
+                // Targets only in right subtree
+                Arguments.of("right_only",
+                        new Integer[]{1, 2, 3, null, null, 4},
+                        new int[]{4},
+                        4)
         );
     }
 }

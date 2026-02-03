@@ -16,7 +16,7 @@ public class LeetCode0116_2 {
     }
 
     private void traverse(TreeNode node1, TreeNode node2) {
-        if (node1 == null && node2 == null) {
+        if (node1 == null) {
             return;
         }
 

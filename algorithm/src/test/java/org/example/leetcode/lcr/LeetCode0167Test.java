@@ -26,7 +26,8 @@ class LeetCode0167Test {
         return Stream.of(
                 Arguments.of("example_1", "dbascDdad", 6),
                 Arguments.of("all_same", "KKK", 1),
-                Arguments.of("example_3", "pwwkew", 3)
+                Arguments.of("example_3", "pwwkew", 3),
+                Arguments.of("repeat_outside_window", "abba", 2)
         );
     }
 }

@@ -58,6 +58,12 @@ class LeetCode0142Test {
                 Arguments.of("example_3",
                         new Integer[]{1},
                         -1,
+                        null),
+
+                // No cycle, two nodes
+                Arguments.of("no_cycle_two_nodes",
+                        new Integer[]{1, 2},
+                        -1,
                         null)
         );
     }

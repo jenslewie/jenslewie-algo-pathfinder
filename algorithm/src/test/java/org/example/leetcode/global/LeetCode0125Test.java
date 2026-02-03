@@ -78,8 +78,11 @@ public class LeetCode0125Test {
                 // Not a palindrome
                 new TestCase("not_palindrome", "hello", false),
 
-                // Case insensitive check
-                new TestCase("case_insensitive", "RaceACar", false)
+                // Case-insensitive check
+                new TestCase("case_insensitive", "RaceACar", false),
+
+                // Character beyond 'z'
+                new TestCase("non_alpha_above_z", "{ab ba}", true)
         );
     }
 

@@ -30,7 +30,13 @@ class LeetCode0373Test {
                 Arguments.of("example_1", new int[]{1, 7, 11}, new int[]{2, 4, 6}, 3,
                         List.of(List.of(1, 2), List.of(1, 4), List.of(1, 6))),
                 Arguments.of("example_2", new int[]{1, 1, 2}, new int[]{1, 2, 3}, 2,
-                        List.of(List.of(1, 1), List.of(1, 1)))
+                        List.of(List.of(1, 1), List.of(1, 1))),
+                Arguments.of("empty_nums1", new int[]{}, new int[]{1, 2}, 3,
+                        List.of()),
+                Arguments.of("empty_nums2", new int[]{1, 2}, new int[]{}, 3,
+                        List.of()),
+                Arguments.of("k_zero", new int[]{1, 2}, new int[]{3, 4}, 0,
+                        List.of())
         );
     }
 }

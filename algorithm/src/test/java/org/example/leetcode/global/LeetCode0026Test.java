@@ -26,7 +26,9 @@ class LeetCode0026Test {
     private static Stream<Arguments> testCases() {
         return Stream.of(
                 Arguments.of("example_1", new int[]{1, 1, 2}, 2),
-                Arguments.of("example_2", new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}, 5)
+                Arguments.of("example_2", new int[]{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}, 5),
+                Arguments.of("empty_array", new int[]{}, 0),
+                Arguments.of("all_unique", new int[]{1, 2, 3, 4}, 4)
         );
     }
 }
