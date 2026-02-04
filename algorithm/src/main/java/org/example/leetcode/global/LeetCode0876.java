@@ -5,6 +5,11 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/middle-of-the-linked-list">LeetCode 876: Middle of the Linked List</a>
  * <p>
+ * Given the head of a singly linked list, return the middle node of the linked list. <br>
+ * If there are two middle nodes, return the second middle node.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Slow/fast pointers. <br>
  - Move fast by two steps and slow by one. <br>
  - Slow ends at the middle.

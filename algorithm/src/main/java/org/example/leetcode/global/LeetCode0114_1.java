@@ -8,6 +8,10 @@ import java.util.Queue;
 /**
  * <a href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list">LeetCode 114: Flatten Binary Tree to Linked List</a>
  * <p>
+ * Given the root of a binary tree, flatten the tree into a "linked list":
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Preorder traversal with a queue. <br>
  * - Collect nodes in preorder. <br>
  * - Rewire pointers to form a right-skewed list.

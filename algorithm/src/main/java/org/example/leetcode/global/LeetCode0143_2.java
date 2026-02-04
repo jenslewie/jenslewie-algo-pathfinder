@@ -7,6 +7,12 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/reorder-list">LeetCode 143: Reorder List</a>
  * <p>
+ * You are given the head of a singly linked-list. The list can be represented as: <br>
+ * Reorder the list to be on the following form: <br>
+ * You may not modify the values in the list's nodes. Only nodes themselves may be changed.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Stack-based interleaving. <br>
  * - Push the second half into a stack. <br>
  * - Pop and interleave nodes into the first half.

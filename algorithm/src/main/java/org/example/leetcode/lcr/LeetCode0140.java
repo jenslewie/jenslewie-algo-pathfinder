@@ -5,6 +5,8 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/description/">LeetCode LCR 140: Kth Node From End of List</a>
  * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Two pointers with a gap. <br>
  - Advance first pointer cnt steps. <br>
  - Move both until first reaches end.

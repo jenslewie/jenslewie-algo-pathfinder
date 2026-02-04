@@ -5,6 +5,12 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/merge-two-sorted-lists">LeetCode 21: Merge Two Sorted Lists</a>
  * <p>
+ * You are given the heads of two sorted linked lists list1 and list2. <br>
+ * Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists. <br>
+ * Return the head of the merged linked list.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Iterative merge with a dummy head. <br>
  * - Compare list heads and append the smaller node. <br>
  * - Attach the remaining list when one is exhausted.

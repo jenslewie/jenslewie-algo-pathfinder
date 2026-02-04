@@ -5,6 +5,11 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list">LeetCode 19: Remove Nth Node From End of List</a>
  * <p>
+ * Given the head of a linked list, remove the nth node from the end of the list and return its head. <br>
+ * Follow up: Could you do this in one pass?
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Two pointers with a dummy node. <br>
  * - Advance the first pointer n+1 steps ahead. <br>
  * - Move both pointers until the first reaches the end, then remove the target node.

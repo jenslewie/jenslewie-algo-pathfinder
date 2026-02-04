@@ -5,6 +5,10 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list">LeetCode 83: Remove Duplicates from Sorted List</a>
  * <p>
+ * Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Single pass with a sentinel. <br>
  * - Compare current node with the next and skip duplicates. <br>
  * - Keep a moving pointer to rebuild the list in place.

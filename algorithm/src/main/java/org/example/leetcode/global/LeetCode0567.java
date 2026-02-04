@@ -6,6 +6,11 @@ import java.util.Map;
 /**
  * <a href="https://leetcode.cn/problems/permutation-in-string">LeetCode 567: Permutation in String</a>
  * <p>
+ * Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise. <br>
+ * In other words, return true if one of s1's permutations is the substring of s2.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Sliding window with frequency maps. <br>
  * - Track counts for the current window and target string. <br>
  * - Check for full match when the window size equals s1 length.

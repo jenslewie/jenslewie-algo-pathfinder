@@ -6,6 +6,12 @@ import java.util.List;
 /**
  * <a href="https://leetcode.cn/problems/shift-2d-grid">LeetCode 1260: Shift 2D Grid</a>
  * <p>
+ * Given a 2D grid of size m x n and an integer k. You need to shift the grid k times. <br>
+ * In one shift operation: <br>
+ * Return the 2D grid after applying shift operation k times.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Modular index shift. <br>
  - Treat grid as circular 1D and compute shifted index. <br>
  - Map back to 2D coordinates.

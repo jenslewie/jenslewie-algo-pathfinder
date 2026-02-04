@@ -8,6 +8,10 @@ import java.util.List;
 /**
  * <a href="https://leetcode.cn/problems/group-anagrams">LeetCode 49: Group Anagrams</a>
  * <p>
+ * Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Sorted-string key. <br>
  * - Sort characters of each string. <br>
  * - Use the sorted string as the grouping key.

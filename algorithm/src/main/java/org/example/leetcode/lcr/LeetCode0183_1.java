@@ -6,9 +6,14 @@ import java.util.Deque;
 /**
  * <a href="https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof">LeetCode LCR 183: Sliding Window Maximum</a>
  * <p>
+ * You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. <br>
+ * Return the max sliding window.
+ * <p>
+ * Difficulty: Hard
+ * <p>
  * Approach: Monotonic deque. <br>
- - Maintain decreasing deque of candidates. <br>
- - The front is the current maximum.
+ * - Maintain decreasing deque of candidates. <br>
+ * - The front is the current maximum.
  * <p>
  * Time Complexity: O(n) <br>
  * - n: length of the array; each element pushed/popped once.

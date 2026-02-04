@@ -6,6 +6,12 @@ import java.util.List;
 /**
  * <a href="https://leetcode.cn/problems/split-array-largest-sum">LeetCode 410: Split Array Largest Sum</a>
  * <p>
+ * Given an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized. <br>
+ * Return the minimized largest sum of the split. <br>
+ * A subarray is a contiguous part of the array.
+ * <p>
+ * Difficulty: Hard
+ * <p>
  * Approach: Binary search on the answer. <br>
  * - Search between max element and total sum. <br>
  * - Greedily count needed subarrays for each candidate sum.

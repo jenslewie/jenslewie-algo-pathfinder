@@ -8,6 +8,12 @@ import java.util.LinkedList;
 /**
  * <a href="https://leetcode.cn/problems/serialize-and-deserialize-binary-tree">LeetCode 297: Serialize and Deserialize Binary Tree</a>
  * <p>
+ * Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment. <br>
+ * Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure. <br>
+ * Clarification: The input/output format is the same as how LeetCode serializes a binary tree. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.
+ * <p>
+ * Difficulty: Hard
+ * <p>
  * Approach: Preorder DFS with null markers. <br>
  * - Serialize with root-left-right and use "#" for nulls. <br>
  * - Deserialize by consuming tokens in preorder.

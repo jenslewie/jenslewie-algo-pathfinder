@@ -9,6 +9,11 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/binary-tree-preorder-traversal">LeetCode 144: Binary Tree Preorder Traversal</a>
  * <p>
+ * Given the root of a binary tree, return the preorder traversal of its nodes' values. <br>
+ * Follow up: Recursive solution is trivial, could you do it iteratively?
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Iterative stack. <br>
  * - Push root, then pop to visit and push right then left. <br>
  * - Ensures preorder order without recursion.

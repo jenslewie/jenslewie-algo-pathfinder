@@ -6,6 +6,10 @@ import java.util.Deque;
 /**
  * <a href="https://leetcode.cn/problems/remove-k-digits">LeetCode 402: Remove K Digits</a>
  * <p>
+ * Given string num representing a non-negative integer num, and an integer k, return the smallest possible integer after removing k digits from num.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Monotonic stack. <br>
  * - Remove larger previous digits while k remains. <br>
  * - Strip leading zeros and handle remaining removals.

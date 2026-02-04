@@ -6,6 +6,10 @@ import java.util.List;
 /**
  * <a href="https://leetcode.cn/problems/spiral-matrix">LeetCode 54: Spiral Matrix</a>
  * <p>
+ * Given an m x n matrix, return all elements of the matrix in spiral order.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Boundary simulation. <br>
  * - Maintain top, bottom, left, and right bounds. <br>
  * - Traverse the edges in order while shrinking the bounds.

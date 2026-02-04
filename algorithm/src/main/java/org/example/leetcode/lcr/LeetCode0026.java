@@ -5,9 +5,15 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/LGjMqU">LeetCode LCR 026: Reorder List</a>
  * <p>
+ * You are given the head of a singly linked-list. The list can be represented as: <br>
+ * Reorder the list to be on the following form: <br>
+ * You may not modify the values in the list's nodes. Only nodes themselves may be changed.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Reverse second half and merge. <br>
- - Find the middle, reverse the second half. <br>
- - Interleave nodes from both halves.
+ * - Find the middle, reverse the second half. <br>
+ * - Interleave nodes from both halves.
  * <p>
  * Time Complexity: O(n) <br>
  * - n: number of nodes; each node visited a constant number of times.

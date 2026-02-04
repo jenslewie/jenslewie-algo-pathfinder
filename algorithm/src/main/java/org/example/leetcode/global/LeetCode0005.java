@@ -3,6 +3,10 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/longest-palindromic-substring">LeetCode 5: Longest Palindromic Substring</a>
  * <p>
+ * Given a string s, return the longest palindromic substring in s.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Expand around center. <br>
  * - For each index, expand for odd and even centers. <br>
  * - Track the longest palindrome found.

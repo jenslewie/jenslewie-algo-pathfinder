@@ -5,6 +5,11 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/design-circular-deque">LeetCode 641: Design Circular Deque</a>
  * <p>
+ * Design your implementation of the circular double-ended queue (deque). <br>
+ * Implement the MyCircularDeque class:
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Doubly linked list. <br>
  * - Insert/delete at both ends in O(1). <br>
  * - Track size to enforce capacity.

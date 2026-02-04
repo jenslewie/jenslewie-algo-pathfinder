@@ -3,6 +3,10 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/add-binary">LeetCode 67: Add Binary</a>
  * <p>
+ * Given two binary strings a and b, return their sum as a binary string.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Two-pointer addition with carry. <br>
  * - Traverse both strings from right to left. <br>
  * - Sum bits with carry and build the result in reverse.

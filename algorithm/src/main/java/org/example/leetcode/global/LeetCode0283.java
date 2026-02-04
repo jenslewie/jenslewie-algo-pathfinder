@@ -3,6 +3,11 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/move-zeroes">LeetCode 283: Move Zeroes</a>
  * <p>
+ * Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements. <br>
+ * Note that you must do this in-place without making a copy of the array.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Two pointers with overwrite. <br>
  * - Move non-zero elements forward with a slow pointer. <br>
  * - Fill the remaining positions with zeros.

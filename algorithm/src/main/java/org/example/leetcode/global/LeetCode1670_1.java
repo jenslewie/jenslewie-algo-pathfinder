@@ -5,6 +5,12 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/design-front-middle-back-queue">LeetCode 1670: Design Front Middle Back Queue</a>
  * <p>
+ * Design a queue that supports push and pop operations in the front, middle, and back. <br>
+ * Implement the FrontMiddleBack class: <br>
+ * Notice that when there are two middle position choices, the operation is performed on the frontmost middle position choice.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Doubly linked list with middle pointer. <br>
  * - Maintain head/tail sentinels and a middle pointer. <br>
  * - Update middle as size changes.

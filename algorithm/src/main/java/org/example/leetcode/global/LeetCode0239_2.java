@@ -6,6 +6,11 @@ import java.util.Queue;
 /**
  * <a href="https://leetcode.cn/problems/sliding-window-maximum">LeetCode 239: Sliding Window Maximum</a>
  * <p>
+ * You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. <br>
+ * Return the max sliding window.
+ * <p>
+ * Difficulty: Hard
+ * <p>
  * Approach: Max-heap (priority queue). <br>
  * - Push values with indices; remove elements that fall out of the window. <br>
  * - The heap top is the current maximum.

@@ -8,6 +8,10 @@ import java.util.Map;
 /**
  * <a href="https://leetcode.cn/problems/find-all-anagrams-in-a-string">LeetCode 438: Find All Anagrams in a String</a>
  * <p>
+ * Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Sliding window with frequency maps. <br>
  * - Track counts for the current window and the target. <br>
  * - Record indices where counts match.

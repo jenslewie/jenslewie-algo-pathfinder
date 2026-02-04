@@ -3,6 +3,12 @@ package org.example.leetcode.lcr;
 /**
  * <a href="https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof">LeetCode LCR 172: Count Target in Sorted Array</a>
  * <p>
+ * Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value. <br>
+ * If target is not found in the array, return [-1, -1]. <br>
+ * You must write an algorithm with O(log n) runtime complexity.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Binary search for bounds. <br>
  - Find left bound of target. <br>
  - Find left bound of target + 1 to get right bound.

@@ -3,6 +3,11 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/range-sum-query-immutable">LeetCode 303: Range Sum Query - Immutable</a>
  * <p>
+ * Given an integer array nums, handle multiple queries of the following type: <br>
+ * Implement the NumArray class:
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Prefix sums. <br>
  * - Precompute prefix sums once in the constructor. <br>
  * - Answer range queries by subtracting prefix sums.

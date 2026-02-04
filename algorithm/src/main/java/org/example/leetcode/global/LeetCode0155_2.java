@@ -5,6 +5,12 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/min-stack">LeetCode 155: Min Stack</a>
  * <p>
+ * Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. <br>
+ * Implement the MinStack class: <br>
+ * You must implement a solution with O(1) time complexity for each function.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Two stacks (main + min). <br>
  * - Main stack stores values; min stack stores current minima. <br>
  * - Push to min stack when a new minimum appears.

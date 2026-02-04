@@ -7,9 +7,13 @@ import java.util.List;
 /**
  * <a href="https://leetcode.cn/problems/VabMRr/">LeetCode LCR 015: Find All Anagrams in a String</a>
  * <p>
+ * Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Sliding window with count arrays. <br>
- - Compare window counts with target counts. <br>
- - Record indices where they match.
+ * - Compare window counts with target counts. <br>
+ * - Record indices where they match.
  * <p>
  * Time Complexity: O(n) <br>
  * - n: length of s; each window shift is O(1) for 26 letters.

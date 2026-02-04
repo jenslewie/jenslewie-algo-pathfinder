@@ -5,6 +5,10 @@ import org.example.model.tree.TreeNode;
 /**
  * <a href="https://leetcode.cn/problems/invert-binary-tree">LeetCode 226: Invert Binary Tree</a>
  * <p>
+ * Given the root of a binary tree, invert the tree, and return its root.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: DFS traversal with swap. <br>
  * - Swap children at each node during traversal. <br>
  * - Continue recursively to both subtrees.

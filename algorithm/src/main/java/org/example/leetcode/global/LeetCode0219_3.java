@@ -3,6 +3,10 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/contains-duplicate-ii">LeetCode 219: Contains Duplicate II</a>
  * <p>
+ * Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Brute force scan within k. <br>
  * - For each index, compare up to k following elements. <br>
  * - Return true on the first match.

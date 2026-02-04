@@ -7,6 +7,10 @@ import java.util.List;
 /**
  * <a href="https://leetcode.cn/problems/group-anagrams">LeetCode 49: Group Anagrams</a>
  * <p>
+ * Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Fixed-length count signature. <br>
  * - Build a compact key from 26 lowercase character counts. <br>
  * - Group strings by that signature.

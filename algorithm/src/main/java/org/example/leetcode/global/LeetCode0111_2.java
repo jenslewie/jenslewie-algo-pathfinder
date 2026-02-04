@@ -5,6 +5,12 @@ import org.example.model.tree.TreeNode;
 /**
  * <a href="https://leetcode.cn/problems/minimum-depth-of-binary-tree">LeetCode 111: Minimum Depth of Binary Tree</a>
  * <p>
+ * Given a binary tree, find its minimum depth. <br>
+ * The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node. <br>
+ * Note: A leaf is a node with no children.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: DFS traversal with depth tracking. <br>
  * - Traverse all root-to-leaf paths. <br>
  * - Track the minimum depth across leaf nodes.

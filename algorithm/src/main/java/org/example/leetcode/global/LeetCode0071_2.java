@@ -5,6 +5,13 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/simplify-path">LeetCode 71: Simplify Path</a>
  * <p>
+ * You are given an absolute path for a Unix-style file system, which always begins with a slash '/'. Your task is to transform this absolute path into its simplified canonical path. <br>
+ * The rules of a Unix-style file system are as follows: <br>
+ * The simplified canonical path should follow these rules: <br>
+ * Return the simplified canonical path.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Stack + front insertion. <br>
  * - Push valid path components to a stack. <br>
  * - Build the result by inserting components at the front.

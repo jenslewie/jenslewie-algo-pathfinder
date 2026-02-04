@@ -6,6 +6,11 @@ import java.util.Deque;
 /**
  * <a href="https://leetcode.cn/problems/shortest-unsorted-continuous-subarray">LeetCode 581: Shortest Unsorted Continuous Subarray</a>
  * <p>
+ * Given an integer array nums, you need to find one continuous subarray such that if you only sort this subarray in non-decreasing order, then the whole array will be sorted in non-decreasing order. <br>
+ * Return the shortest such subarray and output its length.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Monotonic stacks for bounds. <br>
  * - Find right bound where order breaks using a decreasing stack. <br>
  * - Find left bound using an increasing stack.

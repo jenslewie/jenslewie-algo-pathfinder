@@ -8,6 +8,11 @@ import java.util.List;
 /**
  * <a href="https://leetcode.cn/problems/binary-tree-preorder-traversal">LeetCode 144: Binary Tree Preorder Traversal</a>
  * <p>
+ * Given the root of a binary tree, return the preorder traversal of its nodes' values. <br>
+ * Follow up: Recursive solution is trivial, could you do it iteratively?
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Recursive traversal returning lists. <br>
  * - Visit root, then concatenate left and right traversals. <br>
  * - Build the result through recursive list merging.

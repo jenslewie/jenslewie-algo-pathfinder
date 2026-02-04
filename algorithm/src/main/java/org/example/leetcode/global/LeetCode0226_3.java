@@ -7,6 +7,10 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/invert-binary-tree">LeetCode 226: Invert Binary Tree</a>
  * <p>
+ * Given the root of a binary tree, invert the tree, and return its root.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Iterative stack traversal. <br>
  * - Use a stack to visit nodes. <br>
  * - Swap children for each popped node.

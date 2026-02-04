@@ -7,9 +7,15 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/lMSNwu/">LeetCode LCR 025: Add Two Numbers II</a>
  * <p>
+ * You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list. <br>
+ * You may assume the two numbers do not contain any leading zero, except the number 0 itself. <br>
+ * Follow up: Could you solve it without reversing the input lists?
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Two stacks for digits. <br>
- - Push digits of both lists onto stacks. <br>
- - Pop and add with carry to build the result.
+ * - Push digits of both lists onto stacks. <br>
+ * - Pop and add with carry to build the result.
  * <p>
  * Time Complexity: O(m + n) <br>
  * - m, n: lengths of the lists; each node processed once.

@@ -7,6 +7,11 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/maximum-frequency-stack">LeetCode 895: Maximum Frequency Stack</a>
  * <p>
+ * Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack. <br>
+ * Implement the FreqStack class:
+ * <p>
+ * Difficulty: Hard
+ * <p>
  * Approach: Map of frequency to stacks. <br>
  - Track value frequencies and per-frequency stacks. <br>
  - Pop from the stack at max frequency.

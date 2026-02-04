@@ -3,6 +3,10 @@ package org.example.leetcode.lcr;
 /**
  * <a href="https://leetcode.cn/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/description/">LeetCode LCR 146: Spiral Order of Matrix</a>
  * <p>
+ * Given an m x n matrix, return all elements of the matrix in spiral order.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Boundary simulation. <br>
  - Maintain top/bottom/left/right bounds. <br>
  - Traverse edges while shrinking bounds.

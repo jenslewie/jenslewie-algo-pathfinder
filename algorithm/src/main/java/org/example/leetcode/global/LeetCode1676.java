@@ -7,6 +7,8 @@ import java.util.HashSet;
 /**
  * <a href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-iv">LeetCode 1676: Lowest Common Ancestor of a Binary Tree IV</a>
  * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Postorder DFS with target set. <br>
  * - Return current node if it is a target or both children report a target. <br>
  * - Otherwise propagate the non-null child result upward.

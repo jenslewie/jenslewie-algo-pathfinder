@@ -8,6 +8,12 @@ import java.util.PriorityQueue;
 /**
  * <a href="https://leetcode.cn/problems/find-k-pairs-with-smallest-sums">LeetCode 373: Find K Pairs with Smallest Sums</a>
  * <p>
+ * You are given two integer arrays nums1 and nums2 sorted in non-decreasing order and an integer k. <br>
+ * Define a pair (u, v) which consists of one element from the first array and one element from the second array. <br>
+ * Return the k pairs (u1, v1), (u2, v2), ..., (uk, vk) with the smallest sums.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Min-heap over pair sums. <br>
  * - Initialize heap with pairs (i, 0) for nums1 and nums2[0]. <br>
  * - Pop smallest and push next pair in the same row.

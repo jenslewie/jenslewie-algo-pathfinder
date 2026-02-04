@@ -3,6 +3,13 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/sort-colors">LeetCode 75: Sort Colors</a>
  * <p>
+ * Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue. <br>
+ * We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively. <br>
+ * You must solve this problem without using the library's sort function. <br>
+ * Follow up: Could you come up with a one-pass algorithm using only constant extra space?
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Two-pass counting by value. <br>
  * - First pass places all 0s, then all 1s. <br>
  * - Remaining elements are 2s.

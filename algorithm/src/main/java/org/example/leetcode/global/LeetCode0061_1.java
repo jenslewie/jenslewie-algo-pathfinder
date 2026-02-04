@@ -5,6 +5,10 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/rotate-list">LeetCode 61: Rotate List</a>
  * <p>
+ * Given the head of a linked list, rotate the list to the right by k places.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Make a cycle, then break at the new tail. <br>
  * - Compute length and connect tail to head. <br>
  * - Move (len - k % len) steps to find the new tail.

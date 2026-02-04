@@ -7,6 +7,11 @@ import java.util.ArrayDeque;
 /**
  * <a href="https://leetcode.cn/problems/maximum-binary-tree">LeetCode 654: Maximum Binary Tree</a>
  * <p>
+ * You are given an integer array nums with no duplicates. A maximum binary tree can be built recursively from nums using the following algorithm: <br>
+ * Return the maximum binary tree built from nums.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Monotonic stack. <br>
  * - Use a decreasing stack to link nodes as left/right children. <br>
  * - The last popped node becomes the left child of the current node.

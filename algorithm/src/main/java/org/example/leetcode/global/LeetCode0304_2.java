@@ -3,6 +3,12 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/range-sum-query-2d-immutable">LeetCode 304: Range Sum Query 2D - Immutable</a>
  * <p>
+ * Given a 2D matrix matrix, handle multiple queries of the following type: <br>
+ * Implement the NumMatrix class: <br>
+ * You must design an algorithm where sumRegion works on O(1) time complexity.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Row-wise prefix sums. <br>
  * - Precompute prefix sums for each row. <br>
  * - Sum over rows within [row1, row2] for each query.

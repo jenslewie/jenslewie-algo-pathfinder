@@ -8,6 +8,10 @@ import java.util.Deque;
 /**
  * <a href="https://leetcode.cn/problems/palindrome-linked-list">LeetCode 234: Palindrome Linked List</a>
  * <p>
+ * Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Half traversal with deque. <br>
  * - Use fast/slow pointers to reach the middle. <br>
  * - Compare second half with values stored from the first half.

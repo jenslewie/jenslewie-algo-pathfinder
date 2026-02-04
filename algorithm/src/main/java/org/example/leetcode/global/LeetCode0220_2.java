@@ -5,6 +5,12 @@ import java.util.TreeSet;
 /**
  * <a href="https://leetcode.cn/problems/contains-duplicate-iii">LeetCode 220: Contains Duplicate III</a>
  * <p>
+ * You are given an integer array nums and two integers indexDiff and valueDiff. <br>
+ * Find a pair of indices (i, j) such that: <br>
+ * Return true if such pair exists or false otherwise.
+ * <p>
+ * Difficulty: Hard
+ * <p>
  * Approach: TreeSet sliding window with floor/ceiling. <br>
  * - Keep a TreeSet of at most indexDiff recent values. <br>
  * - Check nearest neighbors within valueDiff.

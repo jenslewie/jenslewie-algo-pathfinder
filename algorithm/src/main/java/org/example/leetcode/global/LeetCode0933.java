@@ -6,6 +6,12 @@ import java.util.Queue;
 /**
  * <a href="https://leetcode.cn/problems/number-of-recent-calls">LeetCode 933: Number of Recent Calls</a>
  * <p>
+ * You have a RecentCounter class which counts the number of recent requests within a certain time frame. <br>
+ * Implement the RecentCounter class: <br>
+ * It is guaranteed that every call to ping uses a strictly larger value of t than the previous call.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Queue of timestamps. <br>
  - Push current time; pop times older than t-3000. <br>
  - Queue size is the answer.

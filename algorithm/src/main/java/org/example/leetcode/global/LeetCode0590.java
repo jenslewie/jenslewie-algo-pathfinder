@@ -8,6 +8,12 @@ import java.util.List;
 /**
  * <a href="https://leetcode.cn/problems/n-ary-tree-postorder-traversal">LeetCode 590: N-ary Tree Postorder Traversal</a>
  * <p>
+ * Given the root of an n-ary tree, return the postorder traversal of its nodes' values. <br>
+ * Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated by the null value (See examples) <br>
+ * Follow up: Recursive solution is trivial, could you do it iteratively?
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: DFS recursion. <br>
  * - Recursively traverse all children, then visit the root. 
  * <p>

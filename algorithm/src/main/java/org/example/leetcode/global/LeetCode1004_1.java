@@ -6,6 +6,10 @@ import java.util.Deque;
 /**
  * <a href="https://leetcode.cn/problems/max-consecutive-ones-iii">LeetCode 1004: Max Consecutive Ones III</a>
  * <p>
+ * Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Sliding window with zero count. <br>
  - Expand right; shrink left when zeros exceed k. <br>
  - Track maximum window length.

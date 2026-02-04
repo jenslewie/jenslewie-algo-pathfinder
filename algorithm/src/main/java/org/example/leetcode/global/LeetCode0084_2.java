@@ -7,6 +7,10 @@ import java.util.Deque;
 /**
  * <a href="https://leetcode.cn/problems/largest-rectangle-in-histogram">LeetCode 84: Largest Rectangle in Histogram</a>
  * <p>
+ * Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+ * <p>
+ * Difficulty: Hard
+ * <p>
  * Approach: Monotonic stack with right boundary fill. <br>
  * - While scanning, pop higher bars to set their right boundary. <br>
  * - Use left boundary from the stack to compute area.

@@ -7,6 +7,12 @@ import java.util.Arrays;
 /**
  * <a href="https://leetcode.cn/problems/car-pooling">LeetCode 1094: Car Pooling</a>
  * <p>
+ * There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west). <br>
+ * You are given the integer capacity and an array trips where trips[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car's initial location. <br>
+ * Return true if it is possible to pick up and drop off all passengers for all the given trips, or false otherwise.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Sorting events. <br>
  - Convert trips into pickup/drop-off events. <br>
  - Sweep in order to track capacity.

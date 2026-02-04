@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 /**
  * <a href="https://leetcode.cn/problems/group-anagrams">LeetCode 49: Group Anagrams</a>
  * <p>
+ * Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Stream grouping with sorted-string key. <br>
  * - Sort characters of each string in a stream pipeline. <br>
  * - Group by the sorted key.

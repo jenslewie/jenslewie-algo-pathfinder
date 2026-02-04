@@ -5,9 +5,15 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof">LeetCode LCR 147: Min Stack</a>
  * <p>
+ * Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. <br>
+ * Implement the MinStack class: <br>
+ * You must implement a solution with O(1) time complexity for each function.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Stack of [value, min] pairs. <br>
- - Each node stores the current minimum. <br>
- - getMin reads top pair.
+ * - Each node stores the current minimum. <br>
+ * - getMin reads top pair.
  * <p>
  * Time Complexity: O(1) <br>
  * - All operations are constant time.

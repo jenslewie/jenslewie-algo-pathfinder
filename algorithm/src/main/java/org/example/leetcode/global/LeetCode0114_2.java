@@ -5,6 +5,10 @@ import org.example.model.tree.TreeNode;
 /**
  * <a href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list">LeetCode 114: Flatten Binary Tree to Linked List</a>
  * <p>
+ * Given the root of a binary tree, flatten the tree into a "linked list":
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Postorder flatten with tail scan. <br>
  * - Flatten left and right subtrees. <br>
  * - Move the left subtree to the right and append the original right subtree.

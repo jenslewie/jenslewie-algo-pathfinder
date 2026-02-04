@@ -6,6 +6,12 @@ import java.util.Map;
 /**
  * <a href="https://leetcode.cn/problems/minimum-window-substring">LeetCode 76: Minimum Window Substring</a>
  * <p>
+ * Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "". <br>
+ * The testcases will be generated such that the answer is unique. <br>
+ * Follow up: Could you find an algorithm that runs in O(m + n) time?
+ * <p>
+ * Difficulty: Hard
+ * <p>
  * Approach: Sliding window with frequency maps. <br>
  * - Expand right to satisfy all needed characters. <br>
  * - Shrink left to minimize the window while maintaining validity.

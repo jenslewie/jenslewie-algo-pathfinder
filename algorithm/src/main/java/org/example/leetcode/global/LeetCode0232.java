@@ -5,6 +5,13 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/implement-queue-using-stacks">LeetCode 232: Implement Queue using Stacks</a>
  * <p>
+ * Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty). <br>
+ * Implement the MyQueue class: <br>
+ * Notes: <br>
+ * Follow-up: Can you implement the queue such that each operation is amortized O(1) time complexity? In other words, performing n operations will take overall O(n) time even if one of those operations may take longer.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Two stacks (in/out). <br>
  * - Push to inStack. <br>
  * - For pop/peek, move elements to outStack if needed to reverse order.

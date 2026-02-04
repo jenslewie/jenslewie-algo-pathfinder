@@ -7,6 +7,10 @@ import java.util.Arrays;
 /**
  * <a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal">LeetCode 105: Construct Binary Tree from Preorder and Inorder Traversal</a>
  * <p>
+ * Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Recursive split with array copies. <br>
  * - Use the preorder root to split the inorder array. <br>
  * - Recurse on left and right subarrays created by copying ranges.

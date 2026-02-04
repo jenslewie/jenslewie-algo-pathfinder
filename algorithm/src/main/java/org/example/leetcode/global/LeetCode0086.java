@@ -5,6 +5,11 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/partition-list">LeetCode 86: Partition List</a>
  * <p>
+ * Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x. <br>
+ * You should preserve the original relative order of the nodes in each of the two partitions.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Two lists for < x and >= x, then concatenate. <br>
  * - Walk the list and append nodes to the appropriate list. <br>
  * - Connect the two lists at the end.

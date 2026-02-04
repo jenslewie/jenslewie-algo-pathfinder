@@ -5,6 +5,10 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/add-binary">LeetCode 67: Add Binary</a>
  * <p>
+ * Given two binary strings a and b, return their sum as a binary string.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Stack-based addition. <br>
  * - Push digits of both strings onto stacks. <br>
  * - Pop and sum with carry to build the result.

@@ -3,6 +3,12 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days">LeetCode 1011: Capacity To Ship Packages Within D Days</a>
  * <p>
+ * A conveyor belt has packages that must be shipped from one port to another within days days. <br>
+ * The ith package on the conveyor belt has a weight of weights[i]. Each day, we load the ship with packages on the conveyor belt (in the order given by weights). We may not load more weight than the maximum weight capacity of the ship. <br>
+ * Return the least weight capacity of the ship that will result in all the packages on the conveyor belt being shipped within days days.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Binary search on capacity. <br>
  * - Check how many days needed for a candidate capacity. <br>
  * - Shrink the search range.

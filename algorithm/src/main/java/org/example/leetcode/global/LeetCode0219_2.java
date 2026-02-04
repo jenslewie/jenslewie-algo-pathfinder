@@ -6,6 +6,10 @@ import java.util.Set;
 /**
  * <a href="https://leetcode.cn/problems/contains-duplicate-ii">LeetCode 219: Contains Duplicate II</a>
  * <p>
+ * Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Sliding window with HashSet. <br>
  * - Maintain a window of at most k elements. <br>
  * - If a value repeats within the window, return true.

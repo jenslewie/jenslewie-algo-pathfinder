@@ -5,6 +5,11 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/merge-k-sorted-lists">LeetCode 23: Merge k Sorted Lists</a>
  * <p>
+ * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. <br>
+ * Merge all the linked-lists into one sorted linked-list and return it.
+ * <p>
+ * Difficulty: Hard
+ * <p>
  * Approach: Divide and conquer merge. <br>
  * - Recursively split the list array in half. <br>
  * - Merge pairs of lists until one remains.

@@ -6,6 +6,10 @@ import java.util.Map;
 /**
  * <a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters">LeetCode 3: Longest Substring Without Repeating Characters</a>
  * <p>
+ * Given a string s, find the length of the longest substring without duplicate characters.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Sliding window with last-seen index map. <br>
  * - Expand right pointer; when a duplicate is seen, move left past its last index. <br>
  * - Track maximum window length.

@@ -3,9 +3,15 @@ package org.example.leetcode.lcr;
 /**
  * <a href="https://leetcode.cn/problems/8Zf90G/">LeetCode LCR 036: Evaluate Reverse Polish Notation</a>
  * <p>
+ * You are given an array of strings tokens that represents an arithmetic expression in a Reverse Polish Notation. <br>
+ * Evaluate the expression. Return an integer that represents the value of the expression. <br>
+ * Note that:
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Array-based stack. <br>
- - Push operands and apply operators to top two values. <br>
- - Store results back on the stack.
+ * - Push operands and apply operators to top two values. <br>
+ * - Store results back on the stack.
  * <p>
  * Time Complexity: O(n) <br>
  * - n: number of tokens; each token processed once.

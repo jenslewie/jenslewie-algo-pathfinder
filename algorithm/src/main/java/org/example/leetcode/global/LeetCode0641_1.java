@@ -3,6 +3,11 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/design-circular-deque">LeetCode 641: Design Circular Deque</a>
  * <p>
+ * Design your implementation of the circular double-ended queue (deque). <br>
+ * Implement the MyCircularDeque class:
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Array with shift on insertFront. <br>
  * - Shift elements to make space at the front. <br>
  * - Use head/tail indices and size for state.

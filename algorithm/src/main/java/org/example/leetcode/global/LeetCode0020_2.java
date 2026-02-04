@@ -5,6 +5,11 @@ import java.util.Stack;
 /**
  * <a href="https://leetcode.cn/problems/valid-parentheses">LeetCode 20: Valid Parentheses</a>
  * <p>
+ * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. <br>
+ * An input string is valid if:
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Stack of opening brackets. <br>
  * - Push openings, and on a closing bracket check it matches the stack top. <br>
  * - Use a helper to map closing brackets to their openings.

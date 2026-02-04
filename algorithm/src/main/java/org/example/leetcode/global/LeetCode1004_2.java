@@ -3,6 +3,10 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/max-consecutive-ones-iii">LeetCode 1004: Max Consecutive Ones III</a>
  * <p>
+ * Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Sliding window with remaining flips. <br>
  - Decrease k when encountering 0, increase when moving left. <br>
  - Maintain the longest valid window.

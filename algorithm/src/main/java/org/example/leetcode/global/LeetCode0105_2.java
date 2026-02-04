@@ -8,6 +8,10 @@ import java.util.Map;
 /**
  * <a href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal">LeetCode 105: Construct Binary Tree from Preorder and Inorder Traversal</a>
  * <p>
+ * Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Recursion with inorder index map. <br>
  * - Map each inorder value to its index for O(1) splits. <br>
  * - Recurse using index ranges without copying arrays.

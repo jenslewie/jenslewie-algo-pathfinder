@@ -5,6 +5,11 @@ import org.example.model.linkedlist.ListNode;
 /**
  * <a href="https://leetcode.cn/problems/reverse-linked-list">LeetCode 206: Reverse Linked List</a>
  * <p>
+ * Given the head of a singly linked list, reverse the list, and return the reversed list. <br>
+ * Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Head-insertion with sentinel. <br>
  * - Repeatedly move the next node to the front of the list. <br>
  * - Uses a dummy node to simplify insertions.

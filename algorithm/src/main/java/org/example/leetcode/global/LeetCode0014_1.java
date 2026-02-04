@@ -3,6 +3,11 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/longest-common-prefix">LeetCode 14: Longest Common Prefix</a>
  * <p>
+ * Write a function to find the longest common prefix string amongst an array of strings. <br>
+ * If there is no common prefix, return an empty string "".
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Horizontal scanning. <br>
  * - Start with the first string as the current prefix. <br>
  * - Iteratively shrink the prefix by comparing it with each subsequent string. <br>

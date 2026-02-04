@@ -3,6 +3,12 @@ package org.example.leetcode.global;
 /**
  * <a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array">LeetCode 34: Find First and Last Position of Element in Sorted Array</a>
  * <p>
+ * Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value. <br>
+ * If target is not found in the array, return [-1, -1]. <br>
+ * You must write an algorithm with O(log n) runtime complexity.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Two binary searches with left bound. <br>
  * - Find the leftmost index of target. <br>
  * - Find the leftmost index of target + 1, then subtract one.

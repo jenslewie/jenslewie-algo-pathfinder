@@ -6,6 +6,13 @@ import java.util.Queue;
 /**
  * <a href="https://leetcode.cn/problems/implement-stack-using-queues">LeetCode 225: Implement Stack using Queues</a>
  * <p>
+ * Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (push, top, pop, and empty). <br>
+ * Implement the MyStack class: <br>
+ * Notes: <br>
+ * Follow-up: Can you implement the stack using only one queue?
+ * <p>
+ * Difficulty: Easy
+ * <p>
  * Approach: Dual queues with reordering. <br>
  * - Push by moving all elements behind the new one. <br>
  * - Pop/top read directly from the front.

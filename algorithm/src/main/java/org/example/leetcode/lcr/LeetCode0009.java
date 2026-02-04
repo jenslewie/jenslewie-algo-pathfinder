@@ -3,9 +3,13 @@ package org.example.leetcode.lcr;
 /**
  * <a href="https://leetcode.cn/problems/ZVAVXX/">LeetCode LCR 009: Subarray Product Less Than K</a>
  * <p>
+ * Given an array of integers nums and an integer k, return the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than k.
+ * <p>
+ * Difficulty: Medium
+ * <p>
  * Approach: Sliding window with product. <br>
- - Expand right and multiply. <br>
- - Shrink left while product >= k.
+ * - Expand right and multiply. <br>
+ * - Shrink left while product >= k.
  * <p>
  * Time Complexity: O(n) <br>
  * - n: length of the array; each pointer moves at most n steps.
