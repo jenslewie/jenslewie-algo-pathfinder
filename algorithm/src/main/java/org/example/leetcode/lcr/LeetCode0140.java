@@ -3,7 +3,7 @@ package org.example.leetcode.lcr;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/description/">LeetCode LCR 140: Kth Node From End of List</a>
+ * <a href="https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/">LeetCode LCR 140: Kth Node From End of List</a>
  * <p>
  * Difficulty: Easy
  * <p>

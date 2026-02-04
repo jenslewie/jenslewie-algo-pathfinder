@@ -3,7 +3,7 @@ package org.example.leetcode.lcr;
 import java.util.TreeSet;
 
 /**
- * <a href="https://leetcode.cn/problems/7WqeDu/description/">LeetCode LCR 057: Contains Duplicate III</a>
+ * <a href="https://leetcode.cn/problems/7WqeDu/">LeetCode LCR 057: Contains Duplicate III</a>
  * <p>
  * You are given an integer array nums and two integers indexDiff and valueDiff. <br>
  * Find a pair of indices (i, j) such that: <br>

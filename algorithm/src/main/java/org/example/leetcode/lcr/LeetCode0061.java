@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 /**
- * <a href="https://leetcode.cn/problems/qn8gGX/description/">LeetCode LCR 061: Find K Pairs with Smallest Sums</a>
+ * <a href="https://leetcode.cn/problems/qn8gGX/">LeetCode LCR 061: Find K Pairs with Smallest Sums</a>
  * <p>
  * You are given two integer arrays nums1 and nums2 sorted in non-decreasing order and an integer k. <br>
  * Define a pair (u, v) which consists of one element from the first array and one element from the second array. <br>
