@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/longest-absolute-file-path">LeetCode 388: Longest Absolute File Path</a>
+ * <a href="https://leetcode.com/problems/longest-absolute-file-path">LeetCode 388: Longest Absolute File Path</a>
  * <p>
  * Suppose we have a file system that stores both files and directories. An example of one system is represented in the following picture: <br>
  * Here, we have dir as the only directory in the root. dir contains two subdirectories, subdir1 and subdir2. subdir1 contains a file file1.ext and subdirectory subsubdir1. subdir2 contains a subdirectory subsubdir2, which contains a file file2.ext. <br>

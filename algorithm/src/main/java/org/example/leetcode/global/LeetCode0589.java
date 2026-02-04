@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/n-ary-tree-preorder-traversal">LeetCode 589: N-ary Tree Preorder Traversal</a>
+ * <a href="https://leetcode.com/problems/n-ary-tree-preorder-traversal">LeetCode 589: N-ary Tree Preorder Traversal</a>
  * <p>
  * Given the root of an n-ary tree, return the preorder traversal of its nodes' values. <br>
  * Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated by the null value (See examples) <br>

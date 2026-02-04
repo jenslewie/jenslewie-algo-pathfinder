@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/invert-binary-tree">LeetCode 226: Invert Binary Tree</a>
+ * <a href="https://leetcode.com/problems/invert-binary-tree">LeetCode 226: Invert Binary Tree</a>
  * <p>
  * Given the root of a binary tree, invert the tree, and return its root.
  * <p>

@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/design-front-middle-back-queue">LeetCode 1670: Design Front Middle Back Queue</a>
+ * <a href="https://leetcode.com/problems/design-front-middle-back-queue">LeetCode 1670: Design Front Middle Back Queue</a>
  * <p>
  * Design a queue that supports push and pop operations in the front, middle, and back. <br>
  * Implement the FrontMiddleBack class: <br>

@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
- * <a href="https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix">LeetCode 378: Kth Smallest Element in a Sorted Matrix</a>
+ * <a href="https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix">LeetCode 378: Kth Smallest Element in a Sorted Matrix</a>
  * <p>
  * Given an n x n matrix where each of the rows and columns is sorted in ascending order, return the kth smallest element in the matrix. <br>
  * Note that it is the kth smallest element in the sorted order, not the kth distinct element. <br>

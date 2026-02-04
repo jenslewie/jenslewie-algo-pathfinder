@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/design-circular-deque">LeetCode 641: Design Circular Deque</a>
+ * <a href="https://leetcode.com/problems/design-circular-deque">LeetCode 641: Design Circular Deque</a>
  * <p>
  * Design your implementation of the circular double-ended queue (deque). <br>
  * Implement the MyCircularDeque class:

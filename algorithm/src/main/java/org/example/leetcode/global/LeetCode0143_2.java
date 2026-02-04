@@ -5,7 +5,7 @@ import org.example.model.linkedlist.ListNode;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/reorder-list">LeetCode 143: Reorder List</a>
+ * <a href="https://leetcode.com/problems/reorder-list">LeetCode 143: Reorder List</a>
  * <p>
  * You are given the head of a singly linked-list. The list can be represented as: <br>
  * Reorder the list to be on the following form: <br>

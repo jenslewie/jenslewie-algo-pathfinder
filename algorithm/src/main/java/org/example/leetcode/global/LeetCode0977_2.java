@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/squares-of-a-sorted-array">LeetCode 977: Squares of a Sorted Array</a>
+ * <a href="https://leetcode.com/problems/squares-of-a-sorted-array">LeetCode 977: Squares of a Sorted Array</a>
  * <p>
  * Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
  * <p>

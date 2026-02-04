@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/merge-sorted-array">LeetCode 88: Merge Sorted Array</a>
+ * <a href="https://leetcode.com/problems/merge-sorted-array">LeetCode 88: Merge Sorted Array</a>
  * <p>
  * You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively. <br>
  * Merge nums1 and nums2 into a single array sorted in non-decreasing order. <br>

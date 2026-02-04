@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/longest-palindromic-substring">LeetCode 5: Longest Palindromic Substring</a>
+ * <a href="https://leetcode.com/problems/longest-palindromic-substring">LeetCode 5: Longest Palindromic Substring</a>
  * <p>
  * Given a string s, return the longest palindromic substring in s.
  * <p>

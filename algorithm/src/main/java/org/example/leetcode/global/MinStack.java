@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/min-stack">LeetCode 155: Min Stack</a>
+ * <a href="https://leetcode.com/problems/min-stack">LeetCode 155: Min Stack</a>
  * <p>
  * Approach: Interface for min-supporting stacks. <br>
  * - Defines operations to push, pop, top, and getMin. <br>

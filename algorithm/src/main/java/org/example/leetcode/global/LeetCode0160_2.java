@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/intersection-of-two-linked-lists">LeetCode 160: Intersection of Two Linked Lists</a>
+ * <a href="https://leetcode.com/problems/intersection-of-two-linked-lists">LeetCode 160: Intersection of Two Linked Lists</a>
  * <p>
  * Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null. <br>
  * For example, the following two linked lists begin to intersect at node c1: <br>

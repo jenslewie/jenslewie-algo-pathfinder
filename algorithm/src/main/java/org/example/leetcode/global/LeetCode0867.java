@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/transpose-matrix">LeetCode 867: Transpose Matrix</a>
+ * <a href="https://leetcode.com/problems/transpose-matrix">LeetCode 867: Transpose Matrix</a>
  * <p>
  * Given a 2D integer array matrix, return the transpose of matrix. <br>
  * The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.

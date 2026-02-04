@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii">LeetCode 82: Remove Duplicates from Sorted List II</a>
+ * <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii">LeetCode 82: Remove Duplicates from Sorted List II</a>
  * <p>
  * Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
  * <p>

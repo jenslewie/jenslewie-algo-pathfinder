@@ -6,7 +6,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/next-greater-node-in-linked-list">LeetCode 1019: Next Greater Node In Linked List</a>
+ * <a href="https://leetcode.com/problems/next-greater-node-in-linked-list">LeetCode 1019: Next Greater Node In Linked List</a>
  * <p>
  * You are given the head of a linked list with n nodes. <br>
  * For each node in the list, find the value of the next greater node. That is, for each node, find the value of the first node that is next to it and has a strictly larger value than it. <br>

@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree">LeetCode 236: Lowest Common Ancestor of a Binary Tree</a>
+ * <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree">LeetCode 236: Lowest Common Ancestor of a Binary Tree</a>
  * <p>
  * Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. <br>
  * According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * <a href="https://leetcode.cn/problems/n-ary-tree-level-order-traversal">LeetCode 429: N-ary Tree Level Order Traversal</a>
+ * <a href="https://leetcode.com/problems/n-ary-tree-level-order-traversal">LeetCode 429: N-ary Tree Level Order Traversal</a>
  * <p>
  * Given an n-ary tree, return the level order traversal of its nodes' values. <br>
  * Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by the null value (See examples).

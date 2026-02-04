@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/binary-tree-preorder-traversal">LeetCode 144: Binary Tree Preorder Traversal</a>
+ * <a href="https://leetcode.com/problems/binary-tree-preorder-traversal">LeetCode 144: Binary Tree Preorder Traversal</a>
  * <p>
  * Given the root of a binary tree, return the preorder traversal of its nodes' values. <br>
  * Follow up: Recursive solution is trivial, could you do it iteratively?

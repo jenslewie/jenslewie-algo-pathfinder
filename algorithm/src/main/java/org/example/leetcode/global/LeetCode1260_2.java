@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/shift-2d-grid">LeetCode 1260: Shift 2D Grid</a>
+ * <a href="https://leetcode.com/problems/shift-2d-grid">LeetCode 1260: Shift 2D Grid</a>
  * <p>
  * Given a 2D grid of size m x n and an integer k. You need to shift the grid k times. <br>
  * In one shift operation: <br>

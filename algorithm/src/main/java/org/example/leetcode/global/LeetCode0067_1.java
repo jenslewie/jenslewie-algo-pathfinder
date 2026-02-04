@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/add-binary">LeetCode 67: Add Binary</a>
+ * <a href="https://leetcode.com/problems/add-binary">LeetCode 67: Add Binary</a>
  * <p>
  * Given two binary strings a and b, return their sum as a binary string.
  * <p>

@@ -6,7 +6,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/palindrome-linked-list">LeetCode 234: Palindrome Linked List</a>
+ * <a href="https://leetcode.com/problems/palindrome-linked-list">LeetCode 234: Palindrome Linked List</a>
  * <p>
  * Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
  * <p>

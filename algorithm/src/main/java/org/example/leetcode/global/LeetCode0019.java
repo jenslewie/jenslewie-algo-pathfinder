@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list">LeetCode 19: Remove Nth Node From End of List</a>
+ * <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list">LeetCode 19: Remove Nth Node From End of List</a>
  * <p>
  * Given the head of a linked list, remove the nth node from the end of the list and return its head. <br>
  * Follow up: Could you do this in one pass?

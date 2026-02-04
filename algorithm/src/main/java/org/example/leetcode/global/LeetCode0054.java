@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/spiral-matrix">LeetCode 54: Spiral Matrix</a>
+ * <a href="https://leetcode.com/problems/spiral-matrix">LeetCode 54: Spiral Matrix</a>
  * <p>
  * Given an m x n matrix, return all elements of the matrix in spiral order.
  * <p>

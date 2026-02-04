@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/reverse-words-in-a-string">LeetCode 151: Reverse Words in a String</a>
+ * <a href="https://leetcode.com/problems/reverse-words-in-a-string">LeetCode 151: Reverse Words in a String</a>
  * <p>
  * Given an input string s, reverse the order of the words. <br>
  * A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space. <br>

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal">LeetCode 106: Construct Binary Tree from Inorder and Postorder Traversal</a>
+ * <a href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal">LeetCode 106: Construct Binary Tree from Inorder and Postorder Traversal</a>
  * <p>
  * Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.
  * <p>

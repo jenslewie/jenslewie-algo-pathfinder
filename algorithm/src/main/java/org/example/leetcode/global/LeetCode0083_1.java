@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list">LeetCode 83: Remove Duplicates from Sorted List</a>
+ * <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list">LeetCode 83: Remove Duplicates from Sorted List</a>
  * <p>
  * Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
  * <p>

@@ -5,7 +5,7 @@ import org.example.model.tree.TreeNode;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/invert-binary-tree">LeetCode 226: Invert Binary Tree</a>
+ * <a href="https://leetcode.com/problems/invert-binary-tree">LeetCode 226: Invert Binary Tree</a>
  * <p>
  * Given the root of a binary tree, invert the tree, and return its root.
  * <p>

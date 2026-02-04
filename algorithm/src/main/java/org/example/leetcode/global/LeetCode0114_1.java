@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * <a href="https://leetcode.cn/problems/flatten-binary-tree-to-linked-list">LeetCode 114: Flatten Binary Tree to Linked List</a>
+ * <a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list">LeetCode 114: Flatten Binary Tree to Linked List</a>
  * <p>
  * Given the root of a binary tree, flatten the tree into a "linked list":
  * <p>

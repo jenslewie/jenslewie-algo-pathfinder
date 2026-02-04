@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/group-anagrams">LeetCode 49: Group Anagrams</a>
+ * <a href="https://leetcode.com/problems/group-anagrams">LeetCode 49: Group Anagrams</a>
  * <p>
  * Given an array of strings strs, group the anagrams together. You can return the answer in any order.
  * <p>

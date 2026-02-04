@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/middle-of-the-linked-list">LeetCode 876: Middle of the Linked List</a>
+ * <a href="https://leetcode.com/problems/middle-of-the-linked-list">LeetCode 876: Middle of the Linked List</a>
  * <p>
  * Given the head of a singly linked list, return the middle node of the linked list. <br>
  * If there are two middle nodes, return the second middle node.

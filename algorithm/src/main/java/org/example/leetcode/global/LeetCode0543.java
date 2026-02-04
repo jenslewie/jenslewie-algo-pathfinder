@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/diameter-of-binary-tree">LeetCode 543: Diameter of Binary Tree</a>
+ * <a href="https://leetcode.com/problems/diameter-of-binary-tree">LeetCode 543: Diameter of Binary Tree</a>
  * <p>
  * Given the root of a binary tree, return the length of the diameter of the tree. <br>
  * The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root. <br>

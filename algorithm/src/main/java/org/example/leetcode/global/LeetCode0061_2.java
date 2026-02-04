@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/rotate-list">LeetCode 61: Rotate List</a>
+ * <a href="https://leetcode.com/problems/rotate-list">LeetCode 61: Rotate List</a>
  * <p>
  * Given the head of a linked list, rotate the list to the right by k places.
  * <p>

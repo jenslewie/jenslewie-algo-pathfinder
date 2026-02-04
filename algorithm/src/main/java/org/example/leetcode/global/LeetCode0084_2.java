@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/largest-rectangle-in-histogram">LeetCode 84: Largest Rectangle in Histogram</a>
+ * <a href="https://leetcode.com/problems/largest-rectangle-in-histogram">LeetCode 84: Largest Rectangle in Histogram</a>
  * <p>
  * Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
  * <p>

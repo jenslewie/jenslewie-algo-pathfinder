@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/next-greater-element-i">LeetCode 496: Next Greater Element I</a>
+ * <a href="https://leetcode.com/problems/next-greater-element-i">LeetCode 496: Next Greater Element I</a>
  * <p>
  * The next greater element of some element x in an array is the first greater element that is to the right of x in the same array. <br>
  * You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2. <br>

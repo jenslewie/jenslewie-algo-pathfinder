@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/maximum-frequency-stack">LeetCode 895: Maximum Frequency Stack</a>
+ * <a href="https://leetcode.com/problems/maximum-frequency-stack">LeetCode 895: Maximum Frequency Stack</a>
  * <p>
  * Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack. <br>
  * Implement the FreqStack class:

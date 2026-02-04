@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/min-stack">LeetCode 155: Min Stack</a>
+ * <a href="https://leetcode.com/problems/min-stack">LeetCode 155: Min Stack</a>
  * <p>
  * Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. <br>
  * Implement the MinStack class: <br>

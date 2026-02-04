@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/valid-parentheses">LeetCode 20: Valid Parentheses</a>
+ * <a href="https://leetcode.com/problems/valid-parentheses">LeetCode 20: Valid Parentheses</a>
  * <p>
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. <br>
  * An input string is valid if:

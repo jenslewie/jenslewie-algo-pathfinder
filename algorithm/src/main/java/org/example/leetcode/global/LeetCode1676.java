@@ -5,7 +5,7 @@ import org.example.model.tree.TreeNode;
 import java.util.HashSet;
 
 /**
- * <a href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-iv">LeetCode 1676: Lowest Common Ancestor of a Binary Tree IV</a>
+ * <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv">LeetCode 1676: Lowest Common Ancestor of a Binary Tree IV</a>
  * <p>
  * Difficulty: Medium
  * <p>

@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/corporate-flight-bookings">LeetCode 1109: Corporate Flight Bookings</a>
+ * <a href="https://leetcode.com/problems/corporate-flight-bookings">LeetCode 1109: Corporate Flight Bookings</a>
  * <p>
  * There are n flights that are labeled from 1 to n. <br>
  * You are given an array of flight bookings bookings, where bookings[i] = [firsti, lasti, seatsi] represents a booking for flights firsti through lasti (inclusive) with seatsi seats reserved for each flight in the range. <br>

@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/partition-list">LeetCode 86: Partition List</a>
+ * <a href="https://leetcode.com/problems/partition-list">LeetCode 86: Partition List</a>
  * <p>
  * Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x. <br>
  * You should preserve the original relative order of the nodes in each of the two partitions.

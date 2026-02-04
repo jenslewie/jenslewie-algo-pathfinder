@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/spiral-matrix-ii">LeetCode 59: Spiral Matrix II</a>
+ * <a href="https://leetcode.com/problems/spiral-matrix-ii">LeetCode 59: Spiral Matrix II</a>
  * <p>
  * Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.
  * <p>

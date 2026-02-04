@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/sort-colors">LeetCode 75: Sort Colors</a>
+ * <a href="https://leetcode.com/problems/sort-colors">LeetCode 75: Sort Colors</a>
  * <p>
  * Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue. <br>
  * We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively. <br>

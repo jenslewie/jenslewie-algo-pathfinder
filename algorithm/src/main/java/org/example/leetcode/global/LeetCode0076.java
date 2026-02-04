@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/minimum-window-substring">LeetCode 76: Minimum Window Substring</a>
+ * <a href="https://leetcode.com/problems/minimum-window-substring">LeetCode 76: Minimum Window Substring</a>
  * <p>
  * Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "". <br>
  * The testcases will be generated such that the answer is unique. <br>

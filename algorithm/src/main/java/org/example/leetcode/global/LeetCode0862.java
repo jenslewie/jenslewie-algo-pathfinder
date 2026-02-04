@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k">LeetCode 862: Shortest Subarray with Sum at Least K</a>
+ * <a href="https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k">LeetCode 862: Shortest Subarray with Sum at Least K</a>
  * <p>
  * Given an integer array nums and an integer k, return the length of the shortest non-empty subarray of nums with a sum of at least k. If there is no such subarray, return -1. <br>
  * A subarray is a contiguous part of an array.

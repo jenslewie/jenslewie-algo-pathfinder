@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.tree.TreeNode;
 
 /**
- * <a href="https://leetcode.cn/problems/maximum-binary-tree">LeetCode 654: Maximum Binary Tree</a>
+ * <a href="https://leetcode.com/problems/maximum-binary-tree">LeetCode 654: Maximum Binary Tree</a>
  * <p>
  * You are given an integer array nums with no duplicates. A maximum binary tree can be built recursively from nums using the following algorithm: <br>
  * Return the maximum binary tree built from nums.

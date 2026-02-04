@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/merge-k-sorted-lists">LeetCode 23: Merge k Sorted Lists</a>
+ * <a href="https://leetcode.com/problems/merge-k-sorted-lists">LeetCode 23: Merge k Sorted Lists</a>
  * <p>
  * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. <br>
  * Merge all the linked-lists into one sorted linked-list and return it.

@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/range-sum-query-immutable">LeetCode 303: Range Sum Query - Immutable</a>
+ * <a href="https://leetcode.com/problems/range-sum-query-immutable">LeetCode 303: Range Sum Query - Immutable</a>
  * <p>
  * Given an integer array nums, handle multiple queries of the following type: <br>
  * Implement the NumArray class:

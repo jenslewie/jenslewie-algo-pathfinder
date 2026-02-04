@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/minimum-size-subarray-sum">LeetCode 209: Minimum Size Subarray Sum</a>
+ * <a href="https://leetcode.com/problems/minimum-size-subarray-sum">LeetCode 209: Minimum Size Subarray Sum</a>
  * <p>
  * Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
  * <p>

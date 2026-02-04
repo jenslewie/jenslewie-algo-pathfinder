@@ -3,7 +3,7 @@ package org.example.leetcode.global;
 import java.util.ArrayDeque;
 
 /**
- * <a href="https://leetcode.cn/problems/maximum-sum-circular-subarray">LeetCode 918: Maximum Sum Circular Subarray</a>
+ * <a href="https://leetcode.com/problems/maximum-sum-circular-subarray">LeetCode 918: Maximum Sum Circular Subarray</a>
  * <p>
  * Given a circular integer array nums of length n, return the maximum possible sum of a non-empty subarray of nums. <br>
  * A circular array means the end of the array connects to the beginning of the array. Formally, the next element of nums[i] is nums[(i + 1) % n] and the previous element of nums[i] is nums[(i - 1 + n) % n]. <br>

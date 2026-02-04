@@ -1,7 +1,7 @@
 package org.example.leetcode.global;
 
 /**
- * <a href="https://leetcode.cn/problems/remove-element">LeetCode 27: Remove Element</a>
+ * <a href="https://leetcode.com/problems/remove-element">LeetCode 27: Remove Element</a>
  * <p>
  * Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val. <br>
  * Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things: <br>
