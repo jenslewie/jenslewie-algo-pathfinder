@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/wtcaE1/">LeetCode LCR 016: Longest Substring Without Repeating Characters</a>
+ * <a href="https://leetcode.cn/problems/wtcaE1/">LCR 016: 无重复字符的最长子串</a>
  * <p>
- * Given a string s, find the length of the longest substring without duplicate characters.
+ * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长连续子字符串 的长度。
  * <p>
  * Difficulty: Medium
  * <p>

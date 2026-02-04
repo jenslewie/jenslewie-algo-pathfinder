@@ -3,11 +3,11 @@ package org.example.leetcode.lcr;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/LGjMqU">LeetCode LCR 026: Reorder List</a>
+ * <a href="https://leetcode.cn/problems/LGjMqU/">LCR 026: 重排链表</a>
  * <p>
- * You are given the head of a singly linked-list. The list can be represented as: <br>
- * Reorder the list to be on the following form: <br>
- * You may not modify the values in the list's nodes. Only nodes themselves may be changed.
+ * 给定一个单链表 L 的头节点 head ，单链表 L 表示为：L0 → L1 → … → Ln - 1 → Ln <br>
+ * 请将其重新排列后变为：L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → … <br>
+ * 不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
  * <p>
  * Difficulty: Medium
  * <p>

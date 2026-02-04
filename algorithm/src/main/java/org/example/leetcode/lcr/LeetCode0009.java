@@ -1,9 +1,9 @@
 package org.example.leetcode.lcr;
 
 /**
- * <a href="https://leetcode.cn/problems/ZVAVXX/">LeetCode LCR 009: Subarray Product Less Than K</a>
+ * <a href="https://leetcode.cn/problems/ZVAVXX/">LCR 009: 乘积小于K的子数组</a>
  * <p>
- * Given an array of integers nums and an integer k, return the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than k.
+ * 给定一个正整数数组 nums 和整数 k ，请找出该数组内乘积小于 k 的连续的子数组的个数。
  * <p>
  * Difficulty: Medium
  * <p>

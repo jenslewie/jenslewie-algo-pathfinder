@@ -1,9 +1,10 @@
 package org.example.leetcode.lcr;
 
 /**
- * <a href="https://leetcode.cn/problems/2VG8Kg/">LeetCode LCR 008: Minimum Size Subarray Sum</a>
+ * <a href="https://leetcode.cn/problems/2VG8Kg/">LCR 008: 长度最小的子数组</a>
  * <p>
- * Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+ * 给定一个含有 n 个正整数的数组和一个正整数 target 。<br>
+ * 找出该数组中满足其总和大于等于 target 的长度最小的连续子数组，并返回其长度。如果不存在符合条件的子数组，返回 0 。
  * <p>
  * Difficulty: Medium
  * <p>

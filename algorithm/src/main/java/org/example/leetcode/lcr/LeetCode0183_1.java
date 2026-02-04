@@ -4,10 +4,11 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
- * <a href="https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof">LeetCode LCR 183: Sliding Window Maximum</a>
+ * <a href="https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof">LCR 183: 望远镜中最高的海拔</a>
  * <p>
- * You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. <br>
- * Return the max sliding window.
+ * 科技馆内有一台虚拟观景望远镜，它可以用来观测特定纬度地区的地形情况。
+ * 该纬度的海拔数据记于数组 heights ，其中 heights[i] 表示对应位置的海拔高度。
+ * 请找出并返回望远镜视野范围 limit 内，可以观测到的最高海拔值。
  * <p>
  * Difficulty: Hard
  * <p>

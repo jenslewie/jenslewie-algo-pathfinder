@@ -1,10 +1,10 @@
 package org.example.leetcode.lcr;
 
 /**
- * <a href="https://leetcode.cn/problems/XltzEq">LeetCode LCR 018: Valid Palindrome</a>
+ * <a href="https://leetcode.cn/problems/XltzEq">LCR 018: 验证回文串</a>
  * <p>
- * A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers. <br>
- * Given a string s, return true if it is a palindrome, or false otherwise.
+ * 给定一个字符串 s ，验证 s 是否是 回文串 ，只考虑字母和数字字符，可以忽略字母的大小写。<br>
+ * 本题中，将空字符串定义为有效的 回文串 。
  * <p>
  * Difficulty: Easy
  * <p>

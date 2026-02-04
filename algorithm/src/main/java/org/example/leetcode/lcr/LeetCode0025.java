@@ -5,11 +5,10 @@ import org.example.model.linkedlist.ListNode;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/lMSNwu/">LeetCode LCR 025: Add Two Numbers II</a>
+ * <a href="https://leetcode.cn/problems/lMSNwu/">LCR 025: 两数相加</a>
  * <p>
- * You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list. <br>
- * You may assume the two numbers do not contain any leading zero, except the number 0 itself. <br>
- * Follow up: Could you solve it without reversing the input lists?
+ * 给定两个 非空链表 l1和 l2 来代表两个非负整数。数字最高位位于链表开始位置。它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。<br>
+ * 可以假设除了数字 0 之外，这两个数字都不会以零开头。
  * <p>
  * Difficulty: Medium
  * <p>

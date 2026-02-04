@@ -4,9 +4,9 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * <a href="https://leetcode.cn/problems/iIQa4I">LeetCode LCR 038: Daily Temperatures</a>
+ * <a href="https://leetcode.cn/problems/iIQa4I/">LCR 038: 每日温度</a>
  * <p>
- * Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
+ * 请根据每日 气温 列表 temperatures ，重新生成一个列表，要求其对应位置的输出为：要想观测到更高的气温，至少需要等待的天数。如果气温在这之后都不会升高，请在该位置用 0 来代替。
  * <p>
  * Difficulty: Medium
  * <p>

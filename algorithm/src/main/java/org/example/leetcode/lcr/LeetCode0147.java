@@ -3,11 +3,15 @@ package org.example.leetcode.lcr;
 import java.util.Stack;
 
 /**
- * <a href="https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof">LeetCode LCR 147: Min Stack</a>
+ * <a href="https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof">LCR 147: 最小栈</a>
  * <p>
- * Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. <br>
- * Implement the MinStack class: <br>
- * You must implement a solution with O(1) time complexity for each function.
+ * 请你设计一个 最小栈 。它提供 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。<br>
+ * 实现 MinStack 类：<br>
+ * · MinStack() 初始化堆栈对象。<br>
+ * · void push(int val) 将元素val推入堆栈。<br>
+ * · void pop() 删除堆栈顶部的元素。<br>
+ * · int top() 获取堆栈顶部的元素。<br>
+ * · int getMin() 获取堆栈中的最小元素。
  * <p>
  * Difficulty: Medium
  * <p>

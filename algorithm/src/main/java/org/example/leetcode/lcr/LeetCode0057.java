@@ -3,13 +3,12 @@ package org.example.leetcode.lcr;
 import java.util.TreeSet;
 
 /**
- * <a href="https://leetcode.cn/problems/7WqeDu/">LeetCode LCR 057: Contains Duplicate III</a>
+ * <a href="https://leetcode.cn/problems/7WqeDu/">LCR 057: 存在重复元素III</a>
  * <p>
- * You are given an integer array nums and two integers indexDiff and valueDiff. <br>
- * Find a pair of indices (i, j) such that: <br>
- * Return true if such pair exists or false otherwise.
+ * 给你一个整数数组 nums 和两个整数 k 和 t 。请你判断是否存在 两个不同下标 i 和 j，使得 abs(nums[i] - nums[j]) <= t ，同时又满足 abs(i - j) <= k 。<br>
+ * 如果存在则返回 true，不存在返回 false。
  * <p>
- * Difficulty: Hard
+ * Difficulty: Medium
  * <p>
  * Approach: TreeSet sliding window. <br>
  * - Maintain last k elements in a TreeSet. <br>

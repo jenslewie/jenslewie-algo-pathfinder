@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <a href="https://leetcode.cn/problems/MPnaiL/">LeetCode LCR 014: Permutation in String</a>
+ * <a href="https://leetcode.cn/problems/MPnaiL/">LCR 014: 字符串的排列</a>
  * <p>
- * Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise. <br>
- * In other words, return true if one of s1's permutations is the substring of s2.
+ * 给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的某个变位词。<br>
+ * 换句话说，第一个字符串的排列之一是第二个字符串的 子串。
  * <p>
  * Difficulty: Medium
  * <p>

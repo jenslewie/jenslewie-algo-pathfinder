@@ -120,29 +120,29 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 
 ## LCR
 
-### Easy (3)
+### Easy (4)
 
-- LeetCode0018 - Valid Palindrome
-- LeetCode0140 - Kth Node From End of List
-- LeetCode0146 - Spiral Order of Matrix
+- LCR 018 - 验证回文串
+- LCR 140 - 链表中倒数第k个节点
+- LCR 146 - 螺旋遍历二维数组
+- LCR 172 - 统计目标成绩出现的次数
 
 ### Medium (13)
 
-- LeetCode0008 - Minimum Size Subarray Sum
-- LeetCode0009 - Subarray Product Less Than K
-- LeetCode0014 - Permutation in String
-- LeetCode0015 - Find All Anagrams in a String
-- LeetCode0016 - Longest Substring Without Repeating Characters
-- LeetCode0025 - Add Two Numbers II
-- LeetCode0026 - Reorder List
-- LeetCode0036 - Evaluate Reverse Polish Notation
-- LeetCode0038 - Daily Temperatures
-- LeetCode0061 - Find K Pairs with Smallest Sums
-- LeetCode0147 - Min Stack
-- LeetCode0167 - Longest Substring Without Repeating Characters
-- LeetCode0172 - Count Target in Sorted Array
+- LCR 008 - 长度最小的子数组
+- LCR 009 - 乘积小于K的子数组
+- LCR 014 - 字符串的排列
+- LCR 015 - 找到字符串中所有字母异位词
+- LCR 016 - 无重复字符的最长子串
+- LCR 025 - 两数相加
+- LCR 026 - 重排链表
+- LCR 036 - 逆波兰表达式求值
+- LCR 038 - 每日温度
+- LCR 057 - 存在重复元素III
+- LCR 061 - 查找和最小的K对数字
+- LCR 147 - 最小栈
+- LCR 167 - 招式拆解I
 
-### Hard (2)
+### Hard (1)
 
-- LeetCode0057 - Contains Duplicate III
-- LeetCode0183 - Sliding Window Maximum
+- LCR 183 - 望远镜中最高的海拔

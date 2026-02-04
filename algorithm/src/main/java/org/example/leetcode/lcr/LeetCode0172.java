@@ -1,13 +1,11 @@
 package org.example.leetcode.lcr;
 
 /**
- * <a href="https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof">LeetCode LCR 172: Count Target in Sorted Array</a>
+ * <a href="https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof">LCR 172: 统计目标成绩出现的次数</a>
  * <p>
- * Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value. <br>
- * If target is not found in the array, return [-1, -1]. <br>
- * You must write an algorithm with O(log n) runtime complexity.
+ * 某班级考试成绩按非严格递增顺序记录于整数数组 scores，请返回目标成绩 target 的出现次数。
  * <p>
- * Difficulty: Medium
+ * Difficulty: Easy
  * <p>
  * Approach: Binary search for bounds. <br>
  - Find left bound of target. <br>

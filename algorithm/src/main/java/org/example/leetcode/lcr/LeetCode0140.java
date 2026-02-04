@@ -3,7 +3,9 @@ package org.example.leetcode.lcr;
 import org.example.model.linkedlist.ListNode;
 
 /**
- * <a href="https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/">LeetCode LCR 140: Kth Node From End of List</a>
+ * <a href="https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/">LCR 140: 链表中倒数第k个节点</a>
+ * <p>
+ * 给定一个头节点为 head 的链表用于记录一系列核心肌群训练项目编号，请查找并返回倒数第 cnt 个训练项目编号。
  * <p>
  * Difficulty: Easy
  * <p>

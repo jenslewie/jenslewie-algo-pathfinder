@@ -5,9 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * <a href="https://leetcode.cn/problems/VabMRr/">LeetCode LCR 015: Find All Anagrams in a String</a>
+ * <a href="https://leetcode.cn/problems/VabMRr/">LCR 015: 找到字符串中所有字母异位词</a>
  * <p>
- * Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
+ * 给定两个字符串 s 和 p，找到 s 中所有 p 的 变位词 的子串，返回这些子串的起始索引。不考虑答案输出的顺序。<br>
+ * 变位词 指字母相同，但排列不同的字符串。
  * <p>
  * Difficulty: Medium
  * <p>
