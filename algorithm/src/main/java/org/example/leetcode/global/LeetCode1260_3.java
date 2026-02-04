@@ -11,10 +11,10 @@ import java.util.List;
  - Rotate by k and rebuild grid.
  * <p>
  * Time Complexity: O(m * n) <br>
- * - m, n: grid dimensions. <br>
+ * - m, n: grid dimensions.
  * <p>
  * Space Complexity: O(m * n) <br>
- * - Deque stores all elements. <br>
+ * - Deque stores all elements.
  */
 public class LeetCode1260_3 {
 

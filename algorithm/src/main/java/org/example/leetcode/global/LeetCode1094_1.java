@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  - Accumulate to check capacity along the route.
  * <p>
  * Time Complexity: O(n + R) <br>
- * - n: trips; R: route range scanned. <br>
+ * - n: trips; R: route range scanned.
  * <p>
  * Space Complexity: O(R) <br>
- * - Difference array for the route. <br>
+ * - Difference array for the route.
  */
 public class LeetCode1094_1 {
 

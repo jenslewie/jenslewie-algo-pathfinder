@@ -10,10 +10,10 @@ import org.example.model.linkedlist.ListNode;
  - Interleave nodes from both halves.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of nodes; each node visited a constant number of times. <br>
+ * - n: number of nodes; each node visited a constant number of times.
  * <p>
  * Space Complexity: O(1) <br>
- * - In-place reordering. <br>
+ * - In-place reordering.
  */
 public class LeetCode0026 {
 

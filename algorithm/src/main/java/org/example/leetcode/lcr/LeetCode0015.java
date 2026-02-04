@@ -12,10 +12,10 @@ import java.util.List;
  - Record indices where they match.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of s; each window shift is O(1) for 26 letters. <br>
+ * - n: length of s; each window shift is O(1) for 26 letters.
  * <p>
  * Space Complexity: O(1) <br>
- * - Two 26-length arrays. <br>
+ * - Two 26-length arrays.
  */
 public class LeetCode0015 {
 

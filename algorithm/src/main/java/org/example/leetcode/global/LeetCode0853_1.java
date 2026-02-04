@@ -12,10 +12,10 @@ import java.util.Deque;
  - Count a new fleet when time exceeds current max.
  * <p>
  * Time Complexity: O(n * log(n)) <br>
- * - n: number of cars; sorting dominates. <br>
+ * - n: number of cars; sorting dominates.
  * <p>
  * Space Complexity: O(n) <br>
- * - Store pairs of position/time. <br>
+ * - Store pairs of position/time.
  */
 public class LeetCode0853_1 {
 

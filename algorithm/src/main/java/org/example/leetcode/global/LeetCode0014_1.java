@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  * - Iteratively shrink the prefix by comparing it with each subsequent string. <br>
  * <p>
  * Time Complexity: O(S) <br>
- * - S: total number of characters across all strings. <br>
+ * - S: total number of characters across all strings.
  * <p>
  * Space Complexity: O(1) <br>
- * - Only constant extra space is used. <br>
+ * - Only constant extra space is used.
  */
 public class LeetCode0014_1 {
 

@@ -11,10 +11,10 @@ import java.util.Deque;
  - The front is the current maximum.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of the array; each element pushed/popped once. <br>
+ * - n: length of the array; each element pushed/popped once.
  * <p>
  * Space Complexity: O(k) <br>
- * - k: window size. <br>
+ * - k: window size.
  */
 public class LeetCode0183_1 {
 

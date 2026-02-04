@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  - Increment fleet count when time increases.
  * <p>
  * Time Complexity: O(n * log(n)) <br>
- * - Sorting dominates. <br>
+ * - Sorting dominates.
  * <p>
  * Space Complexity: O(n) <br>
- * - Store pairs or times. <br>
+ * - Store pairs or times.
  */
 public class LeetCode0853_3 {
 

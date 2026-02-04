@@ -8,10 +8,10 @@ package org.example.leetcode.lcr;
  - Adjust left when a count exceeds target.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of s2; single pass with two pointers. <br>
+ * - n: length of s2; single pass with two pointers.
  * <p>
  * Space Complexity: O(1) <br>
- * - Fixed-size array of 26 counts. <br>
+ * - Fixed-size array of 26 counts.
  */
 public class LeetCode0014_1 {
 

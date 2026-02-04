@@ -9,10 +9,10 @@ import java.util.Arrays;
  - Collect elements of each diagonal, sort, and write back.
  * <p>
  * Time Complexity: O(m * n log(min(m, n))) <br>
- * - Sorting each diagonal dominates. <br>
+ * - Sorting each diagonal dominates.
  * <p>
  * Space Complexity: O(min(m, n)) <br>
- * - Temporary list for a diagonal. <br>
+ * - Temporary list for a diagonal.
  */
 public class LeetCode1329_1 {
 

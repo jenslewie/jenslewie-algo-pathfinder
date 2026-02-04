@@ -10,10 +10,10 @@ import org.example.learning.queue.MonotonicQueue;
  - Shrink window when max - min exceeds limit.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of the array; each index is pushed/popped once. <br>
+ * - n: length of the array; each index is pushed/popped once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Deques store indices. <br>
+ * - Deques store indices.
  */
 public class LeetCode1438_1 {
 

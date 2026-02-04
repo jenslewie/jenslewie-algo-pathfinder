@@ -11,10 +11,10 @@ import java.util.Deque;
  - Push the current price and span.
  * <p>
  * Time Complexity: O(1) amortized <br>
- * - Each price is pushed and popped once. <br>
+ * - Each price is pushed and popped once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Stack stores past prices. <br>
+ * - Stack stores past prices.
  */
 public class LeetCode0901_1 {
 

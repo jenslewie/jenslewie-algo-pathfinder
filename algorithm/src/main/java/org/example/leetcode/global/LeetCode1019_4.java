@@ -15,10 +15,10 @@ import java.util.List;
  - Use a stack of indices to find next greater values.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of nodes; each index pushed/popped once. <br>
+ * - n: number of nodes; each index pushed/popped once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Array of values and stack. <br>
+ * - Array of values and stack.
  */
 public class LeetCode1019_4 {
 

@@ -10,10 +10,10 @@ import org.example.model.linkedlist.ListNode;
  - Slow ends at the middle.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of nodes; single traversal. <br>
+ * - n: number of nodes; single traversal.
  * <p>
  * Space Complexity: O(1) <br>
- * - Constant extra space. <br>
+ * - Constant extra space.
  */
 public class LeetCode0876 {
 

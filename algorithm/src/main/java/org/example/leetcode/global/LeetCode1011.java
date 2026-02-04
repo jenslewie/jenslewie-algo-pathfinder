@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  * - Shrink the search range.
  * <p>
  * Time Complexity: O(n * log(W)) <br>
- * - n: number of packages; W: sum of weights. <br>
+ * - n: number of packages; W: sum of weights.
  * <p>
  * Space Complexity: O(1) <br>
- * - Constant extra space. <br>
+ * - Constant extra space.
  */
 public class LeetCode1011 {
 

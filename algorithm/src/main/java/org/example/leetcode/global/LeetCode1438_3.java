@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  - Shrink when max - min exceeds limit.
  * <p>
  * Time Complexity: O(n * log(n)) <br>
- * - Heap operations are logarithmic. <br>
+ * - Heap operations are logarithmic.
  * <p>
  * Space Complexity: O(n) <br>
- * - Heaps store window values. <br>
+ * - Heaps store window values.
  */
 public class LeetCode1438_3 {
 

@@ -11,10 +11,10 @@ import java.util.Queue;
  - Pop while index is out of window.
  * <p>
  * Time Complexity: O(n * log(k)) <br>
- * - n: length of the array; heap ops are log(k). <br>
+ * - n: length of the array; heap ops are log(k).
  * <p>
  * Space Complexity: O(k) <br>
- * - Heap stores up to k elements. <br>
+ * - Heap stores up to k elements.
  */
 public class LeetCode0183_2 {
 

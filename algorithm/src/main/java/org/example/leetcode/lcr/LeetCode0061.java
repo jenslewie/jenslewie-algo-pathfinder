@@ -13,10 +13,10 @@ import java.util.PriorityQueue;
  - Pop smallest and push next pair in the row.
  * <p>
  * Time Complexity: O(k * log(min(n, k))) <br>
- * - n: length of nums1; heap size bounded by min(n, k). <br>
+ * - n: length of nums1; heap size bounded by min(n, k).
  * <p>
  * Space Complexity: O(min(n, k)) <br>
- * - Heap stores one pair per nums1 index. <br>
+ * - Heap stores one pair per nums1 index.
  */
 public class LeetCode0061 {
 

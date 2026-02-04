@@ -10,10 +10,10 @@ import org.example.model.linkedlist.ListNode;
  - Move both until first reaches end.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of nodes; single pass. <br>
+ * - n: number of nodes; single pass.
  * <p>
  * Space Complexity: O(1) <br>
- * - Constant extra space. <br>
+ * - Constant extra space.
  */
 public class LeetCode0140 {
 

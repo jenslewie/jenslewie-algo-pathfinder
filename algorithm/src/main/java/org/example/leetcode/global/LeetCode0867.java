@@ -7,10 +7,10 @@ package org.example.leetcode.global;
  - result[j][i] = matrix[i][j].
  * <p>
  * Time Complexity: O(m * n) <br>
- * - m, n: matrix dimensions. <br>
+ * - m, n: matrix dimensions.
  * <p>
  * Space Complexity: O(m * n) <br>
- * - Output matrix. <br>
+ * - Output matrix.
  */
 public class LeetCode0867 {
 

@@ -8,7 +8,7 @@ package org.example.leetcode.global;
  * - Apply the first such discount.
  * <p>
  * Time Complexity: O(n^2) <br>
- * - Nested scan over prices.
+ * - Nested scan overprices.
  * <p>
  * Space Complexity: O(1) <br>
  * - Constant extra space.

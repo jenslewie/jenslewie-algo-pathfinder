@@ -8,10 +8,10 @@ package org.example.leetcode.lcr;
  - Traverse edges while shrinking bounds.
  * <p>
  * Time Complexity: O(m * n) <br>
- * - m, n: matrix dimensions; each element visited once. <br>
+ * - m, n: matrix dimensions; each element visited once.
  * <p>
  * Space Complexity: O(1) <br>
- * - Output array excluded. <br>
+ * - Output array excluded.
  */
 public class LeetCode0146 {
 

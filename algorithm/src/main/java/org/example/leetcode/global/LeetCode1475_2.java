@@ -10,10 +10,10 @@ import java.util.Deque;
  - For each price, scan right until a smaller/equal price is found.
  * <p>
  * Time Complexity: O(n^2) <br>
- * - Nested scan over prices. <br>
+ * - Nested scan over prices.
  * <p>
  * Space Complexity: O(1) <br>
- * - Constant extra space. <br>
+ * - Constant extra space.
  */
 public class LeetCode1475_2 {
 

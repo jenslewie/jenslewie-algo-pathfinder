@@ -8,10 +8,10 @@ package org.example.leetcode.lcr;
  - Shrink left while product >= k.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of the array; each pointer moves at most n steps. <br>
+ * - n: length of the array; each pointer moves at most n steps.
  * <p>
  * Space Complexity: O(1) <br>
- * - Constant extra space. <br>
+ * - Constant extra space.
  */
 public class LeetCode0009 {
 

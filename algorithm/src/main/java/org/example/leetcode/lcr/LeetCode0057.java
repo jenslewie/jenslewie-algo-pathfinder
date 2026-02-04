@@ -10,10 +10,10 @@ import java.util.TreeSet;
  - Use ceiling to check valueDiff range.
  * <p>
  * Time Complexity: O(n * log(k)) <br>
- * - n: array length; each TreeSet op is log(k). <br>
+ * - n: array length; each TreeSet op is log(k).
  * <p>
  * Space Complexity: O(k) <br>
- * - TreeSet stores up to k elements. <br>
+ * - TreeSet stores up to k elements.
  */
 public class LeetCode0057 {
 

@@ -11,10 +11,10 @@ import java.util.LinkedList;
  - Resolve waits when a warmer day appears.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of days; each index pushed/popped once. <br>
+ * - n: number of days; each index pushed/popped once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Stack and result array. <br>
+ * - Stack and result array.
  */
 public class LeetCode0038 {
 

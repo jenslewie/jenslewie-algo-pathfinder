@@ -11,10 +11,10 @@ import java.util.Queue;
  - Queue size is the answer.
  * <p>
  * Time Complexity: O(1) amortized <br>
- * - Each time is enqueued and dequeued once. <br>
+ * - Each time is enqueued and dequeued once.
  * <p>
  * Space Complexity: O(w) <br>
- * - w: number of calls within the last 3000 ms. <br>
+ * - w: number of calls within the last 3000 ms.
  */
 public class LeetCode0933 {
 

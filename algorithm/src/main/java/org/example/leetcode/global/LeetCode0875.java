@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  - Shrink the search range accordingly.
  * <p>
  * Time Complexity: O(n * log(M)) <br>
- * - n: piles count; M: max pile size. <br>
+ * - n: piles count; M: max pile size.
  * <p>
  * Space Complexity: O(1) <br>
- * - Constant extra space. <br>
+ * - Constant extra space.
  */
 public class LeetCode0875 {
 

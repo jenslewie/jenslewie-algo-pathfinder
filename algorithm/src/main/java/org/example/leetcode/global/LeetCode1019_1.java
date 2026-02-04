@@ -13,10 +13,10 @@ import java.util.Deque;
  - Use a decreasing stack to fill results on the way back.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of nodes; each node processed once. <br>
+ * - n: number of nodes; each node processed once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Recursion stack and monotonic stack. <br>
+ * - Recursion stack and monotonic stack.
  */
 public class LeetCode1019_1 {
 

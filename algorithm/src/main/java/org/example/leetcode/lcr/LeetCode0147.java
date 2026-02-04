@@ -10,10 +10,10 @@ import java.util.Stack;
  - getMin reads top pair.
  * <p>
  * Time Complexity: O(1) <br>
- * - All operations are constant time. <br>
+ * - All operations are constant time.
  * <p>
  * Space Complexity: O(n) <br>
- * - Stack stores one pair per element. <br>
+ * - Stack stores one pair per element.
  */
 public class LeetCode0147 {
 

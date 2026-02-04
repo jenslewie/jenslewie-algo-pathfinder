@@ -10,10 +10,10 @@ import java.util.Arrays;
  - Pop when a car catches up to form a fleet.
  * <p>
  * Time Complexity: O(n * log(n)) <br>
- * - Sorting dominates. <br>
+ * - Sorting dominates.
  * <p>
  * Space Complexity: O(n) <br>
- * - Stack of times. <br>
+ * - Stack of times.
  */
 public class LeetCode0853_2 {
 

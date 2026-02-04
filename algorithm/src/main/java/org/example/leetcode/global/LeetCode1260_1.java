@@ -10,10 +10,10 @@ import java.util.List;
  - Convert grid to 1D, shift by k, then map back.
  * <p>
  * Time Complexity: O(m * n) <br>
- * - m, n: grid dimensions. <br>
+ * - m, n: grid dimensions.
  * <p>
  * Space Complexity: O(m * n) <br>
- * - Extra list for flattening. <br>
+ * - Extra list for flattening.
  */
 public class LeetCode1260_1 {
 

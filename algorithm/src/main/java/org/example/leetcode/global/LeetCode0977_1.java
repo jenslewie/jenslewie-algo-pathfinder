@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  - Build a sorted squares array.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of the array; single pass. <br>
+ * - n: length of the array; single pass.
  * <p>
  * Space Complexity: O(n) <br>
- * - Output array. <br>
+ * - Output array.
  */
 public class LeetCode0977_1 {
 

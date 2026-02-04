@@ -13,10 +13,10 @@ import java.util.Deque;
  - Fill results from the end.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of nodes; linear passes. <br>
+ * - n: number of nodes; linear passes.
  * <p>
  * Space Complexity: O(n) <br>
- * - Stack and result array. <br>
+ * - Stack and result array.
  */
 public class LeetCode1019_2 {
 

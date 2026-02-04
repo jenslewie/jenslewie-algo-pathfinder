@@ -8,10 +8,10 @@ package org.example.leetcode.lcr;
  - Compare lowercase characters from both ends.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of the string; each character visited once. <br>
+ * - n: length of the string; each character visited once.
  * <p>
  * Space Complexity: O(1) <br>
- * - Constant extra space. <br>
+ * - Constant extra space.
  */
 public class LeetCode0018 {
 

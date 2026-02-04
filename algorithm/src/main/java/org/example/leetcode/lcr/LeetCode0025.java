@@ -12,10 +12,10 @@ import java.util.Stack;
  - Pop and add with carry to build the result.
  * <p>
  * Time Complexity: O(m + n) <br>
- * - m, n: lengths of the lists; each node processed once. <br>
+ * - m, n: lengths of the lists; each node processed once.
  * <p>
  * Space Complexity: O(m + n) <br>
- * - Stacks store all digits. <br>
+ * - Stacks store all digits.
  */
 public class LeetCode0025 {
 

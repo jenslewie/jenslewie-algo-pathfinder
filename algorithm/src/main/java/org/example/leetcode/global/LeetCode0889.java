@@ -13,10 +13,10 @@ import java.util.Map;
  - Recurse on left and right ranges.
  * <p>
  * Time Complexity: O(n) <br>
- * - Each node is constructed once. <br>
+ * - Each node is constructed once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Map plus recursion stack. <br>
+ * - Map plus recursion stack.
  */
 public class LeetCode0889 {
 

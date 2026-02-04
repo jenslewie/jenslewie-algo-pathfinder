@@ -15,10 +15,10 @@ import java.util.List;
  - Update results when a greater value appears.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of nodes; each node pushed/popped once. <br>
+ * - n: number of nodes; each node pushed/popped once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Stack and list of results. <br>
+ * - Stack and list of results.
  */
 public class LeetCode1019_3 {
 

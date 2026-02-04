@@ -10,10 +10,10 @@ import java.util.ArrayDeque;
  - Maintain a window size at most n.
  * <p>
  * Time Complexity: O(n) <br>
- * - Each index is pushed/popped at most once. <br>
+ * - Each index is pushed/popped at most once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Prefix sums and deque. <br>
+ * - Prefix sums and deque.
  */
 public class LeetCode0918_1 {
 

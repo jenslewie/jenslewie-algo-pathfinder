@@ -12,10 +12,10 @@ import java.util.Map;
  - Pop from the highest-frequency list.
  * <p>
  * Time Complexity: O(1) <br>
- * - Push and pop are constant time. <br>
+ * - Push and pop are constant time.
  * <p>
  * Space Complexity: O(n) <br>
- * - Store all pushed values. <br>
+ * - Store all pushed values.
  */
 public class LeetCode0895_1 {
 

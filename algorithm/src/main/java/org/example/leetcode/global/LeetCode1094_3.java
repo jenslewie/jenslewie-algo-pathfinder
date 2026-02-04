@@ -11,10 +11,10 @@ import java.util.Map;
  - Track current load.
  * <p>
  * Time Complexity: O(n * log(n)) <br>
- * - Sorting and heap operations. <br>
+ * - Sorting and heap operations.
  * <p>
  * Space Complexity: O(n) <br>
- * - Heap stores active trips. <br>
+ * - Heap stores active trips.
  */
 public class LeetCode1094_3 {
 

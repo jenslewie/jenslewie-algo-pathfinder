@@ -8,10 +8,10 @@ package org.example.leetcode.lcr;
  - Find left bound of target + 1 to get right bound.
  * <p>
  * Time Complexity: O(log(n)) <br>
- * - n: length of the array; two binary searches. <br>
+ * - n: length of the array; two binary searches.
  * <p>
  * Space Complexity: O(1) <br>
- * - Constant extra space. <br>
+ * - Constant extra space.
  */
 public class LeetCode0172 {
 

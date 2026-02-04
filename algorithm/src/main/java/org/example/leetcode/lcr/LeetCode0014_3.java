@@ -10,10 +10,10 @@ import java.util.Arrays;
  - Compare arrays when window size matches.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of s2; linear scan. <br>
+ * - n: length of s2; linear scan.
  * <p>
  * Space Complexity: O(1) <br>
- * - Fixed-size arrays of 26 counts. <br>
+ * - Fixed-size arrays of 26 counts.
  */
 public class LeetCode0014_3 {
 

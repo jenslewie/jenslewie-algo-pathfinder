@@ -8,10 +8,10 @@ package org.example.leetcode.lcr;
  - Store results back on the stack.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of tokens; each token processed once. <br>
+ * - n: number of tokens; each token processed once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Stack holds operands. <br>
+ * - Stack holds operands.
  */
 public class LeetCode0036 {
 

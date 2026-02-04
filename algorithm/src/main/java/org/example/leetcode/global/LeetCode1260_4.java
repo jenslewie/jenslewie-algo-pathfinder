@@ -11,10 +11,10 @@ import java.util.List;
  - Map back to 2D coordinates.
  * <p>
  * Time Complexity: O(m * n) <br>
- * - m, n: grid dimensions. <br>
+ * - m, n: grid dimensions.
  * <p>
  * Space Complexity: O(m * n) <br>
- * - Output grid. <br>
+ * - Output grid.
  */
 public class LeetCode1260_4 {
 

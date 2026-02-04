@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  - Maintain the longest valid window.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of the array; linear scan. <br>
+ * - n: length of the array; linear scan.
  * <p>
  * Space Complexity: O(1) <br>
- * - Constant extra space. <br>
+ * - Constant extra space.
  */
 public class LeetCode1004_2 {
 

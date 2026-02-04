@@ -11,10 +11,10 @@ import java.util.Map;
  - Maintain valid count to detect matches.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of s2; linear scan. <br>
+ * - n: length of s2; linear scan.
  * <p>
  * Space Complexity: O(k) <br>
- * - k: number of unique characters in s1. <br>
+ * - k: number of unique characters in s1.
  */
 public class LeetCode0014_4 {
 

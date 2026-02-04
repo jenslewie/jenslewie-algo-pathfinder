@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  - Prefix sum computes results.
  * <p>
  * Time Complexity: O(n + m) <br>
- * - n: flights; m: bookings. <br>
+ * - n: flights; m: bookings.
  * <p>
  * Space Complexity: O(n) <br>
- * - Difference array. <br>
+ * - Difference array.
  */
 public class LeetCode1109_2 {
 

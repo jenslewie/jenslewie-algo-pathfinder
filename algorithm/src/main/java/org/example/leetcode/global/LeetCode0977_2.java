@@ -8,10 +8,10 @@ package org.example.leetcode.global;
  - Merge squares from negative and non-negative sides.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of the array; linear merge. <br>
+ * - n: length of the array; linear merge.
  * <p>
  * Space Complexity: O(n) <br>
- * - Output array. <br>
+ * - Output array.
  */
 public class LeetCode0977_2 {
 

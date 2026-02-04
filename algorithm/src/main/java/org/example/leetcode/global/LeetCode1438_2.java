@@ -11,10 +11,10 @@ import java.util.Deque;
  - Shrink when max - min exceeds limit.
  * <p>
  * Time Complexity: O(n * log(n)) <br>
- * - TreeMap operations are logarithmic. <br>
+ * - TreeMap operations are logarithmic.
  * <p>
  * Space Complexity: O(n) <br>
- * - TreeMap stores window values. <br>
+ * - TreeMap stores window values.
  */
 public class LeetCode1438_2 {
 

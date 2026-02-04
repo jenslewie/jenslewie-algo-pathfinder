@@ -12,10 +12,10 @@ import java.util.Arrays;
  - Sweep in order to track capacity.
  * <p>
  * Time Complexity: O(n * log(n)) <br>
- * - n: number of trips; sorting events dominates. <br>
+ * - n: number of trips; sorting events dominates.
  * <p>
  * Space Complexity: O(n) <br>
- * - Event list. <br>
+ * - Event list.
  */
 public class LeetCode1094_2 {
 

@@ -11,10 +11,10 @@ import java.util.Deque;
  - Update prices when a discount is found.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: number of prices; each index pushed/popped once. <br>
+ * - n: number of prices; each index pushed/popped once.
  * <p>
  * Space Complexity: O(n) <br>
- * - Stack of indices. <br>
+ * - Stack of indices.
  */
 public class LeetCode1475_1 {
 

@@ -11,10 +11,10 @@ import java.util.Map;
  * - Stop once any string ends or the counts diverge. <br>
  * <p>
  * Time Complexity: O(S) <br>
- * - S: total number of characters across all strings. <br>
+ * - S: total number of characters across all strings.
  * <p>
  * Space Complexity: O(m) <br>
- * - m: number of strings (used for counting per position). <br>
+ * - m: number of strings (used for counting per position).
  */
 public class LeetCode0014_3 {
 

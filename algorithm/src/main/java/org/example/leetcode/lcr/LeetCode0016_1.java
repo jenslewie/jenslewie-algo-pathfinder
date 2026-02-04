@@ -11,10 +11,10 @@ import java.util.Map;
  - Track maximum window length.
  * <p>
  * Time Complexity: O(n) <br>
- * - n: length of the string; each character processed once. <br>
+ * - n: length of the string; each character processed once.
  * <p>
  * Space Complexity: O(min(m, n)) <br>
- * - m: character set size. <br>
+ * - m: character set size.
  */
 public class LeetCode0016_1 {
 

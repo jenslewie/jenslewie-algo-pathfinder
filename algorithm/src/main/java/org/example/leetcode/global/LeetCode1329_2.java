@@ -14,10 +14,10 @@ import java.util.Map;
  - Pop to fill in sorted order.
  * <p>
  * Time Complexity: O(m * n * log(min(m, n))) <br>
- * - Heap operations for each diagonal. <br>
+ * - Heap operations for each diagonal.
  * <p>
  * Space Complexity: O(m * n) <br>
- * - Heaps across diagonals. <br>
+ * - Heaps across diagonals.
  */
 public class LeetCode1329_2 {
 
