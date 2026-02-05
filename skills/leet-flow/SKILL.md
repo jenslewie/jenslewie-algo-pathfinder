@@ -19,6 +19,15 @@ Use this skill when adding a new LeetCode solution in this repo. It standardizes
 - Global problems: `algorithm/src/main/resources/merged_problems.json`
 - LCR problems: no data source yet; leave hyperlink/title/description blank unless user provides.
 
+## Scripts (recommended)
+
+Use the bundled scripts for consistent results:
+
+- `scripts/update_javadoc.py --class <ClassName> --scope <global|lcr>`
+- `scripts/update_readme.py`
+- `scripts/check_coverage.py --classes <ClassName> [<ClassName> ...]`
+- `scripts/generate_test.py --class <ClassName> --scope <global|lcr>`
+
 ## JavaDoc format (class-level)
 
 Match the style of `LeetCode0001` in global:
@@ -31,15 +40,15 @@ Match the style of `LeetCode0001` in global:
 - Sections in order: `Approach`, `Time Complexity`, `Space Complexity`
 - Use `<p>` separators between sections
 - Keep `<br>` inside section lines, but do not end the final line of Time/Space with `<br>`
-- Do not include `@leetcodeDifficulty`
 
 ## Global workflow
 
+- Order test data with LeetCode official examples first, then add supplemental cases for coverage.
 1. Add/verify solution class name: `LeetCodeXXXX` or `LeetCodeXXXX_N` as needed.
 2. Use `merged_problems.json` to pull title, slug, difficulty, description.
-3. Fill JavaDoc using the standard format and `leetcode.com` link.
-4. Add/extend tests to achieve 100% line and branch coverage for new or modified logic.
-5. Update `algorithm/README_DIFFICULTY.md`:
+3. Prefer `scripts/update_javadoc.py` to update the JavaDoc.
+4. Add/extend tests to achieve 100% line and branch coverage for new or modified logic (prefer `scripts/generate_test.py`).
+5. Update `algorithm/README_DIFFICULTY.md` (prefer `scripts/update_readme.py`):
    - Global section only
    - One record per problem (no `_1/_2/_3` suffixes)
    - Format: `LeetCodeXXXX - Title`
@@ -48,12 +57,12 @@ Match the style of `LeetCode0001` in global:
 ## LCR workflow
 
 1. Class names are `LCRXXXX` or `LCRXXXX_N`.
-2. JavaDoc:
+2. JavaDoc (prefer `scripts/update_javadoc.py`):
    - Keep link/title/description blank unless user provides
    - Keep difficulty `Unknown` unless user provides
    - Maintain standard section layout
-3. Add tests to reach 100% line and branch coverage for new or modified logic.
-4. Update `algorithm/README_DIFFICULTY.md`:
+3. Add tests to reach 100% line and branch coverage for new or modified logic (prefer `scripts/generate_test.py`).
+4. Update `algorithm/README_DIFFICULTY.md` (prefer `scripts/update_readme.py`):
    - LCR section
    - One record per problem (no `_1/_2/_3` suffixes)
    - Format: `LCRXXXX - Title` (title blank if unknown)
@@ -61,8 +70,15 @@ Match the style of `LeetCode0001` in global:
 
 ## Testing
 
+- For tree algorithms, if metadata is included in the key name, prefix it with `with_` (e.g., `dfs_recursive_divide_conquer_with_height`).
+- For tree algorithms, use ALGO_VARIANTS keys like `dfs_recursive_traverse_with_stack` or `bfs_iterative_traverse_with_queue` following `[dfs/bfs]_[recursive/iterative]_[traverse/divide_conquer]_[with_metadata]`.
+- When multiple solutions exist, name solution variables with numeric suffixes (e.g., `SOLUTION_1`).
+- Prefer a Map-based variant dispatch like `LeetCode0003Test` to run the same cases across all solutions.
+- Ensure test data sections are labeled: "LeetCode Official Examples" first, then "Additional Coverage".
+- Prefer @ParameterizedTest and consolidate cases in a single test where possible.
 - Run `mvn test jacoco:report` (no confirmation) after changes to ensure `jacoco.csv` is generated.
-- Check `algorithm/target/site/jacoco/jacoco.csv` and ensure new/modified classes have `BRANCH_MISSED = 0`.
+- Check `algorithm/target/site/jacoco/jacoco.csv` and ensure new/modified classes have `BRANCH_MISSED = 0`
+  (prefer `scripts/check_coverage.py --classes <ClassName>`).
 - If any new/modified class has missed branches, add tests to cover them and re-run `mvn test jacoco:report`.
 
 ## Guardrails
