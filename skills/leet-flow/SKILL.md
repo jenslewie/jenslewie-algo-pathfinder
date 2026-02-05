@@ -1,9 +1,9 @@
 ---
-name: LeetFlow
+name: leet-flow
 description: Standardize LeetCode solution additions with JavaDoc, tests, and README index updates for global and LCR packages.
 ---
 
-# LeetFlow
+# leet-flow
 
 Use this skill when adding a new LeetCode solution in this repo. It standardizes class-level JavaDoc, test coverage, and the difficulty index.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "LeetFlow"
+  short_description: "Add LeetCode solutions with docs, tests, and index updates"
+  default_prompt: "Use $leet-flow to add a LeetCode solution with JavaDoc, tests, README updates, and branch coverage verification."
