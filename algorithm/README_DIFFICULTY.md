@@ -4,8 +4,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 
 ## Global
 
-### Easy (36)
-
+### Easy (37)
 - LeetCode0001 - Two Sum
 - LeetCode0014 - Longest Common Prefix
 - LeetCode0020 - Valid Parentheses
@@ -23,6 +22,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0160 - Intersection of Two Linked Lists
 - LeetCode0206 - Reverse Linked List
 - LeetCode0219 - Contains Duplicate II
+- LeetCode0222 - Count Complete Tree Nodes
 - LeetCode0225 - Implement Stack using Queues
 - LeetCode0226 - Invert Binary Tree
 - LeetCode0232 - Implement Queue using Stacks
@@ -106,7 +106,6 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1670 - Design Front Middle Back Queue
 
 ### Hard (10)
-
 - LeetCode0023 - Merge k Sorted Lists
 - LeetCode0076 - Minimum Window Substring
 - LeetCode0084 - Largest Rectangle in Histogram
@@ -119,30 +118,29 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1944 - Number of Visible People in a Queue
 
 ## LCR
-
 ### Easy (4)
 
-- LCR 018 - 验证回文串
-- LCR 140 - 链表中倒数第k个节点
-- LCR 146 - 螺旋遍历二维数组
-- LCR 172 - 统计目标成绩出现的次数
+- LCR0018 - 验证回文串
+- LCR0140 - 链表中倒数第k个节点
+- LCR0146 - 螺旋遍历二维数组
+- LCR0172 - 统计目标成绩出现的次数
 
 ### Medium (13)
 
-- LCR 008 - 长度最小的子数组
-- LCR 009 - 乘积小于K的子数组
-- LCR 014 - 字符串的排列
-- LCR 015 - 找到字符串中所有字母异位词
-- LCR 016 - 无重复字符的最长子串
-- LCR 025 - 两数相加
-- LCR 026 - 重排链表
-- LCR 036 - 逆波兰表达式求值
-- LCR 038 - 每日温度
-- LCR 057 - 存在重复元素III
-- LCR 061 - 查找和最小的K对数字
-- LCR 147 - 最小栈
-- LCR 167 - 招式拆解I
+- LCR0008 - 长度最小的子数组
+- LCR0009 - 乘积小于K的子数组
+- LCR0014 - 字符串的排列
+- LCR0015 - 找到字符串中所有字母异位词
+- LCR0016 - 无重复字符的最长子串
+- LCR0025 - 两数相加
+- LCR0026 - 重排链表
+- LCR0036 - 逆波兰表达式求值
+- LCR0038 - 每日温度
+- LCR0057 - 存在重复元素III
+- LCR0061 - 查找和最小的K对数字
+- LCR0147 - 最小栈
+- LCR0167 - 招式拆解I
 
 ### Hard (1)
 
-- LCR 183 - 望远镜中最高的海拔
+- LCR0183 - 望远镜中最高的海拔
