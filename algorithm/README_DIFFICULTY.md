@@ -44,7 +44,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
 
-### Medium (60)
+### Medium (61)
 - LeetCode0002 - Add Two Numbers
 - LeetCode0003 - Longest Substring Without Repeating Characters
 - LeetCode0005 - Longest Palindromic Substring
@@ -65,6 +65,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0114 - Flatten Binary Tree to Linked List
 - LeetCode0116 - Populating Next Right Pointers in Each Node
 - LeetCode0128 - Longest Consecutive Sequence
+- LeetCode0129 - Sum Root to Leaf Numbers
 - LeetCode0142 - Linked List Cycle II
 - LeetCode0143 - Reorder List
 - LeetCode0150 - Evaluate Reverse Polish Notation
