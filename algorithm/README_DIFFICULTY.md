@@ -4,7 +4,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 
 ## Global
 
-### Easy (37)
+### Easy (38)
 - LeetCode0001 - Two Sum
 - LeetCode0014 - Longest Common Prefix
 - LeetCode0020 - Valid Parentheses
@@ -27,6 +27,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0226 - Invert Binary Tree
 - LeetCode0232 - Implement Queue using Stacks
 - LeetCode0234 - Palindrome Linked List
+- LeetCode0257 - Binary Tree Paths
 - LeetCode0283 - Move Zeroes
 - LeetCode0303 - Range Sum Query - Immutable
 - LeetCode0344 - Reverse String
@@ -119,14 +120,12 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 
 ## LCR
 ### Easy (4)
-
 - LCR0018 - 验证回文串
 - LCR0140 - 链表中倒数第k个节点
 - LCR0146 - 螺旋遍历二维数组
 - LCR0172 - 统计目标成绩出现的次数
 
 ### Medium (13)
-
 - LCR0008 - 长度最小的子数组
 - LCR0009 - 乘积小于K的子数组
 - LCR0014 - 字符串的排列
@@ -142,5 +141,4 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LCR0167 - 招式拆解I
 
 ### Hard (1)
-
 - LCR0183 - 望远镜中最高的海拔
