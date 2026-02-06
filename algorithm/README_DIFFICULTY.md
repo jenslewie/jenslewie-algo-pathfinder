@@ -44,7 +44,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
 
-### Medium (62)
+### Medium (63)
 - LeetCode0002 - Add Two Numbers
 - LeetCode0003 - Longest Substring Without Repeating Characters
 - LeetCode0005 - Longest Palindromic Substring
@@ -73,6 +73,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0155 - Min Stack
 - LeetCode0167 - Two Sum II - Input Array Is Sorted
 - LeetCode0199 - Binary Tree Right Side View
+- LeetCode0988 - Smallest String Starting From Leaf
 - LeetCode0209 - Minimum Size Subarray Sum
 - LeetCode0235 - Lowest Common Ancestor of a Binary Search Tree
 - LeetCode0236 - Lowest Common Ancestor of a Binary Tree
