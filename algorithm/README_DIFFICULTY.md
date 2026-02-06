@@ -3,8 +3,7 @@
 This index covers classes in `org.example.leetcode.global` and `org.example.leetcode.lcr`.
 
 ## Global
-
-### Easy (38)
+### Easy (39)
 - LeetCode0001 - Two Sum
 - LeetCode0014 - Longest Common Prefix
 - LeetCode0020 - Valid Parentheses
@@ -40,6 +39,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0876 - Middle of the Linked List
 - LeetCode0933 - Number of Recent Calls
 - LeetCode0977 - Squares of a Sorted Array
+- LeetCode1022 - Sum of Root To Leaf Binary Numbers
 - LeetCode1260 - Shift 2D Grid
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
@@ -73,7 +73,6 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0155 - Min Stack
 - LeetCode0167 - Two Sum II - Input Array Is Sorted
 - LeetCode0199 - Binary Tree Right Side View
-- LeetCode0988 - Smallest String Starting From Leaf
 - LeetCode0209 - Minimum Size Subarray Sum
 - LeetCode0235 - Lowest Common Ancestor of a Binary Search Tree
 - LeetCode0236 - Lowest Common Ancestor of a Binary Tree
@@ -99,6 +98,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0889 - Construct Binary Tree from Preorder and Postorder Traversal
 - LeetCode0901 - Online Stock Span
 - LeetCode0918 - Maximum Sum Circular Subarray
+- LeetCode0988 - Smallest String Starting From Leaf
 - LeetCode1004 - Max Consecutive Ones III
 - LeetCode1011 - Capacity To Ship Packages Within D Days
 - LeetCode1019 - Next Greater Node In Linked List
