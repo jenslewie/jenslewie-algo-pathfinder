@@ -39,7 +39,7 @@ def main():
     title_prefix = 'LeetCode' if args.scope == 'global' else 'LCR'
     display_name = f"{title_prefix} ???? : TODO"
 
-    template = f"""package org.example.leetcode.{args.scope};
+    template = """package org.example.leetcode.{scope};
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -51,8 +51,8 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName(\"{display_name}\")
-class {test_class} {{
+@DisplayName(\"__DISPLAY_NAME__\")
+class __TEST_CLASS__ {{
 
     // TODO: instantiate solution class(es) using numeric suffixes, e.g. SOLUTION_1
 
@@ -70,7 +70,7 @@ class {test_class} {{
     //         \"variant_2\", SOLUTION_2::methodName
     // );
 
-    @ParameterizedTest(name = \"[{{index}}] case={{0}}, algo={{1}}\")
+    @ParameterizedTest(name = \"[{index}] case={0}, algo={1}\")
     @MethodSource(\"allCombinations\")
     void testCases(String caseName, String algoName, Object input, Object expected) {{
         // TODO: build inputs and call solution
@@ -99,6 +99,10 @@ class {test_class} {{
     }}
 }
 """
+
+    template = template.replace('{scope}', args.scope)
+    template = template.replace('__DISPLAY_NAME__', display_name)
+    template = template.replace('__TEST_CLASS__', test_class)
 
     test_file.write_text(template)
     print(f'Created {test_file}')
