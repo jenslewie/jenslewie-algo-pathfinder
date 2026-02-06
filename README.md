@@ -1,1 +1,1 @@
-# jenslewie-algo-pathfnder
+# jenslewie-algo-pathfinder
