@@ -44,7 +44,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
 
-### Medium (63)
+### Medium (64)
 - LeetCode0002 - Add Two Numbers
 - LeetCode0003 - Longest Substring Without Repeating Characters
 - LeetCode0005 - Longest Palindromic Substring
@@ -106,6 +106,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1109 - Corporate Flight Bookings
 - LeetCode1329 - Sort the Matrix Diagonally
 - LeetCode1438 - Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+- LeetCode1457 - Pseudo-Palindromic Paths in a Binary Tree
 - LeetCode1658 - Minimum Operations to Reduce X to Zero
 - LeetCode1670 - Design Front Middle Back Queue
 
