@@ -44,6 +44,40 @@ Match the style of `LeetCode0001` in global:
 - Use `<p>` separators between sections
 - Keep `<br>` inside section lines, but do not end the final line of Time/Space with `<br>`
 
+Preflight checklist (aim for correctness before validation):
+
+- Use the `LeetCode0001` JavaDoc as the exact template for structure and punctuation.
+- `Approach:` header ends with `<br>` and has at least one bullet line.
+- `Time Complexity:` header ends with `<br>` and has at least one bullet line.
+- `Space Complexity:` header ends with `<br>` and has at least one bullet line.
+- Description lines use `<br>` separators and no HTML tags beyond `<br>`.
+- Place `<p>` only between sections (not inside bullet lists).
+
+JavaDoc stub template (fill placeholders, keep structure intact):
+
+```
+/**
+ * <a href="https://leetcode.com/problems/<slug>">LeetCode N: Title</a>
+ * <p>
+ * Description line 1. <br>
+ * Description line 2. <br>
+ * Description line 3.
+ * <p>
+ * Difficulty: Easy
+ * <p>
+ * Approach: Short approach header. <br>
+ * - Bullet explanation line 1. <br>
+ * - Bullet explanation line 2.
+ * <p>
+ * Time Complexity: O(n) <br>
+ * - n: brief definition.
+ * <p>
+ * Space Complexity: O(h) <br>
+ * - h: brief definition.
+ */
+```
+
+
 ## Global workflow
 
 - Order test data with LeetCode official examples first, then add supplemental cases for coverage.
@@ -53,8 +87,7 @@ Match the style of `LeetCode0001` in global:
 4. Add/extend tests to achieve 100% line and branch coverage for new or modified logic (prefer `scripts/generate_test.py`).
 5. Validate JavaDoc formatting (prefer `scripts/validate_javadoc.py`).
 6. Validate test style (prefer `scripts/validate_test_style.py`).
-7. Update `algorithm/README_DIFFICULTY.md` (prefer `scripts/update_readme.py`), then validate counts (prefer
-   `scripts/validate_readme_counts.py`):
+7. Update `algorithm/README_DIFFICULTY.md` (prefer `scripts/update_readme.py`), then validate counts (prefer `scripts/validate_readme_counts.py`):
    - Global section only
    - One record per problem (no `_1/_2/_3` suffixes)
    - Format: `LeetCodeXXXX - Title`
@@ -70,8 +103,7 @@ Match the style of `LeetCode0001` in global:
 3. Add tests to reach 100% line and branch coverage for new or modified logic (prefer `scripts/generate_test.py`).
 4. Validate JavaDoc formatting (prefer `scripts/validate_javadoc.py`).
 5. Validate test style (prefer `scripts/validate_test_style.py`).
-6. Update `algorithm/README_DIFFICULTY.md` (prefer `scripts/update_readme.py`), then validate counts (prefer
-   `scripts/validate_readme_counts.py`):
+6. Update `algorithm/README_DIFFICULTY.md` (prefer `scripts/update_readme.py`), then validate counts (prefer `scripts/validate_readme_counts.py`):
    - LCR section
    - One record per problem (no `_1/_2/_3` suffixes)
    - Format: `LCRXXXX - Title` (title blank if unknown)
@@ -82,19 +114,18 @@ Match the style of `LeetCode0001` in global:
 - For tree algorithms, if metadata is included in the key name, prefix it with `with_` (e.g., `dfs_recursive_divide_conquer_with_height`).
 - For tree algorithms, use ALGO_VARIANTS keys like `dfs_recursive_traverse_with_stack` or `bfs_iterative_traverse_with_queue` following `[dfs/bfs]_[recursive/iterative]_[traverse/divide_conquer]_[with_metadata]`.
 - When multiple solutions exist, name solution variables with numeric suffixes (e.g., `SOLUTION_1`).
-- Use a Map-based variant dispatch like `LeetCode0003Test` to run the same cases across all solutions; do not create one
-  test method per solution.
+- Use a Map-based variant dispatch like `LeetCode0003Test` to run the same cases across all solutions; do not create one test method per solution.
 - Do not call solution methods directly in the test method; always call `ALGO_VARIANTS.get(algoName).apply(...)`.
 - Ensure test data sections are labeled: "LeetCode Official Examples" first, then "Additional Coverage".
 - Prefer @ParameterizedTest and consolidate cases in a single test where possible (one test method for all variants).
 - Enforce test file order:
-    - SOLUTION fields
-    - @FunctionalInterface (if needed)
-    - ALGO_VARIANTS
-    - @ParameterizedTest (name must include `[{index}] case={0}, algo={1}`; extra placeholders allowed)
-    - allCombinations method
-    - testCases method
-    - TestCase record (if needed)
+  - SOLUTION fields
+  - @FunctionalInterface (if needed)
+  - ALGO_VARIANTS
+  - @ParameterizedTest (name must include `[{index}] case={0}, algo={1}`; extra placeholders allowed)
+  - allCombinations method
+  - testCases method
+  - TestCase record (if needed)
 - If an @FunctionalInterface is declared, ALGO_VARIANTS must be typed to that interface (not a generic Function).
 - Run `mvn test jacoco:report` (no confirmation) after changes to ensure `jacoco.csv` is generated.
 - Ensure all tests pass after running `mvn test jacoco:report` (fix failing cases before proceeding).
