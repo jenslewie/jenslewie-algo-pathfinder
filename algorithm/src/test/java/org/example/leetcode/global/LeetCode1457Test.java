@@ -18,6 +18,8 @@ class LeetCode1457Test {
 
     private static final LeetCode1457_1 SOLUTION_1 = new LeetCode1457_1();
     private static final LeetCode1457_2 SOLUTION_2 = new LeetCode1457_2();
+    private static final LeetCode1457_3 SOLUTION_3 = new LeetCode1457_3();
+    private static final LeetCode1457_4 SOLUTION_4 = new LeetCode1457_4();
 
     @FunctionalInterface
     interface PseudoPalindromicPathsFunction {
@@ -26,7 +28,9 @@ class LeetCode1457Test {
 
     private static final Map<String, PseudoPalindromicPathsFunction> ALGO_VARIANTS = Map.of(
             "dfs_recursive_traverse_with_hashmap", SOLUTION_1::pseudoPalindromicPaths,
-            "dfs_recursive_traverse_with_array", SOLUTION_2::pseudoPalindromicPaths
+            "dfs_recursive_traverse_with_array", SOLUTION_2::pseudoPalindromicPaths,
+            "dfs_recursive_traverse_with_xor_count", SOLUTION_3::pseudoPalindromicPaths,
+            "dfs_recursive_traverse_with_bitmask", SOLUTION_4::pseudoPalindromicPaths
     );
 
     @ParameterizedTest(name = "[{index}] case={0}, algo={1}, tree={2}")
