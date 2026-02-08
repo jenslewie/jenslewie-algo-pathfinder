@@ -5,57 +5,78 @@ description: Standardize LeetCode solution additions with JavaDoc, tests, and RE
 
 # leet-flow
 
-Use this skill when adding a new LeetCode solution in this repo. It standardizes class-level JavaDoc, test coverage, and the difficulty index.
+Use this skill when adding a new LeetCode solution in this repo.
+
+## Priority Keywords
+
+- `MUST`: required for completion.
+- `SHOULD`: strongly recommended unless blocked.
+- `MAY`: optional improvement.
 
 ## Scope
 
-- Global: `algorithm/src/main/java/org/example/leetcode/global`
-- LCR: `algorithm/src/main/java/org/example/leetcode/lcr`
+- Global code: `algorithm/src/main/java/org/example/leetcode/global`
+- LCR code: `algorithm/src/main/java/org/example/leetcode/lcr`
 - Tests: `algorithm/src/test/java/org/example/leetcode/global` and `algorithm/src/test/java/org/example/leetcode/lcr`
-- Index: `algorithm/README_DIFFICULTY.md`
+- Difficulty index: `algorithm/README_DIFFICULTY.md`
 
-## Data sources
+## Data Sources
 
 - Global problems: `algorithm/src/main/resources/merged_problems.json`
-- LCR problems: no data source yet; leave hyperlink/title/description blank unless user provides.
+- LCR problems: no data source yet.
 
-## Scripts (recommended)
+## Scripts By Phase
 
-Use the bundled scripts for consistent results:
+- JavaDoc:
+  - `scripts/update_javadoc.py --class <ClassName> --scope <global|lcr>`
+  - `scripts/validate_javadoc.py --class <ClassName> --scope <global|lcr>`
+- Tests:
+  - `scripts/generate_test.py --class <ClassName> --scope <global|lcr>`
+  - `scripts/validate_test_style.py --class <ClassName> --scope <global|lcr>`
+- README:
+  - `scripts/update_readme.py`
+  - `scripts/validate_readme_counts.py`
+- Coverage:
+  - `scripts/check_coverage.py --classes <ClassName> [<ClassName> ...]`
 
-- `scripts/update_javadoc.py --class <ClassName> --scope <global|lcr>`
-- `scripts/validate_javadoc.py --class <ClassName> --scope <global|lcr>`
-- `scripts/validate_test_style.py --class <ClassName> --scope <global|lcr>`
-- `scripts/validate_readme_counts.py`
-- `scripts/update_readme.py`
-- `scripts/check_coverage.py --classes <ClassName> [<ClassName> ...]`
-- `scripts/generate_test.py --class <ClassName> --scope <global|lcr>`
+## Quick Workflow (Required)
 
-## JavaDoc format (class-level)
+1. `MUST` verify class naming: `LeetCodeXXXX(_N)` for global, `LCRXXXX(_N)` for LCR.
+2. `MUST` update class-level JavaDoc.
+3. `MUST` add or update tests for the target class.
+4. `MUST` validate JavaDoc and test style.
+5. `MUST` update `algorithm/README_DIFFICULTY.md` and validate counts.
+6. `MUST` run `mvn test jacoco:report` and ensure tests pass.
+7. `MUST` ensure `BRANCH_MISSED = 0` for new or modified classes.
 
-Match the style of `LeetCode0001` in global:
+## Scope Differences
 
-- First line: problem link
-  - Global: `https://leetcode.com/problems/<slug>`
-  - LCR: leave href/title/description blank unless user supplies data
-- Description block immediately after link
-- Difficulty line: `Difficulty: Easy|Medium|Hard` (Global from JSON; LCR use `Unknown` unless user provides)
-- Sections in order: `Approach`, `Time Complexity`, `Space Complexity`
-- Use `<p>` separators between sections
-- Keep `<br>` inside section lines, but do not end the final line of Time/Space with `<br>`
+- Global:
+  - `MUST` pull title, slug, difficulty, and description from `merged_problems.json`.
+  - `MUST` use link format `https://leetcode.com/problems/<slug>`.
+  - `MUST` keep one README record per problem (`LeetCodeXXXX - Title`, no `_1/_2/_3`).
+  - If JSON data is missing, `MUST` ask the user before proceeding.
+- LCR:
+  - `MUST` keep link/title/description blank unless user provides data.
+  - `MUST` use `Difficulty: Unknown` unless user provides difficulty.
+  - `MUST` keep one README record per problem (`LCRXXXX - Title`, title may be blank).
 
-Preflight checklist (aim for correctness before validation):
+## JavaDoc Rules (Required)
 
-- Use the `LeetCode0001` JavaDoc as the exact template for structure and punctuation.
-- `Approach:` header ends with `<br>` and has at least one bullet line.
-- `Time Complexity:` header ends with `<br>` and has at least one bullet line.
-- `Space Complexity:` header ends with `<br>` and has at least one bullet line.
-- Description lines use `<br>` separators and no HTML tags beyond `<br>`.
-- Place `<p>` only between sections (not inside bullet lists).
+Use `LeetCode0001` as the structural reference.
 
-JavaDoc stub template (fill placeholders, keep structure intact):
+- `MUST` keep section order: link, description, difficulty, approach, time, space.
+- `MUST` use `<p>` separators between sections.
+- `MUST` keep description plain text, with `<br>` line breaks only.
+- `MUST` format headers exactly:
+  - `Approach: ... <br>` followed by at least one bullet line.
+  - `Time Complexity: ... <br>` followed by at least one bullet line.
+  - `Space Complexity: ... <br>` followed by at least one bullet line.
+- `MUST` keep links free of `/description`.
 
-```
+## JavaDoc Stub (Reference)
+
+```java
 /**
  * <a href="https://leetcode.com/problems/<slug>">LeetCode N: Title</a>
  * <p>
@@ -77,66 +98,32 @@ JavaDoc stub template (fill placeholders, keep structure intact):
  */
 ```
 
+## Testing Gates (Required)
 
-## Global workflow
+- `MUST` place LeetCode official examples before supplemental coverage cases.
+- `MUST` use variant dispatch map; do not call solution methods directly in test methods.
+- `MUST` use a single parameterized test flow where practical.
+- `MUST` pass `scripts/validate_test_style.py`.
+- `MUST` pass `mvn test jacoco:report`.
+- `MUST` fix tests and rerun if any failures occur.
+- `MUST` ensure branch coverage is complete for target classes via `jacoco.csv` (prefer `scripts/check_coverage.py`).
 
-- Order test data with LeetCode official examples first, then add supplemental cases for coverage.
-1. Add/verify solution class name: `LeetCodeXXXX` or `LeetCodeXXXX_N` as needed.
-2. Use `merged_problems.json` to pull title, slug, difficulty, description.
-3. Prefer `scripts/update_javadoc.py` to update the JavaDoc.
-4. Add/extend tests to achieve 100% line and branch coverage for new or modified logic (prefer `scripts/generate_test.py`).
-5. Validate JavaDoc formatting (prefer `scripts/validate_javadoc.py`).
-6. Validate test style (prefer `scripts/validate_test_style.py`).
-7. Update `algorithm/README_DIFFICULTY.md` (prefer `scripts/update_readme.py`), then validate counts (prefer `scripts/validate_readme_counts.py`):
-   - Global section only
-   - One record per problem (no `_1/_2/_3` suffixes)
-   - Format: `LeetCodeXXXX - Title`
-   - Group by difficulty
+## Test Style Conventions (Recommended)
 
-## LCR workflow
-
-1. Class names are `LCRXXXX` or `LCRXXXX_N`.
-2. JavaDoc (prefer `scripts/update_javadoc.py`):
-   - Keep link/title/description blank unless user provides
-   - Keep difficulty `Unknown` unless user provides
-   - Maintain standard section layout
-3. Add tests to reach 100% line and branch coverage for new or modified logic (prefer `scripts/generate_test.py`).
-4. Validate JavaDoc formatting (prefer `scripts/validate_javadoc.py`).
-5. Validate test style (prefer `scripts/validate_test_style.py`).
-6. Update `algorithm/README_DIFFICULTY.md` (prefer `scripts/update_readme.py`), then validate counts (prefer `scripts/validate_readme_counts.py`):
-   - LCR section
-   - One record per problem (no `_1/_2/_3` suffixes)
-   - Format: `LCRXXXX - Title` (title blank if unknown)
-   - Group by difficulty
-
-## Testing
-
-- For tree algorithms, if metadata is included in the key name, prefix it with `with_` (e.g., `dfs_recursive_divide_conquer_with_height`).
-- For tree algorithms, use ALGO_VARIANTS keys like `dfs_recursive_traverse_with_stack` or `bfs_iterative_traverse_with_queue` following `[dfs/bfs]_[recursive/iterative]_[traverse/divide_conquer]_[with_metadata]`.
-- When multiple solutions exist, name solution variables with numeric suffixes (e.g., `SOLUTION_1`).
-- Use a Map-based variant dispatch like `LeetCode0003Test` to run the same cases across all solutions; do not create one test method per solution.
-- Do not call solution methods directly in the test method; always call `ALGO_VARIANTS.get(algoName).apply(...)`.
-- Ensure test data sections are labeled: "LeetCode Official Examples" first, then "Additional Coverage".
-- Prefer @ParameterizedTest and consolidate cases in a single test where possible (one test method for all variants).
-- Enforce test file order:
-  - SOLUTION fields
-  - @FunctionalInterface (if needed)
-  - ALGO_VARIANTS
-  - @ParameterizedTest (name must include `[{index}] case={0}, algo={1}`; extra placeholders allowed)
-  - allCombinations method
-  - testCases method
-  - TestCase record (if needed)
-- If an @FunctionalInterface is declared, ALGO_VARIANTS must be typed to that interface (not a generic Function).
-- Run `mvn test jacoco:report` (no confirmation) after changes to ensure `jacoco.csv` is generated.
-- Ensure all tests pass after running `mvn test jacoco:report` (fix failing cases before proceeding).
-- Check `algorithm/target/site/jacoco/jacoco.csv` and ensure new/modified classes have `BRANCH_MISSED = 0`
-  (prefer `scripts/check_coverage.py --classes <ClassName>`).
-- If any new/modified class has missed branches, add tests to cover them and re-run `mvn test jacoco:report`.
+- `SHOULD` name solution fields with numeric suffixes (`SOLUTION_1`, `SOLUTION_2`).
+- `SHOULD` use tree variant keys in form `[dfs/bfs]_[recursive/iterative]_[traverse/divide_conquer]_[with_metadata]`.
+- `SHOULD` prefix metadata in keys with `with_`.
+- `SHOULD` keep test file order:
+  - solution fields
+  - `@FunctionalInterface` (if used)
+  - `ALGO_VARIANTS`
+  - parameterized test (`[{index}] case={0}, algo={1}`)
+  - `allCombinations`
+  - `testCases`
+  - `TestCase` record (if used)
+- If `@FunctionalInterface` is used, `ALGO_VARIANTS` `SHOULD` use that interface type.
 
 ## Guardrails
 
-- Keep all links free of `/description`.
-- Do not modify unrelated packages.
-- Do not chase branch coverage in non-target packages unless explicitly requested.
-- Keep descriptions plain text (no HTML tags beyond `<br>` for line breaks).
-- If JSON data is missing for a global problem, ask the user how to proceed.
+- `MUST NOT` modify unrelated packages.
+- `MUST NOT` chase branch coverage in non-target packages unless user asks.
