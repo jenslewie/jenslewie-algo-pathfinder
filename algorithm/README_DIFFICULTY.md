@@ -3,7 +3,7 @@
 This index covers classes in `org.example.leetcode.global` and `org.example.leetcode.lcr`.
 
 ## Global
-### Easy (40)
+### Easy (41)
 - LeetCode0001 - Two Sum
 - LeetCode0014 - Longest Common Prefix
 - LeetCode0020 - Valid Parentheses
@@ -25,6 +25,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0222 - Count Complete Tree Nodes
 - LeetCode0225 - Implement Stack using Queues
 - LeetCode0226 - Invert Binary Tree
+- LeetCode0231 - Power of Two
 - LeetCode0232 - Implement Queue using Stacks
 - LeetCode0234 - Palindrome Linked List
 - LeetCode0257 - Binary Tree Paths
