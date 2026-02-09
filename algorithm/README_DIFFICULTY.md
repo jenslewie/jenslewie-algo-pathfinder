@@ -3,7 +3,7 @@
 This index covers classes in `org.example.leetcode.global` and `org.example.leetcode.lcr`.
 
 ## Global
-### Easy (41)
+### Easy (42)
 - LeetCode0001 - Two Sum
 - LeetCode0014 - Longest Common Prefix
 - LeetCode0020 - Valid Parentheses
@@ -16,6 +16,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0104 - Maximum Depth of Binary Tree
 - LeetCode0111 - Minimum Depth of Binary Tree
 - LeetCode0125 - Valid Palindrome
+- LeetCode0136 - Single Number
 - LeetCode0141 - Linked List Cycle
 - LeetCode0144 - Binary Tree Preorder Traversal
 - LeetCode0160 - Intersection of Two Linked Lists
