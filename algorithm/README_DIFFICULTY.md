@@ -3,7 +3,7 @@
 This index covers classes in `org.example.leetcode.global` and `org.example.leetcode.lcr`.
 
 ## Global
-### Easy (43)
+### Easy (44)
 - LeetCode0001 - Two Sum
 - LeetCode0014 - Longest Common Prefix
 - LeetCode0020 - Valid Parentheses
@@ -34,6 +34,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0283 - Move Zeroes
 - LeetCode0303 - Range Sum Query - Immutable
 - LeetCode0344 - Reverse String
+- LeetCode0404 - Sum of Left Leaves
 - LeetCode0496 - Next Greater Element I
 - LeetCode0543 - Diameter of Binary Tree
 - LeetCode0589 - N-ary Tree Preorder Traversal
