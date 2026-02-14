@@ -126,9 +126,10 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1944 - Number of Visible People in a Queue
 
 ## LCR
-### Easy (4)
+### Easy (5)
 - LCR0018 - 验证回文串
 - LCR0140 - 链表中倒数第k个节点
+- LCR0141 - 训练计划 III
 - LCR0146 - 螺旋遍历二维数组
 - LCR0172 - 统计目标成绩出现的次数
 
