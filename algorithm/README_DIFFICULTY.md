@@ -49,7 +49,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
 
-### Medium (64)
+### Medium (65)
 - LeetCode0002 - Add Two Numbers
 - LeetCode0003 - Longest Substring Without Repeating Characters
 - LeetCode0005 - Longest Palindromic Substring
@@ -94,6 +94,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0567 - Permutation in String
 - LeetCode0581 - Shortest Unsorted Continuous Subarray
 - LeetCode0622 - Design Circular Queue
+- LeetCode0623 - Add One Row to Tree
 - LeetCode0641 - Design Circular Deque
 - LeetCode0654 - Maximum Binary Tree
 - LeetCode0713 - Subarray Product Less Than K
