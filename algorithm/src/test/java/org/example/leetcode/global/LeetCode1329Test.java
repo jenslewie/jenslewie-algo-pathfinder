@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 1329: Sort the Matrix Diagonally - Algorithm Variants")
+@DisplayName("LeetCode 1329: Sort the Matrix Diagonally")
 class LeetCode1329Test {
 
     private static final LeetCode1329_1 SOLUTION_1 = new LeetCode1329_1();

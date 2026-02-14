@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 167: Dismantling Action (Longest Substring)")
+@DisplayName("LCR 0167: 招式拆解I")
 class LCR0167Test {
 
     private static final LCR0167 SOLUTION = new LCR0167();

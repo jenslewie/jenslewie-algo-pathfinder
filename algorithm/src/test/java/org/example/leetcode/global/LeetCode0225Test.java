@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 225: Implement Stack using Queues - Algorithm Variants")
+@DisplayName("LeetCode 0225: Implement Stack using Queues")
 class LeetCode0225Test {
 
     interface StackOperations {

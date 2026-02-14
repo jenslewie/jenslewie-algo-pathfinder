@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 129: Sum Root to Leaf Numbers")
+@DisplayName("LeetCode 0129: Sum Root to Leaf Numbers")
 class LeetCode0129Test {
 
     private static final LeetCode0129_1 SOLUTION_1 = new LeetCode0129_1();

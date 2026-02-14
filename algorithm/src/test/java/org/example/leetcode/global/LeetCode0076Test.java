@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 76: Minimum Window Substring")
+@DisplayName("LeetCode 0076: Minimum Window Substring")
 class LeetCode0076Test {
 
     private static final LeetCode0076 SOLUTION = new LeetCode0076();

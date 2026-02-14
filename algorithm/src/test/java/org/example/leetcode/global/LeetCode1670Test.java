@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 1670: Design Front Middle Back Queue - Algorithm Variants")
+@DisplayName("LeetCode 1670: Design Front Middle Back Queue")
 class LeetCode1670Test {
 
     @FunctionalInterface

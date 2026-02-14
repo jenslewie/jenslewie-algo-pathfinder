@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 373: Find K Pairs with Smallest Sums")
+@DisplayName("LeetCode 0373: Find K Pairs with Smallest Sums")
 class LeetCode0373Test {
 
     private static final LeetCode0373 SOLUTION = new LeetCode0373();

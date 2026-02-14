@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-@DisplayName("LeetCode 445: Add Two Numbers II")
+@DisplayName("LeetCode 0445: Add Two Numbers II")
 class LeetCode0445Test {
 
     private static final LeetCode0445 SOLUTION = new LeetCode0445();

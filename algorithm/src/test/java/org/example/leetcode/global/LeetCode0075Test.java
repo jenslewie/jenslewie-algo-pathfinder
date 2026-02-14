@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 75: Sort Colors - Algorithm Variants Test")
+@DisplayName("LeetCode 0075: Sort Colors")
 public class LeetCode0075Test {
 
     private static final LeetCode0075_1 SOLUTION_1 = new LeetCode0075_1();

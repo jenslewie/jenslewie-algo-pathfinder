@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 150: Evaluate Reverse Polish Notation - Algorithm Variants")
+@DisplayName("LeetCode 0150: Evaluate Reverse Polish Notation")
 class LeetCode0150Test {
 
     private static final LeetCode0150_1 SOLUTION_1 = new LeetCode0150_1();

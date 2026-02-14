@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 009: Subarray Product Less Than K")
+@DisplayName("LCR 0009: 乘积小于K的子数组")
 class LCR0009Test {
 
     private static final LCR0009 SOLUTION = new LCR0009();

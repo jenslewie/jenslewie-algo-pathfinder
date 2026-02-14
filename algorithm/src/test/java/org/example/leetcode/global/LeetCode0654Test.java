@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("LeetCode 654: Maximum Binary Tree")
+@DisplayName("LeetCode 0654: Maximum Binary Tree")
 class LeetCode0654Test {
 
     @FunctionalInterface

@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 222: Count Complete Tree Nodes")
+@DisplayName("LeetCode 0222: Count Complete Tree Nodes")
 class LeetCode0222Test {
 
     private static final LeetCode0222_1 SOLUTION_1 = new LeetCode0222_1();

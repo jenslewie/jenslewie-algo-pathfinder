@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 71: Simplify Path - Algorithm Variants")
+@DisplayName("LeetCode 0071: Simplify Path")
 class LeetCode0071Test {
 
     private static final LeetCode0071_1 SOLUTION_1 = new LeetCode0071_1();

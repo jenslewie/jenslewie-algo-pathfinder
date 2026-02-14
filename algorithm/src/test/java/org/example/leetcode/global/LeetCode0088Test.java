@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 88: Merge Sorted Array - Algorithm Variants")
+@DisplayName("LeetCode 0088: Merge Sorted Array")
 class LeetCode0088Test {
 
     private static final LeetCode0088_1 SOLUTION_1 = new LeetCode0088_1();

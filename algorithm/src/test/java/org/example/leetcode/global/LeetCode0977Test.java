@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 977: Squares of a Sorted Array - Algorithm Variants")
+@DisplayName("LeetCode 0977: Squares of a Sorted Array")
 class LeetCode0977Test {
 
     private static final LeetCode0977_1 SOLUTION_1 = new LeetCode0977_1();

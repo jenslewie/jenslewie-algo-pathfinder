@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("LeetCode 116: Populating Next Right Pointers in Each Node")
+@DisplayName("LeetCode 0116: Populating Next Right Pointers in Each Node")
 class LeetCode0116Test {
 
     @FunctionalInterface

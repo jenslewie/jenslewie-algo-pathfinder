@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 344: Reverse String")
+@DisplayName("LeetCode 0344: Reverse String")
 class LeetCode0344Test {
 
     private static final LeetCode0344 SOLUTION = new LeetCode0344();

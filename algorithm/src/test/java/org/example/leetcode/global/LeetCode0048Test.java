@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 48: Rotate Image")
+@DisplayName("LeetCode 0048: Rotate Image")
 class LeetCode0048Test {
 
     private static final LeetCode0048 SOLUTION = new LeetCode0048();

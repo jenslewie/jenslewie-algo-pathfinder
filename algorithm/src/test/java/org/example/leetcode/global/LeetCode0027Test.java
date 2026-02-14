@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 27: Remove Element")
+@DisplayName("LeetCode 0027: Remove Element")
 class LeetCode0027Test {
 
     private static final LeetCode0027 SOLUTION = new LeetCode0027();

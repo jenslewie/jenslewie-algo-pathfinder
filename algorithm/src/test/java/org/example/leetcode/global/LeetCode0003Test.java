@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 3: Longest Substring Without Repeating Characters - Algorithm Variants")
+@DisplayName("LeetCode 0003: Longest Substring Without Repeating Characters")
 class LeetCode0003Test {
 
     private static final LeetCode0003_1 SOLUTION_1 = new LeetCode0003_1();

@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 590: N-ary Tree Postorder Traversal")
+@DisplayName("LeetCode 0590: N-ary Tree Postorder Traversal")
 class LeetCode0590Test {
 
     private static final LeetCode0590 SOLUTION = new LeetCode0590();

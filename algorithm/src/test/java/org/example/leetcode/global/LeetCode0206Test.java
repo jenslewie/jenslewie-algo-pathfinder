@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@DisplayName("LeetCode 206: Reverse Linked List - Algorithm Variants")
+@DisplayName("LeetCode 0206: Reverse Linked List")
 class LeetCode0206Test {
 
     private static final LeetCode0206_1 SOLUTION_1 = new LeetCode0206_1();

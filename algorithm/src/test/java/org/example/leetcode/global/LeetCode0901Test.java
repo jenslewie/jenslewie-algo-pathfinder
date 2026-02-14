@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 901: Online Stock Span - Algorithm Variants")
+@DisplayName("LeetCode 0901: Online Stock Span")
 class LeetCode0901Test {
 
     @FunctionalInterface

@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 84: Largest Rectangle in Histogram - Algorithm Variants")
+@DisplayName("LeetCode 0084: Largest Rectangle in Histogram")
 class LeetCode0084Test {
 
     @FunctionalInterface

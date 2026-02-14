@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 199: Binary Tree Right Side View")
+@DisplayName("LeetCode 0199: Binary Tree Right Side View")
 class LeetCode0199Test {
 
     private static final LeetCode0199_1 SOLUTION_1 = new LeetCode0199_1();

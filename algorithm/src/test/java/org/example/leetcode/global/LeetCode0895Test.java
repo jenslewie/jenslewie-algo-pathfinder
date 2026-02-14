@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 895: Maximum Frequency Stack - Algorithm Variants")
+@DisplayName("LeetCode 0895: Maximum Frequency Stack")
 class LeetCode0895Test {
 
     @FunctionalInterface

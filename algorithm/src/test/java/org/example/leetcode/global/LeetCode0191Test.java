@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 191: Number of 1 Bits - Algorithm Variants")
+@DisplayName("LeetCode 0191: Number of 1 Bits")
 class LeetCode0191Test {
 
     private static final LeetCode0191_1 SOLUTION_1 = new LeetCode0191_1();

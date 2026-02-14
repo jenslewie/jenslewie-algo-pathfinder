@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 1004: Max Consecutive Ones III - Algorithm Variants")
+@DisplayName("LeetCode 1004: Max Consecutive Ones III")
 class LeetCode1004Test {
 
     private static final LeetCode1004_1 SOLUTION_1 = new LeetCode1004_1();

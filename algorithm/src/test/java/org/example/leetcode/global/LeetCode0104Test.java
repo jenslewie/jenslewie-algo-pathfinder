@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static org.example.builder.BinaryTreeBuilder.build;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 104: Maximum Depth of Binary Tree")
+@DisplayName("LeetCode 0104: Maximum Depth of Binary Tree")
 class LeetCode0104Test {
 
     @FunctionalInterface

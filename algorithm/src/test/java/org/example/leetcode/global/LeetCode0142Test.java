@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@DisplayName("LeetCode 142: Linked List Cycle II")
+@DisplayName("LeetCode 0142: Linked List Cycle II")
 class LeetCode0142Test {
 
     private static final LeetCode0142 SOLUTION = new LeetCode0142();

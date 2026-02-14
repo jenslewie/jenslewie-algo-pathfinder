@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 257: Binary Tree Paths")
+@DisplayName("LeetCode 0257: Binary Tree Paths")
 class LeetCode0257Test {
 
     private static final LeetCode0257_1 SOLUTION_1 = new LeetCode0257_1();

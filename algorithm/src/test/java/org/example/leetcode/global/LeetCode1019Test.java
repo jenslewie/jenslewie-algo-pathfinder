@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 1019: Next Greater Node In Linked List - Algorithm Variants")
+@DisplayName("LeetCode 1019: Next Greater Node In Linked List")
 class LeetCode1019Test {
 
     @FunctionalInterface

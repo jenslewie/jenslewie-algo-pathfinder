@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
-@DisplayName("LeetCode 80: Remove Duplicates from Sorted Array II - Algorithm Variants")
+@DisplayName("LeetCode 0080: Remove Duplicates from Sorted Array II")
 public class LeetCode0080Test {
 
     private static final LeetCode0080_1 SOLUTION_1 = new LeetCode0080_1();

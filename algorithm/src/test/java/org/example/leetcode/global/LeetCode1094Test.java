@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static org.example.leetcode.utility.ArrayUtility.matrixToString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 1094: Car Pooling - Algorithm Variants")
+@DisplayName("LeetCode 1094: Car Pooling")
 class LeetCode1094Test {
 
     private static final LeetCode1094_1 SOLUTION_1 = new LeetCode1094_1();

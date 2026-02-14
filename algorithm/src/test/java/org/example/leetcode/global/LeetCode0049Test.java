@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("LeetCode 49: Group Anagrams - Algorithm Variants")
+@DisplayName("LeetCode 0049: Group Anagrams")
 class LeetCode0049Test {
 
     private static final LeetCode0049_1 SOLUTION_1 = new LeetCode0049_1();

@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 1260: Shift 2D Grid - Algorithm Variants")
+@DisplayName("LeetCode 1260: Shift 2D Grid")
 class LeetCode1260Test {
 
     private static final LeetCode1260_1 SOLUTION_1 = new LeetCode1260_1();

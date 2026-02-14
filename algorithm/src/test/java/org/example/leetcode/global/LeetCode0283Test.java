@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 283: Move Zeroes")
+@DisplayName("LeetCode 0283: Move Zeroes")
 class LeetCode0283Test {
 
     private static final LeetCode0283 SOLUTION = new LeetCode0283();

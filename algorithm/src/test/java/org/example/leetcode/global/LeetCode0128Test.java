@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 128: Longest Consecutive Sequence")
+@DisplayName("LeetCode 0128: Longest Consecutive Sequence")
 class LeetCode0128Test {
 
     private static final LeetCode0128 SOLUTION = new LeetCode0128();

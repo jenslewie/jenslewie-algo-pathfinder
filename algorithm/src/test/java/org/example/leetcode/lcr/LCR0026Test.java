@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LCR 026: Reorder List - Algorithm Variants")
+@DisplayName("LCR 0026: 重排链表")
 class LCR0026Test {
 
     private static final LCR0026 SOLUTION = new LCR0026();

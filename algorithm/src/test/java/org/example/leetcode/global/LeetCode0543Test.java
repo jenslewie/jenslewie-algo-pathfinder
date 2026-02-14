@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static org.example.builder.BinaryTreeBuilder.build;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 543: Diameter of Binary Tree")
+@DisplayName("LeetCode 0543: Diameter of Binary Tree")
 class LeetCode0543Test {
 
     private final LeetCode0543 solution = new LeetCode0543();

@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LCR 141: 训练计划 III - Algorithm Variants")
+@DisplayName("LCR 0141: 训练计划 III")
 class LCR0141Test {
 
     private static final LCR0141 SOLUTION_1 = new LCR0141();

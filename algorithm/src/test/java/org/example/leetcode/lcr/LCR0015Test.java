@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 015: Find All Anagrams in a String")
+@DisplayName("LCR 0015: 找到字符串中所有字母异位词")
 class LCR0015Test {
 
     private static final LCR0015 SOLUTION = new LCR0015();

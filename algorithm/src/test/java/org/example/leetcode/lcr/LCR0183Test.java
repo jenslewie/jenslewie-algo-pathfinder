@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LCR 183: Sliding Window Maximum - Algorithm Variants")
+@DisplayName("LCR 0183: 望远镜中最高的海拔")
 class LCR0183Test {
 
     private static final LCR0183_1 SOLUTION_1 = new LCR0183_1();

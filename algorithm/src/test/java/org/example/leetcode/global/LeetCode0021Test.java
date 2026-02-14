@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@DisplayName("LeetCode 21: Merge Two Sorted Lists")
+@DisplayName("LeetCode 0021: Merge Two Sorted Lists")
 class LeetCode0021Test {
 
     private static final LeetCode0021 SOLUTION = new LeetCode0021();

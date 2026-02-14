@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static org.example.leetcode.utility.ArrayUtility.matrixToString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 304: Range Sum Query 2D - Immutable")
+@DisplayName("LeetCode 0304: Range Sum Query 2D - Immutable")
 class LeetCode0304Test {
 
     @FunctionalInterface

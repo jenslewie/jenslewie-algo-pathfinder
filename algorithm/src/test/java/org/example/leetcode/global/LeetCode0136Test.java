@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 136: Single Number - Algorithm Variants")
+@DisplayName("LeetCode 0136: Single Number")
 class LeetCode0136Test {
 
     private static final LeetCode0136 SOLUTION_1 = new LeetCode0136();

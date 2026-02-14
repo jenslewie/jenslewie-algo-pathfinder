@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-@DisplayName("LeetCode 876: Middle of the Linked List")
+@DisplayName("LeetCode 0876: Middle of the Linked List")
 class LeetCode0876Test {
 
     private static final LeetCode0876 SOLUTION = new LeetCode0876();

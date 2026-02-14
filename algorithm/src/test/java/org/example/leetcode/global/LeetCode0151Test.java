@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 151: Reverse Words in a String - Algorithm Variants")
+@DisplayName("LeetCode 0151: Reverse Words in a String")
 class LeetCode0151Test {
 
     private static final LeetCode0151_1 SOLUTION_1 = new LeetCode0151_1();

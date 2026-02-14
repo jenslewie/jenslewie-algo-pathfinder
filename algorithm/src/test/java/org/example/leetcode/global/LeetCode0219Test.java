@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 219: Contains Duplicate II - Algorithm Variants")
+@DisplayName("LeetCode 0219: Contains Duplicate II")
 class LeetCode0219Test {
 
     private static final LeetCode0219_1 SOLUTION_1 = new LeetCode0219_1();

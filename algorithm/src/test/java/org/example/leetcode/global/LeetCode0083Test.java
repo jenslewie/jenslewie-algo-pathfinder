@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-@DisplayName("LeetCode 83: Remove Duplicates from Sorted List - Algorithm Variants")
+@DisplayName("LeetCode 0083: Remove Duplicates from Sorted List")
 class LeetCode0083Test {
 
     private static final LeetCode0083_1 SOLUTION_1 = new LeetCode0083_1();

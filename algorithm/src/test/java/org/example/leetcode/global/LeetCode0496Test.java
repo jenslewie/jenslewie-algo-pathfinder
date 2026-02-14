@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 496: Next Greater Element I - Algorithm Variants")
+@DisplayName("LeetCode 0496: Next Greater Element I")
 class LeetCode0496Test {
 
     private static final LeetCode0496_1 SOLUTION_1 = new LeetCode0496_1();

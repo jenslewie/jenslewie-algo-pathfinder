@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 424: Longest Repeating Character Replacement")
+@DisplayName("LeetCode 0424: Longest Repeating Character Replacement")
 class LeetCode0424Test {
 
     private static final LeetCode0424 SOLUTION = new LeetCode0424();

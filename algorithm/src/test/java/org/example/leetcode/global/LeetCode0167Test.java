@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 167: Two Sum II - Input Array Is Sorted")
+@DisplayName("LeetCode 0167: Two Sum II - Input Array Is Sorted")
 class LeetCode0167Test {
 
     private static final LeetCode0167 SOLUTION = new LeetCode0167();

@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 739: Daily Temperatures - Algorithm Variants")
+@DisplayName("LeetCode 0739: Daily Temperatures")
 class LeetCode0739Test {
 
     private static final LeetCode0739_1 SOLUTION_1 = new LeetCode0739_1();

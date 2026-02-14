@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 2073: Time Needed to Buy Tickets - Algorithm Variants")
+@DisplayName("LeetCode 2073: Time Needed to Buy Tickets")
 class LeetCode2073Test {
 
     private static final LeetCode2073_1 SOLUTION_1 = new LeetCode2073_1();

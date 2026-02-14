@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 234: Palindrome Linked List")
+@DisplayName("LeetCode 0234: Palindrome Linked List")
 class LeetCode0234Test {
 
     private static final LeetCode0234 SOLUTION = new LeetCode0234();

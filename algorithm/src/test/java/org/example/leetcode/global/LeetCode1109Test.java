@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static org.example.leetcode.utility.ArrayUtility.matrixToString;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 1109: Corporate Flight Bookings - Algorithm Variants")
+@DisplayName("LeetCode 1109: Corporate Flight Bookings")
 class LeetCode1109Test {
 
     private static final LeetCode1109_1 SOLUTION_1 = new LeetCode1109_1();

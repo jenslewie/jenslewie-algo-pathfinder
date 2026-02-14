@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 581: Shortest Unsorted Continuous Subarray")
+@DisplayName("LeetCode 0581: Shortest Unsorted Continuous Subarray")
 class LeetCode0581Test {
 
     private final LeetCode0581 solution = new LeetCode0581();

@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@DisplayName("LeetCode 1: Two Sum - Algorithm Variants")
+@DisplayName("LeetCode 0001: Two Sum")
 class LeetCode0001Test {
 
     private static final LeetCode0001 SOLUTION = new LeetCode0001();

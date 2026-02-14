@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 875: Koko Eating Bananas - Algorithm Variants")
+@DisplayName("LeetCode 0875: Koko Eating Bananas")
 class LeetCode0875Test {
 
     private static final LeetCode0875 SOLUTION = new LeetCode0875();

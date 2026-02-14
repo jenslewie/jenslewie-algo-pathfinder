@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 231: Power of Two")
+@DisplayName("LeetCode 0231: Power of Two")
 class LeetCode0231Test {
 
     private static final LeetCode0231 SOLUTION_1 = new LeetCode0231();

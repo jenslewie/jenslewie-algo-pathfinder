@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 209: Minimum Size Subarray Sum")
+@DisplayName("LeetCode 0209: Minimum Size Subarray Sum")
 class LeetCode0209Test {
 
     private static final LeetCode0209 SOLUTION = new LeetCode0209();

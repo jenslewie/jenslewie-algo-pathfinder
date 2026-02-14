@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-@DisplayName("LeetCode 155: Min Stack - Algorithm Variants")
+@DisplayName("LeetCode 0155: Min Stack")
 class LeetCode0155Test {
 
     private static final List<String> ALGO_NAMES = Arrays.asList(

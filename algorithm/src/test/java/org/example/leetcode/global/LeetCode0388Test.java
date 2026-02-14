@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 388: Longest Absolute File Path - Algorithm Variants")
+@DisplayName("LeetCode 0388: Longest Absolute File Path")
 class LeetCode0388Test {
 
     private static final LeetCode0388_1 SOLUTION_1 = new LeetCode0388_1();

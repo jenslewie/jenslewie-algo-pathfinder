@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@DisplayName("LeetCode 19: Remove Nth Node From End of List")
+@DisplayName("LeetCode 0019: Remove Nth Node From End of List")
 class LeetCode0019Test {
 
     private static final LeetCode0019 SOLUTION = new LeetCode0019();

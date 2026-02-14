@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@DisplayName("LeetCode 82: Remove Duplicates from Sorted List II - Algorithm Variants")
+@DisplayName("LeetCode 0082: Remove Duplicates from Sorted List II")
 class LeetCode0082Test {
 
     private static final LeetCode0082_1 SOLUTION_1 = new LeetCode0082_1();

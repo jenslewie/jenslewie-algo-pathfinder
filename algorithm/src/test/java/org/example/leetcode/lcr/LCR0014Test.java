@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 014: String Permutation - Algorithm Variants")
+@DisplayName("LCR 0014: 字符串的排列")
 class LCR0014Test {
 
     private static final LCR0014_1 SOLUTION_1 = new LCR0014_1();

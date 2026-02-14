@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 1944: Number of Visible People in a Queue - Algorithm Variants")
+@DisplayName("LeetCode 1944: Number of Visible People in a Queue")
 class LeetCode1944Test {
 
     @FunctionalInterface

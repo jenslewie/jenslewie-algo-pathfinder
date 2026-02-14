@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 26: Remove Duplicates from Sorted Array")
+@DisplayName("LeetCode 0026: Remove Duplicates from Sorted Array")
 class LeetCode0026Test {
 
     private static final LeetCode0026 SOLUTION = new LeetCode0026();

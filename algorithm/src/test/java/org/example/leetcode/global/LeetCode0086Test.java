@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-@DisplayName("LeetCode 86: Partition List")
+@DisplayName("LeetCode 0086: Partition List")
 class LeetCode0086Test {
 
     private static final LeetCode0086 SOLUTION = new LeetCode0086();

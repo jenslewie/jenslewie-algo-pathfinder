@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 867: Transpose Matrix - Algorithm Variants")
+@DisplayName("LeetCode 0867: Transpose Matrix")
 class LeetCode0867Test {
 
     private static final LeetCode0867 SOLUTION = new LeetCode0867();

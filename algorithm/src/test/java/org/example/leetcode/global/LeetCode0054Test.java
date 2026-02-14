@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 54: Spiral Matrix")
+@DisplayName("LeetCode 0054: Spiral Matrix")
 class LeetCode0054Test {
 
     private static final LeetCode0054 SOLUTION = new LeetCode0054();

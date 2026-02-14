@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 14: Longest Common Prefix - Algorithm Variants")
+@DisplayName("LeetCode 0014: Longest Common Prefix")
 class LeetCode0014Test {
 
     private static final LeetCode0014_1 SOLUTION_1 = new LeetCode0014_1();

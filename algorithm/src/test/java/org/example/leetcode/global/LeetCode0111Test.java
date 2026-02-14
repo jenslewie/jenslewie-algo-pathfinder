@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 111: Minimum Depth of Binary Tree - Algorithm Variants")
+@DisplayName("LeetCode 0111: Minimum Depth of Binary Tree")
 class LeetCode0111Test {
 
     private static final LeetCode0111_1 SOLUTION_1 = new LeetCode0111_1();

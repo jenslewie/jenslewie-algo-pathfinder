@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 236: Lowest Common Ancestor of a Binary Tree")
+@DisplayName("LeetCode 0236: Lowest Common Ancestor of a Binary Tree")
 class LeetCode0236Test {
 
     private static final LeetCode0236 SOLUTION = new LeetCode0236();

@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-@DisplayName("LCR 140: Training Plan (Kth from End)")
+@DisplayName("LCR 0140: 链表中倒数第k个节点")
 class LCR0140Test {
 
     private static final LCR0140 SOLUTION = new LCR0140();

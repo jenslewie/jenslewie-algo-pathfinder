@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 622: Design Circular Queue - Algorithm Variants")
+@DisplayName("LeetCode 0622: Design Circular Queue")
 class LeetCode0622Test {
 
     @FunctionalInterface

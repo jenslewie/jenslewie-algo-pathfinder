@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 1011: Capacity To Ship Packages - Algorithm Variants")
+@DisplayName("LeetCode 1011: Capacity To Ship Packages Within D Days")
 class LeetCode1011Test {
 
     private static final LeetCode1011 SOLUTION = new LeetCode1011();

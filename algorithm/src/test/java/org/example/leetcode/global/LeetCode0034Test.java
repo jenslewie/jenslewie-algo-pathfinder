@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 34: Find First and Last Position - Algorithm Variants")
+@DisplayName("LeetCode 0034: Find First and Last Position of Element in Sorted Array")
 class LeetCode0034Test {
 
     private static final LeetCode0034_1 SOLUTION_1 = new LeetCode0034_1();

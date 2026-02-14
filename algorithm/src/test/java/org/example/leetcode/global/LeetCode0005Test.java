@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 5: Longest Palindromic Substring")
+@DisplayName("LeetCode 0005: Longest Palindromic Substring")
 class LeetCode0005Test {
 
     private static final LeetCode0005 SOLUTION = new LeetCode0005();

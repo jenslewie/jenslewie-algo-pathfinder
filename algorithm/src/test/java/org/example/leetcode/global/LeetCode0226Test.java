@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("LeetCode 226: Invert Binary Tree")
+@DisplayName("LeetCode 0226: Invert Binary Tree")
 class LeetCode0226Test {
 
     @FunctionalInterface

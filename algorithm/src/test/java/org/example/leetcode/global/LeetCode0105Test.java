@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("LeetCode 105: Construct Binary Tree from Preorder and Inorder Traversal")
+@DisplayName("LeetCode 0105: Construct Binary Tree from Preorder and Inorder Traversal")
 class LeetCode0105Test {
 
     @FunctionalInterface

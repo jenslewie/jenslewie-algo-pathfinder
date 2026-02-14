@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-@DisplayName("LCR 025: Add Two Numbers II")
+@DisplayName("LCR 0025: 两数相加")
 class LCR0025Test {
 
     private static final LCR0025 SOLUTION = new LCR0025();

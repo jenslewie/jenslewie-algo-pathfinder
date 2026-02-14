@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("LeetCode 125: Valid Palindrome - Algorithm Variants")
+@DisplayName("LeetCode 0125: Valid Palindrome")
 public class LeetCode0125Test {
 
     private static final LeetCode0125_1 SOLUTION_1 = new LeetCode0125_1();

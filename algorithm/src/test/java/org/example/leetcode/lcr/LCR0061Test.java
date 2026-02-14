@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 061: Find K Pairs with Smallest Sums")
+@DisplayName("LCR 0061: 查找和最小的K对数字")
 class LCR0061Test {
 
     private static final LCR0061 SOLUTION = new LCR0061();

@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 402: Remove K Digits - Algorithm Variants")
+@DisplayName("LeetCode 0402: Remove K Digits")
 class LeetCode0402Test {
 
     @FunctionalInterface

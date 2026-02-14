@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 862: Shortest Subarray with Sum at Least K")
+@DisplayName("LeetCode 0862: Shortest Subarray with Sum at Least K")
 class LeetCode0862Test {
 
     private final LeetCode0862 solution = new LeetCode0862();

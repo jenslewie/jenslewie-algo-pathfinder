@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@DisplayName("LeetCode 23: Merge k Sorted Lists - Algorithm Variants")
+@DisplayName("LeetCode 0023: Merge k Sorted Lists")
 class LeetCode0023Test {
 
     private static final LeetCode0023_1 SOLUTION_1 = new LeetCode0023_1();

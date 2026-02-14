@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 239: Sliding Window Maximum - Algorithm Variants")
+@DisplayName("LeetCode 0239: Sliding Window Maximum")
 class LeetCode0239Test {
 
     private static final LeetCode0239_1 SOLUTION_1 = new LeetCode0239_1();

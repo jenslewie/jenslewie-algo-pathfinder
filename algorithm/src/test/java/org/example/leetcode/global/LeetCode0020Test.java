@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 20: Valid Parentheses - Algorithm Variants")
+@DisplayName("LeetCode 0020: Valid Parentheses")
 class LeetCode0020Test {
 
     private static final LeetCode0020_1 SOLUTION_1 = new LeetCode0020_1();

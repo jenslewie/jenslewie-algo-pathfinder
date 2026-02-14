@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 853: Car Fleet - Algorithm Variants")
+@DisplayName("LeetCode 0853: Car Fleet")
 class LeetCode0853Test {
 
     @FunctionalInterface

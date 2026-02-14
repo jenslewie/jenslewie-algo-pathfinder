@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 410: Split Array Largest Sum - Algorithm Variants")
+@DisplayName("LeetCode 0410: Split Array Largest Sum")
 class LeetCode0410Test {
 
     private static final LeetCode0410_1 SOLUTION_1 = new LeetCode0410_1();

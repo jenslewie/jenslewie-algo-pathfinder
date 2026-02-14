@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LCR 146: Spiral Array")
+@DisplayName("LCR 0146: 螺旋遍历二维数组")
 class LCR0146Test {
 
     private static final LCR0146 SOLUTION = new LCR0146();

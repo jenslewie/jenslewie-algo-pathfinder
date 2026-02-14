@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 378: Kth Smallest Element in a Sorted Matrix")
+@DisplayName("LeetCode 0378: Kth Smallest Element in a Sorted Matrix")
 class LeetCode0378Test {
 
     private static final LeetCode0378 SOLUTION = new LeetCode0378();

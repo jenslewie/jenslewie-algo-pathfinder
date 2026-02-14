@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 933: Number of Recent Calls - Algorithm Variants")
+@DisplayName("LeetCode 0933: Number of Recent Calls")
 class LeetCode0933Test {
 
     @FunctionalInterface

@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Stream;
 
-@DisplayName("LeetCode 61: Rotate List - Algorithm Variants")
+@DisplayName("LeetCode 0061: Rotate List")
 class LeetCode0061Test {
 
     private static final LeetCode0061_1 SOLUTION_1 = new LeetCode0061_1();

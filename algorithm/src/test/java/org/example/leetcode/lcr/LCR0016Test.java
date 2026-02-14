@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 016: Longest Substring Without Repeating Characters - Algorithm Variants")
+@DisplayName("LCR 0016: 无重复字符的最长子串")
 class LCR0016Test {
 
     private static final LCR0016_1 SOLUTION_1 = new LCR0016_1();

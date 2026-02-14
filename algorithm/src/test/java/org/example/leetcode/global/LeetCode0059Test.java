@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 59: Spiral Matrix II")
+@DisplayName("LeetCode 0059: Spiral Matrix II")
 class LeetCode0059Test {
 
     private static final LeetCode0059 SOLUTION = new LeetCode0059();

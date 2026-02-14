@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LCR 038: Daily Temperatures - Algorithm Variants")
+@DisplayName("LCR 0038: 每日温度")
 class LCR0038Test {
 
     private static final LCR0038 SOLUTION = new LCR0038();

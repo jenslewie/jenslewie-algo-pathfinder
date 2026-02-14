@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 641: Design Circular Deque - Algorithm Variants")
+@DisplayName("LeetCode 0641: Design Circular Deque")
 class LeetCode0641Test {
 
     @FunctionalInterface

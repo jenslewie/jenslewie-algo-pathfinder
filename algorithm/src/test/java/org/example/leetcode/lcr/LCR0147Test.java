@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 147: Min Stack - Algorithm Variants")
+@DisplayName("LCR 0147: 最小栈")
 class LCR0147Test {
 
     private static final String ALGO_NAME = "int_array_stack";

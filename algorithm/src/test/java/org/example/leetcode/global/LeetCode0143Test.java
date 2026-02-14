@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-@DisplayName("LeetCode 143: Reorder List - Algorithm Variants")
+@DisplayName("LeetCode 0143: Reorder List")
 class LeetCode0143Test {
 
     private static final LeetCode0143_1 SOLUTION_1 = new LeetCode0143_1();

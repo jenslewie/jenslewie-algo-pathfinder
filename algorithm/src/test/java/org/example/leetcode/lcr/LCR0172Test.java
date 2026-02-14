@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 172: Count Target in Sorted Array - Algorithm Variants")
+@DisplayName("LCR 0172: 统计目标成绩出现的次数")
 class LCR0172Test {
 
     private static final LCR0172 SOLUTION = new LCR0172();

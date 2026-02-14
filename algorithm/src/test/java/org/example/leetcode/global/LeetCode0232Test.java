@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 232: Implement Queue using Stacks")
+@DisplayName("LeetCode 0232: Implement Queue using Stacks")
 class LeetCode0232Test {
 
     @ParameterizedTest(name = "[{index}] case={0}, ops={1}, params={2}")

@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 567: Permutation in String")
+@DisplayName("LeetCode 0567: Permutation in String")
 class LeetCode0567Test {
 
     private static final LeetCode0567 SOLUTION = new LeetCode0567();

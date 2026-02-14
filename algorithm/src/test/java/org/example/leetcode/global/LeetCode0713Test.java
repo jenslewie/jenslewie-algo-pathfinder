@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 713: Subarray Product Less Than K")
+@DisplayName("LeetCode 0713: Subarray Product Less Than K")
 class LeetCode0713Test {
 
     private static final LeetCode0713 SOLUTION = new LeetCode0713();

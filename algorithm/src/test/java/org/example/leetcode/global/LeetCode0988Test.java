@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 988: Smallest String Starting From Leaf")
+@DisplayName("LeetCode 0988: Smallest String Starting From Leaf")
 class LeetCode0988Test {
 
     private static final LeetCode0988 SOLUTION_1 = new LeetCode0988();

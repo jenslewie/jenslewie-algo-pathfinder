@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 1457: Pseudo-Palindromic Paths in a Binary Tree - Algorithm Variants")
+@DisplayName("LeetCode 1457: Pseudo-Palindromic Paths in a Binary Tree")
 class LeetCode1457Test {
 
     private static final LeetCode1457_1 SOLUTION_1 = new LeetCode1457_1();

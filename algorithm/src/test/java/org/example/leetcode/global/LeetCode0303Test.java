@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 303: Range Sum Query - Immutable")
+@DisplayName("LeetCode 0303: Range Sum Query - Immutable")
 class LeetCode0303Test {
 
     private static final Function<int[], LeetCode0303> CONSTRUCTOR = LeetCode0303::new;

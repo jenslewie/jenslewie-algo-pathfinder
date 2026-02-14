@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("LeetCode 297: Serialize and Deserialize Binary Tree")
+@DisplayName("LeetCode 0297: Serialize and Deserialize Binary Tree")
 class LeetCode0297Test {
 
     interface Codec {

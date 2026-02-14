@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 438: Find All Anagrams in a String")
+@DisplayName("LeetCode 0438: Find All Anagrams in a String")
 class LeetCode0438Test {
 
     private static final LeetCode0438 SOLUTION = new LeetCode0438();

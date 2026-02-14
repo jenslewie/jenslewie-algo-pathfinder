@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 918: Maximum Sum Circular Subarray")
+@DisplayName("LeetCode 0918: Maximum Sum Circular Subarray")
 class LeetCode0918Test {
 
     @FunctionalInterface

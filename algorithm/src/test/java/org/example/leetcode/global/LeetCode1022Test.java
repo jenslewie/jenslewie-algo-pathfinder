@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 1022: Sum of Root To Leaf Binary Numbers - Algorithm Variants")
+@DisplayName("LeetCode 1022: Sum of Root To Leaf Binary Numbers")
 class LeetCode1022Test {
 
     private static final LeetCode1022 SOLUTION_1 = new LeetCode1022();

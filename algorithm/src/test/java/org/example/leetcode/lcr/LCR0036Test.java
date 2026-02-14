@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 036: Evaluate RPN - Algorithm Variants")
+@DisplayName("LCR 0036: 逆波兰表达式求值")
 class LCR0036Test {
 
     private static final LCR0036 SOLUTION = new LCR0036();

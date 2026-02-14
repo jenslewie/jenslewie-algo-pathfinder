@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 1438: Longest Continuous Subarray With Absolute Diff <= Limit")
+@DisplayName("LeetCode 1438: Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit")
 class LeetCode1438Test {
 
     private static final LeetCode1438_1 SOLUTION_1 = new LeetCode1438_1();

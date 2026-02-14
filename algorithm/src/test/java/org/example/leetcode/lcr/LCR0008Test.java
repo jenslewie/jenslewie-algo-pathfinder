@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 008: Minimum Size Subarray Sum")
+@DisplayName("LCR 0008: 长度最小的子数组")
 class LCR0008Test {
 
     private static final LCR0008 SOLUTION = new LCR0008();

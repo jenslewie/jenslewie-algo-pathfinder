@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LeetCode 704: Binary Search - Algorithm Variants")
+@DisplayName("LeetCode 0704: Binary Search")
 class LeetCode0704Test {
 
     private static final LeetCode0704 SOLUTION = new LeetCode0704();

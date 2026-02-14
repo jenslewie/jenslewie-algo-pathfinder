@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("LCR 057: Contains Duplicate III")
+@DisplayName("LCR 0057: 存在重复元素III")
 class LCR0057Test {
 
     private static final LCR0057 SOLUTION = new LCR0057();

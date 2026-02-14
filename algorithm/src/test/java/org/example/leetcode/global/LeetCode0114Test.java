@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@DisplayName("LeetCode 114: Flatten Binary Tree to Linked List")
+@DisplayName("LeetCode 0114: Flatten Binary Tree to Linked List")
 class LeetCode0114Test {
 
     @FunctionalInterface

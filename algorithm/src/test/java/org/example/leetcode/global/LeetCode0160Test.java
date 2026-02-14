@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-@DisplayName("LeetCode 160: Intersection of Two Linked Lists - Algorithm Variants")
+@DisplayName("LeetCode 0160: Intersection of Two Linked Lists")
 class LeetCode0160Test {
 
     private static final LeetCode0160_1 SOLUTION_1 = new LeetCode0160_1();
