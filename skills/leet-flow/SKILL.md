@@ -22,11 +22,17 @@ Use this skill when adding a new LeetCode solution in this repo.
 
 ## Data Sources
 
-- Global problems: `algorithm/src/main/resources/merged_problems.json`
-- LCR problems: no data source yet.
+- Primary (MUST try first): MCP via `tools/leetcode_mcp/server.py`
+  - Global endpoint: `https://leetcode.com/graphql`
+  - LCR endpoint: `https://leetcode.cn/graphql/`
+- Fallback:
+  - Global problems: `algorithm/src/main/resources/merged_problems.json`
+  - LCR problems: keep existing/blank values unless user provides metadata.
 
 ## Scripts By Phase
 
+- Metadata:
+  - `tools/leetcode_mcp/server.py` (used by scripts as first metadata source)
 - JavaDoc:
   - `scripts/update_javadoc.py --class <ClassName> --scope <global|lcr>`
   - `scripts/validate_javadoc.py --class <ClassName> --scope <global|lcr>`
@@ -42,23 +48,26 @@ Use this skill when adding a new LeetCode solution in this repo.
 ## Quick Workflow (Required)
 
 1. `MUST` verify class naming: `LeetCodeXXXX(_N)` for global, `LCRXXXX(_N)` for LCR.
-2. `MUST` update class-level JavaDoc.
-3. `MUST` add or update tests for the target class.
-4. `MUST` validate JavaDoc and test style.
-5. `MUST` update `algorithm/README_DIFFICULTY.md` and validate counts.
-6. `MUST` run `mvn test jacoco:report` and ensure tests pass.
-7. `MUST` ensure `BRANCH_MISSED = 0` for new or modified classes.
+2. `MUST` fetch metadata via MCP first; only if MCP fails, fallback to existing behavior.
+3. `MUST` update class-level JavaDoc.
+4. `MUST` add or update tests for the target class.
+5. `MUST` validate JavaDoc and test style.
+6. `MUST` update `algorithm/README_DIFFICULTY.md` and validate counts.
+7. `MUST` run `mvn test jacoco:report` and ensure tests pass.
+8. `MUST` ensure `BRANCH_MISSED = 0` for new or modified classes.
 
 ## Scope Differences
 
 - Global:
-  - `MUST` pull title, slug, difficulty, and description from `merged_problems.json`.
+  - `MUST` pull title, slug, difficulty, and description from MCP first.
+  - On MCP failure, `MUST` fallback to `merged_problems.json`.
   - `MUST` use link format `https://leetcode.com/problems/<slug>`.
   - `MUST` keep one README record per problem (`LeetCodeXXXX - Title`, no `_1/_2/_3`).
-  - If JSON data is missing, `MUST` ask the user before proceeding.
+  - If fallback JSON data is missing, `MUST` ask the user before proceeding.
 - LCR:
-  - `MUST` keep link/title/description blank unless user provides data.
-  - `MUST` use `Difficulty: Unknown` unless user provides difficulty.
+  - `MUST` pull title/slug/difficulty/description from MCP first.
+  - On MCP failure, `MUST` keep link/title/description blank unless user provides data.
+  - On MCP failure, `MUST` use `Difficulty: Unknown` unless user provides difficulty.
   - `MUST` keep one README record per problem (`LCRXXXX - Title`, title may be blank).
 
 ## JavaDoc Rules (Required)
@@ -110,6 +119,9 @@ Use `LeetCode0001` as the structural reference.
 
 ## Test Style Conventions (Recommended)
 
+- `SHOULD` set class-level `@DisplayName` as:
+  - Global: `LeetCode XXXX: title`
+  - LCR: `LCR XXXX: title`
 - `SHOULD` name solution fields with numeric suffixes (`SOLUTION_1`, `SOLUTION_2`).
 - `SHOULD` use tree variant keys in form `[dfs/bfs]_[recursive/iterative]_[traverse/divide_conquer]_[with_metadata]`.
 - `SHOULD` prefix metadata in keys with `with_`.

@@ -18,6 +18,18 @@ def base_test_name(class_name: str, scope: str) -> str:
     raise SystemExit('scope must be global or lcr')
 
 
+def display_name_for_class(class_name: str, scope: str) -> str:
+    if scope == 'global':
+        m = re.match(r'LeetCode(\d+)', class_name)
+        if not m:
+            raise SystemExit('Expected class name like LeetCodeXXXX or LeetCodeXXXX_N')
+        return f"LeetCode {int(m.group(1)):04d}: TODO"
+    m = re.match(r'LCR(\d+)', class_name)
+    if not m:
+        raise SystemExit('Expected class name like LCRXXXX or LCRXXXX_N')
+    return f"LCR {int(m.group(1)):04d}: TODO"
+
+
 def main():
     parser = argparse.ArgumentParser(description='Generate a test class skeleton with labeled sections')
     parser.add_argument('--class', dest='class_name', required=True, help='Class name, e.g. LeetCode0123_1')
@@ -36,8 +48,7 @@ def main():
         print(f'Test file already exists: {test_file}')
         return
 
-    title_prefix = 'LeetCode' if args.scope == 'global' else 'LCR'
-    display_name = f"{title_prefix} ???? : TODO"
+    display_name = display_name_for_class(args.class_name, args.scope)
 
     template = """package org.example.leetcode.{scope};
 

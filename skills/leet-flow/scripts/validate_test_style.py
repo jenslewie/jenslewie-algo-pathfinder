@@ -19,11 +19,13 @@ def main():
         if not m:
             raise SystemExit('Expected class name like LeetCodeXXXX or LeetCodeXXXX_N')
         test_class = f'LeetCode{m.group(1)}Test'
+        expected_display_prefix = f'LeetCode {int(m.group(1)):04d}: '
     else:
         m = re.match(r'LCR(\d+)', args.class_name)
         if not m:
             raise SystemExit('Expected class name like LCRXXXX or LCRXXXX_N')
         test_class = f'LCR{m.group(1)}Test'
+        expected_display_prefix = f'LCR {int(m.group(1)):04d}: '
 
     test_file = test_dir / f'{test_class}.java'
     if not test_file.exists():
@@ -44,6 +46,14 @@ def main():
         errors.append('Missing @ParameterizedTest annotation.')
     if 'MethodSource("allCombinations")' not in text:
         errors.append('Parameterized test should use MethodSource("allCombinations").')
+
+    display_match = re.search(r'@DisplayName\("([^"]+)"\)', text)
+    if not display_match:
+        errors.append('Missing @DisplayName on test class.')
+    else:
+        display_value = display_match.group(1)
+        if not display_value.startswith(expected_display_prefix):
+            errors.append(f'Test class @DisplayName should follow "{expected_display_prefix}<title>".')
     if 'testCases()' not in text:
         errors.append('Missing testCases() helper with labeled sections.')
     if 'LeetCode Official Examples' not in text:
