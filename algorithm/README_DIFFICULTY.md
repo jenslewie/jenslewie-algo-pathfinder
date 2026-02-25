@@ -50,7 +50,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
 
-### Medium (70)
+### Medium (71)
 - LeetCode0002 - Add Two Numbers
 - LeetCode0003 - Longest Substring Without Repeating Characters
 - LeetCode0005 - Longest Palindromic Substring
@@ -93,6 +93,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0438 - Find All Anagrams in a String
 - LeetCode0445 - Add Two Numbers II
 - LeetCode0503 - Next Greater Element II
+- LeetCode0513 - Find Bottom Left Tree Value
 - LeetCode0560 - Subarray Sum Equals K
 - LeetCode0567 - Permutation in String
 - LeetCode0581 - Shortest Unsorted Continuous Subarray
