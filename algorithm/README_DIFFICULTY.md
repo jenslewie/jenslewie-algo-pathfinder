@@ -3,7 +3,7 @@
 This index covers classes in `org.example.leetcode.global` and `org.example.leetcode.lcr`.
 
 ## Global
-### Easy (44)
+### Easy (45)
 - LeetCode0001 - Two Sum
 - LeetCode0014 - Longest Common Prefix
 - LeetCode0020 - Valid Parentheses
@@ -44,12 +44,13 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0876 - Middle of the Linked List
 - LeetCode0933 - Number of Recent Calls
 - LeetCode0977 - Squares of a Sorted Array
+- LeetCode0993 - Cousins in Binary Tree
 - LeetCode1022 - Sum of Root To Leaf Binary Numbers
 - LeetCode1260 - Shift 2D Grid
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
 
-### Medium (65)
+### Medium (70)
 - LeetCode0002 - Add Two Numbers
 - LeetCode0003 - Longest Substring Without Repeating Characters
 - LeetCode0005 - Longest Palindromic Substring
@@ -88,9 +89,11 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0402 - Remove K Digits
 - LeetCode0424 - Longest Repeating Character Replacement
 - LeetCode0429 - N-ary Tree Level Order Traversal
+- LeetCode0437 - Path Sum III
 - LeetCode0438 - Find All Anagrams in a String
 - LeetCode0445 - Add Two Numbers II
 - LeetCode0503 - Next Greater Element II
+- LeetCode0560 - Subarray Sum Equals K
 - LeetCode0567 - Permutation in String
 - LeetCode0581 - Shortest Unsorted Continuous Subarray
 - LeetCode0622 - Design Circular Queue
@@ -104,14 +107,17 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0889 - Construct Binary Tree from Preorder and Postorder Traversal
 - LeetCode0901 - Online Stock Span
 - LeetCode0918 - Maximum Sum Circular Subarray
+- LeetCode0971 - Flip Binary Tree To Match Preorder Traversal
 - LeetCode0988 - Smallest String Starting From Leaf
 - LeetCode1004 - Max Consecutive Ones III
 - LeetCode1011 - Capacity To Ship Packages Within D Days
 - LeetCode1019 - Next Greater Node In Linked List
 - LeetCode1094 - Car Pooling
 - LeetCode1109 - Corporate Flight Bookings
+- LeetCode1315 - Sum of Nodes with Even-Valued Grandparent
 - LeetCode1329 - Sort the Matrix Diagonally
 - LeetCode1438 - Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+- LeetCode1448 - Count Good Nodes in Binary Tree
 - LeetCode1457 - Pseudo-Palindromic Paths in a Binary Tree
 - LeetCode1658 - Minimum Operations to Reduce X to Zero
 - LeetCode1670 - Design Front Middle Back Queue
