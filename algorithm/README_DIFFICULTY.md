@@ -50,7 +50,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
 
-### Medium (71)
+### Medium (74)
 - LeetCode0002 - Add Two Numbers
 - LeetCode0003 - Longest Substring Without Repeating Characters
 - LeetCode0005 - Longest Palindromic Substring
@@ -85,6 +85,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0304 - Range Sum Query 2D - Immutable
 - LeetCode0373 - Find K Pairs with Smallest Sums
 - LeetCode0378 - Kth Smallest Element in a Sorted Matrix
+- LeetCode0386 - Lexicographical Numbers
 - LeetCode0388 - Longest Absolute File Path
 - LeetCode0402 - Remove K Digits
 - LeetCode0424 - Longest Repeating Character Replacement
@@ -114,7 +115,9 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1011 - Capacity To Ship Packages Within D Days
 - LeetCode1019 - Next Greater Node In Linked List
 - LeetCode1094 - Car Pooling
+- LeetCode1104 - Path In Zigzag Labelled Binary Tree
 - LeetCode1109 - Corporate Flight Bookings
+- LeetCode1261 - Find Elements in a Contaminated Binary Tree
 - LeetCode1315 - Sum of Nodes with Even-Valued Grandparent
 - LeetCode1329 - Sort the Matrix Diagonally
 - LeetCode1438 - Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
