@@ -36,4 +36,43 @@ public class BinaryTreeUtility {
         return left != null ? left : findNodeByValue(root.right, val);
     }
 
+    public static String serializeTree(TreeNode root) {
+        if (root == null) {
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
+        var queue = new java.util.LinkedList<TreeNode>();
+        queue.offer(root);
+
+        // Flag to track if we should continue processing
+        boolean hasNonNull = true;
+
+        while (!queue.isEmpty() && hasNonNull) {
+            hasNonNull = false;
+            int size = queue.size();
+
+            for (int i = 0; i < size; i++) {
+                var node = queue.poll();
+                if (node == null) {
+                    sb.append("null").append(",");
+                } else {
+                    sb.append(node.val).append(",");
+                    queue.add(node.left);
+                    queue.add(node.right);
+                    // If we added any non-null nodes, we should continue
+                    if (node.left != null || node.right != null) {
+                        hasNonNull = true;
+                    }
+                }
+            }
+        }
+
+        // Remove trailing comma
+        if (!sb.isEmpty()) {
+            sb.setLength(sb.length() - 1);
+        }
+
+        return sb.toString();
+    }
+
 }
