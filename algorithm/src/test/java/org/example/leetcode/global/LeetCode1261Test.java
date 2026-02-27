@@ -18,8 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("LeetCode 1261: Find Elements in a Contaminated Binary Tree")
 class LeetCode1261Test {
 
-    private static final Class<LeetCode1261_1> SOLUTION_1 = LeetCode1261_1.class;
-    private static final Class<LeetCode1261_2> SOLUTION_2 = LeetCode1261_2.class;
     private static final Map<String, FindElementsFunction> ALGO_VARIANTS = Map.of(
             "dfs_recursive_traverse_with_fixed_array_membership", LeetCode1261Test::executeV1,
             "dfs_recursive_traverse_with_hashset_membership", LeetCode1261Test::executeV2
