@@ -50,7 +50,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
 
-### Medium (76)
+### Medium (77)
 - LeetCode0002 - Add Two Numbers
 - LeetCode0003 - Longest Substring Without Repeating Characters
 - LeetCode0005 - Longest Palindromic Substring
@@ -119,6 +119,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1094 - Car Pooling
 - LeetCode1104 - Path In Zigzag Labelled Binary Tree
 - LeetCode1109 - Corporate Flight Bookings
+- LeetCode1110 - Delete Nodes And Return Forest
 - LeetCode1261 - Find Elements in a Contaminated Binary Tree
 - LeetCode1315 - Sum of Nodes with Even-Valued Grandparent
 - LeetCode1329 - Sort the Matrix Diagonally
