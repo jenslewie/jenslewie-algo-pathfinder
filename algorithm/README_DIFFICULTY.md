@@ -132,10 +132,11 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1658 - Minimum Operations to Reduce X to Zero
 - LeetCode1670 - Design Front Middle Back Queue
 
-### Hard (10)
+### Hard (11)
 - LeetCode0023 - Merge k Sorted Lists
 - LeetCode0076 - Minimum Window Substring
 - LeetCode0084 - Largest Rectangle in Histogram
+- LeetCode0124 - Binary Tree Maximum Path Sum
 - LeetCode0220 - Contains Duplicate III
 - LeetCode0239 - Sliding Window Maximum
 - LeetCode0297 - Serialize and Deserialize Binary Tree
