@@ -52,7 +52,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode1475 - Final Prices With a Special Discount in a Shop
 - LeetCode2073 - Time Needed to Buy Tickets
 
-### Medium (77)
+### Medium (78)
 - LeetCode0002 - Add Two Numbers
 - LeetCode0003 - Longest Substring Without Repeating Characters
 - LeetCode0005 - Longest Palindromic Substring
@@ -113,6 +113,7 @@ This index covers classes in `org.example.leetcode.global` and `org.example.leet
 - LeetCode0894 - All Possible Full Binary Trees
 - LeetCode0901 - Online Stock Span
 - LeetCode0918 - Maximum Sum Circular Subarray
+- LeetCode0951 - Flip Equivalent Binary Trees
 - LeetCode0971 - Flip Binary Tree To Match Preorder Traversal
 - LeetCode0988 - Smallest String Starting From Leaf
 - LeetCode1004 - Max Consecutive Ones III
